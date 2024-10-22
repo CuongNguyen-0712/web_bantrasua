@@ -5,12 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     searchBtn.addEventListener("click", () => {
         searchBar.classList.toggle("active");
-        if(searchBar.classList.contains("active")){
+        if (searchBar.classList.contains("active")) {
             inputValueSearch.focus();
         }
-        else{
+        else {
             inputValueSearch.value = "";
         }
     });
-
 });
+
+const handleLoadContent = (page) => {
+    var iframe = document.getElementById('content_admin');
+    iframe.src = page;
+}
