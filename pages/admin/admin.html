@@ -12,20 +12,20 @@
   </head>
   <body>
     <aside class="aside_admin">
-      <button class="btn">
-        <a class="fa-solid fa-house" href="/"></a>
+      <button class="btn" onclick="handleLoadContent('product.html')">
+        <i class="fa-solid fa-house"></i>
+      </button>
+      <button class="btn" onclick="handleLoadContent('users.html')">
+        <i class="fa-solid fa-users"></i>
       </button>
       <button class="btn">
-        <a class="fa-solid fa-users"></a>
+        <i class="fa-solid fa-cart-shopping"></i>
       </button>
       <button class="btn">
-        <a class="fa-solid fa-cart-shopping"></a>
+        <i class="fa-solid fa-magnifying-glass-chart"></i>
       </button>
       <button class="btn">
-        <a class="fa-solid fa-magnifying-glass-chart"></a>
-      </button>
-      <button class="btn">
-        <a class="fa-solid fa-gear"></a>
+        <i class="fa-solid fa-gear"></i>
       </button>
     </aside>
     <main class="main_admin">
@@ -42,8 +42,8 @@
           </span>
         </div>
       </header>
-      <section class="section_admin"></section>
+      <iframe id="content_admin" src="product.html"></iframe>
     </main>
   </body>
   <script src="/assets/handle/admin.js"></script>
-
+</html>
