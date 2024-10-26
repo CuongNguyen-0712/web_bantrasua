@@ -12,6 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
             inputValueSearch.value = "";
         }
     });
+
+    const contentBtns = document.querySelectorAll(".btn");
+
+    contentBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            contentBtns.forEach((btn) => {
+                btn.classList.remove("active");
+            })
+            btn.classList.add("active");
+        })
+    })
 });
 
 const handleLoadContent = (page) => {
