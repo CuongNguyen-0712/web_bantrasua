@@ -1,34 +1,229 @@
-body{
-    display:flex;
-    align-items: center;
-    justify-content: center;
+body {
     height: 100vh;
     width: 100%;
-    padding-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-table{
+
+.product-info {
+    padding: 24px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-info h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.product-info button{
+    font-size: 18px;
+    color: #fff;
+    padding: 16px 30px;
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.5s, border 0.5s;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.product-info button:hover{
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.table-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 }
-th,td {
-    padding: 10px;
-    text-align: center;
-    border-top: 1px solid #ccc; 
-    border-bottom: 1px solid #ccc; 
-    border-left: none; 
+
+tr,
+td {
+    padding: 8px;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: none;
     border-right: none;
-    font-size: 28px;
+    font-size: 16px;
+    border-radius: 10px;
+    font-weight: lighter;
 }
 
-thead th{
-    padding-left: 20px;
+th {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    opacity: 0.6;
+    font-size: 18px;
+    font-weight: lighter;
 }
 
-th img {
-    height: 100px;
+th:first-child,
+td:first-child {
+    width: 20px;
+    text-align: center;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 50px;
+    text-align: center;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 200px;
+}
+
+th:nth-child(4),
+td:nth-child(4),
+th:nth-child(5),
+td:nth-child(5),
+th:nth-child(6),
+td:nth-child(6) {
     width: 100px;
 }
 
-tr:hover{
-    background-color: lightgoldenrodyellow;
+th:nth-child(7),
+td:nth-child(7) {
+    width: 100px;
+    text-align: center;
 }
+
+td img {
+    height: 80px;
+    width: 80px;
+    border-radius: 10%;
+}
+
+tr:hover {
+    background-color: rgb(245, 255, 250);
+}
+
+.option-menu {
+    position: absolute;
+    display: none;
+    right: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+    padding: 5px;
+    border-radius: 10px;
+    animation: dropDown 0.3s ease;
+
+}
+
+.option-menu button {
+    text-align: left;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(248, 129, 129, 0.1);
+    border: none;
+}
+
+.option-menu button i {
+    float: right;
+}
+
+.option-menu button:hover {
+    background-color: rgb(245, 255, 250);
+}
+
+.option {
+    cursor: pointer;
+    color: rgb(104, 97, 97);
+    font-size: 24px;
+    user-select: none;
+    background-color: transparent;
+    transition: background-color 0.5s, border 0.5s;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.option:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
+
+.pagination > span {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-button {
+    user-select: none;
+}
+
+.pagination-button > button {
+    padding: 12px 20px;
+    background-color: #fff;
+    background-color: transparent;
+    transition: background-color 0.5s, border 0.5s;
+    border: none;
+    margin-right: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pagination-button > button:disabled {
+    background-color: #ccc;      /* có màu hoặc không màu đây ? */
+    cursor: not-allowed;
+}
+
+.pagination-button > button:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.pagination-button > button i {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@keyframes dropDown {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*
+@keyframes dropDown {
+    0% {
+        transform: scale(0.75);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+*/
+
