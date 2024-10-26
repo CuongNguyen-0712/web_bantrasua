@@ -18,3 +18,4 @@ const handleLoadContent = (page) => {
     var iframe = document.getElementById('content_admin');
     iframe.src = page;
 }
+
