@@ -1,20 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-</head>
-<body>
-    
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/styles/admin/admin.css" />
+    <link rel="stylesheet" href="/assets/styles/style.css">
     <link
       rel="stylesheet"
       href="/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css"
@@ -26,13 +16,13 @@
       <button class="btn" onclick="handleLoadContent('product.html')">
         <i class="fa-solid fa-house"></i>
       </button>
-      <button class="btn" onclick="handleLoadContent('users.html')">
+      <button class="btn" onclick="handleLoadContent('user.html')">
         <i class="fa-solid fa-users"></i>
       </button>
       <button class="btn">
         <i class="fa-solid fa-cart-shopping"></i>
       </button>
-      <button class="btn">
+      <button class="btn" onclick="handleLoadContent('statistics.html')">
         <i class="fa-solid fa-magnifying-glass-chart"></i>
       </button>
       <button class="btn">
@@ -53,8 +43,8 @@
           </span>
         </div>
       </header>
-      <iframe id="content_admin" src="product.html"></iframe>
+      <iframe id="content_admin" src="statistics.html"></iframe>
     </main>
   </body>
-  <script src="/assets/handle/admin.js"></script>
+  <script src="/assets/handle/admin/admin.js"></script>
 </html>
