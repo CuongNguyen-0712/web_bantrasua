@@ -35,7 +35,7 @@ body {
 }
 
 .product-info button:hover{
-    background-color: rgb(0, 0, 0, 0.1);
+    background-color: rgb(0, 0, 0, 0.5);
 }
 
 .table-container {
@@ -51,10 +51,9 @@ table {
     table-layout: fixed;
 }
 
-tr,
 td {
     padding: 8px;
-    text-align: left;
+    text-align: center;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     border-left: none;
@@ -66,7 +65,7 @@ td {
 
 th {
     padding: 10px;
-    text-align: left;
+    text-align: center;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     border-left: none;
@@ -80,18 +79,17 @@ th {
 th:first-child,
 td:first-child {
     width: 20px;
-    text-align: center;
 }
 
 th:nth-child(2),
 td:nth-child(2) {
     width: 50px;
-    text-align: center;
 }
 
 th:nth-child(3),
 td:nth-child(3) {
-    width: 200px;
+    white-space: wrap;
+    width: 100px;
 }
 
 th:nth-child(4),
@@ -106,7 +104,6 @@ td:nth-child(6) {
 th:nth-child(7),
 td:nth-child(7) {
     width: 100px;
-    text-align: center;
 }
 
 td img {
@@ -122,6 +119,7 @@ tr:hover {
 .option-menu {
     position: absolute;
     display: none;
+    bottom: 0;
     right: auto;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -130,7 +128,6 @@ tr:hover {
     padding: 5px;
     border-radius: 10px;
     animation: dropDown 0.3s ease;
-
 }
 
 .option-menu button {
@@ -149,6 +146,7 @@ tr:hover {
 
 .option-menu button:hover {
     background-color: rgb(245, 255, 250);
+    cursor: pointer;
 }
 
 .option {

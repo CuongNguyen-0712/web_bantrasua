@@ -24,4 +24,5 @@ function toggleOptions(event, element) {
             window.removeEventListener('click', closeOptionsMenu);
         }
     }
+    
 }
