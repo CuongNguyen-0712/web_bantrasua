@@ -23,6 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.classList.add("active");
         })
     })
+
+    const adminInfoBtn = document.querySelector(".feature_admin > i");
+    const adminInfo = document.querySelector(".admin_nav");
+    
+    adminInfoBtn.addEventListener("click", () => {
+        adminInfo.classList.toggle("active");
+        adminInfoBtn.classList.toggle("change")
+    })
 });
 
 const handleLoadContent = (page) => {

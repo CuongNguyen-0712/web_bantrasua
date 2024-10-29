@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const featureBtns = document.querySelectorAll('.feature i');
+    const featureBtns = document.querySelectorAll('.feature > i');
     const parentBtn = document.querySelectorAll('li')
 
     for (let i = 0; i < featureBtns.length; i++) {

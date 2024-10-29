@@ -6,18 +6,18 @@ function toggleOptions(event, element) {
 
     allMenu.forEach((menu) => {
         if (menu !== optionsMenu) {
-            menu.style.display = 'none';
+            menu.style.display = 'none';    
         }
     });
 
     if (optionsMenu.style.display === 'block') {
         optionsMenu.style.display = 'none';
-        window.removeEventListener('click', closeOptionsMenu);
     } else {
         optionsMenu.style.display = 'block';
-        window.addEventListener('click', closeOptionsMenu);
+        optionsMenu.style.zIndex = '1';
     }
-
+    window.addEventListener('click', closeOptionsMenu);
+    
     function closeOptionsMenu(e) {
         if (!optionsMenu.contains(e.target) && !element.contains(e.target)) {
             optionsMenu.style.display = 'none';
