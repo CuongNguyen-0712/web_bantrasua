@@ -71,10 +71,11 @@ body::-webkit-scrollbar-thumb{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: max-content;
   width: 100%;
-  gap: 5px;
+  padding: 20px 0;
   border-bottom: 1px solid #ccc;
+  gap: 10px;
 }
 
 .table_user li:not(:first-child):hover{
@@ -97,15 +98,19 @@ li > span {
   text-align: center;
 }
 
-li:not(li:first-child) > span:last-child i:hover{
+li:not(li:first-child) > span:last-child > i{
   display: flex;
   height: 30px;
   width: 30px;
   justify-content: center;
   align-items: center;
-  background: #cccaca;
+  background: transparent;
   border-radius: 5px;
   cursor: pointer;
+}
+
+li:not(li:first-child) > span:last-child > i:hover{
+  background: #cccaca;
 }
 
 li > span:nth-child(1),
@@ -154,6 +159,7 @@ li > span:nth-child(3) {
     background: #fff;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
 .dropdown button:hover{

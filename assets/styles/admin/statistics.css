@@ -1,0 +1,417 @@
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(245, 255, 250);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(2 108 61);
+}
+
+.section_statistics {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30px;
+  flex-direction: column;
+}
+
+.section_statistics .heading_statistics {
+  display: flex;
+  height: 70px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  padding-left: 20px;
+  color: rgb(2 108 61);
+  flex-direction: column;
+  user-select: none;
+  gap: 5px;
+}
+
+.heading_statistics span {
+  color: #919090;
+}
+
+.content_statistics {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 30px 0;
+  flex-direction: column;
+}
+
+.statistics_product,
+.statistics_user {
+  display: flex;
+  height: 400px;
+  width: 90%;
+  gap: 30px;
+  border-bottom: 5px solid #303030;
+  flex-direction: column;
+}
+
+.statistics_product h2,
+.statistics_user h2 {
+  display: flex;
+  font-size: 18px;
+  height: max-content;
+  width: 100%;
+  color: rgb(2 108 61);
+}
+
+.statistics_product .table_product,
+.statistics_user .table_user {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.table_product .statistics_value,
+.table_user .statistics_value {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 5px 5px 10px;
+  list-style: none;
+  user-select: none;
+  flex-direction: column;
+}
+
+.table_product .statistics_value::before {
+  content: "Số sản phẩm";
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  color: rgb(2 108 61);
+  top: 0;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.table_user .statistics_value::before {
+  content: "Lượng chi tiêu triệu đồng";
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 120px;
+  text-align: center;
+  color: rgb(2 108 61);
+  top: 0;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.table_product .statistics_column,
+.table_user .statistics_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+}
+
+.statistics_column .div_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 20%;
+  flex-direction: column;
+}
+
+.div_container .columns {
+  display: flex;
+  height: 0%;
+  width: 50%;
+  background: rgb(2 108 61);
+}
+
+.statistics_product.active .div_container:nth-child(1) > .columns {
+  height: 50%;
+  transition: 0.2s all ease;
+}
+
+.statistics_user.active .div_container:nth-child(1) > .columns {
+  height: 10%;
+  transition: 0.2s all ease;
+}
+
+.div_container .columns::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 2px;
+  width: 0%;
+  background: #000;
+  right: 0;
+  transition: 0.2s all ease;
+}
+
+.div_container .columns::after {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  top: -20px;
+  color: rgb(2 108 61);
+  background: transparent;
+  transition: 0.2s all ease;
+}
+
+.div_container .columns:hover::after {
+  justify-content: flex-start;
+  top: -7px;
+  right: 0;
+  transition: 0.2s all ease;
+}
+
+.div_container:nth-child(1) > .columns:hover::before {
+  width: 150%;
+  transition: 0.2s all ease;
+}
+
+.div_container:nth-child(1) > .columns:hover::after {
+  width: 150%;
+}
+
+.statistics_product.active .div_container:nth-child(1) > .columns::after {
+  content: "3124";
+}
+
+.statistics_user.active .div_container:nth-child(1) > .columns::after {
+  content: "6.2";
+}
+
+.statistics_product.active .div_container:nth-child(2) > .columns {
+  height: 20%;
+  transition: 0.2s all ease;
+}
+
+.statistics_user.active .div_container:nth-child(2) > .columns {
+  height: 80%;
+  transition: 0.2s all ease;
+}
+
+.div_container:nth-child(2) > .columns:hover::after {
+  width: 350%;
+}
+
+.div_container:nth-child(2) > .columns:hover::before {
+  width: 350%;
+  transition: 0.2s all ease;
+}
+
+.statistics_product.active .div_container:nth-child(2) > .columns::after {
+  content: "1830";
+}
+
+.statistics_user.active .div_container:nth-child(2) > .columns::after {
+  content: "9.7";
+}
+
+.statistics_product.active .div_container:nth-child(3) > .columns {
+  height: 60%;
+  transition: 0.2s all ease;
+}
+
+.statistics_user.active .div_container:nth-child(3) > .columns {
+  height: 70%;
+  transition: 0.2s all ease;
+}
+
+.div_container:nth-child(3) > .columns:hover::before {
+  width: 550%;
+  transition: 0.2s all ease;
+}
+
+.div_container:nth-child(3) > .columns:hover::after {
+  width: 550%;
+}
+
+.statistics_product.active .div_container:nth-child(3) > .columns::after {
+  content: "3124";
+}
+
+.statistics_user.active .div_container:nth-child(3) > .columns::after {
+  content: "9.2";
+}
+
+.statistics_product.active .div_container:nth-child(4) > .columns {
+  height: 40%;
+  transition: 0.2s all ease;
+}
+
+.statistics_user.active .div_container:nth-child(4) > .columns {
+  height: 30%;
+  transition: 0.2s all ease;
+}
+
+.div_container:nth-child(4) > .columns:hover::before {
+  width: 750%;
+  transition: 0.2s all ease;
+}
+
+.div_container:nth-child(4) > .columns:hover::after {
+  width: 750%;
+}
+
+.statistics_product.active .div_container:nth-child(4) > .columns::after {
+  content: "2831";
+}
+
+.statistics_user.active .div_container:nth-child(4) > .columns::after {
+  content: "7.1";
+}
+
+.statistics_product.active .div_container:nth-child(5) > .columns {
+  height: 80%;
+  transition: 0.2s all ease;
+}
+
+.statistics_user.active .div_container:nth-child(5) > .columns {
+  height: 40%;
+  transition: 0.2s all ease;
+}
+
+.statistics_product.active .div_container:nth-child(5) > .columns::after {
+  content: "4867";
+}
+
+.statistics_user.active .div_container:nth-child(5) > .columns::after {
+  content: "7.8";
+}
+
+.div_container:nth-child(5) > .columns:hover::before {
+  width: 950%;
+  transition: 0.2s all ease;
+}
+
+.div_container:nth-child(5) > .columns:hover::after {
+  width: 950%;
+}
+
+.statistics_product.active .columns:hover::after {
+  text-indent: -41px;
+}
+
+.statistics_user.active .columns:hover::after {
+  text-indent: -26px;
+}
+
+.statistics_product.active .div_container .card,
+.statistics_user.active .div_container .card {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  text-align: center;
+  padding: 20px;
+  background: rgb(245, 255, 250);
+  border-radius: 10px;
+  flex-direction: column;
+  transform: scaleY(0);
+  transition: 0.2s all ease-in;
+}
+
+.statistics_product .div_container .card,
+.statistics_user .div_container .card {
+  display: none;
+}
+
+.statistics_product.active .div_container:hover > .card,
+.statistics_user.active .div_container:hover > .card {
+  transform: scaleY(1);
+  transition: 0.2s all ease-out;
+}
+
+.statistics_product.active .div_container:nth-child(1) > .card {
+  bottom: calc(50% + 40px);
+}
+
+.statistics_product.active .div_container:nth-child(2) > .card {
+  bottom: calc(20% + 40px);
+}
+
+.statistics_product.active .div_container:nth-child(3) > .card {
+  bottom: calc(60% + 40px);
+}
+
+.statistics_product.active .div_container:nth-child(4) > .card {
+  bottom: calc(40% + 40px);
+}
+
+.statistics_product.active .div_container:nth-child(5) > .card {
+  bottom: calc(80% + 40px);
+}
+
+.statistics_user.active .div_container:nth-child(1) > .card {
+  bottom: calc(10% + 40px);
+}
+
+.statistics_user.active .div_container:nth-child(2) > .card {
+  bottom: calc(80% + 40px);
+}
+
+.statistics_user.active .div_container:nth-child(3) > .card {
+  bottom: calc(70% + 40px);
+}
+
+.statistics_user.active .div_container:nth-child(4) > .card {
+  bottom: calc(30% + 40px);
+}
+
+.statistics_user.active .div_container:nth-child(5) > .card {
+  bottom: calc(40% + 40px);
+}
+
+.card span:nth-child(1) {
+  display: flex;
+  font-weight: 700;
+  color: rgb(2 108 61);
+}
+
+.card span:nth-child(2) {
+  font-size: 13px;
+}
