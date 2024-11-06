@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < featureBtns.length; i++) {
         const button = featureBtns[i];
 
-        button.addEventListener('click', () => {
+        button.addEventListener('click', () => {    
             featureBtns.forEach(btn => {
                 btn.classList.remove('active');
             })
@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     }
+
     window.onclick = ((e) => {
         if (!e.target.matches('.feature i')) {
             featureBtns.forEach(btn => {
