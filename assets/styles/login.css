@@ -1,0 +1,160 @@
+html{
+    font-family: "Arimo" ;
+    font-size: 14px;
+}
+
+*{
+    box-sizing: inherit ;
+}
+
+/* Login overlay */
+.login{
+    display: flex;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.login__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.login__body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Login form */
+.login-form{
+    width: 450px;
+    height: 400px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.login-form__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form__form{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.login-form__header{
+    text-align: center;
+}
+
+.login-form__welcome{
+    font-weight: 400;
+}
+.login-form__heading{
+    padding-top: 16px;
+    font-size: 20px;
+    color: rgb(2, 108, 61);
+}
+
+.login-form__heading-icon{
+    rotate: 35deg;
+}
+
+.login-form__title{
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(2, 108, 61);
+}
+
+/* Input */
+.login-form__group{
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0;
+    margin-top: 24px;
+    position: relative;
+}
+
+.login-form__hidden-icon{
+    position: absolute;
+    right: 40px;
+    top: 35px; 
+    display: none;
+}
+
+.login-form__input:focus + .login-form__hidden-icon{
+    display:block;
+}
+
+.login-form__group:nth-child(2){
+    margin-top: 8px;
+}
+
+.login-form__label{
+    margin-left: 32px;
+    color: rgb(2, 108, 61);
+    font-weight: 600;
+}
+
+.login-form__input{
+    margin: 8px 32px;
+    outline: none;
+    border: 1px solid  rgb(2, 108, 61);
+    padding: 6px;
+    border-radius: 2px;
+}
+
+.login-form__icon{
+    color: rgb(2, 108, 61);
+}
+
+/* Forgot */
+.login-form__forgot{
+    padding: 0 32px;
+    text-align: end;
+}
+
+.login-form__forgot-link{
+    color: rgb(2, 108, 61, 0.5);
+    text-decoration: none;
+}
+
+.login-form__button{
+   margin-top: 40px;
+}
+
+.login-form__btn{
+    display: flex;
+    margin: auto;
+    width: 375px;
+    height: 30px;
+    background-color: rgb(2, 108, 61);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form__btn:hover{
+    opacity: 0.8;
+}
+
+.login-form__link{
+    text-align: center;
+    margin: 8px 0;
+}
+.login-form__link-register{
+    text-decoration: none;
+    color:rgba(2, 108, 61, 0.5);
+}
+
+.login-form__link:hover{
+    opacity: 0.6;
+}
