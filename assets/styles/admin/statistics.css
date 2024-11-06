@@ -31,7 +31,7 @@ body::-webkit-scrollbar-thumb {
 
 .section_statistics {
   display: flex;
-  height: max-content;
+  height: 100%;
   width: 100%;
   align-items: center;
   justify-content: flex-start;
@@ -67,11 +67,11 @@ body::-webkit-scrollbar-thumb {
   color: #919090;
 }
 
-.intro_statistics h1{
+.intro_statistics h1 {
   font-size: 28px;
 }
 
-.statistics_btn{
+.statistics_btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,33 +83,32 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-.statistics_btn button{
+.statistics_btn button {
   display: flex;
   align-items: center;
   justify-content: center;
   height: max-content;
   width: max-content;
-  padding: 10px;  
+  padding: 10px;
   font-size: 15px;
   font-weight: 700;
   background: #fff;
   cursor: pointer;
 }
 
-.statistics_btn button:hover{
-  background: rgb( 2 108 61);
+.statistics_btn button:hover {
+  background: rgb(2 108 61);
   color: #fff;
 }
 
-.statistics_btn .active{
-  background: rgb( 2 108 61);
+.statistics_btn .active {
+  background: rgb(2 108 61);
   color: #fff;
 }
-
 
 .content_statistics {
   display: flex;
-  height: max-content;
+  height: 100%;
   width: 200%;
   align-items: center;
   justify-content: center;
@@ -117,11 +116,11 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-.frame_statistics{
+.frame_statistics {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: max-content;
+  height: 100%;
   width: 300%;
   gap: 50px;
   flex-direction: row;
@@ -129,7 +128,7 @@ body::-webkit-scrollbar-thumb {
   transition: 0.2s all ease;
 }
 
-.frame_statistics.change{
+.frame_statistics.change {
   transform: translateX(-24%);
   transition: 0.2s all ease;
 }
@@ -139,7 +138,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px;
+  height: 100%;
   width: 90%;
   gap: 30px;
   border-bottom: 5px solid #303030;
@@ -231,7 +230,7 @@ body::-webkit-scrollbar-thumb {
   transition: 0.2s all ease;
 }
 
-.div_container .columns{
+.div_container .columns {
   cursor: pointer;
 }
 
@@ -490,7 +489,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .statistics_user_detail.show,
-.statistics_product_detail.show{
+.statistics_product_detail.show {
   display: flex;
   position: absolute;
   align-items: center;
@@ -502,12 +501,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .statistics_user_detail,
-.statistics_product_detail{
+.statistics_product_detail {
   display: none;
 }
 
 .statistics_user_detail.show .statistics_frame,
-.statistics_product_detail.show .statistics_frame{
+.statistics_product_detail.show .statistics_frame {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -520,20 +519,20 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-.heading_detail{
+.heading_detail {
   display: flex;
   align-items: center;
   justify-content: center;
   height: max-content;
   width: 100%;
   padding: 10px;
-  background: rgb( 2 108 61);
+  background: rgb(2 108 61);
   flex-direction: column;
   color: #fff;
   gap: 10px;
 }
 
-.heading_detail #trademark{
+.heading_detail #trademark {
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -544,12 +543,12 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
 }
 
-#trademark i{
+#trademark i {
   font-size: 10px;
   transform: rotate(35deg);
 }
 
-.content_detail{
+.content_detail {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -559,15 +558,15 @@ body::-webkit-scrollbar-thumb {
   overflow-x: hidden;
 }
 
-.content_detail::-webkit-scrollbar{
+.content_detail::-webkit-scrollbar {
   width: 10px;
 }
 
-.content_detail::-webkit-scrollbar-thumb{
-  background: rgb( 2 108 61);
+.content_detail::-webkit-scrollbar-thumb {
+  background: rgb(2 108 61);
 }
 
-.content_detail .frame_detail{
+.content_detail .frame_detail {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -578,7 +577,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
 }
 
-.frame_detail li{
+.frame_detail li {
   display: flex;
   align-items: center;
   height: max-content;
@@ -589,7 +588,7 @@ body::-webkit-scrollbar-thumb {
   gap: 10px;
 }
 
-.frame_detail li .detail{
+.frame_detail li .detail {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -598,16 +597,16 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
 }
 
-li .detail span:nth-child(1){
+li .detail span:nth-child(1) {
   font-size: 17px;
   font-weight: 700;
 }
 
-li .detail span:nth-child(2){
+li .detail span:nth-child(2) {
   font-size: 15px;
 }
 
-.footer_detail{
+.footer_detail {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -620,7 +619,7 @@ li .detail span:nth-child(2){
   gap: 20px;
 }
 
-.footer_detail #result{
+.footer_detail #result {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -629,18 +628,18 @@ li .detail span:nth-child(2){
   padding: 0 15px;
 }
 
-#result span:nth-child(1){
+#result span:nth-child(1) {
   text-transform: uppercase;
   font-size: 15px;
-  color: rgb( 2 108 61);
+  color: rgb(2 108 61);
   font-weight: 700;
 }
 
-#result span:nth-child(2){
+#result span:nth-child(2) {
   font-weight: 700;
 }
 
-.footer_detail button{
+.footer_detail button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -649,11 +648,8 @@ li .detail span:nth-child(2){
   font-weight: 700;
   font-size: 15px;
   padding: 0 20px;
-  background: rgb( 2 108 61);
+  background: rgb(2 108 61);
   color: #fff;
   cursor: pointer;
   border-radius: 5px;
 }
-
-
-
