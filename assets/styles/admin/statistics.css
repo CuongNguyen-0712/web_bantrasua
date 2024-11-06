@@ -9,7 +9,7 @@ html {
 body {
   display: flex;
   position: relative;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: 100%;
   width: 100%;
@@ -31,46 +31,114 @@ body::-webkit-scrollbar-thumb {
 
 .section_statistics {
   display: flex;
-  height: 100%;
+  height: max-content;
   width: 100%;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 30px;
+  padding-top: 20px;
+  gap: 10px;
   flex-direction: column;
 }
 
 .section_statistics .heading_statistics {
   display: flex;
-  height: 70px;
+  height: max-content;
   width: 100%;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   border-bottom-left-radius: 10px;
-  padding-left: 20px;
+  padding: 0 20px;
   color: rgb(2 108 61);
-  flex-direction: column;
+  flex-direction: row;
   user-select: none;
   gap: 5px;
 }
 
-.heading_statistics span {
+.heading_statistics .intro_statistics {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.intro_statistics span {
   color: #919090;
 }
+
+.intro_statistics h1{
+  font-size: 28px;
+}
+
+.statistics_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.statistics_btn button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  padding: 10px;  
+  font-size: 15px;
+  font-weight: 700;
+  background: #fff;
+  cursor: pointer;
+}
+
+.statistics_btn button:hover{
+  background: rgb( 2 108 61);
+  color: #fff;
+}
+
+.statistics_btn .active{
+  background: rgb( 2 108 61);
+  color: #fff;
+}
+
 
 .content_statistics {
   display: flex;
   height: max-content;
-  width: 100%;
+  width: 200%;
   align-items: center;
   justify-content: center;
-  gap: 100px;
   padding: 30px 0;
-  flex-direction: column;
+  overflow: hidden;
+}
+
+.frame_statistics{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 300%;
+  gap: 50px;
+  flex-direction: row;
+  transform: translateX(27%);
+  transition: 0.2s all ease;
+}
+
+.frame_statistics.change{
+  transform: translateX(-24%);
+  transition: 0.2s all ease;
 }
 
 .statistics_product,
 .statistics_user {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 400px;
   width: 90%;
   gap: 30px;
@@ -136,8 +204,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 13px;
 }
 
-.table_product .statistics_column,
-.table_user .statistics_column {
+.statistics_column {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,11 +222,17 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
 }
 
-.div_container .columns {
+.statistics_product .div_container .columns,
+.statistics_user .div_container .columns {
   display: flex;
   height: 0%;
   width: 50%;
   background: rgb(2 108 61);
+  transition: 0.2s all ease;
+}
+
+.div_container .columns{
+  cursor: pointer;
 }
 
 .statistics_product.active .div_container:nth-child(1) > .columns {
@@ -415,3 +488,172 @@ body::-webkit-scrollbar-thumb {
 .card span:nth-child(2) {
   font-size: 13px;
 }
+
+.statistics_user_detail.show,
+.statistics_product_detail.show{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+.statistics_user_detail,
+.statistics_product_detail{
+  display: none;
+}
+
+.statistics_user_detail.show .statistics_frame,
+.statistics_product_detail.show .statistics_frame{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 50%;
+  background: #fff;
+  border-radius: 10px;
+  outline: 1px solid #ccc;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.heading_detail{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  padding: 10px;
+  background: rgb( 2 108 61);
+  flex-direction: column;
+  color: #fff;
+  gap: 10px;
+}
+
+.heading_detail #trademark{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  font-size: 15px;
+  gap: 1px;
+  font-weight: 700;
+}
+
+#trademark i{
+  font-size: 10px;
+  transform: rotate(35deg);
+}
+
+.content_detail{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.content_detail::-webkit-scrollbar{
+  width: 10px;
+}
+
+.content_detail::-webkit-scrollbar-thumb{
+  background: rgb( 2 108 61);
+}
+
+.content_detail .frame_detail{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: max-content;
+  width: 100%;
+  list-style: none;
+  padding: 0 20px;
+  flex-direction: column;
+}
+
+.frame_detail li{
+  display: flex;
+  align-items: center;
+  height: max-content;
+  width: 100%;
+  padding: 20px 0;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.frame_detail li .detail{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+}
+
+li .detail span:nth-child(1){
+  font-size: 17px;
+  font-weight: 700;
+}
+
+li .detail span:nth-child(2){
+  font-size: 15px;
+}
+
+.footer_detail{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  flex-direction: column;
+  background: rgb(245, 255, 250);
+  gap: 20px;
+}
+
+.footer_detail #result{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: max-content;
+  width: 100%;
+  padding: 0 15px;
+}
+
+#result span:nth-child(1){
+  text-transform: uppercase;
+  font-size: 15px;
+  color: rgb( 2 108 61);
+  font-weight: 700;
+}
+
+#result span:nth-child(2){
+  font-weight: 700;
+}
+
+.footer_detail button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: max-content;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 0 20px;
+  background: rgb( 2 108 61);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+

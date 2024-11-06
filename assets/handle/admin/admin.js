@@ -27,10 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const adminInfoBtn = document.querySelector(".feature_admin > i");
     const adminInfo = document.querySelector(".admin_nav");
     
-    adminInfoBtn.addEventListener("click", () => {
+    adminInfoBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
         adminInfo.classList.toggle("active");
         adminInfoBtn.classList.toggle("change")
     })
+
+    window.addEventListener("click", (e) => {
+        if (!adminInfo.contains(e.target) && !adminInfoBtn.contains(e.target)) {
+            adminInfo.classList.remove("active");
+            adminInfoBtn.classList.remove("change");
+        }
+    });
 });
 
 const handleLoadContent = (page) => {
