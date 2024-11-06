@@ -1,0 +1,228 @@
+body {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(245, 255, 250);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: rgb(2 108 61);
+  }
+
+.product-info {
+    padding: 24px;
+    padding-bottom: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-info h1 {
+    color: #036C3D;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.product-info button{
+    font-size: 18px;
+    color: #fff;
+    padding: 16px 30px;
+    background-color: #036C3D;
+    transition: background-color 0.5s, border 0.5s;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.table-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    font-size: 16px;
+    border-radius: 10px;
+    font-weight: lighter;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    opacity: 0.6;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+th:first-child,
+td:first-child {
+    width: 20px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 50px;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    white-space: wrap;
+    width: 100px;
+}
+
+th:nth-child(4),
+td:nth-child(4),
+th:nth-child(5),
+td:nth-child(5),
+th:nth-child(6),
+td:nth-child(6) {
+    width: 100px;
+}
+
+th:nth-child(7),
+td:nth-child(7) {
+    width: 100px;
+}
+
+td img {
+    height: 80px;
+    width: 80px;
+    border-radius: 10%;
+}
+
+tr:hover {
+    background-color: rgb(245, 255, 250);
+}   
+
+.option-menu {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    right: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+    padding: 5px;
+    border-radius: 10px;
+    animation: dropDown 0.3s ease;
+}
+
+.option-menu button {
+    text-align: left;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(248, 129, 129, 0.1);
+    border: none;
+}
+
+.option-menu button i {
+    float: right;
+}
+
+.option-menu button:hover {
+    background-color: rgb(245, 255, 250);
+    cursor: pointer;
+}
+
+.option {
+    cursor: pointer;
+    color: rgb(104, 97, 97);
+    font-size: 24px;
+    user-select: none;
+    background-color: transparent;
+    transition: background-color 0.5s, border 0.5s;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.option:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
+
+.pagination > span {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-button {
+    user-select: none;
+}
+
+.pagination-button > button {
+    padding: 12px 20px;
+    background-color: #fff;
+    background-color: transparent;
+    transition: background-color 0.5s, border 0.5s;
+    border: none;
+    margin-right: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pagination-button > button:disabled {
+    background-color: #ccc;     
+    cursor: not-allowed;
+}
+
+.pagination-button > button:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.pagination-button > button i {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@keyframes dropDown {
+    0% {
+        transform: scale(0.75);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+

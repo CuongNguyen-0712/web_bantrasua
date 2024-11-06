@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles/admin/admin.css" />
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
+    <title>My admin</title>
+  </head>
+  <body>
+    <aside class="aside_admin">
+      <button class="btn active" onclick="handleLoadContent('product.html')">
+        <i class="fa-solid fa-mug-saucer"></i>
+      </button>
+      <button class="btn" onclick="handleLoadContent('user.html')">
+        <i class="fa-solid fa-users"></i>
+      </button>
+      <button class="btn" onclick="handleLoadContent('orders.html')">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+      <button class="btn" onclick="handleLoadContent('statistics.html')">
+        <i class="fa-solid fa-magnifying-glass-chart"></i>
+      </button>
+      <button class="btn">
+        <i class="fa-solid fa-gear"></i>
+      </button>
+    </aside>
+    <main class="main_admin">
+      <header class="header_admin">
+        <div class="feature_admin">
+          <div class="search">
+            <input type="text" placeholder="Search..." class="input_search" />
+            <span class="search_icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+          </div>
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </header>
+      <section class="admin_nav">
+        <div class="heading_admin">
+          <div class="avatar">
+            <div class="frame">
+              <img
+                src="/assets/img/logo.png"
+                alt="admin_avatar"
+                class="avatar_img"
+              />
+              <i class="fa-solid fa-camera"></i>
+            </div>
+          </div>
+          <div class="admin_info">
+            <div class="intro">
+              <h1>Xin chào CuongCoder!</h1>
+            </div>
+            <ul class="info">
+              <li>
+                <span>Tên đăng nhập:</span>
+                <span>Nguyễn Quốc Cường</span>
+              </li>
+              <li>
+                <span>Email:</span>
+                <span>quoccuong0712@gmail.com</span>
+              </li>
+              <li>
+                <span>Hình thức đăng nhập:</span>
+                <span>Administrator</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_admin">
+          <button>Chỉnh sửa thông tin</button>
+          <button>Đăng xuất</button>
+        </div>
+      </section>
+      <iframe id="content_admin" src="product.html"></iframe>
+    </main>
+  </body>
+  <script src="/assets/handle/admin/admin.js"></script>
+</html>
