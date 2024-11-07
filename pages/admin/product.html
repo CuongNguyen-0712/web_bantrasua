@@ -16,19 +16,19 @@
   </head>
 
   <body>
-    <div class="product-info">
+    <div class="product-heading">
       <div>
-        <h1>Sản phẩm</h1>
-        <p>Quản lí các sản phẩm của cửa hàng Clover Tea</p>
+        <h1>Quản lí sản phẩm</h1>
+        <p>Xem và thao tác các sản phẩm của cửa hàng Clover Tea</p>
       </div>
-      <div>
+      <div class="product-heading_button">
         <button>
           <i class="bi bi-plus-circle"></i>
           Thêm sản phẩm
         </button>
       </div>
     </div>
-    <div class="table-container">
+    <div class="product-table">
       <table>
         <thead>
           <tr>
@@ -50,10 +50,10 @@
             <td>57.000&#8363;</td>
             <td>25/2/2023</td>
             <td>
-              <span class="option" onclick="toggleOptions(event,this)">
+              <span class="product-table_feature" onclick="toggleOptions(event,this)">
                 <i class="fa fa-ellipsis-h"></i>
               </span>
-              <div class="option-menu">
+              <div class="product-table_feature-menu">
                 <button>
                   Change
                   <i class="bi bi-wrench"></i>
@@ -73,10 +73,10 @@
             <td>57.000&#8363;</td>
             <td>25/2/2023</td>
             <td>
-              <span class="option" onclick="toggleOptions(event,this)">
+              <span class="product-table_feature" onclick="toggleOptions(event,this)">
                 <i class="fa fa-ellipsis-h"></i>
               </span>
-              <div class="option-menu">
+              <div class="product-table_feature-menu">
                 <button>
                   Change
                   <i class="bi bi-wrench"></i>
@@ -96,10 +96,10 @@
             <td>57.000&#8363;</td>
             <td>25/2/2023</td>
             <td>
-              <span class="option" onclick="toggleOptions(event,this)">
+              <span class="product-table_feature" onclick="toggleOptions(event,this)">
                 <i class="fa fa-ellipsis-h"></i>
               </span>
-              <div class="option-menu">
+              <div class="product-table_feature-menu">
                 <button>
                   Change
                   <i class="bi bi-wrench"></i>
@@ -119,10 +119,10 @@
             <td>57.000&#8363;</td>
             <td>25/2/2023</td>
             <td>
-              <span class="option" onclick="toggleOptions(event,this)">
+              <span class="product-table_feature" onclick="toggleOptions(event,this)">
                 <i class="fa fa-ellipsis-h"></i>
               </span>
-              <div class="option-menu">
+              <div class="product-table_feature-menu">
                 <button>
                   Change
                   <i class="bi bi-wrench"></i>
@@ -142,10 +142,10 @@
             <td>57.000&#8363;</td>
             <td>25/2/2023</td>
             <td>
-              <span class="option" onclick="toggleOptions(event,this)">
+              <span class="product-table_feature" onclick="toggleOptions(event,this)">
                 <i class="fa fa-ellipsis-h"></i>
               </span>
-              <div class="option-menu">
+              <div class="product-table_feature-menu">
                 <button>
                   Change
                   <i class="bi bi-wrench"></i>
@@ -160,9 +160,9 @@
         </tbody>
       </table>
     </div>
-    <div class="pagination">
+    <div class="product-pagination">
       <span><b>5</b> trong số <b>39</b> sản phẩm</span>
-      <div class="pagination-button">
+      <div class="product-pagination_button">
         <button disabled>
           <i class="fa-solid fa-chevron-left"></i>
           Prev
