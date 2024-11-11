@@ -130,6 +130,10 @@ html{
    margin-top: 40px;
 }
 
+.login-form__button-link{
+    text-decoration: none;
+}
+
 .login-form__btn{
     display: flex;
     margin: auto;
