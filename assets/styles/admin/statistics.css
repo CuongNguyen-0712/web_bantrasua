@@ -71,7 +71,30 @@ body::-webkit-scrollbar-thumb {
   font-size: 28px;
 }
 
-.statistics_btn {
+.feature_statistics{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.feature_statistics .statistics_value {
+  display: flex;
+  height: 35px;
+  width: 35px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.feature_statistics .statistics_btn {
   display: flex;
   align-items: center;
   justify-content: center;

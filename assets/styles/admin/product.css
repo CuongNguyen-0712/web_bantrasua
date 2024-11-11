@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
     background: rgb(2 108 61);
   }
 
-.product-info {
+.product-heading {
     padding: 24px;
     padding-bottom: 20px;
     display: flex;
@@ -26,18 +26,18 @@ body::-webkit-scrollbar {
     justify-content: space-between;
 }
 
-.product-info h1 {
+.product-heading h1 {
     color: #036C3D;
     font-size: 28px;
     margin-bottom: 10px;
 }
 
-.product-info p {
+.product-heading p {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.6);
 }
 
-.product-info button{
+.product-heading button{
     font-size: 18px;
     color: #fff;
     padding: 16px 30px;
@@ -49,7 +49,7 @@ body::-webkit-scrollbar {
     user-select: none;
 }
 
-.table-container {
+.product-table{
     display: flex;
     align-items: center;
     justify-items: center;
@@ -127,7 +127,7 @@ tr:hover {
     background-color: rgb(245, 255, 250);
 }   
 
-.option-menu {
+.product-table_feature-menu {
     position: absolute;
     display: none;
     bottom: 0;
@@ -141,7 +141,7 @@ tr:hover {
     animation: dropDown 0.3s ease;
 }
 
-.option-menu button {
+.product-table_feature-menu button {
     text-align: left;
     display: block;
     width: 100%;
@@ -151,16 +151,16 @@ tr:hover {
     border: none;
 }
 
-.option-menu button i {
+.product-table_feature-menu button i {
     float: right;
 }
 
-.option-menu button:hover {
+.product-table_feature-menu button:hover {
     background-color: rgb(245, 255, 250);
     cursor: pointer;
 }
 
-.option {
+.product-table_feature {
     cursor: pointer;
     color: rgb(104, 97, 97);
     font-size: 24px;
@@ -171,27 +171,27 @@ tr:hover {
     padding: 8px;
 }
 
-.option:hover {
+.product-table_feature:hover {
     background-color: rgb(0, 0, 0, 0.1);
 }
 
-.pagination {
+.product-pagination {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 24px;
 }
 
-.pagination > span {
+.product-pagination > span {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.6);
 }
 
-.pagination-button {
+.product-pagination_button {
     user-select: none;
 }
 
-.pagination-button > button {
+.product-pagination_button > button {
     padding: 12px 20px;
     background-color: #fff;
     background-color: transparent;
@@ -202,16 +202,16 @@ tr:hover {
     cursor: pointer;
 }
 
-.pagination-button > button:disabled {
+.product-pagination_button > button:disabled {
     background-color: #ccc;     
     cursor: not-allowed;
 }
 
-.pagination-button > button:hover {
+.product-pagination_button > button:hover {
     background-color: rgb(0, 0, 0, 0.1);
 }
 
-.pagination-button > button i {
+.product-pagination_button > button i {
     margin-left: 5px;
     margin-right: 5px;
 }
