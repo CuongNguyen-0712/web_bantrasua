@@ -9,11 +9,10 @@ html{
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-family: "my-font", sans-serif;
 }
 
-.proccess-form{
+.proccess-form-1{
     width: 1100px;
     height: 450px;
     display: flex;
@@ -50,7 +49,7 @@ html{
 
 .proccess-form__headeing-item--separate{
     position: absolute;
-    bottom: 15px;
+    bottom: 7px;
     right: 310px;
     font-size: 20px;
 }
@@ -61,7 +60,7 @@ html{
 
 .proccess-form__proccess{
     width: 1100px;
-    height: 150px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,10 +81,6 @@ html{
     background-color: rgb(45, 194, 88);
 }
 
-.proccess-form__item-line--uncomplete{
-    background-color: #dad7d7;
-}
-
 .proccess-form__proccess-item-circle{
     width: 1000px;
     display: flex;
@@ -100,14 +95,6 @@ html{
     height: 70px;
     border: 5px solid rgb(45, 194, 88);
     border-radius: 50%;
-}
-
-.proccess-form__proccess-item-circle--transport{
-    background-color: rgb(45, 194, 88);
-}
-
-.proccess-form__item-circle--uncomplete{
-    border-color: #dad7d7;
 }
 
 .proccess-form__proccess-item-icons{
@@ -138,21 +125,21 @@ html{
     position: absolute;
     right: 490px;
     font-size: 30px;
-    color: #fff;
+    color: rgb(45, 194, 88);
 }
 
 .proccess-form__proccess-item-icon--received{
     position: absolute;
     right: 260px;
     font-size: 30px;
-    color: #dad7d7;
+    color: rgb(45, 194, 88);
 }
 
 .proccess-form__proccess-item-icon--rated{
     position: absolute;
     right: 27px;
     font-size: 30px;
-    color: #dad7d7;
+    color: rgb(45, 194, 88);
 }
 
 .proccess-form__proccess-item-details{
@@ -214,10 +201,23 @@ html{
     left: 235px;
 }
 
-.proccess-form__proccess-item-date--rated{
+.proccess-form__proccess-item-date--transport{
     position: absolute;
     top: 20px;
     left: 465px;
+}
+
+.proccess-form__proccess-item-date--received{
+    position: absolute;
+    top: 20px;
+    left: 700px;
+}
+
+.proccess-form__proccess-item-date--rated{
+    width: 150px;
+    position: absolute;
+    top: 40px;
+    left: 940px;
 }
 
 .proccess-form__another-box{
@@ -253,4 +253,148 @@ html{
     border: 1px solid rgb(171, 173, 174);
     border-radius: 5px;
     cursor: pointer;
+}
+
+.proccess-form__common-btn--buy{
+    color: #fff;
+    background-color: rgb(2, 108, 61);
+}
+
+.proccess-form__common-btn--buy:hover{
+    opacity: 0.5;
+}
+
+.proccess-form-2{
+    width: 1100px;
+    margin-top: 15px;
+}
+
+.proccess-header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(2, 108, 61, 0.8);
+}
+
+.proccess-header__heading{
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+.proccess-header__heading-item{
+    color: rgb(2, 108, 61);
+    font-size: 17px;
+    font-weight: 700;
+    flex: 1;
+}
+
+.proccess-header__heading-btn-chat{
+    width: 60px;
+    height: 22px;
+    background-color: rgb(2, 108, 61);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
+
+.proccess-header__heading-btn-shop{
+    width: 90px;
+    background-color: #fff;
+    border: 1px solid rgb(210, 213, 215);
+    border-radius: 2px;
+}
+
+.proccess-header__heading-btn-content{
+    text-decoration: none;
+    color:#4f4949 ;
+}
+
+.order-form__item{
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    position: relative;
+    border-bottom: 1px solid rgb(210, 213, 215);
+    
+}
+
+.order-form__item-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(236, 239, 241, 1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-form__item-img{
+    width: 70%;
+    height: 70%;
+}
+
+.order-form__content{
+    width: 550px;
+    margin-left: 10px;
+}
+
+.order-form__title{
+    color: rgb(2, 108, 61);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.order-form__describ{
+    font-size: 14px;
+    color: #676464;
+}
+
+p{
+    font-size: 14px;
+}
+
+.order-form__cost{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    color:rgb(2, 108, 61);
+}
+
+.detail-form{
+    width: 1100px;
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.detail-form__form{
+    flex: 1;
+    list-style: none;
+    text-align: end;
+    font-size: 14px;
+}
+
+.detail-form__form-item{
+    height: 50px;
+    padding-right: 10px;
+    line-height: 50px;
+    border: 1px dashed rgb(232, 232, 233);
+    border-top: none;
+}
+
+.detail-form__form-item--content{
+    color: rgb(109, 113, 115);
+    border-right: none;
+}
+
+.detail-form__form-item-cost{
+    color: rgb(2, 108, 61);
+    font-size: 20px;
+}
+
+.detail-form__form-item--pay{
+    font-weight: 600;
 }

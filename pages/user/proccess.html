@@ -11,8 +11,7 @@
 </head>
 <body>
     
-    <div class="proccess-form">
-
+    <div class="proccess-form-1">
         <!-- Header -->
         <header class="proccess-form__header">
             <ul>
@@ -35,16 +34,16 @@
             <div class="proccess-form__proccess-item-line">
                 <div class="proccess-form__item-line"></div>
                 <div class="proccess-form__item-line"></div>
-                <div class="proccess-form__item-line proccess-form__item-line--uncomplete"></div>
-                <div class="proccess-form__item-line proccess-form__item-line--uncomplete"></div>
+                <div class="proccess-form__item-line"></div>
+                <div class="proccess-form__item-line"></div>
             </div>
 
             <div class="proccess-form__proccess-item-circle">
                 <div class="proccess-form__item-circle"></div>
                 <div class="proccess-form__item-circle"></div>
-                <div class="proccess-form__item-circle proccess-form__proccess-item-circle--transport"></div>
-                <div class="proccess-form__item-circle proccess-form__item-circle--uncomplete"></div>
-                <div class="proccess-form__item-circle proccess-form__item-circle--uncomplete"></div>
+                <div class="proccess-form__item-circle"></div>
+                <div class="proccess-form__item-circle"></div>
+                <div class="proccess-form__item-circle"></div>
             </div>
 
             <div class="proccess-form__proccess-item-icons">
@@ -66,7 +65,9 @@
             <div class="proccess-form__proccess-item-time">
                 <div class="proccess-form__proccess-item-date--ordered">12:05&nbsp;08-11-2024</div>
                 <div class="proccess-form__proccess-item-date--confirm">12:10&nbsp;08-11-2024</div>
-                <div class="proccess-form__proccess-item-date--rated">12:30&nbsp;08-11-2024</div>
+                <div class="proccess-form__proccess-item-date--transport">12:30&nbsp;08-11-2024</div>
+                <div class="proccess-form__proccess-item-date--received">12:40&nbsp;08-11-2024</div>
+                <div class="proccess-form__proccess-item-date--rated">12:45&nbsp;08-11-2024</div>
             </div>
         </div>
        
@@ -80,13 +81,95 @@
             </div>
 
             <div class="proccess-form__common">
-                <button class="proccess-form__common-btn">Hủy Đơn Hàng</button>
+                <button class="proccess-form__common-btn proccess-form__common-btn--buy">Mua Lại</button>
             </div>
 
             <div class="proccess-form__common">
                 <button class="proccess-form__common-btn">Liên Hệ Người Bán</button>
             </div>
         </div>
+    </div>
+
+    <div class="proccess-form-2">
+        <header class="proccess-header">
+            <div class="proccess-header__heading">
+                <span class="proccess-header__heading-item">Clover Tea</span>
+                <button class="proccess-header__heading-btn-chat">
+                    <i class="fa-regular fa-comment"></i>   
+                    Chat
+                </button>
+
+                <button class="proccess-header__heading-btn-shop">
+                    <i class="fa-solid fa-store"></i>
+                    <a href="" class="proccess-header__heading-btn-content">Trang chủ </a>  
+                </button>
+            </div>
+        </header>
+    </div>
+
+    <div class="order-form">
+        <div class="order-form__item">
+            <div class="order-form__item-image">
+                <img src="/assets/img/milk.png" alt=">Trà Sữa Clover Tea" class="order-form__item-img">
+            </div>
+
+            <div class="order-form__content">
+                <h5 class="order-form__title">Trà Sữa Clover Tea</h5>
+                <span class="order-form__describ">Kích cỡ: S, Ngọt: Bình thường, Đá: Bình thường, Toppng: Kem Cheese Khứ Hồi</span>
+                <p>x1</p>
+            </div>
+
+            <div class="order-form__cost">59.000&#8363</div>
+        </div>  
+    </div>
+
+    <div class="order-form">
+        <div class="order-form__item">
+            <div class="order-form__item-image">
+                <img src="/assets/img/milk.png" alt=">Trà Sữa Clover Tea" class="order-form__item-img">
+            </div>
+
+            <div class="order-form__content">
+                <h5 class="order-form__title">Mỹ Nhân Thanh Trà</h5>
+                <span class="order-form__describ">Kích cỡ: M, Ngọt: Nhiều, Đá: Bình thường</span>
+                <p>x2</p>
+            </div>
+
+            <div class="order-form__cost">218.000&#8363</div>
+        </div>  
+    </div>
+
+    <div class="order-form">
+        <div class="order-form__item">
+            <div class="order-form__item-image">
+                <img src="/assets/img/milk.png" alt=">Trà Sữa Clover Tea" class="order-form__item-img">
+            </div>
+
+            <div class="order-form__content">
+                <h5 class="order-form__title">Americano</h5>
+                <span class="order-form__describ">Kích cỡ: L, Ngọt: Ít ngọt, Đá: Bình thường</span>
+                <p>x3</p>
+            </div>
+
+            <div class="order-form__cost">117.000&#8363</div>
+        </div>  
+    </div>
+
+    <div class="detail-form">
+        <ul class="detail-form__form">
+            <li class="detail-form__form-item detail-form__form-item--content">Tổng tiền hàng</li>
+            <li class="detail-form__form-item detail-form__form-item--content">Phí vận chuyển</li>
+            <li class="detail-form__form-item detail-form__form-item--content">Thành tiền</li>
+            <li class="detail-form__form-item detail-form__form-item--content">Phương thức Thanh toán</li>
+
+        </ul>
+
+        <ul class="detail-form__form">
+            <li class="detail-form__form-item">385.000&#8363</li>
+            <li class="detail-form__form-item">30.000&#8363</li>
+            <li class="detail-form__form-item detail-form__form-item-cost">415.000&#8363</li>
+            <li class="detail-form__form-item detail-form__form-item--pay">Thanh toán khi nhận hàng</li>
+        </ul>
     </div>
 </body>
 </html>

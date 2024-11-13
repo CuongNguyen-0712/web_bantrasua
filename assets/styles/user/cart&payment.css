@@ -14,7 +14,7 @@ html{
 body{
     display: flex;
     position: relative;
-    height: 100%;
+    height: max-content;
     width: 100%;
     overflow: scroll;
     overflow-x: hidden;
@@ -330,6 +330,114 @@ hr{
     font-weight: 700;
     border: 1px solid rgb(2, 108, 61);
     border-radius: 5px;
+}
+
+/* Address */
+.address{
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.address.show{
+    display: flex;
+}
+
+.address__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.address__body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.address-form{
+    width: 525px;
+    height: 210px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.address-form-icon-x{
+    position: absolute;
+    right: -5px;
+    top: -4px;
+    color: rgb(2, 108, 61);
+    font-size: 18px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.address-form-icon-x:hover{
+    opacity: 0.7;
+}
+
+.address-form__header{
+    margin: 20px 10px 10px 32px;
+}
+
+.address-form__heading{
+    font-size: 20px;
+    color: rgb(2, 108, 61);
+}
+
+.address-form__input-address{
+    width: 90%;
+    height: 30px;
+    margin: 0 0 20px 30px;
+    background-color: rgba(0, 0, 0, 0.07);
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+
+.address-form__input-icon-search{
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.address-form__input{
+    height: 30px;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0007);
+}
+
+.address-form__location{
+    margin: 0 0 20px 30px;
+}
+
+.address-form__location-title{
+    color:rgb(2, 108, 61);
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.address-form__location-content{
+    margin-left: 20px;
+    color:rgba(0, 0, 0, 0.5);
+}
+
+.address-form__form-separate{
+    width: 100%;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.address-form__form-footer{
+    margin: 10px 0 0 30px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 

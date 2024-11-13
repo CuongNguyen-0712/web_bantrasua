@@ -106,11 +106,6 @@ body{
   opacity: 0.8;
 }
 
-.product-form__page{
-  position: absolute;
-  bottom: 150px;  
-}
-
 /* pagination */
 
 .pagination{
@@ -119,7 +114,7 @@ body{
   align-items: center;
   list-style: none;
   position: absolute;
-  bottom: 80px;
+  bottom: -40px;
   margin-right: 50px;
 }
 
