@@ -100,6 +100,7 @@ body{
   color: #fff;
   border: 1px solid rgb(2, 108, 61);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .product-form__buy:hover{
