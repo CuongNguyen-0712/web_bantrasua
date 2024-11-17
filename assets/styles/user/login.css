@@ -21,7 +21,6 @@ body {
   align-items: center;
   justify-content: center;
   width: 450px;
-  max-width: 95%;
   height: 400px;
   background-color: #fff;
   border-radius: 5px;
@@ -51,6 +50,7 @@ body {
 .login-form__welcome {
   font-weight: 400;
 }
+
 .login-form__heading {
   padding-top: 16px;
   font-size: 20px;
@@ -131,7 +131,6 @@ body {
   display: flex;
   margin: auto;
   width: 375px;
-  max-width: 350px;
   height: 30px;
   background-color: rgb(2, 108, 61);
   color: #fff;
@@ -155,13 +154,4 @@ body {
 
 .login-form__link:hover {
   opacity: 0.6;
-}
-
-
-@media(max-width: 320px)
-{
-  .login-form__btn{
-    width: 290px;
-  }
-  
 }
