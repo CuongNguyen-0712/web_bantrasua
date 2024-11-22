@@ -87,7 +87,6 @@ body {
     text-decoration: none;  
     color: rgb(2, 108, 61);
 }
-
 .header__search-find-link:hover {
     color: black;
 }
@@ -103,15 +102,20 @@ body {
 
 /* CSS ICON FILTER */
 .icon-filter {
-    margin-left: 40px;
     position: absolute;
-    height: 700px;
+    left: 775px;
     color: rgb(2, 108, 61);
     text-decoration: none;
     transform-origin: top left;
+    margin-left: 70px;
+    margin-top: 0;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
 }
-
+.header__search-filter-link{
+    margin-bottom:13px;
+    text-decoration: none;  
+    color: rgb(2, 108, 61);
+}
 .icon-filter:hover .menu__filter {
     opacity: 1; 
     transform-origin: top left;
@@ -322,12 +326,15 @@ body {
     color: #9d9c9c;
     font-weight: 300;
   }
+
+  .header__product-item{
+    width:auto;
+  }
   /* CSS TÊN TỪNG LOẠI TRÀ SỮA DROPDOWN */
   .header__product-name-item {
-      text-decoration: none;
+    text-decoration: none;
     color: #9d9c9c;
     line-height: 1.5;
-    padding: 5px 5px;
     display: flex;
   }
   
@@ -340,14 +347,13 @@ body {
   .header__nav-item__product {
     display: none;
     position: absolute;
-    height: 600px;
-    /* margin-top: ; */
+    height: 700px;
     background-color: rgb(252, 249, 246);
     color: rgb(2, 108, 61);
     text-decoration: none;
     transform-origin: top left;
   }
-  
+  /* TIÊU ĐỀ SẢN PHẨM */
   .header__nav-item.header__nav-item--has-product{
     margin-top:9.6px;
 
@@ -587,8 +593,9 @@ body {
     border: 1px solid rgb(2, 108, 61);
   }
   .more:hover {
-    color: rgb(0, 0, 0);
-    border: 1px solid black;
+    background-color: rgb(2, 108, 61);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
   }
 
 /* TIN TỨC VÀ KHUYẾN MÃI */

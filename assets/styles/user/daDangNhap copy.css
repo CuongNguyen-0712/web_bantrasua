@@ -95,14 +95,20 @@ body {
 
 /* CSS ICON FILTER */
 .icon-filter {
-    margin-left: 40px;
     position: absolute;
-    height: 700px;
+    left:775px;
     color: rgb(2, 108, 61);
     text-decoration: none;
     transform-origin: top left;
+    margin-left: 70px;
+    margin-top: 0;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
   }
+  .header__search-filter-link{
+    margin-bottom:13px;
+    text-decoration: none;  
+    color: rgb(2, 108, 61);
+}
   .icon-filter:hover .menu__filter {
     opacity: 1; 
     transform-origin: top left;
@@ -324,7 +330,7 @@ body {
 .header__nav-item__product {
   display: none;
   position: absolute;
-  height: 600px;
+  height: 700px;
   width: auto;
   background-color: rgb(252, 249, 246);
   color: rgb(2, 108, 61);
@@ -536,7 +542,6 @@ body {
 .product-form__buy {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
   min-width: 25%;
   min-height: 15%;
 }
@@ -570,8 +575,9 @@ body {
   border: 1px solid rgb(2, 108, 61);
 }
 .more:hover {
-  color: rgb(0, 0, 0);
-  border: 1px solid black;
+  background-color: rgb(2, 108, 61);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
 }
 
 /* TIN TỨC VÀ KHUYẾN MÃI */
