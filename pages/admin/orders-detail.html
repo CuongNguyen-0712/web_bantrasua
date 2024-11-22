@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết đơn hàng</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/assets/styles/admin/iframe.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Đơn hàng #200501</h1>
+    </div>
+    <div class="content">
+        <div class="content-info">
+            <h2>Thông tin đơn hàng</h2>
+            <div class="row">
+                <p><strong>Người mua</strong>: Nguyễn Tiến An</p>
+                <p class="right"><strong>Địa chỉ</strong>: F12/6D ấp 8</p>
+            </div>
+            <div class="row">
+                <p><strong>Ngày đặt:</strong> <time datetime="2024-11-27">27/11/2024</time></p>
+                <p class="right"><strong>Quận</strong>: Quận 5</p>
+            </div>
+            <div class="row">
+                <p><strong>Trạng thái</strong>: <span>Đã giao</span></p>
+                <p class="right"><strong>Phương thức thanh toán</strong>: Tiền mặt</p>
+            </div>
+            <h2>Chi tiết sản phẩm</h2>
+        </div>
+        <div class="content-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá tiền</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Trà sữa Clover Tea</td>
+                        <td>5</td>
+                        <td>57.000&#8363;</td>
+                        <td>285.000&#8363;</td>
+                    </tr>
+                    <tr>
+                        <td>Trà sữa Clover Tea</td>
+                        <td>5</td>
+                        <td>57.000&#8363;</td>
+                        <td>285.000&#8363;</td>
+                    </tr>
+                    <tr>
+                        <td>Trà sữa Clover Tea</td>
+                        <td>5</td>
+                        <td>57.000&#8363;</td>
+                        <td>285.000&#8363;</td>
+                    </tr>
+                    <tr>
+                        <td>Trà sữa Clover Tea</td>
+                        <td>5</td>
+                        <td>57.000&#8363;</td>
+                        <td>285.000&#8363;</td>
+                    </tr>
+                    <tr>
+                        <td>Trà sữa Clover Tea</td>
+                        <td>5</td>
+                        <td>57.000&#8363;</td>
+                        <td>285.000&#8363;</td>
+                    </tr>
+                    <tr>
+                        <td>Trà sữa Clover Tea</td>
+                        <td>5</td>
+                        <td>57.000&#8363;</td>
+                        <td>285.000&#8363;</td>
+                    </tr>
+                    <tr>
+                        <td>Trà sữa Clover Tea</td>
+                        <td>5</td>
+                        <td>57.000&#8363;</td>
+                        <td>285.000&#8363;</td>
+                    </tr>                    <tr>
+                        <td>Trà sữa Clover Tea</td>
+                        <td>5</td>
+                        <td>57.000&#8363;</td>
+                        <td>285.000&#8363;</td>
+                    </tr>                    <tr>
+                        <td>Trà sữa Clover Tea</td>
+                        <td>5</td>
+                        <td>57.000&#8363;</td>
+                        <td>285.000&#8363;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination">
+            <p><strong>Tổng cộng : 885.000&#8363</strong></p>
+        </div>
+    </div>
+    <div class="footer">
+        <button onclick="closeOrdersDetail()">Xong</button>
+    </div>
+    <script>
+        function closeOrdersDetail() {
+            window.parent.postMessage("closeOrdersDetail", "*");
+        }
+    </script>
+</body>
+
+</html>
