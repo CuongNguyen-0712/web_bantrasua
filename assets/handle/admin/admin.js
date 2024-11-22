@@ -1,18 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const searchBtn = document.querySelector(".search_icon");
-    const searchBar = document.querySelector(".search");
-    const inputValueSearch = document.querySelector(".input_search");
-
-    searchBtn.addEventListener("click", () => {
-        searchBar.classList.toggle("active");
-        if (searchBar.classList.contains("active")) {
-            inputValueSearch.focus();
-        }
-        else {
-            inputValueSearch.value = "";
-        }
-    });
-
     const contentBtns = document.querySelectorAll(".btn");
 
     contentBtns.forEach((btn) => {
@@ -24,22 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 
-    const adminInfoBtn = document.querySelector(".feature_admin > i");
-    const adminInfo = document.querySelector(".admin_nav");
-    
-    adminInfoBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        adminInfo.classList.toggle("active");
-        adminInfoBtn.classList.toggle("change")
-    })
+    const asideBar = document.querySelector(".aside_admin");
+    const main = document.querySelector(".main_admin");
 
-    window.addEventListener("click", (e) => {
-        if (!adminInfo.contains(e.target) && !adminInfoBtn.contains(e.target)) {
-            adminInfo.classList.remove("active");
-            adminInfoBtn.classList.remove("change");
-        }
-    });
+    const listMenuBtn = document.querySelector(".fa-solid.fa-bars");
+    listMenuBtn.addEventListener("click", () => {
+        asideBar.classList.toggle("active");
+        main.classList.toggle("active");
+    })
 });
+
 
 const handleLoadContent = (page) => {
     var iframe = document.getElementById('content_admin');
