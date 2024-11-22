@@ -115,7 +115,13 @@ body {
 
 /* Forgot */
 .login-form__forgot {
+  color: rgb(2, 108, 61, 0.5);
   text-align: end;
+}
+
+.login-form__forgot:hover{
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .login-form__forgot-link {
@@ -125,6 +131,16 @@ body {
 
 .login-form__button {
   margin-top: 40px;
+}
+
+.login-form__button a{
+  display:flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
 }
 
 .login-form__btn {
