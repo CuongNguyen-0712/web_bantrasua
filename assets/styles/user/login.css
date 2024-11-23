@@ -1,15 +1,16 @@
-body {
-  font-family: "my-font", sans-serif;
-  font-size: 14px;
-  height: 100vh;
+body{
   width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/katinat.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "my-font", sans-serif;
 }
 
 /* Login overlay */
 .login {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -17,12 +18,9 @@ body {
 
 /* Login form */
 .login-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 450px;
-  height: 400px;
-  background-color: #fff;
+  width: 550px;
+  height: 100vh;
+  background-color: #dcdadadb;
   border-radius: 5px;
 }
 
@@ -53,7 +51,7 @@ body {
 
 .login-form__heading {
   padding-top: 16px;
-  font-size: 20px;
+  font-size: 22px;
   color: rgb(2, 108, 61);
 }
 
@@ -62,7 +60,7 @@ body {
 }
 
 .login-form__title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: rgb(2, 108, 61);
 }
@@ -99,6 +97,7 @@ body {
 .login-form__label {
   color: rgb(2, 108, 61);
   font-weight: 600;
+  font-size: 16px;
 }
 
 .login-form__input {
@@ -107,6 +106,7 @@ body {
   border: 1px solid rgb(2, 108, 61);
   padding: 6px;
   border-radius: 2px;
+  font-size: 14px;
 }
 
 .login-form__icon {
@@ -115,7 +115,13 @@ body {
 
 /* Forgot */
 .login-form__forgot {
+  color: rgb(2, 108, 61, 0.5);
   text-align: end;
+}
+
+.login-form__forgot:hover{
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .login-form__forgot-link {
@@ -125,6 +131,17 @@ body {
 
 .login-form__button {
   margin-top: 40px;
+}
+
+.login-form__button a{
+  display:flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
 }
 
 .login-form__btn {
@@ -146,7 +163,9 @@ body {
 .login-form__link {
   text-align: center;
   margin: 8px 0;
+  font-size: 15px;
 }
+
 .login-form__link-register {
   text-decoration: none;
   color: rgba(2, 108, 61, 0.5);
