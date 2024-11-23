@@ -45,6 +45,24 @@
         font-weight: 700;
         color: rgb(2, 108, 61);
     }
+    .discover {
+        padding: 10px 30px;
+        justify-content: center;
+        text-align: center;
+        margin-left: 35%;
+        margin-top: 20px;
+        color: rgb(2, 108, 61);
+        background-color: white;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid rgb(2, 108, 61);
+      }
+      .discover:hover {
+        background-color: rgb(2, 108, 61);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(255, 255, 255);
+      }
+    
 
     /* Detail-form__layout-2 */
     .detail-form__layout-2{

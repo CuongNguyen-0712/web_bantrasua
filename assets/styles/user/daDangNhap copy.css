@@ -96,7 +96,8 @@ body {
 /* CSS ICON FILTER */
 .icon-filter {
     position: absolute;
-    left:775px;
+    left: 52%;
+    font-size: 18px;
     color: rgb(2, 108, 61);
     text-decoration: none;
     transform-origin: top left;
@@ -184,7 +185,7 @@ body {
 }
 
 .header__search-icon-link {
-  margin-top: 30px;
+  margin-top: 13%;
   color: rgb(2, 108, 61);
 }
 
@@ -196,6 +197,9 @@ body {
 .header__search-icon i:hover {
   color: #000000;
 }
+.icon-cart{
+  font-size: 18px;
+}
 
 /* ICON USER */
 .icon-user-wrapper {
@@ -204,8 +208,9 @@ body {
 }
 
 .icon-user {
-  margin-top: 90%;
+  margin-top: 30%;
   margin-left: 20px;
+  font-size: 18px;
   color: rgb(2, 108, 61);
   cursor: pointer;
 }
@@ -466,7 +471,7 @@ body {
 
 /* SẢN PHẨM NỔI BẬT  */
 /* CSS BESTSELLER */
-.BestSeller h2 {
+.BestSeller{
   font-weight: 500;
   text-align: center;
   justify-content: center;
@@ -563,10 +568,10 @@ body {
 /* CSS Button */
 
 .more {
-  padding: 12px;
+  padding: 10px 50px;
   justify-content: center;
   text-align: center;
-  margin-left: 45%;
+  margin-left: 2%;
   margin-top: 20px;
   color: rgb(2, 108, 61);
   background-color: white;
@@ -690,6 +695,7 @@ body {
   margin-left: 10px;
   min-width: 100%;
   color: white;
+  font-size: 18px;
   background-color: rgb(2, 108, 61);
   padding: 20px 0;
 }
@@ -703,5 +709,17 @@ body {
 .form-container__rule {
   padding: 50px 60px;
   min-width: 30%;
+}
+
+.icon-contact-fb{
+  font-size: 25px;
+}
+.icon-contact-ig{
+  font-size: 25px;
+  margin-left: 15px;
+}
+.icon-contact-tiktok{
+  font-size: 25px;
+  margin-left: 15px;
 }
 
