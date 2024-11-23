@@ -138,11 +138,12 @@ body {
   /* CSS MENU FILTER */
 .menu__filter {
     position: absolute;
-    height: 700px;
+    height: 450px;
     min-width: 250px;
     background-color: rgb(252, 249, 246);
     color: rgb(2, 108, 61);
     text-decoration: none;
+    overflow-y:scroll;
     opacity: 0;
     transform: scale(0);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -163,6 +164,7 @@ body {
     line-height: 2.0;
     padding: 5px 5px;
     margin-left: 10%;
+    font-size: 14px;
     font-family: Arimo, sans-serif;
     font-weight: 500;
     justify-content: center;
@@ -319,10 +321,15 @@ body {
     font-weight: 700;
   
   }
+  .header__product{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
   
   /* CSS TIÊU ĐỀ TRÀ SỮA DROPDOWN*/
   .header__product-header {
-    margin-left: 30px;
+    margin-left: 15px;
   }
   
   /* CSS MENU TRÀ SỮA DROPDOWN */
@@ -337,10 +344,12 @@ body {
   }
   /* CSS TÊN TỪNG LOẠI TRÀ SỮA DROPDOWN */
   .header__product-name-item {
+    display: flex;
     text-decoration: none;
     color: #9d9c9c;
     line-height: 1.5;
-    display: flex;
+    padding: 5px 5px;
+
   }
   
   .header__product-name-item:hover {
@@ -352,11 +361,15 @@ body {
   .header__nav-item__product {
     display: none;
     position: absolute;
-    height: 700px;
+    left:50%;
+    top: 100%;
+    width:800px;
+    height: auto;
     background-color: rgb(252, 249, 246);
     color: rgb(2, 108, 61);
     text-decoration: none;
-    transform-origin: top left;
+    transform: translateX(-50%);
+    transform-origin: center;
   }
   /* TIÊU ĐỀ SẢN PHẨM */
   .header__nav-item.header__nav-item--has-product{
@@ -373,11 +386,9 @@ body {
   @keyframes headerProductGrowth {
     from {
       opacity: 0;
-      transform: scale(0);
     }
     to {
       opacity: 1;
-      transform: scale(1);
     }
   }
     /* SLIDE SHOW ẢNH TRANG CHỦ */
@@ -486,17 +497,15 @@ body {
 /* SẢN PHẨM NỔI BẬT  */
 
     /* CSS BESTSELLER */
-  .BestSeller{
-    font-weight: 500;
-    text-align: center;
-    justify-content: center;
-  }
-
+    h2{
+      font-weight: 700;
+      text-align: center;
+      justify-content: center;
+    }
   /* CSS IMAGE BESTSELLER */
   .Img__BestSeller {
     display: flex;
     justify-content: center;
-    font-weight: 550;
     gap: 40px;
   }
     .product-form__form {
@@ -589,7 +598,7 @@ body {
     padding: 10px 50px;
     justify-content: center;
     text-align: center;
-    margin-left: 2%;
+    margin-left: 45%;
     margin-top: 20px;
     color: rgb(2, 108, 61);
     background-color: white;

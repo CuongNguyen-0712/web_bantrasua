@@ -5,33 +5,57 @@
     line-height: 1.5;
     color: rgb(2, 108, 61);
 }
+/*  BACKGROUND MỜ ĐEN CHỦ ĐẠO */
+/* .modal__over-lay {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.4);
+}
+.modal__over-lay img{
+    min-width: 0%;
+
+} */
+
+.modal__over-lay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+.modal__over-lay img {
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    object-fit: cover; 
+}
+/* BACKGROUND ĐĂNG KÝ */
 .modal{
     position:fixed ;
     top: 0;
-    right: 0;
     left: 0;
     bottom: 0;
     display: flex;
-}
-
-.modal__over-lay {
-position: absolute;
-width: 100%;
-height: 100%;
-background-color: rgba(0,0,0, 0.4);
+    z-index: 2;
 }
 
 .modal__body{
-    background-color: #fcf8f8;
+    background-color: rgba(207, 206, 206, 0.8);
     border-radius: 5px;
     margin: auto;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
-
+/* ĐĂNG ký */
 .auth-form{
+    margin-top: 100px;
     padding: 0 32px;
-    width: 450px;
+    width: 550px;
+    height: 715px;
 }
 
 .auth-form__header{
