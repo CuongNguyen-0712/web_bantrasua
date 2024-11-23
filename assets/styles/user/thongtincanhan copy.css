@@ -1,0 +1,365 @@
+.html,body{
+    font-family: Arimo, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(2, 108, 61);
+}
+.modal{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    flex-wrap: wrap;
+
+}
+
+.modal__over-lay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.modal__body{
+   width: 70%;
+   height: 70vh;
+   display: flex;
+    background-color:white;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 5%;
+    position: relative;
+    border: 1px solid rgb(190, 188, 188);
+    flex-direction: column;
+    flex-wrap:wrap;
+}
+h2{
+    margin-left: 5%;
+}
+
+/* Modal content */
+.modal__content{
+    display: flex;
+    width: 20%;
+    height: 30vh;
+    font-size: 15px;
+    text-decoration: none;
+     background-color:white;
+     border-radius: 10px;
+     margin: auto;
+     margin-top: 5%;
+     margin-right: 0px;
+     position: relative;
+     border: 1px solid rgb(190, 188, 188);
+     flex-direction: column; 
+     flex-wrap: wrap;
+ }
+ 
+
+
+ /* MENU THÔNG TIN CÁ NHÂN */
+/* SIDEBAR */
+.sidebar{
+    padding: 0px 20px;
+    margin-top: 20px;
+    list-style: none;
+    text-decoration: none;
+    flex-wrap: wrap;
+ }
+ /* CSS CÁC MỤC TRONG LIÊN HỆ */
+ .sidebar li{
+    margin-top: 20px;
+    border-bottom: 2px solid #eae7e7;
+ }
+
+ /* CSS THẺ A  */
+ .sidebar a{
+    margin-top: 40px;
+    text-decoration: none;
+    color:#706f6f;
+ }
+
+ /* CSS CÁC ICON TRONG MENU */
+ .icon-identify {
+    color: rgb(2, 108, 61);
+ }
+
+ /* CSS ICON > */
+ .icon-1{
+    color: #b2b1b1;
+    margin-left: 42%;
+ }
+
+ /* CSS ICON > */
+ .icon-2{
+    color: #b2b1b1;
+    margin-left: 63%;
+ }
+
+ /* CSS ICON > */
+ .icon-3{
+    color: #b2b1b1;
+    margin-left: 60%;
+ }
+
+ /* CSS ICON > */
+ .icon-4{
+    color: #b2b1b1;
+    margin-left: 25%;
+ }
+
+.sidebar a:hover{
+color: rgb(0, 0, 0);
+}
+
+
+
+/*THÔNG TIN CÁ NHÂN */
+
+/* CSS GROUP */
+.Information__group{
+    flex-direction: column;
+    padding: 0px 12px;
+    flex-wrap: wrap;
+}
+
+/* CSS HỌ & TÊN */
+/* CSS HỌ & TÊN/ GIỚI TÍNH/ NGÀY SINH/ TỈNH THÀNH PHỐ/ PHƯỜNG XÃ  */
+.Information__title{
+    max-width: 100px;
+    font-weight: 500px;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 8px;
+    margin-left: 8%;
+
+}
+
+/* CSS SỐ ĐIỆN THOẠI  */
+.Information__title-phone{
+    max-width: 100px;
+    font-weight: 500px;
+    font-size: 13px;
+    font-weight: 500px;
+    color: #888;
+    margin-bottom: 8px;
+    margin-left: 5%;
+}
+
+/*CSS SỐ CCCD */
+.Information__title-identify{
+    max-width: 100px;
+    font-weight: 500px;
+    font-size: 13px;
+    font-weight: 500px;
+    color: #888;
+    margin-bottom: 8px;
+    margin-left: 5%;
+}
+
+/* CSS MAIL */
+.Information__title-email{
+    max-width: 100px;
+    font-weight: 500px;
+    font-size: 13px;
+    font-weight: 500px;
+    color: #888;
+    margin-bottom: 8px;
+    margin-left: 5.3%;
+}
+
+/* CSS QUẬN/ HUYỆN */
+.Information__title-district{
+    max-width: 100px;
+    font-weight: 500px;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 8px;
+    margin-left: 5.1%;
+}
+
+/* CSS ĐỊA CHỈ */
+.Information__title-address{
+    max-width: 100px;
+    font-weight: 500px;
+    font-size: 13px;
+    font-weight: 500px;
+    color: #888;
+    margin-bottom: 8px;
+    margin-left: 5.3%;
+}
+
+/* CSS INPUT HỌ TÊN */
+.Information__name{
+    width: 300px;
+    height: 36px;
+    color:#cfc7c7;
+    margin-left: 45px;
+    padding: 0 30px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.Information__name:hover{
+    border: 1px solid #505050
+}
+
+/* CSS INPUT GIỚI TÍNH */
+.gender-input {
+    width: 275px;
+    height: 36px;
+    padding:0px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #b4b4b4;
+    margin-bottom: 10px;
+    margin-left: 45px;
+}
+.gender-input:hover{
+    border: 1px solid #505050;
+}
+
+/* CSS INPUT NGÀY SINH */
+.Information__date{
+    width: 300px;
+    height: 36px;
+    color:#cfc7c7;
+    margin-left: 38px;
+    padding: 0 30px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.Information__date:hover{
+    border: 1px solid #505050
+}
+/* CSS INPUT TỈNH/ THÀNH PHỐ */
+.location-input {
+    width: 275px;
+    height: 36px;
+    padding:0px 12px;
+    font-size: 14px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: 1px solid #b4b4b4;
+    margin-bottom: 10px;
+}
+.location-input:hover{
+    border: 1px solid #505050;
+}
+
+/* CSS INPUT PHƯỜNG XÃ */
+.Information__at{
+    width: 300px;
+    height: 36px;
+    color:#cfc7c7;
+    margin-left: 32px;
+    padding: 0 30px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.Information__at:hover{
+    border: 1px solid #505050
+}
+
+/* CSS INPUT SỐ ĐIỆN THOẠI */
+.Information__phone{
+    width: 300px;
+    height: 36px;
+    color:#cfc7c7;
+    margin-left: 50px;
+    padding: 0 30px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.Information__phone:hover{
+    border: 1px solid #505050
+}
+
+/*CSS INPUT CCCD  */
+.Information__identify{
+    width: 300px;
+    height: 36px;
+    color:#cfc7c7;
+    margin-left: 27px;
+    padding: 0 30px;
+    
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.Information__identify:hover{
+    border: 1px solid #505050
+}
+
+/* * CSS INPUT EMAIL */ 
+.Information__email{
+    width: 300px;
+    height: 36px;
+    color:#cfc7c7;
+    margin-left: 92px;
+    padding: 0 30px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.Information__email:hover{
+    border: 1px solid #505050
+}
+
+/* CSS INPUT QUẬN/ HUYỆN */
+.district-input{
+    width: 275px;
+    height: 36px;
+    padding: 0px 12px;
+    font-size: 14px;
+    margin-left: 50px;
+    border-radius: 5px;
+    border: 1px solid #b4b4b4;
+    margin-bottom: 10px;
+    margin-top: 7px;
+}
+.district-input:hover{
+    border: 1px solid #505050;
+}
+/* CSS INPUT ĐỊA CHỈ */
+.Information__address{
+    width: 300px;
+    height: 36px;
+    color:#cfc7c7;
+    margin-left: 80px;
+    padding: 0 30px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.Information__address:hover{
+    border: 1px solid #505050
+}
+
+
+/* CSS NÚT LƯU THAY ĐỔI */
+.save{
+    width:120px;
+    height: 30px;
+    background-color: rgb(2, 108, 61);
+    font-size: 12px;
+    font-weight: 600;
+    color: aliceblue;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+    margin-left: 80%;
+    border-radius: 5px;
+}
+.save:hover{
+    font-weight: 500;
+}
+.menubar{
+    background-color: #888;
+}
