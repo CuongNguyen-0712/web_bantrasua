@@ -5,87 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Đăng Kí</title>
-    <link rel="icon" type="image/x-icon" href="https://github.com/CuongNguyen-0712/web_bantrasua/blob/master/assets/img/logo.png?raw=true">
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lobster&family=Qwigley&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 <body>
-    <!-- Modal layout-->
-     <div class="modal">
+    <div class="modal">
+        <!-- Overlay phủ đen -->
         <div class="modal__over-lay">
-
+            <!-- Hình ảnh nền -->
+            <img src="https://katinat.vn/wp-content/uploads/2023/12/KAT_NEWBRANDING_COVERFB_3-scaled.jpg" alt="Background Image">
         </div>
+    
+        <!-- Nội dung Modal -->
         <div class="modal__body">
             <div class="modal__inner">
                 <!-- Auth form -->
                 <div class="auth-form">
-                    <!-- header -->
-                    <div class= "auth-form__header">
-                        <!-- welcome -->
+                    <div class="auth-form__header">
                         <div class="auth-form__welcome">
-                        <span class="auth-form-heading">Welcome to <strong>Clover Tea</strong>
-                            <i class="icon fa-solid fa-clover"></i>
-                        </span>
+                            <span class="auth-form-heading">Welcome to <strong>Clover Tea</strong>
+                                <i class="icon fa-solid fa-clover"></i>
+                            </span>
                         </div>
                         <h3 class="auth-form__heading">Đăng Ký</h3>
-                        <!-- switch-btn -->
                         <span class="auth-form__switch-btn">Bạn đã có tài khoản?
-                            <!-- switch-btn-link -->
                             <a href="./login.html" class="auth-form__switch-btn-link">Đăng nhập</a>
                         </span>
                     </div>
-                    <!-- auth-form__form -->
+                    <!-- Form đăng ký -->
                     <div class="auth-form__form">
-                        <!-- group -->
-                        <div class ="auth-form__group">
-                            <!-- title -->
+                        <div class="auth-form__group">
                             <span class="auth-form__title">Nhập họ tên:</span>
-                            <!-- input -->
-                            <input type="text" class ="auth-form__input" placeholder ="Nhập họ tên">
+                            <input type="text" class="auth-form__input" placeholder="Nhập họ tên">
                         </div>
-                        <!-- group -->
-                        <div class ="auth-form__group">
-                            <!-- title -->
+                        <div class="auth-form__group">
                             <span class="auth-form__title">Nhập email:</span>
-                                <!-- input -->
-                            <input type="text" class ="auth-form__input" placeholder ="Nhập email">
+                            <input type="text" class="auth-form__input" placeholder="Nhập email">
                         </div>
-                        <!-- group -->
-                        <div class ="auth-form__group">
-                            <!-- title -->
+                        <div class="auth-form__group">
                             <span class="auth-form__title">Nhập mật khẩu:</span>
-                            <!-- input -->
-                            <input type="password" class ="auth-form__input" placeholder ="Nhập mật khẩu">
+                            <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
                         </div>
-                        <!-- group -->
-                        <div class ="auth-form__group">
-                            <!-- title -->
+                        <div class="auth-form__group">
                             <span class="auth-form__title">Nhập lại mật khẩu:</span>
-                            <!-- input -->
-                            <input type="password" class ="auth-form__input" placeholder ="Nhập lại mật khẩu">
+                            <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
                         </div>
                     </div>
-                    <!-- auth-form__aside -->
+                    <!-- Điều khoản -->
                     <div class="auth-form__aside">
-                        <!-- policy-text-link -->
                         <a href="" class="auth-form__policy-text-link">Chấp nhận điều khoản: </a>
-                        <!-- check-box -->
                         <p class="auth-form__check-box">
-                        <input type="checkbox" id="member" name="member" value="guest">
-                        <label for="member">Khách hàng đăng kí trở thành Hội Viên Clover Tea</label>
+                            <input type="checkbox" id="member" name="member" value="guest">
+                            <label for="member">Khách hàng đăng kí trở thành Hội Viên Clover Tea</label>
                         </p>
                     </div>
-                    <!-- button__controls -->
+                    <!-- Nút đăng ký -->
                     <div class="auth-form__controls">
-                        <a href="./daDangNhap copy.html" class="btn-link"><button class="btn">ĐĂNG KÝ</button></a>
+                        <a href="./daDangNhap copy.html" class="btn-link">
+                            <button class="btn">ĐĂNG KÝ</button>
+                        </a>
                     </div>
-
-                 </div>
+                </div>
             </div>
         </div>
-     </div>
-
+    </div>
     
-</body>
-</html>
