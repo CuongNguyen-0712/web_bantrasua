@@ -59,7 +59,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .orders-fill{
-    min-width: 200px;
+    min-width: 11%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column; 
     gap: 20px; 
     width: 100%; 
-    max-width: 200px; 
+    max-width: 11%; 
   }
   
   .orders-time-fill input[type="date"] {
@@ -211,8 +211,6 @@ tr:hover {
     outline: 1px solid #ccc;
     flex-direction: column;
     overflow: hidden;
-  
-}
   
 .orders-detail_content {
     background-color: #fff;
