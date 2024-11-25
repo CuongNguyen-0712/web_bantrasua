@@ -95,14 +95,21 @@ body {
 
 /* CSS ICON FILTER */
 .icon-filter {
-    margin-left: 40px;
     position: absolute;
-    height: 700px;
+    left: 52%;
+    font-size: 18px;
     color: rgb(2, 108, 61);
     text-decoration: none;
     transform-origin: top left;
+    margin-left: 70px;
+    margin-top: 0;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
   }
+  .header__search-filter-link{
+    margin-bottom:13px;
+    text-decoration: none;  
+    color: rgb(2, 108, 61);
+}
   .icon-filter:hover .menu__filter {
     opacity: 1; 
     transform-origin: top left;
@@ -122,13 +129,14 @@ body {
   /* CSS MENU FILTER */
   .menu__filter {
     position: absolute;
-    height: 700px;
+    height: 450px;
     min-width: 250px;
     background-color: rgb(252, 249, 246);
     color: rgb(2, 108, 61);
     text-decoration: none;
-    opacity: 0; /* Ban đầu ẩn */
-    transform: scale(0); /* Ẩn phần tử ban đầu */
+    overflow-y:scroll;
+    opacity: 0; 
+    transform: scale(0); 
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Hiệu ứng mượt mà */
   }  
   /* CSS TIÊU ĐỀ MENUFILTER */
@@ -145,6 +153,7 @@ body {
     line-height: 2.0;
     padding: 5px 5px;
     margin-left: 10%;
+    font-size: 14px;
     font-family: Arimo, sans-serif;
     font-weight: 500;
     justify-content: center;
@@ -178,7 +187,7 @@ body {
 }
 
 .header__search-icon-link {
-  margin-top: 30px;
+  margin-top: 13%;
   color: rgb(2, 108, 61);
 }
 
@@ -190,6 +199,9 @@ body {
 .header__search-icon i:hover {
   color: #000000;
 }
+.icon-cart{
+  font-size: 18px;
+}
 
 /* ICON USER */
 .icon-user-wrapper {
@@ -198,8 +210,9 @@ body {
 }
 
 .icon-user {
-  margin-top: 90%;
+  margin-top: 30%;
   margin-left: 20px;
+  font-size: 18px;
   color: rgb(2, 108, 61);
   cursor: pointer;
 }
@@ -295,9 +308,14 @@ body {
   font-weight: 700;
 
 }
+.header__product{
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 /* CSS TIÊU ĐỀ TRÀ SỮA DROPDOWN*/
 .header__product-header {
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
 /*CSS MENU TRÀ SỮA DROPDOWN */
@@ -324,12 +342,15 @@ body {
 .header__nav-item__product {
   display: none;
   position: absolute;
-  height: 600px;
-  width: auto;
+  left:50%;
+  top: 100%;
+  width: 800px;
+  height: auto;
   background-color: rgb(252, 249, 246);
   color: rgb(2, 108, 61);
   text-decoration: none;
-  transform-origin: top left;
+  transform: translateX(-50%);
+  transform-origin: center;
 }
 
 .header__nav-item.header__nav-item--has-product{
@@ -345,11 +366,9 @@ body {
 @keyframes headerProductGrowth {
   from {
     opacity: 0;
-    transform: scale(0);
   }
   to {
     opacity: 1;
-    transform: scale(1);
   }
 }
 /* CSS ẢNH TRANG CHỦ */
@@ -460,8 +479,8 @@ body {
 
 /* SẢN PHẨM NỔI BẬT  */
 /* CSS BESTSELLER */
-.BestSeller h2 {
-  font-weight: 500;
+h2{
+  font-weight: 700;
   text-align: center;
   justify-content: center;
 }
@@ -536,7 +555,6 @@ body {
 .product-form__buy {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
   min-width: 25%;
   min-height: 15%;
 }
@@ -558,7 +576,7 @@ body {
 /* CSS Button */
 
 .more {
-  padding: 12px;
+  padding: 10px 50px;
   justify-content: center;
   text-align: center;
   margin-left: 45%;
@@ -570,8 +588,9 @@ body {
   border: 1px solid rgb(2, 108, 61);
 }
 .more:hover {
-  color: rgb(0, 0, 0);
-  border: 1px solid black;
+  background-color: rgb(2, 108, 61);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
 }
 
 /* TIN TỨC VÀ KHUYẾN MÃI */
@@ -684,6 +703,7 @@ body {
   margin-left: 10px;
   min-width: 100%;
   color: white;
+  font-size: 18px;
   background-color: rgb(2, 108, 61);
   padding: 20px 0;
 }
@@ -697,5 +717,17 @@ body {
 .form-container__rule {
   padding: 50px 60px;
   min-width: 30%;
+}
+
+.icon-contact-fb{
+  font-size: 25px;
+}
+.icon-contact-ig{
+  font-size: 25px;
+  margin-left: 15px;
+}
+.icon-contact-tiktok{
+  font-size: 25px;
+  margin-left: 15px;
 }
 
