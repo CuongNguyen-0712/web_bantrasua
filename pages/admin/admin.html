@@ -12,73 +12,81 @@
     <title>My admin</title>
   </head>
   <body>
-    <aside class="aside_admin">
-      <button class="btn active" onclick="handleLoadContent('product.html')">
-        <i class="fa-solid fa-mug-saucer"></i>
-      </button>
-      <button class="btn" onclick="handleLoadContent('user.html')">
-        <i class="fa-solid fa-users"></i>
-      </button>
-      <button class="btn" onclick="handleLoadContent('orders.html')">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </button>
-      <button class="btn" onclick="handleLoadContent('statistics.html')">
-        <i class="fa-solid fa-magnifying-glass-chart"></i>
-      </button>
-      <button class="btn">
-        <i class="fa-solid fa-gear"></i>
+    <aside class="aside_admin active">
+      <div class="heading_aside">
+        <i class="fa-solid fa-clover"></i>
+        <h1>Clover Tea</h1>
+      </div>
+      <div class="feature_admin">
+        <button class="btn" onclick="handleLoadContent('product.html')">
+          <i class="fa-solid fa-mug-saucer"></i>
+          <span class="name">Sản phẩm</span>
+        </button>
+        <button class="btn" onclick="handleLoadContent('user.html')">
+          <i class="fa-solid fa-users"></i>
+          <span class="name">Người dùng</span>
+        </button>
+        <button class="btn" onclick="handleLoadContent('orders.html')">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="name">Hóa đơn</span>
+        </button>
+        <button class="btn" onclick="handleLoadContent('statistics.html')">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <span class="name">Thống kê </span>
+        </button>
+        <button class="btn">
+          <i class="fa-solid fa-gear"></i>
+          <span class="name">Cài đặt</span>
+        </button>
+      </div>
+      <div class="footer_aside">
+        <button>
+          <span>Gửi ý kiến phản hồi</span>
+          <i class="fa-solid fa-comment"></i>
+        </button>
+      </div>
+      <button class="close_aside">
+        <i class="fa-solid fa-xmark"></i>
       </button>
     </aside>
-    <main class="main_admin">
+    <main class="main_admin active">
       <header class="header_admin">
-        <div class="feature_admin">
-          <div class="search">
-            <input type="text" placeholder="Search..." class="input_search" />
-            <span class="search_icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <i class="fa-solid fa-user"></i>
+        <div class="header_left">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Tìm kiếm" />
         </div>
-      </header>
-      <section class="admin_nav">
-        <div class="admin_avatar">
-          <div class="avatar">
-            <div class="frame">
-              <img
-                src="/assets/img/logo.png"
-                alt="admin_avatar"
-                class="avatar_img"
-              />
-              <i class="fa-solid fa-camera"></i>
+        <div class="header_right">
+          <i class="fa-regular fa-envelope"></i>
+          <i class="fa-regular fa-bell"></i>
+          <div class="admin_info">
+            <i class="fa-solid fa-user"></i>
+            <span>Admin</span>
+          </div>
+          <div class="admin_dropdown active">
+            <div class="dropdown_heading">
+              <img src="" alt="" />
+              <h4>CuongNguyen</h4>
             </div>
-          </div>
-        </div>
-        <div class="admin_info">
-          <div class="intro">
-            <h1>Xin chào CuongCoder!</h1>
-          </div>
-          <ul class="info">
-            <li>
-              <span>Tên đăng nhập:</span>
-              <span>Nguyễn Quốc Cường</span>
-            </li>
-            <li>
-              <span>Email:</span>
-              <span>quoccuong0712@gmail.com</span>
-            </li>
-            <li>
-              <span>Hình thức đăng nhập:</span>
-              <span>Administrator</span>
-            </li>
-          </ul>
-          <div class="footer_admin">
-            <button>Chỉnh sửa thông tin</button>
+            <div class="admin_center">
+              <button onclick="handleLoadContent('adminInfo.html')">
+                <i class="fa-solid fa-info"></i>
+                <span>Thông tin</span>
+              </button>
+              <button>
+                <i class="fa-regular fa-bell"></i>
+                <span>Thông báo</span>
+              </button>
+              <button>
+                <i class="fa-regular fa-envelope"></i>
+                <span>Hộp thư</span>
+              </button>
+            </div>
             <button>Đăng xuất</button>
           </div>
         </div>
-      </section>
-      <iframe id="content_admin" src="statistics.html"></iframe>
+      </header>
+      <iframe id="content_admin" src="adminInfo.html"></iframe>
     </main>
   </body>
   <script src="/assets/handle/admin/admin.js"></script>

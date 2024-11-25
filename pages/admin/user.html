@@ -23,7 +23,7 @@
         <span>Số điện thoại</span>
         <span>Mật khẩu</span>
         <span>Ngày tạo</span>
-        <span></span>
+        <div class="feature"></div>
       </li>
       <li>
         <span>1</span>
@@ -32,19 +32,19 @@
         <span>01210929109</span>
         <span>cuongcoder</span>
         <span>12/12/2022</span>
-        <span class="feature">
+        <div class="feature">
           <i class="fa-solid fa-ellipsis"></i>
           <div class="dropdown">
             <button>
               <span>Khóa</span>
               <i class="fa-solid fa-lock"></i>
             </button>
-            <button>
+            <button onclick="handleShowFormDelete()">
               <span>Xóa</span>
               <i class="fa-solid fa-trash"></i>
             </button>
           </div>
-        </span>
+        </d>
       </li>
       <li>
         <span>2</span>
@@ -53,19 +53,19 @@
         <span>1212133499</span>
         <span>gnasche.tntt</span>
         <span>12/23/2022</span>
-        <span class="feature">
+        <div class="feature">
           <i class="fa-solid fa-ellipsis"></i>
           <div class="dropdown">
             <button>
               <span>Khóa</span>
               <i class="fa-solid fa-lock"></i>
             </button>
-            <button>
+            <button onclick="handleShowFormDelete()">
               <span>Xóa</span>
               <i class="fa-solid fa-trash"></i>
             </button>
           </div>
-        </span>
+        </d>
       </li>
       <li>
         <span>3</span>
@@ -74,19 +74,19 @@
         <span>1213213123</span>
         <span>zxcvbn</span>
         <span>12/13/2022</span>
-        <span class="feature">
+        <div class="feature">
           <i class="fa-solid fa-ellipsis"></i>
           <div class="dropdown">
             <button>
               <span>Khóa</span>
               <i class="fa-solid fa-lock"></i>
             </button>
-            <button>
+            <button onclick="handleShowFormDelete()">
               <span>Xóa</span>
               <i class="fa-solid fa-trash"></i>
             </button>
           </div>
-        </span>
+        </d>
       </li>
       <li>
         <span>4</span>
@@ -95,21 +95,52 @@
         <span>01210929109</span>
         <span>jdkljklj</span>
         <span>12/12/1222</span>
-        <span class="feature">
+        <div class="feature">
           <i class="fa-solid fa-ellipsis"></i>
           <div class="dropdown">
             <button>
               <span>Khóa</span>
               <i class="fa-solid fa-lock"></i>
             </button>
-            <button>
+            <button onclick="handleShowFormDelete()">
               <span>Xóa</span>
               <i class="fa-solid fa-trash"></i>
             </button>
           </div>
-        </span>
+        </d>
       </li>
     </ul>
+    <div class="footer_user">
+        <div class="pagination">
+          <button>
+            <i class="fa-solid fa-angle-left"></i>
+            <span>Trước</span>
+          </button>
+          <button>
+            <span>Sau</span>
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+    </div>
+  </div>
+    <div class="form_delete_overlay">
+      <div class="form_delete">
+        <div class="heading_delete">
+          <h2>Xoá người dùng này?</h2>
+        </div>
+        <div class="content_delete">
+          Không thể hoàn tác lại dữ liệu người dùng này.
+        </div>
+        <div class="footer_delete">
+          <button class="btn_cancel" onclick="handleCancel()">Hủy</button>
+          <button class="btn_delete" onclick="handleDelete()">Xoá</button>
+        </div>
+        <div class="delete_background">
+          <div class="check"></div>
+          <span>Đã xóa</span>
+        </div>
+      </div>
+    </div>
   </section>
   <script src="/assets/handle/admin/user.js"></script>
 </html>

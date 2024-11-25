@@ -1,6 +1,6 @@
 html {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: 100%;
   width: 100%;
@@ -11,7 +11,7 @@ body {
   position: relative;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: max-content;
   width: 100%;
   overflow: scroll;
   overflow-x: hidden;
@@ -25,9 +25,9 @@ body::-webkit-scrollbar-track {
   background: rgb(245, 255, 250);
 }
 
-body::-webkit-scrollbar-thumb{
-  background: rgb( 2 108 61);
-} 
+body::-webkit-scrollbar-thumb {
+  background: rgb(2 108 61);
+}
 
 .section_user {
   display: flex;
@@ -36,7 +36,6 @@ body::-webkit-scrollbar-thumb{
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  padding-top: 20px;
   flex-direction: column;
 }
 
@@ -47,8 +46,9 @@ body::-webkit-scrollbar-thumb{
   align-items: flex-start;
   justify-content: center;
   border-bottom-left-radius: 10px;
+  padding-top: 20px;
   padding-left: 20px;
-  color : rgb( 2 108 61);
+  color: rgb(2 108 61);
   flex-direction: column;
   user-select: none;
   gap: 5px;
@@ -58,7 +58,17 @@ body::-webkit-scrollbar-thumb{
   color: #919090;
 }
 
-.section_user .table_user {
+.section_user .content_user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  gap: 100px;
+  flex-direction: column;
+}
+
+.table_user {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +88,7 @@ body::-webkit-scrollbar-thumb{
   gap: 10px;
 }
 
-.table_user li:not(:first-child):hover{
+.table_user li:not(:first-child):hover {
   background: rgb(245, 255, 250);
 }
 
@@ -98,7 +108,7 @@ li > span {
   text-align: center;
 }
 
-li:not(li:first-child) > span:last-child > i{
+li:not(li:first-child) > span:last-child > i {
   display: flex;
   height: 30px;
   width: 30px;
@@ -109,12 +119,11 @@ li:not(li:first-child) > span:last-child > i{
   cursor: pointer;
 }
 
-li:not(li:first-child) > span:last-child > i:hover{
+li:not(li:first-child) > span:last-child > i:hover {
   background: #cccaca;
 }
 
-li > span:nth-child(1),
-li > span:nth-child(7) {
+li > span:nth-child(1) {
   width: 10%;
 }
 
@@ -132,36 +141,242 @@ li > span:nth-child(3) {
   width: 25%;
 }
 
+li > .feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+}
+
+.feature > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.feature > i:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+
 .fa-solid.fa-ellipsis.active ~ .dropdown {
-    display: flex;
-    position: absolute;
-    height: max-content;
-    width: max-content;
-    padding: 10px;
-    background: #fff;
-    border-radius: 5px;
-    outline: 1px solid #ccc;
-    bottom: -80px;
-    right: 10px;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  position: absolute;
+  height: max-content;
+  width: max-content;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  outline: 1px solid #ccc;
+  bottom: -100px;
+  right: 20px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .fa-solid.fa-ellipsis ~ .dropdown {
-    display: none;
+  display: none;
 }
 
-.dropdown button{
-    display: flex;
-    height: 30px;
-    width: 80px;
-    border-radius: 5px;
-    background: #fff;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.dropdown button {
+  display: flex;
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.dropdown button:hover{
-    background: #e7e3e3;
+.dropdown button:hover {
+  background: #e7e3e3;
 }
+
+.footer_user{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: max-content;
+  width: 100%;
+  padding: 20px;
+  z-index: -1;
+}
+
+.footer_user .pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  gap: 20px;
+}
+
+.pagination > button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 80px;
+  border-radius: 5px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.pagination > button:nth-child(1){
+  background: rgb(245, 255, 250);
+  cursor: not-allowed;
+}
+
+.pagination > button:nth-child(2){
+  color: #fff;
+  background: rgb(2 108 61);
+}
+
+
+/* form-delete */
+
+.form_delete_overlay.show {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.8);
+  flex-wrap: wrap;
+}
+
+.form_delete_overlay {
+  display: none;
+}
+
+.form_delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 300px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.form_delete > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.form_delete .heading_delete {
+  justify-content: flex-start;
+  background-color: rgb(2 108 61);
+  padding: 0 10px;
+  font-size: 12px;
+  color: #fff;
+  user-select: none;
+}
+
+.form_delete .content_delete {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  flex-grow: 2;
+}
+
+.form_delete .footer_delete {
+  justify-content: flex-end;
+  background: rgb(245, 255, 250);
+  padding: 0 10px;
+  gap: 10px;
+}
+
+.footer_delete button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 30%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #fff;  
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.btn_delete {
+  background: rgb(231, 85, 85);
+}
+
+.btn_cancel {
+  background: rgb(2 108 61);
+}
+ 
+.footer_delete button:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.delete_background {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  flex-direction: column;
+  gap: 20px;
+  transform-origin: center;
+  transform: scale(0);
+  transition: 0.2s all ease-in;
+}
+
+.delete_background.show{
+  transform: scale(1);
+  transition: 0.2s all ease-out;
+}
+
+.delete_background .check{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  background: rgb(2 108 61);
+  border-radius: 50px;
+}
+
+.delete_background .check::before{
+  content: "";
+  display: flex;
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  left: 15px;
+  bottom: 33px;
+  transform: rotate(45deg);
+}
+
+.check::after{
+  content: "";
+  display: flex;
+  position: absolute;
+  height: 3px;
+  width: 40px;
+  background: #fff;
+  right: 10px;
+  transform: rotate(-45deg);
+}
+
+
