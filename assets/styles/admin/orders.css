@@ -211,6 +211,7 @@ tr:hover {
     outline: 1px solid #ccc;
     flex-direction: column;
     overflow: hidden;
+}
   
 .orders-detail_content {
     background-color: #fff;
