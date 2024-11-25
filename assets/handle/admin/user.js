@@ -1,3 +1,5 @@
+let onHandle = false;
+
 document.addEventListener("DOMContentLoaded", () => {
     let buttonActive;
     const featureBtns = document.querySelectorAll('.feature > i');
@@ -11,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 btn.classList.remove('active');
             })
 
+            document.body.style.overflow = 'hidden';
             button.classList.add('active');
             buttonActive = button;
             if (parentBtn[i + 1]) {
@@ -21,13 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    window.addEventListener('click', (e) => {
-        if (e.target !== buttonActive) {
-            featureBtns.forEach(btn => {
-                btn.classList.remove('active');
-            })
-        }
-    })
+    if(!onHandle) {
+        window.addEventListener('click', (e) => {
+            if (e.target !== buttonActive) {
+                featureBtns.forEach(btn => {
+                    btn.classList.remove('active');
+                })
+                document.body.style.overflow = 'auto';
+            }
+        })
+    }
 })
 
 const overlay_delete = document.querySelector('.form_delete_overlay');
@@ -35,6 +41,7 @@ const delete_background = document.querySelector('.delete_background');
 const cancel_btn = document.querySelector('.btn_cancel');
 const delete_btn = document.querySelector('.btn_delete');
 const handleShowFormDelete = () => {
+    onHandle = true;
     overlay_delete.classList.add('show');
 }
 
@@ -43,6 +50,7 @@ const handleDelete = () => {
     setTimeout(() => {
         overlay_delete.classList.remove('show');
         delete_background.classList.remove('show');
+        onHandle = false;
     }, 1000)
 }
 
