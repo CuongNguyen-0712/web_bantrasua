@@ -10,6 +10,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: rgb(2, 108, 61);
+  font-family: 'my font', sans-serif;
 }
 
 .header {
