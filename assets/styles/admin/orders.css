@@ -212,6 +212,34 @@ tr:hover {
     flex-direction: column;
     overflow: hidden;
 }
+  
+.orders-detail_content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.orders-detail_content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.orders-detail_content p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.orders-detail_close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+}
 
 .orders-pagination {
     display: flex;

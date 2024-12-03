@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLOVER-TEA</title>
-    <link rel="icon" type="image/x-icon" href="https://github.com/CuongNguyen-0712/web_bantrasua/blob/master/assets/img/offical.png?raw=true">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lobster&family=Qwigley&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
+    <link rel="stylesheet" href="/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link href="/assets/font/Arimo-VariableFont_wght.ttf" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Arimo:ital,wght@0,400..700;1,400..700&family=Lobster&family=Qwigley&display=swap" rel="stylesheet">
 
     <body>
     <div class= "web">
-        <header class ="header">
+        <header>
+        <div class ="header">
             <!-- Header__search -->
             <div class ="header__search">
                 <!-- LOGO -->
@@ -26,11 +27,13 @@
                 <div class="header__search-find">
                     <input type="text" placeholder="Tìm kiếm theo sản phẩm"id="search" name="search">
                     <!-- link -->
-                        <a href="/pages/user/milktea.html" class="header__search-find-link">
-                            <!-- icon-search -->
-                        <i class="icon-search fa-solid fa-magnifying-glass"></i>
-                            <!--icon-filter  -->
-                        <i class="icon-filter fa-solid fa-filter">
+                          <!-- icon-search -->
+                          <a href="/pages/user/milktea.html" class="header__search-find-link">
+                            <i class="icon-search fa-solid fa-magnifying-glass"></i>
+                            </a>
+                                <!-- icon-filter -->
+                            <a href="" class="header__search-filter-link">
+                            <i class="icon-filter fa-solid fa-filter">
                             <!-- MENU__FILTER -->
                             <div class="menu__filter">
                                 <h3>Bộ Lọc Tìm Kiếm</h3>
@@ -53,7 +56,7 @@
                                             <li><input type="radio" name="transport" id="transportvn" value="quick" checked>Nhanh</li>
                                             <li><input type="radio" name="transport" id="transportvn" value="save">Tiết Kiệm</li>
                                         </ul>
-                                        
+
                                 <ul class ="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i> Khoảng Giá
                                     <li><input type="" placeholder="Từ &#8363;"></li>
                                     <li><input type="" placeholder="Đến &#8363;"></li>
@@ -63,15 +66,13 @@
                             </div>
                         </i>
                         </a>
-                    
-                
                 </div>
                      <!-- HEADER__SEARCH-ICON -->
                 <div class="header__search-icon">
                         <!-- link -->
                     <a href="/pages/user/cart&payment.html" class="header__search-icon-link">
                              <!-- icon cart -->
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="icon-cart fa-solid fa-cart-shopping"></i>
                         </a>
                         <!-- Icon-user-wrapper -->
                         <div class="icon-user-wrapper">
@@ -98,12 +99,7 @@
                                         <i class="icon-login_3 fa-solid fa-boxes-stacked"></i>
                                         <a href="./purchase.html">Đơn Mua</a>
                                     </li>
-                                    <!-- item-4 -->
-                                    <li class="menu__user-item-4">
-                                        <!-- icon-login_4 -->
-                                        <i class="icon-login_4 fa-solid fa-clock-rotate-left"></i>
-                                        <a href="./purchase.html">Lịch Sử</a>
-                                    </li>
+                                
                                     <!-- item 5 -->
                                     <li class="menu__user-item-5">
                                         <!-- icon-login_5 -->
@@ -130,6 +126,7 @@
                 <!-- Header__nav-item__product -->
                  <!-- MENU TRÀ SỮA -->
                     <div class="header__nav-item__product">
+                        <div class="header__product">
                         <!-- Header__product-header -->
                         <header class="header__product-header">
                             <h3>TRÀ SỮA</h3>
@@ -160,22 +157,22 @@
                            </header>
                            <ul class="header__product-list">
                                <li class="header__product-item">
-                                   <a href="/pages/user/milktea.html" class="header__product-name-item">Clover Trà Xanh</a>
+                                   <a href="/pages/user/tea.html" class="header__product-name-item">Clover Trà Xanh</a>
                                </li>
                                <li class="header__product-item">
-                                   <a href="/pages/user/milktea.html" class="header__product-name-item">Olong Đào Tiên</a>
+                                   <a href="/pages/user/tea.html" class="header__product-name-item">Olong Đào Tiên</a>
                                </li>
                                <li class="header__product-item">
-                                   <a href="/pages/user/milktea.html" class="header__product-name-item">Hồng Long Pha Lê Tuyết</a>
+                                   <a href="/pages/user/tea.html" class="header__product-name-item">Hồng Long Pha Lê Tuyết</a>
                                </li>
                                <li class="header__product-item">
-                                   <a href="/pages/user/milktea.html" class="header__product-name-item">Mỹ Nhân Thanh Trà</a>
+                                   <a href="/pages/user/tea.html" class="header__product-name-item">Mỹ Nhân Thanh Trà</a>
                                </li>
                                <li class="header__product-item">
-                                   <a href="/pages/user/milktea.html" class="header__product-name-item">Trà Nhãn Hoa Mộc Lê</a>
+                                   <a href="/pages/user/tea.html" class="header__product-name-item">Trà Nhãn Hoa Mộc Lê</a>
                                </li>
                                <li class="header__product-item">
-                                <a href="/pages/user/milktea.html" class="header__product-name-item">Bách Trà Thảo Mộc</a>
+                                <a href="/pages/user/tea.html" class="header__product-name-item">Bách Trà Thảo Mộc</a>
                             </li>
                            </ul>
                            <header class="header__product-header">
@@ -183,25 +180,36 @@
                            </header>
                            <ul class="header__product-list">
                                <li class="header__product-item">
-                                   <a href="/pages/user/milktea.html" class="header__product-name-item">Americano</a>
+                                   <a href="/pages/user/coffee.html" class="header__product-name-item">Americano</a>
                                </li>
                                <li class="header__product-item">
-                                   <a href="/pages/user/milktea.html" class="header__product-name-item">Capuchino</a>
+                                   <a href="/pages/user/coffee.html" class="header__product-name-item">Capuchino</a>
                                </li>
                                <li class="header__product-item">
-                                   <a href="/pages/user/milktea.html" class="header__product-name-item">Latte</a>
+                                   <a href="/pages/user/coffee.html" class="header__product-name-item">Latte</a>
                                </li>
+                               <li class="header__product-item">
+                                <a href="/pages/user/coffee.html" class="header__product-name-item">Espresso</a>
+                            </li>
+                            <li class="header__product-item">
+                                <a href="/pages/user/coffee.html" class="header__product-name-item">Machiato</a>
+                            </li>
+                            <li class="header__product-item">
+                                <a href="/pages/user/coffee.html" class="header__product-name-item">Cold Brew</a>
+                            </li>
                             </ul>
+                        </div>
                     </div>
                 </li>
                 <li class="header__nav-item">
                     <a href="/pages/user/aboutUs copy.html" class="header__nav-item">VỀ CHÚNG TÔI</a>
             </li> 
             </li>
-        
             </div>
-        </header>
+        </div>
+</header>
         <!-- Ảnh trang chủ -->
+<main>
         <div class="slideShow">
             <div class="list-image">
                     <img src="https://katinat.vn/wp-content/uploads/2024/04/KAT_BANNER-WEB_CPPM.jpg" width="100%" alt="">
@@ -258,10 +266,12 @@
         
                 <!-- Button -->
                 <div class="product-form__buy">
+                    <a href="/pages/user/datMua copy.html"  class="product-form__buy-btn">
                     <button class="product-form__buy-btn">
                     <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                     Đặt mua
                     </button>
+                    </a>
                 </div>
     
             </div>
@@ -285,10 +295,12 @@
         
                 <!-- Button -->
                 <div class="product-form__buy">
+                    <a href="/pages/user/datMua copy.html"  class="product-form__buy-btn">
                     <button class="product-form__buy-btn">
                     <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                     Đặt mua
                     </button>
+                    </a>
                 </div>
     
             </div>
@@ -314,10 +326,12 @@
         
                 <!-- Button -->
                 <div class="product-form__buy">
+                    <a href="/pages/user/datMua copy.html"  class="product-form__buy-btn">
                     <button class="product-form__buy-btn">
                     <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                     Đặt mua
                     </button>
+                </a>
                 </div>
     
             </div>
@@ -341,16 +355,18 @@
         
                 <!-- Button -->
                 <div class="product-form__buy">
+                    <a href="/pages/user/datMua copy.html"  class="product-form__buy-btn">
                     <button class="product-form__buy-btn">
                     <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                     Đặt mua
                     </button>
+                    </a>
                 </div>
             </div>
         </div>
         </div>
         <button class="more">
-            Xem thêm 3 Sản Phẩm Nổi Bật
+            Xem thêm
         </button>
     </div>
 
@@ -417,8 +433,9 @@
     <!-- Information -->
     <a href="#" class="status-more__information">Xem Thêm</a>
     </div>
-
+</main>
 <!-- LIÊN HỆ  -->
+ <footer>
                 <!--FORM-CONTAINER  -->
         <div class="form-container"> 
             <!-- contact -->
@@ -427,9 +444,11 @@
             <p><i class="fa-regular fa-envelope"></i> Email: clovertea2678@gmail.com</p>
             <p><i class="fa-solid fa-phone"></i> Hotline: 0968597549</p>
             <p><i class="fa-solid fa-building"></i> Công ty TNHH Clover Tea</p> 
-            <p><i class="fa-brands fa-facebook"></i> 
-                 <i class="fa-brands fa-instagram"></i>
-                 <i class="fa-brands fa-tiktok"></i>
+
+            <p>
+                <i class="icon-contact-fb fa-brands fa-facebook"></i> 
+                 <i class="icon-contact-ig fa-brands fa-instagram"></i>
+                 <i class="icon-contact-tiktok fa-brands fa-tiktok"></i>
             </p>
         </div>
             <!-- information -->
@@ -445,6 +464,6 @@
         </div>
     </div>
     </div>
-    
+</footer>
 </body>
 </html>

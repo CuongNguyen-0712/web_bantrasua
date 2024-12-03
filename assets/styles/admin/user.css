@@ -58,7 +58,17 @@ body::-webkit-scrollbar-thumb {
   color: #919090;
 }
 
-.section_user .table_user {
+.section_user .content_user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  gap: 100px;
+  flex-direction: column;
+}
+
+.table_user {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,6 +197,47 @@ li > .feature {
   background: #e7e3e3;
 }
 
+.footer_user{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: max-content;
+  width: 100%;
+  padding: 20px;
+  z-index: -1;
+}
+
+.footer_user .pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  gap: 20px;
+}
+
+.pagination > button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 80px;
+  border-radius: 5px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.pagination > button:nth-child(1){
+  background: rgb(245, 255, 250);
+  cursor: not-allowed;
+}
+
+.pagination > button:nth-child(2){
+  color: #fff;
+  background: rgb(2 108 61);
+}
+
+
 /* form-delete */
 
 .form_delete_overlay.show {
@@ -197,19 +248,8 @@ li > .feature {
   height: 100%;
   width: 100%;
   opacity: 1;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.8);
   flex-wrap: wrap;
-}
-
-.form_delete_overlay.show::before {
-  content: "";
-  display: flex;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background: #fff;
-  opacity: 0.8;
-  z-index: 0;
 }
 
 .form_delete_overlay {
