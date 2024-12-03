@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(2, 108, 61);
+  font-family: 'my font', sans-serif;
+}
+
+.header {
+  background-color: #333;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header__search {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+
+/* CSS LOGO */
+/* Header__search-logo */
+.header__search-logo {
+    width: 20%;
+    margin-left: 10%;
+  }
+  
+  .icon-logo {
+    rotate: 35deg;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .icon-logo:hover {
+    color: rgb(2, 108, 61);
+  }
+
+  .header__search-logo-link:hover {
+    color: rgb(2, 108, 61);
+  }
+
+  .header__search-logo-link {
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: Anton SC, sans-serif;
+  }
+
+
+/* CSS THANH TÌM KIẾM */
+.header__search-find {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.header__search input[type="text"] {
+    padding: 12px;
+    width: 400px;
+    border-radius: 50px;
+    border: 1px;
+    background-color: #eeecec;
+    margin-left: 10%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.header__search-find-link {
+    margin-left: 25%;
+    position: absolute;
+    text-decoration: none;  
+    color: rgb(2, 108, 61);
+}
+.header__search-find-link:hover {
+    color: black;
+}
+
+
+  /* CSS ICON TÌM KIẾM */
+.icon-search {
+    margin-left: 10px;
+ }
+  
+  /* FILTER */
+/* BỘ LỌC TÌM KIẾM */
+
+/* CSS ICON FILTER */
+.icon-filter {
+    position: absolute;
+    left: 52%;
+    font-size: 18px;
+    color: rgb(2, 108, 61);
+    text-decoration: none;
+    transform-origin: top left;
+    margin-left: 70px;
+    margin-top: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+}
+.header__search-filter-link{
+    margin-bottom:13px;
+    text-decoration: none;  
+    color: rgb(2, 108, 61);
+}
+.icon-filter:hover .menu__filter {
+    opacity: 1; 
+    transform-origin: top left;
+    transform: scale(1); 
+    animation: headerFilterGrowth ease-in 0.3s;
+}
+
+@keyframes headerFilterGrowth {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
+
+  /* CSS MENU FILTER */
+.menu__filter {
+    position: absolute;
+    height: 450px;
+    min-width: 250px;
+    background-color: rgb(252, 249, 246);
+    color: rgb(2, 108, 61);
+    text-decoration: none;
+    overflow-y:scroll;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}  
+
+  /* CSS TIÊU ĐỀ: BỘ LỌC TÌM KIẾM */
+.menu__filter h3 {
+    font-family: Arimo, sans-serif;
+    font-weight: 700;
+    justify-content: center;
+    text-align: center
+}  
+
+  /* CSS MENU__FILTER-ITEM */
+.menu__filter-item {
+    list-style-type: none;
+    color: rgb(8, 86, 51);
+    line-height: 2.0;
+    padding: 5px 5px;
+    margin-left: 10%;
+    font-size: 14px;
+    font-family: Arimo, sans-serif;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.menu__filter-item li:hover{
+    color: white;
+    font-size: 15px;
+    background-color:rgb(2, 108, 61);
+}
+
+/* CSS BUTTON ÁP DỤNG */
+.button-filter{
+    background-color: rgb(2, 108, 61);
+    color:white;
+    border-radius: 3px;
+    border: none;
+    justify-content: center;
+    text-align: center;
+    padding:5px;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+  /* HEADER__SEARCH-ICON */
+/* GIỎ HÀNG VÀ ĐĂNG NHẬP/ ĐĂNG KÝ */
+
+.header__search-icon {
+    display: flex;
+    gap: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+  /* CSS ICON GIỎ HÀNG */
+.header__search-icon i {
+    cursor: pointer;
+}
+
+.header__search-icon i:hover {
+    color: #000000;
+}
+
+.header__search-icon-link {
+    margin-top: 13%;
+    color: rgb(2, 108, 61);
+}
+.icon-cart{
+  font-size: 18px;
+}
+  
+  /* CSS ICON USER */
+  .icon-user-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .icon-user {
+      margin-top:30%;
+      margin-left: 20px;
+      font-size: 18px;
+      color: rgb(2, 108, 61);
+      cursor: pointer;
+    }
+    
+    /* CSS MENU ĐĂNG KÝ/ĐĂNG NHẬP */
+    .menu__user {
+      position: absolute;
+      top: 100%; 
+      left: 0;
+      min-width: 150px;
+      background-color: #eceaea;
+      padding: 10px;
+      display: none; 
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .icon-user-wrapper:hover .menu__user {
+      display: block; 
+    }
+    
+    /* Menu item */
+    .menu__user-item {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    /* Các mục li */
+    .menu__user-item li {
+      display: flex;
+      align-items: center;
+      padding: 10px; 
+      font-weight:500;
+      border-bottom: 1px solid white;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .menu__user-item li:last-child {
+      border-bottom: none;
+    }
+    
+    .menu__user-item li:hover {
+      background-color: rgb(2, 108, 61);
+      color: white;
+    }
+    /* Thẻ a  */
+    .menu__user-item a {
+      text-decoration: none;
+      color: inherit;
+      margin-left: 8px;
+      display: block;
+    }
+    
+    /* Icon menu */
+    .icon-login_1, .icon-login_2 {
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    /* THANH NAV-BAR/ TRANG CHỦ;SẢN PHẨM & VỀ CHÚNG TÔI */
+/* Header__nav */
+.header__nav {
+    min-height: 42px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #f5f4f4;
+    text-decoration: none;
+    line-height: 1.5;
+    flex-direction: row;
+  }
+  
+  .header__nav-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .header__nav-item {
+    color: #9d9c9c;
+    list-style: none;
+    margin: 0 50px;
+    margin-top: 5px;
+    justify-content: space-between;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .header__nav-item:hover {
+    color: rgb(2, 108, 61);
+    font-weight: 700;
+  
+  }
+  .header__product{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  /* CSS TIÊU ĐỀ TRÀ SỮA DROPDOWN*/
+  .header__product-header {
+    margin-left: 15px;
+  }
+  
+  /* CSS MENU TRÀ SỮA DROPDOWN */
+  .header__product-list {
+    list-style-type: none;
+    color: #9d9c9c;
+    font-weight: 300;
+  }
+
+  .header__product-item{
+    width:auto;
+  }
+  /* CSS TÊN TỪNG LOẠI TRÀ SỮA DROPDOWN */
+  .header__product-name-item {
+    display: flex;
+    text-decoration: none;
+    color: #9d9c9c;
+    line-height: 1.5;
+    padding: 5px 5px;
+
+  }
+  
+  .header__product-name-item:hover {
+    background-color: rgb(2, 108, 61);
+    color: white;
+  }
+  
+  /* Header__nav-item-product */
+  .header__nav-item__product {
+    display: none;
+    position: absolute;
+    left:50%;
+    top: 100%;
+    width:800px;
+    height: auto;
+    background-color: rgb(252, 249, 246);
+    color: rgb(2, 108, 61);
+    text-decoration: none;
+    transform: translateX(-50%);
+    transform-origin: center;
+  }
+  /* TIÊU ĐỀ SẢN PHẨM */
+  .header__nav-item.header__nav-item--has-product{
+    margin-top:9.6px;
+
+  }
+
+  .header__nav-item.header__nav-item--has-product:hover
+    .header__nav-item__product {
+    display: block;
+    animation: headerProductGrowth ease-in 0.2s;
+  }
+  
+  @keyframes headerProductGrowth {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* /////////////////////////////////////////////////// */
+
+  /* FOOTER */
+  /* Footer */
+/* LIÊN HỆ VÀ ĐỊA CHỈ */
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-top: 55px;
+    min-width: 100%; 
+    font-size: 18px;
+    color: white;
+    background-color: rgb(2, 108, 61);
+    padding: 20px 0; 
+  }
+  
+  .bolded {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .form-container__contact,
+  .form-container__information,
+  .form-container__rule {
+    padding: 50px 60px;
+    min-width: 30%;
+  }
+  
+  .icon-contact-fb{
+    font-size: 25px;
+  }
+  .icon-contact-ig{
+    font-size: 25px;
+    margin-left: 15px;
+  }
+  .icon-contact-tiktok{
+    font-size: 25px;
+    margin-left: 15px;
+  }
