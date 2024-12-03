@@ -3,6 +3,12 @@
     src: url(/assets/font/Arimo-VariableFont_wght.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'second-font';
+    src: url(/assets/font/Arimo-VariableFont_wght.ttf) format('truetype');
+}
+
+
 *{
     margin: 0;
     padding: 0;
