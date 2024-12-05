@@ -1,3 +1,4 @@
+
 html{
   width: 100vw;
   height: 100vh;
@@ -7,14 +8,18 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  flex-direction: column;
+  margin-top: 3%;
 }
 
 .product-form{
-  width: 40%;
-  height: 75vh;
+  width: 30%;
+  height: 60vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-top: 50px;
   gap: 20px;
@@ -114,9 +119,8 @@ body{
   justify-content: center;
   align-items: center;
   list-style: none;
-  position: absolute;
-  bottom: -40px;
-  margin-right: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .pagination-item{
@@ -147,6 +151,42 @@ body{
   line-height: 30px;
   border-radius: 2px;
 }
+
+.form-container {
+  display: flex;
+  line-height: 3;
+  justify-content: space-around;
+  margin-left: 10px;
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(2, 108, 61);
+  padding: 20px 0;
+}
+.bolded {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form-container__contact,
+.form-container__information,
+.form-container__rule {
+  padding: 50px 60px;
+  min-width: 30%;
+}
+
+.icon-contact-fb{
+  font-size: 25px;
+}
+.icon-contact-ig{
+  font-size: 25px;
+  margin-left: 15px;
+}
+.icon-contact-tiktok{
+  font-size: 25px;
+  margin-left: 15px;
+}
+
 
 
 
