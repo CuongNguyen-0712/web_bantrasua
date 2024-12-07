@@ -51,9 +51,10 @@ body{
 /* ĐĂNG ký */
 .auth-form{
     margin-top: 100px;
+    margin-left: 45px;
     padding: 0 32px;
     width: 550px;
-    height: 715px;
+    height: 100vh;
 }
 
 .auth-form__header{
