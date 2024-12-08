@@ -1,12 +1,19 @@
-body{
+body {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
-.header-form{
+.form {
+    margin-top: 17%;
+}
+
+.header-form {
     width: 700px;
     height: 30px;
     display: flex;
@@ -18,42 +25,44 @@ body{
     line-height: 30px;
 }
 
-.header-form-item--all{
+.header-form-item--all {
     color: rgb(2, 108, 61);
     border-bottom: 1px solid rgb(2, 108, 61);
 }
 
-.header-form-item:hover{
+.header-form-item:hover {
     color: rgb(2, 108, 61);
     opacity: 0.6;
 }
 
-.purchase-form{
+.purchase-form {
     width: 700px;
-    margin-top: 20px;
+    margin-top: 4%;
+    margin-bottom: 5%;
 }
 
-.purchase-header{
+.purchase-header {
     display: flex;
     justify-content: space-between;
     padding-bottom: 5px;
     border-bottom: 2px solid rgba(2, 108, 61, 0.8);
 }
 
-.purchase-header__heading{
+.purchase-header__heading {
     width: 280px;
     display: flex;
     justify-content: space-between;
     gap: 5px;
 }
-.purchase-header__heading-item{
+
+.purchase-header__heading-item {
     color: rgb(2, 108, 61);
     font-size: 17px;
     font-weight: 700;
     flex: 1;
 }
 
-.purchase-header__heading-btn-chat{
+.purchase-header__heading-btn-chat {
     width: 60px;
     height: 22px;
     background-color: rgb(2, 108, 61);
@@ -62,19 +71,19 @@ body{
     border-radius: 2px;
 }
 
-.purchase-header__heading-btn-shop{
+.purchase-header__heading-btn-shop {
     width: 90px;
     background-color: #fff;
     border: 1px solid rgb(210, 213, 215);
     border-radius: 2px;
 }
 
-.purchase-header__heading-btn-content{
+.purchase-header__heading-btn-content {
     text-decoration: none;
-    color:#4f4949 ;
+    color: #4f4949;
 }
 
-.purchase-header-status{
+.purchase-header-status {
     width: 270px;
     display: flex;
     justify-content: space-between;
@@ -82,15 +91,15 @@ body{
     position: relative;
 }
 
-.purchase-header-status--success{
+.purchase-header-status--success {
     color: rgba(2, 108, 61, 0.8);
 }
 
-.purchase-header-status--rating{
+.purchase-header-status--rating {
     color: rgba(222, 40, 40, 0.94);
 }
 
-.purchase-header-status--separate::after{
+.purchase-header-status--separate::after {
     content: "";
     display: block;
     position: absolute;
@@ -100,20 +109,20 @@ body{
     border: 1px solid #ccc;
 }
 
-.order-form{
+.order-form {
     text-decoration: none;
 }
 
-.order-form__item{
+.order-form__item {
     display: flex;
     margin-top: 10px;
     padding-bottom: 5px;
     position: relative;
     border-bottom: 1px solid rgb(210, 213, 215);
-    
+
 }
 
-.order-form__item-image{
+.order-form__item-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,72 +133,75 @@ body{
     cursor: pointer;
 }
 
-.order-form__item-img{
+.order-form__item-img {
     width: 70%;
     height: 70%;
 }
 
-.order-form__content{
+.order-form__content {
     width: 550px;
     margin-left: 10px;
 }
 
-.order-form__title{
+.order-form__title {
     color: rgb(2, 108, 61);
     font-size: 16px;
     font-weight: 400;
 }
 
-.order-form__describ{
+.order-form__describ {
     font-size: 14px;
     color: #676464;
 }
 
-p{
+.form p {
     font-size: 14px;
     color: #676464;
 }
 
-.order-form__cost{
+.order-form__cost {
     position: absolute;
     right: 0;
     top: 40px;
-    color:rgb(2, 108, 61);
+    color: rgb(2, 108, 61);
 }
 
-.order-form__footer{
+.order-form__footer {
     width: 100%;
-    height: 60px;
+    height: 5%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
     margin-top: 20px;
+    margin-bottom: 2%;
 }
 
-.order-form__ctn{
+.order-form__ctn {
     display: flex;
-    width: max-content;    /*chiều rộng box bằng nội dung bên trong*/
-    margin: 20px;   
+    width: max-content;
+    /*chiều rộng box bằng nội dung bên trong*/
+    margin: 20px;
 }
 
-.order-form__ctn-cost{
+.order-form__ctn-cost {
     color: rgb(2, 108, 61);
     font-size: 25px;
     margin-top: -5px;
 }
 
-.order-form__btn-reorder{
+.order-form__btn-reorder {
     width: 150px;
     height: 30px;
     background-color: rgb(2, 108, 61);
     color: #fff;
-    font-size: 14px;;
+    font-size: 14px;
+    ;
     border: 1px solid rgb(2, 108, 61);
     border-radius: 2px;
 }
 
-.order-form__btn-more{
+.order-form__btn-more {
     width: 100px;
     height: 30px;
     background-color: #fff;
@@ -201,7 +213,45 @@ p{
 .purchase-header-status--rating:hover,
 .purchase-header__heading-btn-shop:hover,
 .purchase-header__heading-btn-chat:hover,
-.order-form__btn-reorder:hover{
+.order-form__btn-reorder:hover {
     cursor: pointer;
     opacity: 0.7;
+}
+
+.form-container {
+    display: flex;
+    line-height: 3;
+    justify-content: space-around;
+    margin-left: 10px;
+    width: 100%;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(2, 108, 61);
+    padding: 20px 0;
+}
+
+.bolded {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form-container__contact,
+.form-container__information,
+.form-container__rule {
+    padding: 50px 60px;
+    min-width: 30%;
+}
+
+.icon-contact-fb {
+    font-size: 25px;
+}
+
+.icon-contact-ig {
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+.icon-contact-tiktok {
+    font-size: 25px;
+    margin-left: 15px;
 }
