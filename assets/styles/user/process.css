@@ -399,38 +399,3 @@ p{
 .detail-form__form-item--pay{
     font-weight: 600;
 }
-
-.form-container {
-    display: flex;
-    line-height: 3;
-    justify-content: space-around;
-    margin-left: 10px;
-    width: 100%;
-    font-size: 18px;
-    color: white;
-    background-color: rgb(2, 108, 61);
-    padding: 20px 0;
-  }
-  .bolded {
-    font-size: 20px;
-    font-weight: 500;
-  }
-  
-  .form-container__contact,
-  .form-container__information,
-  .form-container__rule {
-    padding: 50px 60px;
-    min-width: 30%;
-  }
-  
-  .icon-contact-fb{
-    font-size: 25px;
-  }
-  .icon-contact-ig{
-    font-size: 25px;
-    margin-left: 15px;
-  }
-  .icon-contact-tiktok{
-    font-size: 25px;
-    margin-left: 15px;
-  }
