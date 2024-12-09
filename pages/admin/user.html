@@ -35,9 +35,13 @@
         <div class="feature">
           <i class="fa-solid fa-ellipsis"></i>
           <div class="dropdown">
-            <button>
+            <button onclick="handleShowFormLock()">
               <span>Khóa</span>
               <i class="fa-solid fa-lock"></i>
+            </button>
+            <button onclick="handleShowFormAdd()">
+              <span>Thêm</span>
+              <i class="fa-solid fa-user-plus"></i>
             </button>
             <button onclick="handleShowFormDelete()">
               <span>Xóa</span>
@@ -56,9 +60,13 @@
         <div class="feature">
           <i class="fa-solid fa-ellipsis"></i>
           <div class="dropdown">
-            <button>
+            <button onclick="handleShowFormLock()">
               <span>Khóa</span>
               <i class="fa-solid fa-lock"></i>
+            </button>
+            <button onclick="handleShowFormAdd()">
+              <span>Thêm</span>
+              <i class="fa-solid fa-user-plus"></i>
             </button>
             <button onclick="handleShowFormDelete()">
               <span>Xóa</span>
@@ -77,9 +85,13 @@
         <div class="feature">
           <i class="fa-solid fa-ellipsis"></i>
           <div class="dropdown">
-            <button>
+            <button onclick="handleShowFormLock()">
               <span>Khóa</span>
               <i class="fa-solid fa-lock"></i>
+            </button>
+            <button onclick="handleShowFormAdd()">
+              <span>Thêm</span>
+              <i class="fa-solid fa-user-plus"></i>
             </button>
             <button onclick="handleShowFormDelete()">
               <span>Xóa</span>
@@ -98,9 +110,13 @@
         <div class="feature">
           <i class="fa-solid fa-ellipsis"></i>
           <div class="dropdown">
-            <button>
+            <button onclick="handleShowFormLock()">
               <span>Khóa</span>
               <i class="fa-solid fa-lock"></i>
+            </button>
+            <button onclick="handleShowFormAdd()">
+              <span>Thêm</span>
+              <i class="fa-solid fa-user-plus"></i>
             </button>
             <button onclick="handleShowFormDelete()">
               <span>Xóa</span>
@@ -133,11 +149,55 @@
         </div>
         <div class="footer_delete">
           <button class="btn_cancel" onclick="handleCancel()">Hủy</button>
-          <button class="btn_delete" onclick="handleDelete()">Xoá</button>
+          <button class="btn_delete" onclick="handleDeleteUser()">Xoá</button>
         </div>
         <div class="delete_background">
           <div class="check"></div>
           <span>Đã xóa</span>
+        </div>
+      </div>
+    </div>
+    <div class="form_lock_overlay">
+      <div class="form_lock">
+        <div class="heading_lock">
+          <h2>Khóa người dùng này?</h2>
+        </div>
+        <div class="content_lock">
+          Tài khoản người dùng này sẽ bị khóa
+        </div>
+        <div class="footer_lock">
+          <button class="btn_cancel" onclick="handleCancel()">Hủy</button>
+          <button class="btn_lock" onclick="handleLockUser()">Khóa</button>
+        </div>
+        <div class="lock_background">
+          <div class="check"></div>
+          <span>Đã khóa</span>
+        </div>
+      </div>
+    </div>
+    <div class="form_add_overlay">
+      <div class="form_add">
+        <div class="heading_add">
+          <h2>Thêm tài khoản người dùng</h2>
+        </div>
+        <div class="content_add">
+          <h4>Họ và tên</h4>
+          <input type="text" placeholder="Nhập họ và tên">
+          <h4>Email</h4>
+          <input type="text" placeholder="Nhập email">
+          <h4>Số điện thoại</h4>
+          <input type="text" placeholder="Nhập số điện thoại">
+          <h4>Mật khẩu</h4>
+          <input type="text" placeholder="Nhập mật khẩu">
+          <span>Ngày tạo: 10/12/2024</span>
+        </div>
+        <div class="footer_add">
+          <button class="btn_cancel" onclick="handleCancel()">Hủy</button>
+          <button class="btn_add" onclick="handleAddUser()">Tạo</button>
+        </div>
+        <div class="add_background">
+          <div class="check"></div>
+          <span>Đã tạo</span>
         </div>
       </div>
     </div>

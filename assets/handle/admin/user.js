@@ -38,14 +38,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const overlay_delete = document.querySelector('.form_delete_overlay');
 const delete_background = document.querySelector('.delete_background');
-const cancel_btn = document.querySelector('.btn_cancel');
 const delete_btn = document.querySelector('.btn_delete');
+
+const overlay_lock = document.querySelector('.form_lock_overlay');
+const lock_background = document.querySelector('.lock_background');
+const lock_btn = document.querySelector('.btn_lock');
+
+const overlay_add = document.querySelector('.form_add_overlay');
+const add_background = document.querySelector('.add_background');
+const add_btn = document.querySelector('.btn_add');
+
+const cancel_btn = document.querySelector('.btn_cancel');
 const handleShowFormDelete = () => {
     onHandle = true;
     overlay_delete.classList.add('show');
 }
 
-const handleDelete = () => {
+const handleShowFormLock = () => {
+    onHandle = true;
+    overlay_lock.classList.add('show');
+}
+
+const handleShowFormAdd = () => {
+    onHandle = true;
+    overlay_add.classList.add('show');
+}
+
+const handleDeleteUser = () => {
     delete_background.classList.add('show');
     setTimeout(() => {
         overlay_delete.classList.remove('show');
@@ -54,6 +73,27 @@ const handleDelete = () => {
     }, 1000)
 }
 
+const handleLockUser = () => {
+    lock_background.classList.add('show');
+    setTimeout(() => {
+        overlay_lock.classList.remove('show');
+        lock_background.classList.remove('show');
+        onHandle = false;
+    }, 1000)
+}
+
+const handleAddUser = () => {
+    add_background.classList.add('show');
+    setTimeout(() => {
+        overlay_add.classList.remove('show');
+        add_background.classList.remove('show');
+        onHandle = false;
+    }, 1000)
+}
+
 const handleCancel = () => {
     overlay_delete.classList.remove('show');
+    overlay_lock.classList.remove('show');
+    overlay_add.classList.remove('show');
+    onHandle = false;
 }

@@ -240,7 +240,9 @@ li > .feature {
 
 /* form-delete */
 
-.form_delete_overlay.show {
+.form_delete_overlay.show,
+.form_lock_overlay.show,
+.form_add_overlay.show{
   display: flex;
   position: absolute;
   align-items: center;
@@ -252,11 +254,14 @@ li > .feature {
   flex-wrap: wrap;
 }
 
-.form_delete_overlay {
+.form_delete_overlay,
+.form_lock_overlay,
+.form_add_overlay{
   display: none;
 }
 
-.form_delete {
+.form_delete,
+.form_lock{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,9 +272,78 @@ li > .feature {
   border: 1px solid #ccc;
   flex-direction: column;
   overflow: hidden;
+} 
+
+.form_add{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 400px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.form_delete > div{
+.form_add .heading_add{
+  display: flex;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgb(2 108 61);
+  color: #fff;
+  font-size: 12px;
+}
+
+.form_add .content_add{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content_add input{
+  display: flex;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  outline: 1px solid #ccc;
+  padding: 0 10px;
+}
+
+.content_add input:focus{
+  outline-color: rgb(2 108 61);
+}
+
+.form_add .footer_add{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+.footer_add button{
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #fff;  
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 10px 20px;
+}
+
+.form_delete > div,
+.form_lock > div{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -277,7 +351,8 @@ li > .feature {
   flex-grow: 1;
 }
 
-.form_delete .heading_delete {
+.form_delete .heading_delete,
+.form_lock .heading_lock{
   justify-content: flex-start;
   background-color: rgb(2 108 61);
   padding: 0 10px;
@@ -286,7 +361,8 @@ li > .feature {
   user-select: none;
 }
 
-.form_delete .content_delete {
+.form_delete .content_delete,
+.form_lock .content_lock{
   align-items: flex-start;
   justify-content: flex-start;
   padding: 10px;
@@ -294,14 +370,16 @@ li > .feature {
   flex-grow: 2;
 }
 
-.form_delete .footer_delete {
+.form_delete .footer_delete,
+.form_lock .footer_lock{
   justify-content: flex-end;
   background: rgb(245, 255, 250);
   padding: 0 10px;
   gap: 10px;
 }
 
-.footer_delete button {
+.footer_delete button,
+.footer_lock button{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -315,7 +393,7 @@ li > .feature {
   font-size: 12px;
 }
 
-.btn_delete {
+.btn_delete, .btn_lock, .btn_add{
   background: rgb(231, 85, 85);
 }
 
@@ -323,13 +401,19 @@ li > .feature {
   background: rgb(2 108 61);
 }
  
-.footer_delete button:hover{
+.footer_delete button:hover,
+.footer_lock button:hover,
+.footer_add button:hover{
   opacity: 0.8;
   cursor: pointer;
 }
 
-.delete_background {
+.delete_background,
+.lock_background,
+.add_background{
   display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -341,12 +425,16 @@ li > .feature {
   transition: 0.2s all ease-in;
 }
 
-.delete_background.show{
+.delete_background.show,
+.lock_background.show,
+.add_background.show{
   transform: scale(1);
   transition: 0.2s all ease-out;
 }
 
-.delete_background .check{
+.delete_background .check,
+.lock_background .check,
+.add_background .check{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -356,7 +444,9 @@ li > .feature {
   border-radius: 50px;
 }
 
-.delete_background .check::before{
+.delete_background .check::before,
+.lock_background .check::before,
+.add_background .check::before{
   content: "";
   display: flex;
   position: absolute;
@@ -368,7 +458,7 @@ li > .feature {
   transform: rotate(45deg);
 }
 
-.check::after{
+.check::after{  
   content: "";
   display: flex;
   position: absolute;
