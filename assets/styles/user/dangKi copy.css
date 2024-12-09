@@ -51,7 +51,6 @@ body{
 /* ĐĂNG ký */
 .auth-form{
     margin-top: 100px;
-    margin-left: 45px;
     padding: 0 32px;
     width: 550px;
     height: 100vh;
@@ -70,8 +69,10 @@ body{
 }
 
 .auth-form__heading h3{
-    font-weight: 300;
+    font-weight: 600;
 }
+
+
 
 /* THẺ TIÊU ĐỀ CLOVER */
 .auth-form__welcome{
@@ -96,11 +97,9 @@ body{
 .auth-form__switch-btn{
     color: #9c9b9b;
     cursor: pointer;
-    font-size: 14px;
-}
-.auth-form__switch-btn{
+    font-size: 16px;
     text-decoration:none ;
-    font-weight: 100;
+    font-weight: 500;
     color: rgba(2, 108, 61, 0.8);
 }
 /* CSS ĐĂNG NHẬP  */
@@ -109,12 +108,16 @@ body{
     font-weight: 100;
     color: rgba(2, 108, 61, 0.8);
 }
+.auth-form__switch-btn-link:hover{
+    opacity: 0.6;
+}
 
 /* CSS TEXT INPUT */
 
 /* CSS TIÊU ĐỀ CỦA INPUT */
 .auth-form__title{
     font-weight: bolder;
+    font-size: 17px;
 }
 
 /* CSS CÁC Ô INPUT */
@@ -137,19 +140,21 @@ body{
 
 /* CSS DÒNG CHẤP NHẬN ĐIỀU KHOẢN */
 .auth-form__aside{
-    /* margin-top: 16px; */
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* CSS DÒNG KHÁCH HÀNG ĐĂNG KÍ TRỞ THÀNH.... */
 .auth-form__policy-text-link{
     color: rgba(2, 108, 61, 0.8);
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .auth-form__check-box{
     color: #545252;
     text-decoration:  rgba(2, 108, 61, 0.8);
+}
+.auth-form__check-box:hover{
+    opacity: 0.7;
 }
 
 /* CSS NÚT BUTTON  */
