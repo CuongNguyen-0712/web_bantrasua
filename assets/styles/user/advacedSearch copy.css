@@ -87,6 +87,7 @@ body {
     position: absolute;
     text-decoration: none;  
     color: rgb(2, 108, 61);
+    cursor: pointer;
 }
 .header__search-find-link:hover {
     color: black;
@@ -262,6 +263,7 @@ body {
       font-weight:500;
       border-bottom: 1px solid white;
       transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: grab;
     }
     
     .menu__user-item li:last-child {

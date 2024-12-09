@@ -36,14 +36,14 @@ body::-webkit-scrollbar-thumb {
     color: rgb(0, 0, 0, 0.6);
 }
 
-.orders-heading-btn{
+.orders-heading-btn {
     user-select: none;
     margin-top: 20px;
     display: flex;
     gap: 10px;
 }
 
-.orders-heading-btn > button{
+.orders-heading-btn>button {
     font-size: 14px;
     display: inline-block;
     width: 130px;
@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb {
     user-select: none;
 }
 
-.orders-fill{
+.orders-fill {
     min-width: 11%;
     display: flex;
     flex-direction: column;
@@ -68,23 +68,28 @@ body::-webkit-scrollbar-thumb {
 
 .orders-time-fill {
     display: flex;
-    flex-direction: column; 
-    gap: 20px; 
-    width: 100%; 
-    max-width: 11%; 
-  }
-  
-  .orders-time-fill input[type="date"] {
-    padding: 12px; 
-    font-size: 16px; 
+    flex-direction: column;
+    gap: 20px;
+    max-width: 11%;
+    margin-right: 10%;
+}
+
+.orders-time-fill input[type="date"] {
+    padding: 12px;
+    font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .orders-time-fill input[type="date"]::placeholder {
+}
+
+.orders-time-fill input[type="date"]::placeholder {
     color: #aaa;
-  }
+}
+
+.formatTime {
+    display: flex;
+    flex-direction: column;
+}
 
 .orders-table {
     padding: 20px;
@@ -126,20 +131,20 @@ th {
 
 th:first-child,
 td:first-child {
-    width: 20px;
+    width: 5%;
 }
 
 th:nth-child(4),
 td:nth-child(4),
 th:nth-child(7),
 td:nth-child(7) {
-    width: 100px;
+    width: 10%;
 }
 
 th:nth-child(3),
 td:nth-child(3) {
     white-space: wrap;
-    width: 200px;
+    width: 20%;
 }
 
 th:nth-child(2),
@@ -148,7 +153,7 @@ th:nth-child(5),
 td:nth-child(5),
 th:nth-child(6),
 td:nth-child(6) {
-    width: 50px;
+    width: 10%;
 }
 
 tr:hover {
@@ -166,7 +171,7 @@ tr:hover {
     padding: 8px;
 }
 
-.orders-table_feature img{
+.orders-table_feature img {
     height: 60px;
     transition: transform 0.3s ease;
 }
@@ -175,15 +180,15 @@ tr:hover {
     transform: scale(1.2);
 }
 
-.select-status i{
+.select-status i {
     position: absolute;
-    right: 8px; 
+    right: 8px;
     top: 42%;
     transform: translateY(-50%);
     font-size: 20px;
 }
 
-.select-status select{
+.select-status select {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -212,7 +217,7 @@ tr:hover {
     flex-direction: column;
     overflow: hidden;
 }
-  
+
 .orders-detail_content {
     background-color: #fff;
     padding: 20px;
@@ -248,7 +253,7 @@ tr:hover {
     padding: 24px;
 }
 
-.orders-pagination > span {
+.orders-pagination>span {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.6);
 }
@@ -257,7 +262,7 @@ tr:hover {
     user-select: none;
 }
 
-.orders-pagination_button > button {
+.orders-pagination_button>button {
     padding: 12px 20px;
     background-color: #fff;
     background-color: transparent;
@@ -268,16 +273,16 @@ tr:hover {
     cursor: pointer;
 }
 
-.orders-pagination_button > button:disabled {
-    background-color: #ccc;     
+.orders-pagination_button>button:disabled {
+    background-color: #ccc;
     cursor: not-allowed;
 }
 
-.orders-pagination_button > button:hover {
+.orders-pagination_button>button:hover {
     background-color: rgb(0, 0, 0, 0.1);
 }
 
-.orders-pagination_button > button i {
+.orders-pagination_button>button i {
     margin-left: 5px;
     margin-right: 5px;
 }
