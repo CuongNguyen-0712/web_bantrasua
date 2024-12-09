@@ -214,7 +214,7 @@ body {
   margin-left: 20px;
   font-size: 18px;
   color: rgb(2, 108, 61);
-  cursor: pointer;
+  cursor: grab;
 }
 
 /* CSS MENU ĐĂNG NHẬP/ ĐĂNG KÝ*/
@@ -232,6 +232,7 @@ body {
 
 .icon-user-wrapper:hover .menu__user {
   display: block; 
+  cursor: grab;
 }
 
 .menu__user-item {
