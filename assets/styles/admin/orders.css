@@ -66,31 +66,65 @@ body::-webkit-scrollbar-thumb {
 
 }
 
-.orders-time-fill {
+.statistics_time {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
-    max-width: 11%;
-    margin-right: 10%;
-}
-
-.orders-time-fill input[type="date"] {
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.orders-time-fill input[type="date"]::placeholder {
-    color: #aaa;
-}
-
-.formatTime {
+  }
+  
+  .statistics_time .from_time,
+  .statistics_time .to_time {
     display: flex;
-    flex-direction: column;
-}
-
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: max-content;
+    gap: 10px;
+  }
+  
+  .from_time span,
+  .to_time span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .from_time input,
+  .to_time input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-right: 10px;
+    font-size: 15px;
+    outline: none;
+    overflow: visible;
+  }
+  
+  .from_time input::before,
+  .to_time input::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background: rgb(245, 255, 250);
+    border-radius: 5px;
+    right: 5px;
+    z-index: -1;
+  }
+  
 .orders-table {
     padding: 20px;
     display: flex;
