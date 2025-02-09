@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh toán</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <link rel="stylesheet" href="/assets/styles/user/payment.css" />
+  </head>
+  <body>
+    <main id="payment">
+      <div class="heading">
+        <div id="back">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="header">
+          <h3>
+            <i class="fa-solid fa-clover"></i>
+            ColoverTea
+          </h3>
+          <span>Thanh toán</span>
+        </div>
+      </div>
+      <div id="main">
+        <div class="info-receive">
+          <h3>Thông tin người nhận</h3>
+          <div class="info">
+            <div class="basic">
+              <div class="container">
+                <span>Người nhận:</span>
+                <p>Nguyễn Quốc Cường (0963597549)</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+              <form id="basic">
+                <div class="main">
+                  <div class="item">
+                    <h4>Người nhận</h4>
+                    <input type="text" value="Nguyễn Quốc Cường" id="name" name="name" autofocus>
+                  </div>
+                  <div class="item">
+                    <h4>Số điện thoại</h4>
+                    <input type="text" value="0963597549" id="phone" name="phone">                    
+                  </div>
+                  <button type="submit">Thay đổi</button>
+                  <button type="button" class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="address">
+              <div class="container">
+                <span>Địa chỉ:</span>
+                <p>
+                  F1/63/T ấp 6, xã Vĩnh Lộc A, huyện Bình Chánh, TP.Hồ Chí Minh
+                </p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+              <form id="address">
+                <div class="main">
+                  <div class="item">
+                    <h4>Địa chỉ</h4>
+                    <input type="text" value="F1/63/T ấp 6, xã Vĩnh Lộc A, huyện Bình Chánh, TP.Hồ Chí Minh" disabled>
+                  </div>
+                  <div class="option">
+                    <div class="home-address">
+                      <div class="top">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Địa chỉ nhà</span>
+                      </div>
+                      <p>F1/63/T ấp 6, xã Vĩnh Lộc A, huyện Bình Chánh, TP.Hồ Chí Minh</p>
+                    </div>
+                    <div class="current-location">
+                      <div class="top">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Vị trí hiện tại</span>
+                      </div>
+                      <p>F1/63/T ấp 6, xã Vĩnh Lộc A, huyện Bình Chánh, TP.Hồ Chí Minh</p>                    
+                    </div>
+                    <div class="other">
+                      <span>Sử dụng vị trí khác</span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                  </div>
+                  <button type="submit">Thay đổi</button>
+                  <button type="button" class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="bill">
+          <h3>
+            Thông tin sản phẩm
+          </h3>
+          <div class="info">
+            <div class="top-product">
+              <span>Sản phẩm</span>
+              <span>Giá tiền</span>
+            </div>
+            <div class="product">
+              <img src="" alt="Hình ảnh" />
+              <div class="info-product">
+                <h4>Trà sữa Clover Tea</h4>
+                <div class="item">
+                  <span>Thông tin:</span>
+                  <p>
+                    Kích cỡ: S, Ngọt: Bình thường, Đá: Bình thường, Toppng: Kem
+                    Cheese Khứ Hồi
+                  </p>
+                </div>
+                <div class="price">
+                  <span> Đơn giá: </span>
+                  <p>59.000&#8363;</p>
+                </div>
+                <div class="quantity">
+                  <span> Số lượng: </span>
+                  <p>2</p>
+                </div>
+              </div>
+              <span class="total"> 59.000&#8363; </span>
+            </div>
+            <div class="product">
+              <img src="" alt="Hình ảnh" />
+              <div class="info-product">
+                <h4>Mỹ nhân thanh trà</h3>
+                <div class="item">
+                  <span>Thông tin:</span>
+                  <p>Kích cỡ: M, Ngọt: Nhiều, Đá: Bình thường</p>
+                </div>
+                <div class="price">
+                  <span> Đơn giá: </span>
+                  <p>109.000&#8363;</p>
+                </div>
+                <div class="quantity">
+                  <span> Số lượng: </span>
+                  <p>2</p>
+                </div>
+              </div>
+              <span class="total"> 219.000&#8363; </span>
+            </div>
+            <div class="total-product">
+              <span>Tổng tiền sản phẩm:</span>
+              <p>278.000&#8363;</p>
+            </div>
+          </div>
+        </div> 
+        <div class="payment">
+          <h3>Thông tin giao dịch</h3>
+          <div class="info">
+            <div class="pay">
+              <div class="container">
+                <i class="fa-solid fa-money-bill" style="color: var(--primary-color);"></i>
+                <span>Phương thức thanh toán</span>
+                <p>Thanh toán bằng tiền mặt</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="discount">
+              <div class="container">
+                <i class="fa-solid fa-tag" style="color: orange;"></i>
+                <span>Mã giảm giá</span>
+                <p>Không có</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="footer">
+              <div class="note">
+                <span>Ghi chú cho cửa hàng:</span>
+                <textarea name="note" id="note" placeholder="Không có"></textarea>
+              </div>
+              <div class="total-purchase">
+                <div>
+                  <span>Tổng tiền:</span>
+                  <p>278.000&#8363;</p>
+                </div>
+                <div> 
+                  <span>Phí vận chuyển:</span>
+                  <p>10.000&#8363;</p>
+                </div>
+                <div id="total-payment">
+                  <span>Tổng thanh toán:</span>
+                  <p>288.000&#8363;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="footer">
+          <button id="pay">Đặt hàng</button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="/assets/handle/user/payment.js"></script>
+</html>

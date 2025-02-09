@@ -237,9 +237,7 @@ li > .feature {
   background: rgb(2 108 61);
 }
 
-
 /* form-delete */
-
 .form_delete_overlay.show,
 .form_lock_overlay.show,
 .form_add_overlay.show{

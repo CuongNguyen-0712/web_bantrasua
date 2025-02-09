@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles/user/product.css" />
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="filter-table">
+      <form id="main" class="table">
+        <h3>Bộ lọc</h3>
+        <div class="frame">
+          <div class="type">
+            <h4>Loại</h4>
+            <div class="container">
+              <input type="checkbox" name="type" checked />
+              <label>Trà</label>
+            </div>
+            <div class="container">
+              <input type="checkbox" name="type" checked />
+              <label>Cà phê</label>
+            </div>
+            <div class="container">
+              <input type="checkbox" name="type" checked />
+              <label>Trà sữa</label>
+            </div>
+          </div>
+          <div class="sort">
+            <h4>Sắp xếp</h4>
+            <div class="container">
+              <button type="button">Giảm dần</button>
+              <button type="button">Tăng dần</button>
+            </div>
+          </div>
+          <div class="price">
+            <h4>Khoảng giá</h4>
+            <div class="container">
+              <span>Từ</span>
+              <input type="text" name="price" value="0">
+              <span>&#8363;</span>
+            </div>
+            <div class="container">
+              <span>Đến</span>
+              <input type="text" name="price" value="0">
+              <span>&#8363;</span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="apply">
+          Áp dụng
+        </button>
+      </form>
+      <button id="change">
+        <i class="fa-solid fa-filter"></i>
+      </button>
+    </div>
+    <main id="product">
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/milk.png" alt="Trà sữa" />
+        </div>
+        <div class="info">
+          <h4>Trà Sữa CloverTea</h4>
+          <span> 59.000₫ </span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/milk.png" alt="Trà sữa" />
+        </div>
+        <div class="info">
+          <h4>Americano</h4>
+          <span> 59.000&#8363;</span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/milk.png" alt="Trà sữa" />
+        </div>
+        <div class="info">
+          <h4>Cappuchino</h4>
+          <span>59.000&#8363;</span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/ảnh trà.png" alt="Trà" />
+        </div>
+        <div class="info">
+          <h4>Olong Đào Tiên</h4>
+          <span> 49.000&#8363; </span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/ảnh trà.png" alt="Trà" />
+        </div>
+        <div class="info">
+          <h4>Trà Nhãn Hoa Mộc Lê</h4>
+          <span> 79.000&#8363; </span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/ảnh trà.png" alt="Trà" />
+        </div>
+        <div class="info">
+          <h4>Bách Thảo Trà Mộc</h4>
+          <span>69.000&#8363;</span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/h5-removebg-preview.png" alt="Trà" />
+        </div>
+        <div class="info">
+          <h4>Trà sữa Trân Châu Hoa</h4>
+          <span>69.000&#8363;</span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/h5-removebg-preview.png" alt="Trà" />
+        </div>
+        <div class="info">
+          <h4>Trà sữa Olong Quế Hoa</h4>
+          <span>69.000&#8363;</span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/h5-removebg-preview.png" alt="Trà" />
+        </div>
+        <div class="info">
+          <h4>Trà sữa Bá Tước</h4>
+          <span>79.000&#8363;</span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/milk.png" alt="Cà phê" />
+        </div>
+        <div class="info">
+          <h4>Latte</h4>
+          <span>49.000&#8363;</span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="heading">
+          <img src="/assets/img/milk.png" alt="Cà phê" />
+        </div>
+        <div class="info">
+          <h4>Espresso</h4>
+          <span>49.000&#8363;</span>
+        </div>
+        <div class="footer">
+          <button class="buy">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Mua</span>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Thêm giỏ hàng</span>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="/assets/handle/user/product.js"></script>
+</html>

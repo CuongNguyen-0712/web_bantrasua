@@ -8,6 +8,7 @@ body {
   gap: 20px;
   background: rgb(245, 255, 250);
   flex-direction: row;
+  overflow: hidden;
 }
 
 .aside_admin {
@@ -127,6 +128,7 @@ body {
   width: calc(100% - 50px);
   gap: 20px;
   flex-direction: column;
+  will-change: transform;
   transition: 0.15s all ease-out;
 }
 
@@ -326,7 +328,7 @@ body {
   justify-content: center;
   height: max-content;
   width: 200px;
-  right: 0;
+  right: 20px;
   top: 60px;
   border-radius: 5px;
   padding: 10px;
@@ -415,14 +417,13 @@ body {
 
 .main_admin #content_admin {
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: calc(100% - 70px);
   width: 100%;
   border-top-left-radius: 10px;
   border-left: 4px solid rgb(240, 255, 240);
   border-top: 4px solid rgb(240, 255, 240);
   background: #fff;
+  overflow: hidden;
   z-index: -1;
 }
 

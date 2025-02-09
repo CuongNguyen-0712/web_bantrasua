@@ -1,0 +1,82 @@
+body{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#bill{
+    display: flex;
+    height: max-content;
+    width: 100%;
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    height: max-content;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heading .checkBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 59px;
+    background: var(--primary-color);
+    font-size: 40px;
+    color: #fff;
+}
+
+.heading h3{
+    text-transform: uppercase;
+}   
+
+.heading p{
+    display: flex;
+    gap: 5px;
+}
+
+.heading p i{
+    color: var(--primary-color);
+    transform: rotate(35deg);
+}
+
+.footer{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    height: max-content;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    gap: 50px;
+    border-top: 1px solid var(--color-black);
+    z-index: 2;
+}
+
+.footer button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    user-select: none;
+}
+
+#purchase{
+    background: var(--primary-color);
+    color: #fff; 
+}

@@ -1,0 +1,333 @@
+body {
+  display: flex;
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  background: #fff;
+}
+
+#detailPurchase {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+}
+
+#detailPurchase .heading {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  height: max-content;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  padding: 10px 20px;
+}
+
+.heading #return {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 50px;
+}
+
+#detailPurchase .beside-heading {
+  display: flex;
+  align-items: center;
+  height: initial;
+  width: max-content;
+  gap: 20px;
+}
+
+.beside-heading .id-purchase {
+  display: flex;
+  height: max-content;
+  gap: 10px;
+}
+
+.id-purchase span {
+  font-weight: 700;
+}
+
+.id-purchase p {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+#status {
+  display: flex;
+  height: max-content;
+  width: max-content;
+  padding: 10px;
+  background: green;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.info-detail {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  padding: 100px 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-detail h2 {
+  display: flex;
+  height: max-content;
+  width: max-content;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  gap: 10px;
+}
+
+.info-detail > div {
+  display: flex;
+  height: max-content;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--color-gray);
+  box-shadow: 0 0 5px var(--color-gray);
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.receiver {
+  display: flex;
+  height: max-content;
+  width: max-content;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.receiver div,
+.address div {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.receiver div span,
+.address div span {
+  display: flex;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.history-list {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.history-list .history-date {
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+.history-item {
+  display: flex;
+  height: max-content;
+  width: max-content;
+  list-style: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-item li {
+  display: flex;
+  height: max-content;
+  width: max-content;
+  gap: 5px;
+}
+
+.history-item li span {
+  font-weight: 700;
+}
+
+.info {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+  border-top: 1px solid var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  height: max-content;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+.product img {
+  display: flex;
+  height: 80px;
+  width: 80px;
+  background: var(--color-gray);
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.product .info-product {
+  display: flex;
+  height: max-content;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-product h3 {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.info-product div {
+  display: flex;
+  gap: 10px;
+}
+
+.info-product div span {
+  display: flex;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.product .total {
+  display: flex;
+  align-items: center;
+  height: initial;
+  width: max-content;
+  font-weight: 700;
+}
+
+.total-purchase {
+  display: flex;
+  align-items: flex-end;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+}
+
+.total-purchase .total,
+.total-purchase .fee,
+.total-purchase .total-bill {
+  display: flex;
+  height: max-content;
+  width: max-content;
+  padding: 10px 0;
+}
+
+.total-purchase div span {
+  font-weight: 700;
+}
+
+.total-purchase div p {
+  display: flex;
+  justify-content: flex-end;
+  height: max-content;
+  width: 150px;
+}
+
+.total-purchase .total-bill {
+  font-size: 18px;
+  border-top: 2px solid var(--primary-color);
+  white-space: nowrap;
+}
+
+.total-purchase .total-bill span {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.total-purchase .total-bill p {
+  font-weight: 700;
+}
+
+.detail-purchase .handle{
+    display: flex;
+    justify-content: center;
+    height: max-content;
+    width: 100%;
+}
+
+.handle button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.footer{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    padding: 10px 20px;
+    border-top: 1px solid var(--color-black);
+    gap: 30px;
+}
+
+.footer .description{
+    display: flex;
+    align-items: center;
+    height: max-content;
+    width: max-content;
+    font-weight: 700;
+    font-size: 14px;
+    gap: 10px;
+}
+
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 150px;
+    min-width: 100px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    flex-shrink: 1;
+}

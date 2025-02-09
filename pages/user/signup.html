@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng kí</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <link rel="stylesheet" href="/assets/styles/user/signup.css" />
+  </head>
+  <body>
+    <form id="signup-form">
+      <div class="heading">
+        <h2>
+          Chào mừng đến với
+          <a href="/index.html">
+            Clover Tea
+            <i class="fa-solid fa-clover"></i>
+          </a>
+        </h2>
+        <p>Điền thông tin đầy đủ để đăng kí</p>
+      </div>
+      <div class="main">
+        <div class="input-group">
+          <div class="sheet" id="sheet_1">
+            <div class="field-input">
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                autofocus
+                autocomplete="off"
+                placeholder=""
+                required
+              />
+              <label for="fullname">Họ và tên</label>
+            </div>
+            <div class="field-input">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="off"
+                placeholder=""
+                required
+              />
+              <label for="email">Email</label>
+            </div>
+            <div class="field-input">
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                autocomplete="off"
+                placeholder=""
+                required
+              />
+              <label for="phone">Số điện thoại</label>
+            </div>
+            <button type="button" id="btn_next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="sheet" id="sheet_2">
+            <div class="field-input">
+              <input
+                type="text"
+                id="username"
+                name="username"
+                autofocus
+                autocomplete="off"
+                placeholder=""
+                required
+              />
+              <label for="username">Tên đăng nhập</label>
+            </div>
+            <div class="field-input">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="off"
+                minlength="8"
+                placeholder=""
+                required
+              />
+              <label for="password">Đặt mật khẩu</label>
+            </div>
+            <div class="field-input">
+              <input
+                type="password"
+                id="repeat_password"
+                name="repeat_password"
+                autocomplete="off"
+                minlength="8"
+                placeholder=""
+                required
+              />
+              <label for="repeat_password">Nhập lại mật khẩu</label>
+            </div>
+            <div id="term_of_use">
+              <input
+                type="checkbox"
+                name="term"
+                id="term"
+                autocomplete="off"
+                required
+              />
+              Chấp nhận điều khoản sử dụng của CloverTea
+            </div>
+            <div class="btn-group">
+              <button type="button" id="btn_back">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button type="submit">Đăng kí</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <a href="./login.html">Bạn đã có tài khoản</a>
+      </div>
+    </form>
+  </body>
+  <script src="/assets/handle/user/signup.js"></script>
+</html>

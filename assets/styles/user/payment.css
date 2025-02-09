@@ -1,0 +1,498 @@
+body {
+    display: flex;
+    position: relative;
+    height: 100dvh;
+    width: 100%;
+    background: #fff;
+  }
+  
+  #payment {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .heading {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    height: max-content;
+    width: 100%;
+    background: #fff;
+    padding: 10px 20px;
+    z-index: 2;
+  }
+  
+  .heading #back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+  }
+  
+  .heading .header {
+    display: flex;
+    align-items: center;
+    height: max-content;
+    width: max-content;
+    gap: 10px;
+  }
+  
+  .header h3 {
+    display: flex;
+    height: max-content;
+    width: max-content;
+    color: var(--primary-color);
+    padding: 0 10px;
+    gap: 5px;
+    border-right: 2px solid var(--color-black);
+  }
+  
+  .header span {
+    font-weight: 700;
+  }
+  
+  .header i {
+    transform: rotate(35deg);
+  }
+
+#main{
+  display: flex;
+  height: max-content;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 70px 20px 20px 20px;
+}
+
+.info-receive{
+  display: flex;
+  align-items: flex-start;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-receive h3{
+  color: var(--primary-color);
+}
+
+.info-receive .info{
+  display: flex;
+  height: max-content;
+  width: 80%;
+  min-width: 500px;
+  border-radius: 5px;
+  border: 1px solid var(--color-gray);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.info-receive .info > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+  width: 100%;
+  padding: 20px;
+}
+
+.info-receive .info > div:hover{
+  background: var(--color-gray);
+  cursor: pointer;
+}
+
+.info-receive .info div .container{
+  display: flex;
+  height: initial;
+  width: max-content;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.container span{
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#bill{
+  display: flex;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#bill h3{
+  color: var(--primary-color);
+}
+
+#bill .info {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--color-gray);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#bill .info .top-product{
+  display: flex;
+  justify-content: space-between;
+  height: max-content;
+  width: 100%;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--primary-color);
+}
+
+#bill .product {
+  display: flex;
+  justify-content: space-between;
+  height: max-content;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+#bill .product img {
+  display: flex;
+  height: 80px;
+  width: 80px;
+  background: var(--color-gray);
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#bill .product .info-product {
+  display: flex;
+  height: max-content;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-product h4 {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.info-product div {
+  display: flex;
+  gap: 10px;
+}
+
+.info-product div span {
+  display: flex;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+#bill .product .total {
+  display: flex;
+  align-items: center;
+  height: initial;
+  width: max-content;
+  font-weight: 700;
+}
+
+#bill .total-product{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: max-content;
+  width: 100%;
+  background: var(--color-gray);
+  padding: 20px;
+  gap: 10px;
+}
+
+#bill .total-product span{
+  font-weight: 600;
+}
+
+#bill .total-product p{
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.payment{
+  display: flex;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment h3{
+  color: var(--primary-color);
+}
+  
+.payment .info{
+  display: flex;
+  height: max-content;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--color-gray);
+  flex-direction: column;
+}
+
+.payment .info .pay, .payment .info .discount{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+  width: 100%;
+  background: transparent;
+  padding: 20px;
+}
+
+.payment .info .pay:hover, .payment .info .discount:hover{
+  background: var(--color-gray);
+  cursor: pointer;
+}
+
+.payment .container{
+  display: flex;
+  align-items: center;
+  height: max-content;
+  width: max-content;
+  gap: 10px;
+}
+
+.payment .footer{
+  display: flex;
+  height: inherit;
+  width: 100%;
+  padding: 20px;
+}
+
+.payment .footer .note{
+  display: flex;
+  height: max-content;
+  width: max-content;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 5px;
+}
+
+.note span{
+  font-weight: 600;
+}
+
+.note textarea{
+  display: flex;
+  height: 100px;
+  width: 300px;
+  outline: none;
+  resize: none;
+  border: 1px solid var(--color-black);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.payment .footer .total-purchase{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: initial;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer .total-purchase div{
+  display: flex;
+  height: max-content;
+  width: max-content;
+}
+
+.total-purchase div p{
+  display: flex;
+  justify-content: flex-end;
+  height: max-content;
+  width: 200px;
+}
+
+.total-purchase div span{
+  font-weight: 600;
+}
+
+#total-payment span{
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#total-payment p{
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+#footer{
+  display: flex;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+}
+
+#footer button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 200px;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  user-select: none;
+  cursor: pointer;
+}
+
+#basic, #address{
+  display: none;
+}
+
+#basic.active, #address.active{
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 4;
+  cursor: default;
+}
+
+.main{
+  display: flex;
+  position: relative;
+  height: max-content;
+  width: max-content;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--color-black);
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main .item{
+  display: flex;
+  height: max-content;
+  width: max-content;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item h4{
+  color:var(--primary-color);
+}
+
+.item input{
+  height: 40px;
+  width: 300px;  
+  padding: 10px;
+  font-size: 15px;
+  outline-color: var(--primary-color);
+  border-radius: 5px;
+  border: 1px solid var(--color-gray);
+  color: var(--color-black);
+}
+
+#address .item input{
+  width: 500px;
+}
+
+.main button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  user-select: none;
+  cursor: pointer;
+}
+
+.main .close{
+  display: flex;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background: transparent;
+  top: 5px;
+  right: 5px;
+  color: var(--color-black);
+}
+
+.option{
+  display: flex;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+  border: 1px solid var(--color-gray);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.option .home-address, .option .current-location{
+  display: flex;
+  height: max-content;
+  width: 100%;
+  padding: 15px 20px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.home-address .top, .current-location .top{
+  display: flex;
+  height: max-content;
+  width: 100%;
+  font-weight: 600;
+  color: var(--primary-color);
+  gap: 10px;
+}
+
+.option .other{
+  display: flex;
+  justify-content: space-between;
+  height: max-content;
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.other span{
+  font-weight: 600;
+}
+
+.option > div:hover{
+  background: var(--color-gray);
+}

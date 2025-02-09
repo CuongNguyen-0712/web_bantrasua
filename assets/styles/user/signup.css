@@ -9,14 +9,14 @@ body {
   overflow: hidden;
 }
 
-#login-form {
+#signup-form {
   display: flex;
   position: absolute;
   align-items: center;
   justify-content: space-around;
   height: 80%;
-  min-height: 500px;
   width: 450px;
+  min-height: 500px;
   background: transparent;
   top: 10%;
   left: 100px;
@@ -26,7 +26,7 @@ body {
   overflow: hidden;
 }
 
-#login-form::before {
+#signup-form::before {
   content: "";
   position: absolute;
   top: 0;
@@ -72,20 +72,40 @@ body {
   font-weight: 700;
 }
 
-.main {
+.main{
   display: flex;
-  align-items: center;
-  height: max-content;
-  width: 100%;
-  flex-direction: column;
-  gap: 40px;
+  position: relative;
+  height: 300px;
+  width: 70%;
+  overflow: hidden;
 }
 
-.main .field-input {
+.main .input-group{
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 200%;
+  padding: 30px 0 10px 0;
+  left: 0;
+  top: 0;
+  transition: 0.2s all ease;
+}
+
+.input-group .sheet{
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  height: 100%;
+  flex-grow: 1;
+  padding: 0 10px;
+  flex-direction: column;
+}
+
+.sheet .field-input {
   display: flex;
   position: relative;
   height: 40px;
-  width: 60%;
+  width: 100%;
 }
 
 .field-input input {
@@ -115,26 +135,72 @@ body {
   transition: 0.2s all ease;
 }
 
-#show-password {
+#sheet_1 button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 100px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+#sheet_2 .btn-group{
+  display: flex;
+  height: 40px;
+  width: 100%;
+  gap: 10px;
+}
+
+#sheet_2 .btn-group button:nth-child(1){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100px;
+  border-radius: 50px;
+  background: var(--color-red);
+  color: #fff;
+}
+
+#sheet_2 .btn-group button:nth-child(2){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  flex-grow: 1;
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  user-select: none;
+  cursor: pointer;
+}
+
+#term_of_use {
   display: flex;
   position: absolute;
   align-items: center;
   height: max-content;
   width: max-content;
-  right: 0;
-  top: 50px;
+  font-size: 12px;
+  bottom: 60px;
+  font-weight: 700;
   gap: 10px;
 }
 
-#show-password input {
+#term_of_use input {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 12px;
   width: 12px;
+  outline: none;
 }
 
-#show-password input::before {
+#term_of_use input::before {
   content: "";
   display: flex;
   position: absolute;
@@ -145,9 +211,10 @@ body {
   border: 2px solid var(--primary-color);
 }
 
-#show-password input::after {
+#term_of_use input::after {
   content: "";
   display: flex;
+  position: absolute;
   height: 10px;
   width: 10px;
   background: var(--primary-color);
@@ -156,60 +223,25 @@ body {
   opacity: 0;
 }
 
-#show-password input:checked::after {
+#term_of_use input:checked::after {
   opacity: 1;
 }
 
-#show-password span {
-  font-size: 13px;
-  font-weight: 700;
-}
-
-#forget-password {
+.footer{
   display: flex;
-  position: absolute;
-  font-size: 13px;
-  bottom: -25px;
-  color: var(--primary-color);
-}
-
-.footer {
-  display: flex;
-  align-items: center;
+  justify-content: center;
   height: max-content;
   width: 100%;
-  flex-direction: column;
-  padding: 10px 0;
-  gap: 10px;
 }
 
-.footer button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 50%;
-  border-radius: 10px;
-  color: #fff;
+.footer a{
+  color: var(--primary-color);
   font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
+  user-select: none;
 }
 
-.footer button:nth-child(1) {
-  background: var(--primary-color);
-}
 
-.footer button:nth-child(2) {
-  background: var(--color-red);
-}
 
-.footer button:nth-child(2) a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-    color: #fff;
-}
+
+
+

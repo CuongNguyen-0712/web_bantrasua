@@ -6,11 +6,11 @@
     <title>Clover Tea</title>
     <link
       rel="stylesheet"
-      href="./assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css"
+      href="/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css"
     />
     <link rel="icon" type="image/x-icon" href="/assets/img/logo.png" />
-    <link rel="stylesheet" href="./assets/styles/style.css" />
-    <link rel="stylesheet" href="./assets/styles/user/index.css" />
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <link rel="stylesheet" href="/assets/styles/user/home.css" />
   </head>
   <body>
     <header id="header">
@@ -36,44 +36,57 @@
           </button>
         </div>
         <div class="feature-user">
-          <button id="notification" disabled>
+          <button id="notification">
             <i class="fa-solid fa-bell"></i>
           </button>
-          <button id="cart" disabled>
+          <button id="cart">
             <i class="fa-solid fa-cart-shopping"></i>
           </button>
-        </div>
-        <div class="auth-user">
-          <button id="signup">
-            <a href="./pages/user/signup.html">
-              Đăng kí
-            </a>
+          <button id="account-user" class="account">
+            <i class="fa-solid fa-user"></i>
           </button>
-          <button id="login">
-            <a href="./pages/user/login.html">
-              Đăng nhập
-            </a>
-          </button>
+          <div id="account-feature">
+            <div class="heading">
+              <img src="" alt="Ảnh đại diện" />
+              <div class="profile">
+                <span>Người dùng</span>
+                <span>Nguyễn Quốc Cường</span>
+              </div>
+            </div>
+            <ul class="body">
+              <li id="info">
+                <i class="fa-solid fa-circle-info"></i>
+                Thông tin cá nhân
+              </li>
+              <li id="purchase">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                Đơn hàng
+              </li>
+            </ul>
+            <div class="footer">
+              <button id="logout">Đăng xuất</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="frame-navbar">
         <nav id="navbar">
-          <button class="btn active" path="./pages/user/homepage.html">Trang chủ</button>
-          <button class="btn" path="./pages/user/product.html">Sản phẩm</button>
-          <button class="btn" path="./pages/user/about.html">Về chúng tôi</button>
+          <button class="btn active" path="./homepage.html">Trang chủ</button>
+          <button class="btn" path="./product.html">Sản phẩm</button>
+          <button class="btn" path="./about.html">Về chúng tôi</button>
           <span id="navigation"></span>
         </nav>
       </div>
     </header>
-    <main id="main">
+    <div id="main">
       <iframe
         id="myIframe"
-        src="./pages/user/homepage.html"
+        src="./homepage.html"
         frameborder="0"
         width="100%"
         height="100%"
       ></iframe>
-    </main>
+    </div>
     <footer id="footer">
       <div class="contact">
         <h2>Liên hệ</h2>
@@ -117,6 +130,7 @@
         </div>
       </div>
     </footer>
+    <iframe id="iframeBuy" src="./buy.html" frameborder="0" height="100%" width="100%"></iframe>
   </body>
-  <script src="/assets/handle/user/index.js"></script>
+  <script src="/assets/handle/user/home.js"></script>
 </html>

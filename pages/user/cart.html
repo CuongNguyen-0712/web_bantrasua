@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png" />
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <link rel="stylesheet" href="/assets/styles/user/cart.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main id="cart">
+      <div class="heading">
+        <div id="returnHome">
+          <i class="fa-solid fa-house"></i>
+        </div>
+        <div class="header">
+          <h3>
+            <i class="fa-solid fa-clover"></i>
+            ColoverTea
+          </h3>
+          <span>Giỏ hàng</span>
+        </div>
+      </div>
+      <div class="main">
+        <div class="top">
+          <span>Sản phẩm</span>
+          <span>Đơn giá</span>
+          <span>Số lượng</span>
+          <span>Số tiền</span>
+        </div>
+        <div id="product">
+          <div class="item">
+            <div class="product">
+              <img src="" alt="Hình ảnh sản phẩm" />
+              <div class="info">
+                <h3>Trà sữa Clover Tea</h3>
+                <p>
+                  Kích cỡ: S, Ngọt: Bình thường, Đá: Bình thường, Toppng: Kem
+                  Cheese Khứ Hồi
+                </p>
+              </div>
+            </div>
+            <span class="price">59.000&#8363;</span>
+            <div class="quantity">
+              <button type="button">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <input type="number" value="1" name="quantity"/>
+              <button type="button">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            <span class="total">59.000&#8363;</span>
+            <button class="delete">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+          <div class="item">
+            <div class="product">
+              <img src="" alt="Hình ảnh sản phẩm" />
+              <div class="info">
+                <h3>Mỹ nhân thanh trà</h3>
+                <p>Kích cỡ: M, Ngọt: Nhiều, Đá: Bình thường</p>
+              </div>
+            </div>
+            <span class="price">109.000&#8363;</span>
+            <div class="quantity">
+              <button type="button">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <input type="number" value="2" name="quantity"/>
+              <button type="button">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            <span class="total">218.000&#8363;</span>
+            <button class="delete">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="discount-code">
+          <div class="title">
+            <i class="fa-solid fa-tag"></i>
+            <span>Mã giảm giá:</span>
+            <p>Không có</p>
+          </div>
+          <div class="discount">
+            <h4>Giá giảm giá:</h4>
+            <p>0&#8363;</p>
+          </div>
+        </div>
+        <div class="cost">
+          <div class="total">
+            <h4>Tạm tính:</h4>
+            <p>100.000&#8363;</p>
+          </div>
+          <div class="result">
+            <h3>Tổng tiền</h3>
+            <p>100.000&#8363;</p>
+          </div>
+        </div>
+        <div class="handle">
+          <button id="add">Thêm</button>
+          <button id="buy">Mua hàng</button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="/assets/handle/user/cart.js"></script>
+</html>

@@ -181,7 +181,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: flex-start;
   height: max-content;
   width: 100%;
-  padding: 30px 20px;
+  padding: 20px 10px;
   flex-direction: column;
   gap: 50px;
   overflow: hidden;
@@ -246,7 +246,6 @@ body::-webkit-scrollbar-thumb {
   content: "";
   display: flex;
   justify-content: center;
-  position: absolute;
   align-items: center;
   height: 80%;
   width: 80%;
@@ -403,21 +402,6 @@ body::-webkit-scrollbar-thumb {
   font-size: 15px;
   outline: none;
   overflow: visible;
-}
-
-.from_time input::before,
-.to_time input::before {
-  content: "";
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  width: 30px;
-  background: rgb(245, 255, 250);
-  border-radius: 5px;
-  right: 5px;
-  z-index: -1;
 }
 
 .statistics_button_handle {
@@ -688,7 +672,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .statistics_product_detail{
-  padding: 10px;
+  padding: 5px;
   outline: none;
   gap: 20px;
 }

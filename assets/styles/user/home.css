@@ -1,0 +1,376 @@
+body {
+  display: flex;
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  background: #fff;
+  flex-direction: column;
+}
+
+#header {
+  display: flex;
+  position: fixed;
+  height: max-content;
+  width: 100%;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  padding: 10px 20px;
+  gap: 10px;
+  background: #fff;
+  border-bottom: 1px solid var(--color-black);
+  z-index: 1;
+  pointer-events: auto;
+}
+
+#header .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.heading h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  font-family: "second-font", sans-serif;
+  color: #303030;
+  gap: 5px;
+  flex-wrap: wrap;
+  transition: 0.2s all ease;
+}
+
+@media screen and (max-width: 888px) {
+  .heading h1 {
+    font-size: 20px;
+  }
+}
+
+.heading h1:hover {
+  color: var(--primary-color);
+  cursor: default;
+  transition: 0.2s all ease;
+}
+
+.heading h1 i {
+  transform: rotate(0deg);
+  transition: 0.2s all ease;
+}
+
+.heading h1:hover i {
+  transform: rotate(35deg);
+  transition: 0.2s all ease;
+}
+
+.field-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.field-input input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 40px;
+  max-width: 300px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 0 10px;
+  background: transparent;
+  transition: 0.2s all ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .field-input input {
+    flex-grow: 1;
+  }
+}
+
+.field-input input:focus {
+  background: var(--second-color);
+  transition: 0.2s all ease;
+}
+
+.field-input button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 50px;
+}
+
+.feature-user {
+  display: flex;
+  height: max-content;
+  width: max-content;
+  gap: 20px;
+}
+
+.feature-user > button {
+  display: flex;
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  transition: 0.2s all ease;
+}
+
+.feature-user > button:hover {
+  background: var(--color-gray);
+  color: var(--primary-color);
+  transition: 0.2s all ease;
+}
+
+.frame-navbar {
+  display: flex;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  overflow: hidden;
+}
+
+#navbar {
+  display: flex;
+  height: 35px;
+  width: max-content;
+  gap: 120px;
+}
+
+#navbar button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 120px;
+  background-color: transparent;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-black);
+  border-radius: 10px;
+  user-select: none;
+  transition: 0.2s all ease;
+}
+
+.account.active{
+  background: var(--color-gray);
+  color: var(--primary-color);
+  transition: 0.2s all ease;
+}
+
+.account.active ~ #account-feature{
+  display: flex;
+  position: absolute;
+  height: max-content;
+  width: max-content;
+  right: 10px;
+  top: 60px;
+  background: #fff;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+#account-feature{
+  display: none;
+}
+
+#account-feature .heading{
+  display: flex;
+  align-items: flex-start;
+  height: 100px;
+  width: max-content;
+  min-width: 100px;
+  padding: 20px 10px 0px 10px;
+  gap: 10px;
+}
+
+#account-feature .heading img{
+  display: flex;
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid var(--color-black);
+}
+
+#account-feature .heading .profile{
+  display: flex;
+  height: 100%;
+  width: max-content;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.profile span:nth-child(1){
+  display: flex;
+  height: max-content;
+  width: max-content;
+  padding: 5px 10px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.profile span:nth-child(2){
+  display: flex;
+  height: max-content;
+  width: max-content;
+  max-width: 150px;
+  font-size: 15px;
+  font-weight: 700;
+  flex-wrap: wrap;
+}
+
+#account-feature .body{
+  display: flex;
+  align-items: center;
+  height: max-content;
+  width: 100%;
+  padding: 0 10px;
+  list-style: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.body li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 70%;
+  background: var(--primary-color);
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 10px;
+  color: #fff;
+  cursor: default;
+  user-select: none;
+  gap: 10px;
+}
+
+#account-feature .footer{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-black);
+}
+
+.footer #logout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: var(--color-red);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#navbar .btn.active {
+  color: #fff;
+  transition: 0.2s all ease;
+}
+
+#navbar .btn:not(.active):hover {
+  background: var(--color-gray);
+  transition: 0.2s all ease;
+}
+
+#navigation {
+  display: flex;
+  position: absolute;
+  height: 35px;
+  width: 120px;
+  background: var(--primary-color);
+  border-radius: 10px;
+  transition: 0.2s all ease;
+  z-index: -1;
+}
+
+#main {
+  display: flex;
+  width: 100%;
+  margin-top: 120px;
+  overflow: clip;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  height: max-content;
+  width: 100%;
+  padding: 50px 30px;
+  background: var(--primary-color);
+  color: #fff;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.contact,
+.address,
+.rule {
+  display: flex;
+  height: max-content;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact div,
+.address div,
+.rule div {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact #social {
+  display: flex;
+  font-size: 22px;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+#myIframe{
+  display: flex;
+  width: 100%;
+  border: 0;
+}
+
+#iframeBuy{
+  display: none;
+  position: fixed;
+  height: 100dvh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+}
