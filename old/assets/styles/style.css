@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'my-font';
+    src: url(/assets/font/Arimo-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'second-font';
+    src: url(/assets/font/Anton-Regular.ttf) format('truetype');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    will-change: transform;
+    font-family: 'my-font', sans-serif;
+}

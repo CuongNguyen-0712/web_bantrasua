@@ -1,0 +1,172 @@
+body{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/katinat.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Login overlay */
+.login {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Login form */
+.login-form {
+  width: 550px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.732);
+}
+
+.login-form__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+
+/* Header */
+.login-form__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form__welcome {
+  font-weight: 400;
+}
+
+.login-form__heading {
+  padding-top: 16px;
+  font-size: 24px;
+  color: rgb(2, 108, 61);
+  text-decoration: none;
+}
+
+.login-form__heading-icon {
+  rotate: 35deg;
+}
+
+.login-form__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(2, 108, 61);
+}
+
+.login-form__form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input */
+.login-form__group {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+  margin-top: 24px;
+  position: relative;
+}
+
+.login-form__hidden-icon {
+  position: absolute;
+  right: 10px;
+  top: 35px;
+  display: none;
+}
+
+.login-form__input:focus + .login-form__hidden-icon {
+  display: block;
+}
+
+.login-form__group:nth-child(2) {
+  margin-top: 8px;
+}
+
+.login-form__label {
+  color: rgb(2, 108, 61);
+  font-size: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.login-form__input {
+  margin: 8px 0px;
+  outline: none;
+  border: 1px solid rgb(2, 108, 61);
+  padding: 6px;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.login-form__icon {
+  color: rgb(2, 108, 61);
+}
+
+/* Forgot */
+.login-form__forgot {
+  color: #026C3DCC;
+  text-align: end;
+  font-size: 16px;
+}
+
+.login-form__forgot:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.login-form__button {
+  margin-top: 40px;
+}
+
+.login-form__button a{
+  display:flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.login-form__btn {
+  display: flex;
+  margin: auto;
+  width: 375px;
+  height: 30px;
+  background-color: rgb(2, 108, 61);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.login-form__btn:hover {
+  opacity: 0.8;
+}
+
+.login-form__link {
+  text-align: center;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.login-form__link-register {
+  text-decoration: none;
+  color: #026C3DCC;
+}
+
+.login-form__link:hover {
+  opacity: 0.6;
+}
