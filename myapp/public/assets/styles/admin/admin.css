@@ -3,7 +3,7 @@ body {
   position: relative;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   gap: 20px;
   background: rgb(245, 255, 250);
@@ -279,8 +279,8 @@ body {
   gap: 20px;
 }
 
-.header_left > i,
-.header_right > i {
+.header_left>i,
+.header_right>i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -290,13 +290,13 @@ body {
   background: transparent;
 }
 
-.header_left > i:hover,
-.header_right > i:hover {
+.header_left>i:hover,
+.header_right>i:hover {
   background: rgb(245, 255, 250);
   cursor: pointer;
 }
 
-.header_left > input {
+.header_left>input {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,7 +382,7 @@ body {
   border-radius: 5px;
 }
 
-.admin_center button:not(:first-child){
+.admin_center button:not(:first-child) {
   display: none;
 }
 
@@ -390,7 +390,7 @@ body {
   background: rgb(240, 255, 240);
 }
 
-.admin_center button > i {
+.admin_center button>i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -398,7 +398,7 @@ body {
   width: 30px;
 }
 
-.admin_dropdown > button {
+.admin_dropdown>button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -469,17 +469,17 @@ body {
 }
 
 @media screen and (max-width: 625px) {
-  .header_right > i {
+  .header_right>i {
     display: none;
   }
 
-  .admin_center button:not(:first-child){
+  .admin_center button:not(:first-child) {
     display: flex;
   }
 }
 
-@media screen and (max-width: 500px){
-  .header_left > input {
+@media screen and (max-width: 500px) {
+  .header_left>input {
     width: 100px;
   }
 }
@@ -503,8 +503,8 @@ body {
     height: 35px;
     width: 35px;
   }
-   
-  .header_right .admin_info > span {
+
+  .header_right .admin_info>span {
     display: none;
   }
 
