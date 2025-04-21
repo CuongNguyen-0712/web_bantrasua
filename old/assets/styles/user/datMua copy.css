@@ -25,7 +25,7 @@ body {
 }
 
 .modal__body {
-    width: 50%;
+    width: 70%;
     background-color: #fcf8f8;
     border-radius: 5px;
     margin: auto;
@@ -36,77 +36,86 @@ body {
 .Order {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-wrap:wrap;
 }
 
 .Img__product {
-    display: flex;
-    flex-direction: row;
-    margin-top: 10%;
-    margin-left: 20px;
-    /* margin-right: 10px; */
-    max-width: 200px;
-    min-width: 100px;
+    width: 40%;
+    display: block;
+    justify-content: center; 
+    align-items: center; 
+    /* padding: 20px; */
+    box-sizing: border-box;
+}
+.Product-decribe{
+    text-indent: 20px;
+    /* text-transform: capitalize; */
+    padding:0 35px 40px 35px;
+    font-style: italic;
+}
 
+.Img__product-decribe{
+    width:100%;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .Img__product-decribe img {
-    max-width: 200px;
-    max-height: 300px;
-    width: auto;
-    height: auto;
+    max-width: 70%;;
     background-color: rgb(239, 238, 238);
-    padding: 70px 40px;
+    padding: 30px 10px;
     border-radius: 10px;
+    margin: 10%;
+    z-index: 1000;
 }
 
-/* Header__layout */
-.header {
-    margin-top: 2%;
-    font-weight: 300;
-    padding: 0 0px 0 100px;
-
-}
-
-.header__title-product {
-    position: relative;
-    display: flex;
+    /* Header__layout */
+    .header {
+        width: 60%;
     justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 600;
-}
+        margin-top: 2%;
+        font-weight: 300;
+        /* padding: 0 0px 0 100px; */
 
-.header__title-product h3 {
-    margin-top: 200px;
-}
+    }
 
-/* Nút quay trở lai */
-.btn-back {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    left: 100%;
-    top: 2%;
+    .header__title-product {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .header__title-product h3 {
+        margin: 0;
+    }
+
+    /* Nút quay trở lai */
+    .btn-back {
     position: absolute;
-}
-
-.btn-back >button{
+    top: -24%;
+    right: 0;
+    margin-left: 0px;
     text-decoration: none;
     background-color: #fcf8f8;
     border: none;
     border-radius: 3px;
     font-size: 40px;
     color: rgb(2, 108, 61);
-    font-weight: 200;
+    font-weight: 100;
     padding: 4px 10px;
-}
+    cursor: pointer;
+    }
+    .btn-back:hover {
+        border-radius: 5px;
+        background-color: #f1efef;
 
-.btn-back >button:hover {
-    border-radius: 5px;
-    background-color: #f1efef;
+    } */
 
-}
+
 
 /* Header_model-product */
 .header__model-product {
@@ -123,7 +132,6 @@ body {
 } */
 .header__price-product {
     display: flex;
-    justify-content: space-around;
     padding: 0 0px;
     font-size: 20px;
 }
@@ -147,10 +155,12 @@ body {
 
 .btn-min:hover {
     opacity: 0.8;
+    cursor: pointer;
 }
 
 .btm-max:hover {
     opacity: 0.8;
+    cursor: pointer;
 }
 
 .count {
@@ -194,6 +204,7 @@ body {
 
 .btn:hover {
     background-color: #f5f5f5;
+    cursor: pointer;
 }
 
 /* Header__sweet-product */
@@ -219,6 +230,7 @@ body {
     outline: none;
     padding: 8px 15px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .btn-sweet:hover {
@@ -248,6 +260,7 @@ body {
     outline: none;
     padding: 8px 15px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .btn-ice:hover {
@@ -268,15 +281,13 @@ body {
     color: rgb(110, 108, 108);
     font-weight: 100;
     margin-top: 10px;
-    /* justify-content: ; */
+    justify-content: space-between;
 }
-
 .header__topping-product-quantity {
-    width: 70%;
-    height: 20%;
     display: flex;
     justify-content: flex-end;
     font-size: 16px;
+    margin-right: 8%;
 }
 
 .btn-topping {
@@ -288,6 +299,7 @@ body {
     font-weight: 700;
     border-radius: 5px;
     padding: 8px 8px;
+    cursor: pointer;
 }
 
 .count {
