@@ -4,11 +4,8 @@
     require_once "../myapp/core/route.php";
     require_once APP_ROOT . "/app/controller/admin/Home_Controller.php";
     $pdo = Database::getInstance();
-
-    $_SESSION['user'] = [
-        'username' => 'admin',
-        'role' => 'admin',
-    ];
+    
+    //Nếu lần đầu sẽ không có sẵn session nhưng những lần khác kiểm tra vui lòng session_datroy để tránh lỗi
 
     route();
 ?>
