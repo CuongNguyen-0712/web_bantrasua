@@ -1,15 +1,11 @@
 <?php
 
+namespace user;
+
 class Home_Controller
 {
-    private $pdo;
-
     public function index()
     {
-
-        include __DIR__ . '/../../views/index.php';
+        include APP_ROOT . '/app/view/user/index.php';
     }
-
 }
-
-?>
