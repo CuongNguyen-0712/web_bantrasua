@@ -17,8 +17,20 @@ spl_autoload_register(function ($class) {
     }
 });
 
+<<<<<<< HEAD:myapp/app/core/route.php
 function route()
 {
+=======
+
+spl_autoload_register(function ($class) {
+    $path = APP_ROOT . '/app/view/' . str_replace('\\', '/', $class) . '.php';
+    if (file_exists($path)) {
+        require_once $path;
+    }
+});
+
+function route() {
+>>>>>>> 3024dfa (update and fix: app/.../user -> update: core/Bridge.php, core/route.php):myapp/core/route.php
     $url = $_GET['url'] ?? 'user/home/index';   //bây giờ params sẽ tới cần 3 đối số lần lượt là quyền hạn, controller và method
     $segments = explode('/', trim($url, '/'));
 
