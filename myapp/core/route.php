@@ -17,6 +17,14 @@ spl_autoload_register(function ($class) {
     }
 });
 
+
+spl_autoload_register(function ($class) {
+    $path = APP_ROOT . '/app/view/' . str_replace('\\', '/', $class) . '.php';
+    if (file_exists($path)) {
+        require_once $path;
+    }
+});
+
 function route() {
     $url = $_GET['url'] ?? 'user/home/index';   //bây giờ params sẽ tới cần 3 đối số lần lượt là quyền hạn, controller và method
     $segments = explode('/', trim($url, '/'));

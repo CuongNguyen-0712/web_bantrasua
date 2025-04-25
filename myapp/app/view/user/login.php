@@ -28,16 +28,16 @@
                     <span class="login-form__title">Đăng nhập</span>
                 </div>
                 <!-- Đây là phần action cơ bản dẫn theo url lần lượt là phân quyền/controller/method, thống nhất cách này cho đơn giản, cách khác lỗi ráng chịu -->
-                <form action="/web_bantrasua/myapp/user/auth/handleLogin" class="login-form__form" method="POST"> //
+                <form action="/web_bantrasua/myapp/user/auth/handleLogin" class="login-form__form" method="POST">
                     <div class="login-form__group">
                         <label for="emailid" class="login-form__label">Email hoặc số điện thoại:</label>
-                        <input type="text" name="username" id="emailid" class="login-form__input"
+                        <input type="text" name="email" id="emailid" class="login-form__input"
                             placeholder="Nhập email hoặc số điện thoại của bạn" />
                     </div>
 
                     <div class="login-form__group">
                         <label for="passid" class="login-form__label">Mật khẩu:</label>
-                        <input type="password" name="password" id="passid" class="login-form__input"
+                        <input type="password" name="pass" id="passid" class="login-form__input"
                             placeholder="Nhập mật khẩu của bạn" />
                         <div class="login-form__hidden-icon">
                             <i class="login-form__icon fa-solid fa-eye"></i>
@@ -52,11 +52,12 @@
                         <button class="login-form__btn" type="submit" name="submitType" value="ĐĂNG NHẬP">
                             Đăng nhập
                         </button>
-                        <?php if (isset($_SESSION['error'])): ?>
-                        <p style="color: red"><?= $_SESSION['error'] ?></p>
-                        <?php unset($_SESSION['error']);?>
-                        <?php endif; ?>
-                    </div>
+                        <?php         
+                            if (isset($_SESSION['error'])) {
+                                echo '<p style="color: red">Tài khoản hoặc mật khẩu không hợp lệ</p>';
+                                unset($_SESSION['error']);
+                            }
+                        ?>
                 </form>
 
                 <div class="login-form__link">
