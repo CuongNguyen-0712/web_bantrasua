@@ -15,7 +15,7 @@ function isAdmin() {
 }
 
 function route() {
-    $url = $_GET['url'] ?? 'home/index';
+    $url = $_GET['url'] ?? 'login/index';
     $segments = explode('/', trim($url, '/'));
 
     $controllerName = ucfirst($segments[0]) . '_Controller';
@@ -27,6 +27,7 @@ function route() {
     if (isAdminRoute($controllerName)) {
         if (!isAuthenticated()) {
             echo "❌ Bạn chưa đăng nhập!";
+            header("Location: login/index");
             return;
         }
         if (!isAdmin()) {
