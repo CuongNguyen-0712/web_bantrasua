@@ -10,9 +10,9 @@
 <body>
     <?php foreach ($accounts as $account): ?>
     <tr>
-        <p>Username: <?= htmlspecialchars($account['username']) ?></p>
-        <p>Email: <?= htmlspecialchars($account['email']) ?></p>
-        <p>Password: <?= htmlspecialchars($account['password']) ?></p>
+        <p>Username: <?= $account->getUserName(); ?></p>
+        <p>Email: <?= $account->getEmail(); ?></p>
+        <p>Password: <?= $account->getPassWord(); ?></p>
     </tr>
     <?php endforeach; ?>
     <button>

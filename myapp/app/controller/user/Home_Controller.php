@@ -1,9 +1,11 @@
 <?php 
 
-class Home_Controller extends Controller{
+namespace User;
+class Home_Controller{
     public function index(){
-        $this->view("user", []);
+        include APP_ROOT . '/app/view/user/index.php';
     }
+
 }
 
 ?>
