@@ -9,13 +9,11 @@ class Auth_Controller extends Controller {
     protected $email;
     protected $password;
 
-
     public function login() {
         $this->view('login', []);
     }
 
-    public function handleLogin() {
-        
+    public function handleLogin() {     
             if (isset($_POST['email']) && isset($_POST['pass'])) {
                 $this->email = $_POST['email'];
                 $this->password = $_POST['pass'];
@@ -25,10 +23,11 @@ class Auth_Controller extends Controller {
                 
                 if (!empty($result)) {
                     $_SESSION['user'] = [
-                        'email' => $this->email,
-                        'role' => 'user'
-                    ];//gắn link trang chủ đã đăng nhập
-                    header("Location: /web_bantrasua/myapp/user/home/index");
+                        'email' => $result['email'],
+                        'role' => 'user',
+                        'id' => $result['id']
+                    ];
+                    header("Location: /web_bantrasua/myapp/user/home/index");       //gắn link trang chủ đã đăng nhập
                     exit;
                 } else {
                     $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";

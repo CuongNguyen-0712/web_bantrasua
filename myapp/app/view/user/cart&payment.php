@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
-    <link rel="stylesheet" href="/myapp/public/assets/styles/user/cart&payment.css" />
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/cart&payment.css" />
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/style.css" />
     <link rel="icon" href="/web_bantrasua/myapp/public/assets/img/logo.png" />
     <title>Clover Tea</title>
@@ -13,9 +13,6 @@
 
 <body>
     <div class="form">
-        <div>
-            
-        </div>
         <!-- Cart -->
         <div class="cart-form">
 
@@ -33,11 +30,20 @@
 
                 <div class="cart-form__address">
                     <h5 class="cart-form__title">Địa chỉ</h5>
-                    <span class="cart-form__describe">213/4 Lí Thái Tổ, phường 9, quận 10, TP.HCM</span>
+                     <span class="cart-form__describe">
+                        <?php if( isset($data['address']) && is_array($data['address']) ): ?>
+                            <?php $fullAddress = $data['address']['street'] . ", " . $data['address']['ward'] . ", " . $data['address']['district'] . ", " . $data['address']['province'];
+                                    echo $fullAddress;  
+                            ?>
+                            <?php else: echo 'Không có địa chỉ mặc định. ' ?>
+                        <?php endif?>
+                    </span>
                 </div>
 
                 <div class="cart-form__btn">
-                    <i class="cart-form__btn-icon fa-solid fa-chevron-right"></i>
+                    <a href="/web_bantrasua/myapp/user/Cart/showAddressAndPhoneNumber">
+                        <i class="cart-form__btn-icon fa-solid fa-chevron-right"></i>       
+                    </a>
                 </div>
 
             </div>
@@ -46,8 +52,10 @@
             <div class="cart-form__form">
 
                 <div class="cart-form__common">
-                    <h5 class="cart-form__title">Hoàng Mạnh Hà</h5>
-                    <span class="cart-form__describ">Số điện thoại: 0377219288</span>
+                     <h5 class="cart-form__title"><?php echo $data['user_name']['username']?></h5>
+                     <span class="cart-form__describ">Số điện thoại: 
+                        <?php echo $data['phone']['phone_number']?>
+                     </span>
                 </div>
 
                 <div class="cart-form__btn">
@@ -83,7 +91,7 @@
                 </div>
 
                 <div class="cart-form__btn">
-                    <i class="cart-form__btn-icon fa-solid fa-chevron-right"></i>
+                        <i class="cart-form__btn-icon fa-solid fa-chevron-right"></i>
                 </div>
 
             </div>
@@ -102,11 +110,10 @@
             </div>
 
             <!-- Check box -->
-            <div class="cart-form__checkbox">
+            <!-- <div class="cart-form__checkbox">
                 <input type="checkbox" id="checkboxid" class="cart-form__check-box">
                 <label for="checkboxid" class="cart-form__check-box-label">Yêu cầu xuất hóa đơn</label>
-            </div>
-
+            </div> -->
         </div>
 
         <!-- Payment -->
@@ -264,12 +271,12 @@
 
             <div class="cart-form__payment-button">
                 <a href="./process2.html" class="cart-form__payment-btn">
-                   TIẾN HÀNH THANH TOÁN
+                TIẾN HÀNH THANH TOÁN
                 </a>
             </div>
         </div>
     </div>
-    
+
     <div class="form-container">
         <div class="form-container__contact">
             <p><span class="bolded">LIÊN HỆ</span></p>
@@ -293,8 +300,7 @@
             <p><i class="fa-solid fa-shield"></i> Chính sách bảo mật thông tin</p>
             <p><i class="fa-solid fa-cart-arrow-down"></i> Chính sách đặt hàng</p>
         </div>
-    </div>
-    <script src="/myapp/public/assets/js/user/payment.js"></script>
+    </div>    
 </body>
 
 </html>
