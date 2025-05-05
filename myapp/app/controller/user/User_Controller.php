@@ -4,15 +4,15 @@ namespace user;
 
 class User_Controller extends Controller
 {
-    // protected $userModel;
-    // public function __construct()
-    // {
-    //     $this->userModel = $this->model('user');
-    // }
+    protected $userModel;
+    public function __construct()
+    {
+        $this->userModel = $this->model('user');
+    }
 
     public function info()
     {
-        $this->view('info',[]);
+        $this->view('info', []);
     }
 
     // Lưu thông tin cá nhân cập nhật
@@ -41,7 +41,7 @@ class User_Controller extends Controller
         ) {
             $errors[] = 'Vui lòng nhập đầy đủ thông tin.';
         }
-        
+
 
         if (!empty($errors)) {
             $_SESSION['errors'] = $errors;
@@ -117,7 +117,3 @@ class User_Controller extends Controller
         }
     }
 }
-
-
-
-

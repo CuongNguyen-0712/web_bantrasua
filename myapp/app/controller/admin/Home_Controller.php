@@ -8,4 +8,4 @@ class Home_Controller
     {
         include APP_ROOT . "/app/view/admin/admin.php";
     }
-?>
+}
