@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'my-font';
-    src: url(web_bantrasua/myapp/lib/font/Arimo-VariableFont_wght.ttf) format('truetype');
+    src: url(/web_bantrasua/myapp/lib/font/Arimo-VariableFont_wght.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'second-font';
-    src: url(/myapp/lib/font/Anton-Regular.ttf) format('truetype');
+    src: url(/web_bantrasua/myapp/lib/font/Anton-Regular.ttf) format('truetype');
 }
 
 * {
