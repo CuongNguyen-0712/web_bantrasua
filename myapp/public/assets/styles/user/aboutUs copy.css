@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+/*Detail-form__Layout-1 */
+.detail-form__layout-1{
+display: flex;
+flex-direction: row;
+line-height: 1.5;
+margin-top: 20vh;
+
+}
+
+.detail-form__container{
+    display: flex;
+}
+/* CSS CONTENT  */
+.detail-form__content{
+    width: 40vw;
+    height: auto;
+    font-size: 20px;
+    margin-left: 250px;
+    text-align: left;
+    position: relative;
+}
+.detail-form__content li::marker{
+    color: rgb(183, 182, 182);
+}
+
+/* CSS CONTENT TIÊU ĐỀ H2 */
+.detail-form__content h2{
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(2, 108, 61);
+}
+
+/* CSS ẢNH  */
+.detail-form__image img{
+    width: 35%;
+    margin-left: 5%;
+    position: absolute;
+}
+/* CSS CHỮ IN ĐẬM */
+strong{
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(2, 108, 61);
+}
+.discover {
+    padding: 10px 30px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 20px;
+    color: rgb(2, 108, 61);
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(2, 108, 61);
+  }
+  .discover:hover {
+    background-color: rgb(2, 108, 61);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+
+/* Detail-form__layout-2 */
+.detail-form__layout-2{
+display: flex;
+flex-direction: row;
+line-height: 1.5;
+margin-top: 10%;
+margin-bottom: 10%;
+
+}
+
+.detail-form__container-second{
+    display: flex;
+}
+
+/* CSS CONTENT  */
+.detail-form__content-second{
+    width: 50vw;
+    height: auto;
+    font-size: 20px;
+    margin-left: 45%;
+    text-align: left;
+    justify-content: center;
+    position: absolute;
+}
+
+.detail-form__content-second li::marker{
+    color: rgb(183, 182, 182);
+}
+
+/* CSS TIÊU ĐỀ CONTENT */
+.detail-form__content-second h2{
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(2, 108, 61);
+}
+
+/* CSS ẢNH */
+.detail-form__image-second img{
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 8%;
+    position: relative;
+}
+strong{
+    color: rgb(2, 108, 61);
+}
+/* Detail-form__last */
+.detail-form__last{
+    width: 60%;
+    justify-content: center;
+    text-align: center;
+    margin-left: 20%;
+    font-size: 18px;
+    line-height: 1.5;
+    color:rgb(99, 98, 98);
+}
+.detail-form__last h2{
+    font-weight: 600;
+    color: rgb(2, 108, 61);
+}
+.detail-form__last p{
+    margin-bottom: 5%;
+}

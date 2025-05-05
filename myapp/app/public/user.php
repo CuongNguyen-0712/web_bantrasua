@@ -6,5 +6,5 @@ include '../view/user/home.php';
 
 include '../view/user/footer.php';
 
-    
+
 ?>
