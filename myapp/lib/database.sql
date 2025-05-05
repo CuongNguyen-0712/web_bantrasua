@@ -9,8 +9,6 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
--- CREATE DATABASE clover_tea;
--- USE clover_tea;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */
 ;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */
@@ -2150,12 +2148,7 @@ ADD PRIMARY KEY (`order_id`, `product_id`, `size_id`),
 -- Chỉ mục cho bảng `order_detail_topping`
 --
 ALTER TABLE `order_detail_topping`
-ADD PRIMARY KEY (
-    `order_id`,
-    `product_id`,
-    `size_id`,
-    `topping_id`
-  ),
+ADD PRIMARY KEY (`order_id`, `product_id`, `size_id`, `topping_id`),
   ADD KEY `topping_id` (`topping_id`);
 --
 -- Chỉ mục cho bảng `order_status`
