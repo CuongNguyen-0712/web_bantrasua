@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/styles/user/address.css">
-    <link rel="stylesheet" href="/assets/font/Arimo-VariableFont_wght.ttf">
-    <link rel="stylesheet" href="/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
-    <link rel="icon" href="/assets/img/logo.png">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/address.css">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/font/Anton-Regular.ttf">
+    <link rel="icon" href="/web_bantrasua/myapp/public/assets/img/logo.png">
     <title>Clover Tea</title>
 </head>
 <body>
@@ -21,17 +21,25 @@
                             <div class="address-form__header">
                                 <header class="address-form__heading">Thay đổi địa chỉ giao hàng</header>
                             </div>   
-                            <div class="address-form__input-address">
+                            <form action = "/web_bantrasua/myapp/user/Cart/saveAddress" method="post" class="address-form__input-address">
                                 <i class="address-form__input-icon-search fa-solid fa-magnifying-glass"></i>
-                                <input type="text" class="address-form__input" placeholder="Vui lòng nhập địa chỉ">
-                            </div>
+                                <input type="text" name="newAddress" class="address-form__input" placeholder="Vui lòng nhập địa chỉ">
+                                <input type="submit" hidden>
+                            </form>
     
                             <div class="address-form__location">
                                 <h4 class="address-form__location-title">
                                     <i class="fa-solid fa-location-crosshairs"></i>
                                     Vị trí hiện tại của bạn
                                 </h4>
-                                <span class="address-form__location-content">213/4 Lí Thái Tổ, phường 9, quận 10, thành phố Hồ Chí Minh</span>
+                                <span class="address-form__location-content">
+                                    <?php if( isset($data['address']) && is_array($data['address']) ): ?>
+                                        <?php $fullAddress = $data['address']['street'] . ", " . $data['address']['ward'] . ", " . $data['address']['district'] . ", " . $data['address']['province'];
+                                                echo $fullAddress;  
+                                        ?>
+                                        <?php else: echo 'Không có địa chỉ mặc định. ' ?>
+                                    <?php endif?>
+                                </span>
                             </div>
                         </div>
 
@@ -45,5 +53,6 @@
             </div>
         </div>
     </div>
+    <script src="/web_bantrasua/myapp/public/assets/js/user/payment.js"></script>     <!-- chỗ này-->
 </body>
 </html>

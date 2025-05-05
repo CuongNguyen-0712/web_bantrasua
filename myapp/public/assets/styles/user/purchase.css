@@ -36,7 +36,7 @@ body {
 }
 
 .purchase-form {
-    width: 750px;
+    width: 700px;
     margin-top: 4%;
     margin-bottom: 5%;
 }
@@ -73,7 +73,6 @@ body {
 
 .purchase-header__heading-btn-shop {
     width: 90px;
-    height: 23px;
     background-color: #fff;
     border: 1px solid rgb(210, 213, 215);
     border-radius: 2px;
