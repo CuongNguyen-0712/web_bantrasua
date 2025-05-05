@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặt Mua</title>
     <link rel="icon" href="/web_bantrasua/myapp/public/assets/img/logo.png">
-    <link rel="stylesheet" href="">
-    <link href="/assets/font/Arimo-VariableFont_wght.ttf" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/icon/fontawesome-free-6.6.0-web/">
+    <!-- <link href="/web_bantrasua/myapp/public/assets/font/Arimo-VariableFont_wght.ttf" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/">
 <style>
 
 .html,
@@ -417,7 +416,7 @@ body {
                         <div class="Img__product">
                             <div class="Img__product-decribe">
                                 <img class="img"
-                                    src="public/assets/img/trasua_moi-Photoroom.png"
+                                    src="/web_bantrasua/myapp/public/assets/img/trasua_moi-Photoroom.png"
                                     alt="hinh tra sua">
                             </div>
 
@@ -500,7 +499,7 @@ body {
                             <!-- header__pay-product -->
                             <div class="header__pay-product">
                                 <button class="header__pay-product-bill">
-                                    <a href="index.php?url=order/checkout" class="header__pay-product-bill-link">
+                                    <a href="/web_bantrasua/myapp/user/cart/store" class="header__pay-product-bill-link">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                         Thêm vào giỏ hàng: 59.000&#8363;
                                     </a>

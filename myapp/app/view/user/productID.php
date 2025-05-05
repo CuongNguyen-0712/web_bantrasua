@@ -38,7 +38,7 @@
                     </div>
                         <!-- Button -->
                     <div class="product-form__buy">
-                        <a href="/pages/user/datMua copy.html " class="product-form__buy-btn">        <!--sẽ sửa đường dẫn sau-->
+                        <a href="/web_bantrasua/myapp/user/order/index" class="product-form__buy-btn">        <!--sẽ sửa đường dẫn sau-->
                             <button class="product-form__buy-btn">
                             <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                             Đặt mua

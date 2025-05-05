@@ -1,19 +1,18 @@
 <?php
 
-
-require_once __DIR__ . '/../../core/Controller.php';
+namespace user;
 
 class User_Controller extends Controller
 {
-    protected $userModel;
-    public function __construct()
-    {
-        $this->userModel = $this->model('User');
-    }
+    // protected $userModel;
+    // public function __construct()
+    // {
+    //     $this->userModel = $this->model('user');
+    // }
 
     public function info()
     {
-        require_once __DIR__ . '/../../views/info.php';
+        $this->view('info',[]);
 
     }
 
@@ -87,13 +86,13 @@ class User_Controller extends Controller
 
             if ($password !== $confirm_password) {
                 $error = "Mật khẩu không khớp!";
-                require_once __DIR__ . '/../../views/register.php';
+                require_once __DIR__ . '/../../view/register.php';
                 return;
             }
 
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $error = "Email không hợp lệ!";
-                require_once __DIR__ . '/../../views/register.php';
+                require_once __DIR__ . '/../../view/register.php';
                 return;
             }
 
@@ -102,17 +101,17 @@ class User_Controller extends Controller
 
             if ($success) {
                 $_SESSION['success'] = 'Đăng ký tài khoản thành công!';
-                require_once __DIR__ . '/../../views/register.php';
+                require_once __DIR__ . '/../../view/register.php';
                 unset($_SESSION['success']); // Xóa sau khi hiển thị
                 return;
             } else {
                 $error = "Đăng ký thất bại. Email có thể đã tồn tại.";
-                require_once __DIR__ . '/../../views/register.php';
+                require_once __DIR__ . '/../../view/register.php';
                 return;
             }
         } else {
             // GET request: hiển thị form
-            require_once __DIR__ . '/../../views/register.php';
+            require_once __DIR__ . '/../../view/register.php';
         }
     }
 

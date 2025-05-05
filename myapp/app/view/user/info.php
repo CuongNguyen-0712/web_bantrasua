@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Thông Tin Cá Nhân</title>
-    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/x-icon" href="/web_bantrasua/myapp/public/assets/img/logo.png">
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/font/Arimo-VariableFont_wght.ttf">
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
 <style>
@@ -235,7 +235,7 @@ input[type="date"] {
                 </li>
                 <li>
          
-                    <a href="/index.html" target="_top">
+                    <a href="index.php" target="_top">
                         <span class="sidebar__item">
                             <i class="icon-identify fa-solid fa-arrow-right-from-bracket"></i> Đăng Xuất
                         </span>
