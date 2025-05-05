@@ -27,8 +27,7 @@ class Database
 
                 // Dùng db và import từ file
                 $pdo->exec("USE {$config['name']}");
-                $sqlPath = __DIR__ . "/database.sql";
-                $sqlPath = __DIR__ . "/database.sql";
+                $sqlPath = __DIR__ . '/../lib/database.sql';
                 if (file_exists($sqlPath)) {
                     $sql = file_get_contents($sqlPath);
                     $pdo->exec($sql);
@@ -50,7 +49,7 @@ class Database
     }
 
     public static function getInstance()
-    {
+    {  //Đây là phần kết nối db, chỉ cần gọi static class là được
         if (!self::$instance) {
             self::$instance = new Database();
         }

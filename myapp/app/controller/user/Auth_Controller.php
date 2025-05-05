@@ -27,7 +27,8 @@ class Auth_Controller extends Controller {
                     $_SESSION['user'] = [
                         'email' => $this->email,
                         'role' => 'user'
-                    ];//gắn link trang chủ đã đăng nhập
+                    ];
+                    
                     header("Location: /web_bantrasua/myapp/user/home/index");
                     exit;
                 } else {

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/admin/admin.css">
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/style.css" />
     <link rel="stylesheet"
-        href="/web_bantrasua/myapp/lib/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
+        href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
     <title>My admin</title>
 </head>
 
@@ -61,7 +61,8 @@
                 <i class="fa-regular fa-bell"></i>
                 <div class="admin_info">
                     <i class="fa-solid fa-user"></i>
-                    <span>Admin</span>
+                    <span
+                        style="display: flex; font-size: 12px; font-weight: 600; text-transform: uppercase;">Admin</span>
                 </div>
                 <div class="admin_dropdown active">
                     <div class="dropdown_heading">
@@ -82,7 +83,7 @@
                             <span>Hộp thư</span>
                         </button>
                     </div>
-                    <button>Đăng xuất</button>
+                    <button id="logout_admin">Đăng xuất</button>
                 </div>
             </div>
         </header>
@@ -90,5 +91,14 @@
     </main>
 </body>
 <script src="/web_bantrasua/myapp/public/assets/js/admin/admin.js"></script>
+<script>
+    document.getElementById('logout_admin').addEventListener('click', () => {
+        fetch('/web_bantrasua/myapp/admin/auth/logout', {
+            method: 'POST'
+        }).then(() => {
+            window.location.href = '/web_bantrasua/myapp/admin/auth/login';
+        })
+    })
+</script>
 
 </html>

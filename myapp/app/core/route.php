@@ -17,11 +17,6 @@ spl_autoload_register(function ($class) {
     }
 });
 
-<<<<<<< HEAD:myapp/app/core/route.php
-function route()
-{
-=======
-
 spl_autoload_register(function ($class) {
     $path = APP_ROOT . '/app/view/' . str_replace('\\', '/', $class) . '.php';
     if (file_exists($path)) {
@@ -29,8 +24,8 @@ spl_autoload_register(function ($class) {
     }
 });
 
-function route() {
->>>>>>> 3024dfa (update and fix: app/.../user -> update: core/Bridge.php, core/route.php):myapp/core/route.php
+function route()
+{
     $url = $_GET['url'] ?? 'user/home/index';   //bây giờ params sẽ tới cần 3 đối số lần lượt là quyền hạn, controller và method
     $segments = explode('/', trim($url, '/'));
 
@@ -60,20 +55,20 @@ function route() {
     $isPublicRoute = in_array($currentRoute, $publicRoutes[$namespace] ?? []);
 
     // 🔒 Phân quyền
-    if (!isset($_SESSION['user'])) {
-        if (!$isPublicRoute) {
+    if (!$isPublicRoute) {
+        if (!isset($_SESSION['user'])) {
             header("Location: /web_bantrasua/myapp/{$namespace}/auth/login");
             exit;
-        }
-    } else {
-        $role = $_SESSION['user']['role'];
-        if ($namespace === 'admin' && $role !== 'admin') {
-            echo "⛔ Bạn không có quyền truy cập trang quản trị!";
-            exit;
-        }
-        if ($namespace === 'user' && $role !== 'user') {
-            echo "⛔ Bạn không có quyền truy cập trang người dùng!";
-            exit;
+        } else {
+            $role = $_SESSION['user']['role'];
+            if ($namespace === 'admin' && $role !== 'admin') {
+                echo "⛔ Bạn không có quyền truy cập trang quản trị!";
+                exit;
+            }
+            if ($namespace === 'user' && $role !== 'user') {
+                echo "⛔ Bạn không có quyền truy cập trang người dùng!";
+                exit;
+            }
         }
     }
 
