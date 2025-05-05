@@ -4,22 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-  <link rel="stylesheet" href="/old/assets/styles/user/product.css">
-  <link rel="stylesheet" href="/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
-  <link rel="stylesheet" href="/old/assets/styles/style.css">
-  <link rel="stylesheet" href="/old/assets/styles/user/">
-  <link rel="stylesheet" href="/old/assets/styles/user/grid.css">
-  <link rel="icon" href="/old/assets/img/logo.png">
-  <link href="/myapp/public/assets/font/Arimo-VariableFont_wght.ttf" rel ="stylesheet">
+  <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/product.css">
+  <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
+  <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/style.css">
+  <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/grid.css">
 
-=======
-  <link rel="stylesheet" href="../../assets/styles/user/product.css">
-  <link rel="stylesheet" href="../../assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
-  <link rel="stylesheet" href="../../assets/styles/style.css">
-  <link rel="icon" href="../../assets/img/logo.png">
->>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a
+  <link rel="icon" href="/web_bantrasua/myapp/public/assets/img/logo.png">
   <title>Trà sữa</title>
+  <style>
+
+    
+  </style>
 </head>
 
 <body>
@@ -47,7 +42,7 @@
             <!-- Image -->
             <div class="product-form__image">
               <i class="product-form__image-icon fa-solid fa-clover"></i>
-              <img src="/old/assets/img/h5-removebg-preview.png" alt="Trà Sữa Clover Tea" class="product-form__image-img">
+              <img src="/web_bantrasua/myapp/public/assets/img/trasua_moi-Photoroom.png" alt="Trà Sữa Clover Tea" class="product-form__image-img">
             </div>
 
             <!-- Content -->
@@ -58,7 +53,7 @@
 
             <!-- Button -->
             <div class="product-form__buy">
-              <a href="/old/pages/user/datMua copy.html" class="product-form__buy-btn">
+              <a href="index.php?url=order/infomation" class="product-form__buy-btn">
                 <button class="product-form__buy-btn">
                   <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                   Đặt mua
@@ -79,7 +74,7 @@
             <!-- Image -->
             <div class="product-form__image">
               <i class="product-form__image-icon fa-solid fa-clover"></i>
-              <img src="/old/assets/img/h5-removebg-preview.png" alt="Trà Sữa Clover Tea" class="product-form__image-img">
+              <img src="/web_bantrasua/myapp/public/assets/img/trasua_moi-Photoroom.png" alt="Trà Sữa Clover Tea" class="product-form__image-img">
             </div>
             <!-- Content -->
             <div class="product-form__content">
@@ -88,7 +83,7 @@
             </div>
               <!-- Button -->
             <div class="product-form__buy">
-              <a href="/old/pages/user/datMua copy.html" class="product-form__buy-btn">
+              <a href="index.php?url=order/infomation" class="product-form__buy-btn">
                 <button class="product-form__buy-btn">
                   <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                   Đặt mua
@@ -107,7 +102,7 @@
           <div class="product-form__container">
             <!-- Image -->
             <div class="product-form__image">
-              <img src="/old/assets/img/h5-removebg-preview.png" alt="Hồng trà sữa" class="product-form__image-img">
+              <img src="/web_bantrasua/myapp/public/assets/img/trasua_moi-Photoroom.png" alt="Hồng trà sữa" class="product-form__image-img">
             </div>
             <!-- Content -->
             <div class="product-form__content">
@@ -116,7 +111,7 @@
             </div>
             <!-- Button -->
             <div class="product-form__buy">
-              <a href="/old/pages/user/datMua copy.html" class="product-form__buy-btn">
+              <a href="index.php?url=order/infomation" class="product-form__buy-btn">
                 <button class="product-form__buy-btn">
                   <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                   Đặt mua
@@ -137,7 +132,7 @@
           <div class="product-form__container">
             <!-- Image -->
             <div class="product-form__image">
-              <img src="/old/assets/img/h5-removebg-preview.png" alt="Trà sữa Olong Quế Hoa" class="product-form__image-img">
+              <img src="/web_bantrasua/myapp/public/assets/img/trasua_moi-Photoroom.png" alt="Trà sữa Olong Quế Hoa" class="product-form__image-img">
             </div>
             <!-- Content -->
             <div class="product-form__content">
@@ -146,7 +141,7 @@
             </div>
             <!-- Button -->
             <div class="product-form__buy">
-              <a href="/pages/user/datMua copy.html" class="product-form__buy-btn">
+              <a href="index.php?url=order/infomation" class="product-form__buy-btn">
                 <button class="product-form__buy-btn">
                   <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                   Đặt mua
@@ -166,7 +161,7 @@
           <div class="product-form__container">
             <!-- Image -->
             <div class="product-form__image">
-              <img src="/old/assets/img/h5-removebg-preview.png" alt="Trà sữa Bá Tước" class="product-form__image-img">
+              <img src="/web_bantrasua/myapp/public/assets/img/trasua_moi-Photoroom.png" alt="Trà sữa Bá Tước" class="product-form__image-img">
             </div>
             <!-- Content -->
             <div class="product-form__content">
@@ -175,7 +170,7 @@
             </div>
             <!-- Button -->
             <div class="product-form__buy">
-              <a href="/pages/user/datMua copy.html" class="product-form__buy-btn">
+              <a href="index.php?url=order/infomation" class="product-form__buy-btn">
                 <button class="product-form__buy-btn">
                   <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                   Đặt mua
@@ -195,7 +190,7 @@
           <div class="product-form__container">
             <!-- Image -->
             <div class="product-form__image">
-              <img src="/old/assets/img/trasua_moi-Photoroom.png" alt="Trà sữa Vân Nam" class="product-form__image-img">
+              <img src="/web_bantrasua/myapp/public/assets/img/trasua_moi-Photoroom.png" alt="Trà sữa Vân Nam" class="product-form__image-img">
             </div>
             <!-- Content -->
             <div class="product-form__content">
@@ -204,7 +199,7 @@
             </div>
             <!-- Button -->
             <div class="product-form__buy">
-              <a href="/old/pages/user/datMua copy.html" class="product-form__buy-btn">
+              <a href="index.php?url=order/infomation" class="product-form__buy-btn">
                 <button class="product-form__buy-btn">
                   <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                   Đặt mua
@@ -232,11 +227,11 @@
     </li>
 
     <li class="pagination-item">
-      <a href="/old/pages/user/tea.html" class="pagination-item__link">2</a>
+      <a href="/pages/user/tea.html" class="pagination-item__link">2</a>
     </li>
 
     <li class="pagination-item">
-      <a href="/old/pages/user/coffee.html" class="pagination-item__link">3</a>
+      <a href="/pages/user/coffee.html" class="pagination-item__link">3</a>
     </li>
 
     <li class="pagination-item">

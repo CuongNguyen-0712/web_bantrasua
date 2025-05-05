@@ -36,9 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
         asideBar.classList.remove("active");
         main.classList.remove("active");
     })
+
 });
-
-
 const handleLoadContent = (page) => {
     var iframe = document.getElementById('content_admin');
     iframe.src = page;
