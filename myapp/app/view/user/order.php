@@ -492,9 +492,10 @@
                                 <div class="header__sweet-product-option">
                                     <?php if (isset($data['sweetLevels']) && is_array($data['sweetLevels'])): ?>
                                         <?php foreach ($data['sweetLevels'] as $sweet):
-                                            if ($sweet['id'] == 5) {
+                                            if ($sweet['id'] == 8) {
+
                                         ?>
-                                                <button class="btn-sweet sweet-btn selected" data-component-id="2"
+                                                <button class="btn-sweet sweet-btn selected >" data-component-id="2"
                                                     data-level-id="<?php echo $sweet['id']; ?>"
                                                     data-sweet="<?php echo $sweet['name']; ?>">
                                                     <?php echo $sweet['name']; ?>
@@ -502,7 +503,7 @@
                                             <?php
                                             } else {
                                             ?>
-                                                <button class="btn-sweet sweet-btn " data-level-id="<?php echo $sweet['id']; ?>"
+                                                <button class="btn-sweet sweet-btn  >" data-level-id="<?php echo $sweet['id']; ?>"
                                                     data-sweet="<?php echo $sweet['name']; ?>">
                                                     <?php echo $sweet['name']; ?>
                                                 </button>
@@ -522,16 +523,16 @@
                                 <div class="header__ice-product-option">
                                     <?php if (isset($data['iceLevels']) && is_array($data['iceLevels'])): ?>
                                         <?php foreach ($data['iceLevels'] as $ice):
-                                            if ($ice['id'] == 2) {
+                                            if ($ice['id'] == 5) {
                                         ?>
-                                                <button class="btn-ice ice-btn selected " data-level-id="<?php echo $ice['id']; ?>"
+                                                <button class="btn-ice ice-btn selected>" data-level-id="<?php echo $ice['id']; ?>"
                                                     data-ice="<?php echo $ice['name']; ?>">
                                                     <?php echo $ice['name']; ?>
                                                 </button>
                                             <?php
                                             } else {
                                             ?>
-                                                <button class="btn-ice ice-btn" data-level-id="<?php echo $ice['id']; ?>"
+                                                <button class="btn-ice ice-btn >" data-level-id="<?php echo $ice['id']; ?>"
                                                     data-ice="<?php echo $ice['name']; ?>">
                                                     <?php echo $ice['name']; ?>
                                                 </button>
@@ -553,9 +554,9 @@
                                             <label>
                                                 <input type="checkbox" class="topping-checkbox" name="topping[]"
                                                     value="<?php echo $topping['id']; ?>"
-                                                    data-price="<?php echo $topping['cost']; ?>">
+                                                    data-price="<?php echo $topping['price']; ?>">
                                                 <span><?php echo $topping['name']; ?></span> -
-                                                <span><?php echo number_format($topping['cost'], 0, ',', '.'); ?>&#8363;</span>
+                                                <span><?php echo number_format($topping['price'], 0, ',', '.'); ?>&#8363;</span>
                                             </label>
                                         </div>
                                     <?php endforeach; ?>
@@ -683,15 +684,15 @@
                         // Thêm selected vào nút được chọn
                         this.classList.add('selected');
 
-                        // Cập nhật thông tin ngọt đã chọn (ID 4, 5, 6)
+                        // Cập nhật thông tin ngọt đã chọn (ID 7, 8, 9)
                         selectedSweet = {
                             sweet: this.getAttribute('data-sweet'),
                             componentId: this.hasAttribute('data-component-id') ? parseInt(this
                                 .getAttribute('data-component-id')) : 2,
                             levelId: this.hasAttribute('data-level-id') ? parseInt(this
                                 .getAttribute('data-level-id')) : (this.getAttribute(
-                                    'data-sweet') === 'Ít' ? 4 :
-                                (this.getAttribute('data-sweet') === 'Bình thường' ? 5 : 6))
+                                    'data-sweet') === 'Ít' ? 7 :
+                                (this.getAttribute('data-sweet') === 'Bình thường' ? 8 : 9))
                         };
                     });
                 });
@@ -706,15 +707,15 @@
                         // Thêm selected vào nút được chọn
                         this.classList.add('selected');
 
-                        // Cập nhật thông tin đá đã chọn (ID 1, 2, 3)
+                        // Cập nhật thông tin đá đã chọn (ID 4, 5, 6)
                         selectedIce = {
                             ice: this.getAttribute('data-ice'),
                             componentId: this.hasAttribute('data-component-id') ? parseInt(this
                                 .getAttribute('data-component-id')) : 1,
                             levelId: this.hasAttribute('data-level-id') ? parseInt(this
                                 .getAttribute('data-level-id')) : (this.getAttribute(
-                                    'data-ice') === 'Ít' ? 1 :
-                                (this.getAttribute('data-ice') === 'Bình thường' ? 2 : 3))
+                                    'data-ice') === 'Ít' ? 4 :
+                                (this.getAttribute('data-ice') === 'Bình thường' ? 5 : 6))
                         };
                     });
                 });
@@ -761,7 +762,7 @@
                             componentId: defaultSweetBtn.hasAttribute('data-component-id') ? parseInt(
                                 defaultSweetBtn.getAttribute('data-component-id')) : 2,
                             levelId: defaultSweetBtn.hasAttribute('data-level-id') ? parseInt(defaultSweetBtn
-                                .getAttribute('data-level-id')) : 5
+                                .getAttribute('data-level-id')) : 8
                         };
                     }
                 }
@@ -777,7 +778,7 @@
                             componentId: defaultIceBtn.hasAttribute('data-component-id') ? parseInt(
                                 defaultIceBtn.getAttribute('data-component-id')) : 1,
                             levelId: defaultIceBtn.hasAttribute('data-level-id') ? parseInt(defaultIceBtn
-                                .getAttribute('data-level-id')) : 2
+                                .getAttribute('data-level-id')) : 5
                         };
                     }
                 }
@@ -797,15 +798,15 @@
                         product_price: basePrice + selectedSize.price + selectedToppings.reduce((total,
                             topping) => total + topping.price, 0),
                         product_quantity: quantity,
-                        ice_level: selectedIce ? selectedIce.levelId : 2, // Mặc định là bình thường (ID: 5)
-                        sweet_level: selectedSweet ? selectedSweet.levelId : 5, // Mặc định là bình thường (ID: 8)
+                        ice_level: selectedIce ? selectedIce.levelId : 5, // Mặc định là bình thường (ID: 5)
+                        sweet_level: selectedSweet ? selectedSweet.levelId : 8, // Mặc định là bình thường (ID: 8)
                         toppings: JSON.stringify(selectedToppings.map(t => t.id))
                     };
 
                     // Tạo form để submit dữ liệu
                     const form = document.createElement('form');
                     form.method = 'POST';
-                    form.action = '/web_bantrasua/myapp/user/cart/add';
+                    form.action = '/web_bantrasua/myapp/user/order/add';
                     form.style.display = 'none';
 
                     // Thêm các trường input vào form

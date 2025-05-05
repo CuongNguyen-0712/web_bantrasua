@@ -16,4 +16,3 @@ class Home_Controller extends Controller
         $this->view('index', []);
     }
 }
-?>
