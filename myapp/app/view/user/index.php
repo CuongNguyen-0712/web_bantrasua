@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<?php 
-    echo("Dang nhap thanh cong");
-    //Này là test thử thoi
-?>
-=======
-<html lang="en">
+<?php
+echo ("Dang nhap thanh cong");
+//Này là test thử thoi
+?>=======<html lang="en">
 
 <head>
     <link rel="stylesheet" href="../../assets/styles/user/advacedSearch copy.css">
@@ -13,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLOVER-TEA</title>
     <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png">
-    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css  ">
+    <link rel="stylesheet"
+        href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css  ">
     <link href="../../assets/font/Arimo-VariableFont_wght.ttf" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Arimo:ital,wght@0,400..700;1,400..700&family=Lobster&family=Qwigley&display=swap"
@@ -25,7 +23,12 @@
             min-width: 250px;
             background-color: #f8f6f6;
         }
-        .icon-login_1, .icon-login_2, .icon-login_3, .icon-login_4, .icon-login_5 {
+
+        .icon-login_1,
+        .icon-login_2,
+        .icon-login_3,
+        .icon-login_4,
+        .icon-login_5 {
             margin-right: 10%;
         }
     </style>
@@ -58,7 +61,8 @@
                                     <h3>Bộ Lọc Tìm Kiếm</h3>
                                     <!-- menu__filter-item -->
                                     <ul class="menu__filter-item"><i class="fa-solid fa-shop"></i> Nơi bán
-                                        <li><input type="radio" name="cty" id="ctyvn" value="hcm" checked>TP.Hồ Chí
+                                        <li><input type="radio" name="cty" id="ctyvn" value="hcm" checked>TP.Hồ
+                                            Chí
                                             Minh</li>
                                         <li><input type="radio" name="cty" id="ctyvn" value="hn">Hà Nội</li>
                                         <li><input type="radio" name="cty" id="ctyvn" value="tn">Thái Nguyên</li>
@@ -72,14 +76,16 @@
                                         <li><input type="radio" name="cty" id="ctyvn" value="ct">Cần Thơ</li>
                                     </ul>
 
-                                    <ul class="menu__filter-item"><i class="fa-solid fa-truck"></i> Đơn Vị Vận Chuyển
+                                    <ul class="menu__filter-item"><i class="fa-solid fa-truck"></i> Đơn Vị Vận
+                                        Chuyển
                                         <li><input type="radio" name="transport" id="transportvn" value="quick"
                                                 checked>Nhanh</li>
                                         <li><input type="radio" name="transport" id="transportvn" value="save">Tiết
                                             Kiệm</li>
                                     </ul>
 
-                                    <ul class="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i> Khoảng
+                                    <ul class="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i>
+                                        Khoảng
                                         Giá
                                         <li><input type="" placeholder="Từ &#8363;"></li>
                                         <li><input type="" placeholder="Đến &#8363;"></li>
@@ -122,7 +128,7 @@
                                         <!-- icon-login_3 -->
                                         <i class="icon-login_3 fa-solid fa-boxes-stacked"></i>
                                         <!-- <a onclick="handleLoadContent('purchase.html')">Đơn Mua</a> -->
-                                         <a href="/web_bantrasua/myapp/user/Purchase/show">Đơn mua</a>
+                                        <a href="/web_bantrasua/myapp/user/Purchase/show">Đơn mua</a>
                                     </li>
 
                                     <!-- item 5 -->
@@ -144,7 +150,8 @@
                     <li class=" header__nav-list">
                         <!-- Header__nav-item -->
                     <li class="header__nav-item">
-                        <a onclick="handleLoadContent('logined-content.html')" class="header__nav-item">TRANG CHỦ</a>
+                        <a onclick="handleLoadContent('logined-content.html')" class="header__nav-item">TRANG
+                            CHỦ</a>
                     </li>
                     <li class="header__nav-item header__nav-item--has-product">SẢN PHẨM
 
@@ -157,27 +164,30 @@
                                     <h3>TRÀ SỮA</h3>
                                 </header> -->
 
-                                <?php foreach($data['categories'] as $category): ?>
+                                <?php foreach ($data['categories'] as $category): ?>
 
-                                <header>     <!--sửa lại css khúc này dùm t nha-->
-                                    <h3> <a href="/web_bantrasua/myapp/user/Home/showProductByCategory/<?php echo $category['id'];?>" class="header__product-header">
-                                        <?php echo $category['name']?></a>
-                                    </h3>
-                                </header>
+                                    <header>
+                                        <!--sửa lại css khúc này dùm t nha-->
+                                        <h3> <a href="/web_bantrasua/myapp/user/Home/showProductByCategory/<?php echo $category['id']; ?>"
+                                                class="header__product-header">
+                                                <?php echo $category['name'] ?></a>
+                                        </h3>
+                                    </header>
 
-                                <ul class="header__product-list">
+                                    <ul class="header__product-list">
 
-                                    <?php foreach($data['products'] as $product): ?>
+                                        <?php foreach ($data['products'] as $product): ?>
 
-                                        <?php if($product['category_id'] == $category['id']): ?>
-                                            <li class="header__product-item">
-                                                <a href="/web_bantrasua/myapp/user/Home/showProductByID/<?php echo $product['id']; ?>" class="header__product-name-item">
-                                                    <?php echo $product['name']?></a>
-                                            </li>
-                                        <?php endif; ?>
+                                            <?php if ($product['category_id'] == $category['id']): ?>
+                                                <li class="header__product-item">
+                                                    <a href="/web_bantrasua/myapp/user/Home/showProductByID/<?php echo $product['id']; ?>"
+                                                        class="header__product-name-item">
+                                                        <?php echo $product['name'] ?></a>
+                                                </li>
+                                            <?php endif; ?>
 
-                                    <?php endforeach; ?>
-                                </ul>
+                                        <?php endforeach; ?>
+                                    </ul>
 
                                 <?php endforeach; ?>
 
@@ -284,7 +294,8 @@
                         </div>
                     </li>
                     <li class="header__nav-item">
-                        <a onclick="handleLoadContent('aboutUs copy.html')" class="header__nav-item">VỀ CHÚNG TÔI</a>
+                        <a onclick="handleLoadContent('aboutUs copy.html')" class="header__nav-item">VỀ CHÚNG
+                            TÔI</a>
                     </li>
                     </li>
                 </div>
@@ -300,4 +311,3 @@
 </body>
 
 </html>
->>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a

@@ -13,7 +13,7 @@ class Order
             $sql = "INSERT INTO orders (total_price, payment, status, province, district, ward, street, shipping_fee, note, account_id)
                     VALUES (:total_price, :payment, :status, :province, :district, :ward, :street, :shipping_fee, :note, :account_id)";
             $stmt = $db->prepare($sql);
-          
+
 
             // Lấy ID đơn hàng mới tạo
             $orderId = $db->lastInsertId();
@@ -45,7 +45,9 @@ class Order
     public static function getByAccount($account_id)
     {
         $db = Database::getInstance();
-        return $db->fetchAll("SELECT * FROM `order` WHERE account_id = ?", [$account_id]);
+        $stmt = $db->prepare("SELECT * FROM `order` WHERE account_id = ?");
+        $stmt->execute([$account_id]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
 
@@ -58,6 +60,4 @@ class Order
         $stmt->execute(['order_id' => $order_id]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
-
 }

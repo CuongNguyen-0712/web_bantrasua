@@ -9,19 +9,11 @@
 
 <body>
     <?php foreach ($accounts as $account): ?>
-<<<<<<< HEAD:myapp/app/views/admin/index.php
         <tr>
             <p>Username: <?= $account->getUserName(); ?></p>
             <p>Email: <?= $account->getEmail(); ?></p>
             <p>Password: <?= $account->getPassWord(); ?></p>
         </tr>
-=======
-    <tr>
-        <p>Username: <?= $account->getUserName(); ?></p>
-        <p>Email: <?= $account->getEmail(); ?></p>
-        <p>Password: <?= $account->getPassWord(); ?></p>
-    </tr>
->>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a:myapp/app/view/admin/index.php
     <?php endforeach; ?>
     <button>
         <a href="index.php?url=home/home">
