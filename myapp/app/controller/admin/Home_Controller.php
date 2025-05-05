@@ -15,4 +15,9 @@ class Home_Controller extends Controller
         // include APP_ROOT ."/app/view/admin/index.php";
         $this->view('index', []);
     }
+
+    public function order()
+    {
+        $this->view('orders', []);
+    }
 }
