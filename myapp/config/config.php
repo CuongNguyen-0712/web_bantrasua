@@ -6,7 +6,7 @@ class Config
     {
         return [
             'host' => 'localhost',
-            'name' => 'web_bantrasua1',
+            'name' => 'clover_tea',
             'user' => 'root',
             'pass' => '',
         ];

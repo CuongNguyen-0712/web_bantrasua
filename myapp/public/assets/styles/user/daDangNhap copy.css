@@ -317,8 +317,15 @@ body {
 /* CSS TIÊU ĐỀ TRÀ SỮA DROPDOWN*/
 .header__product-header {
   margin-left: 15px;
+<<<<<<< HEAD
 }
 
+=======
+  text-decoration: none;
+  color: rgb(2, 108, 61);
+}
+  
+>>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a
 /*CSS MENU TRÀ SỮA DROPDOWN */
 .header__product-list {
   list-style-type: none;

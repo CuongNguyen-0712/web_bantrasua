@@ -46,5 +46,3 @@ class Home_Model
     //     return $this->password;
     // }
 }
-
-?>

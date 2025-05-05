@@ -27,7 +27,7 @@ class Database
 
                 // Dùng db và import từ file
                 $pdo->exec("USE {$config['name']}");
-                $sqlPath = __DIR__ . "/database.sql";
+                $sqlPath = __DIR__ . '/../lib/database.sql';
                 if (file_exists($sqlPath)) {
                     $sql = file_get_contents($sqlPath);
                     $pdo->exec($sql);
@@ -43,7 +43,6 @@ class Database
                 $config['pass']
             );
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         } catch (PDOException $e) {
             die("Kết nối database thất bại: " . $e->getMessage());
         }
@@ -55,10 +54,5 @@ class Database
             self::$instance = new Database();
         }
         return self::$instance->pdo;
-    }
-
-    public function getConnection()
-    {
-        return $this->pdo;
     }
 }
