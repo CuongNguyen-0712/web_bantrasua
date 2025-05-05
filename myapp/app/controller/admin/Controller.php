@@ -1,8 +1,12 @@
 <?php
-namespace admin;
-class Controller{
 
-    public function model($model){      
+namespace admin;
+
+class Controller
+{
+
+    public function model($model)
+    {
         $path = APP_ROOT . "/app/model/admin/{$model}.php";
         if (file_exists($path)) {
             require_once $path;
@@ -11,7 +15,8 @@ class Controller{
         }
     }
 
-    public function view($view, $data=[]){    
+    public function view($view, $data = [])
+    {
         $path = APP_ROOT . "/app/view/admin/{$view}.php";
         if (file_exists($path)) {
             extract($data); // Chuyển đổi mảng thành biến
@@ -19,4 +24,3 @@ class Controller{
         }
     }
 }
-?>
