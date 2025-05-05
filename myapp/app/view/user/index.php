@@ -1,4 +1,303 @@
+<<<<<<< HEAD
 <?php 
     echo("Dang nhap thanh cong");
     //Này là test thử thoi
 ?>
+=======
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../assets/styles/user/advacedSearch copy.css">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/daDangNhap copy.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOVER-TEA</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css  ">
+    <link href="../../assets/font/Arimo-VariableFont_wght.ttf" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Arimo:ital,wght@0,400..700;1,400..700&family=Lobster&family=Qwigley&display=swap"
+        rel="stylesheet">
+
+<body>
+    <style>
+        .menu__user {
+            min-width: 250px;
+            background-color: #f8f6f6;
+        }
+        .icon-login_1, .icon-login_2, .icon-login_3, .icon-login_4, .icon-login_5 {
+            margin-right: 10%;
+        }
+    </style>
+    <div class="web">
+        <header>
+            <div class="header">
+                <!-- Header__search -->
+                <div class="header__search">
+                    <!-- LOGO -->
+                    <!-- HEADER__SEARCH-LOGO -->
+                    <div class="header__search-logo">
+                        <a onclick="handleLoadContent('logined-content.html')" class="header__search-logo-link">
+                            <i class="icon-logo fa-solid fa-clover"></i>
+                            <span>CLOVER-TEA</span>
+                        </a>
+                    </div>
+                    <!-- HEADER__SEARCH-FIND -->
+                    <div class="header__search-find">
+                        <input type="text" placeholder="Tìm kiếm theo sản phẩm" id="search" name="search">
+                        <!-- link -->
+                        <!-- icon-search -->
+                        <a onclick="handleLoadContent('milktea.html')" class="header__search-find-link">
+                            <i class="icon-search fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <!-- icon-filter -->
+                        <a href="" class="header__search-filter-link">
+                            <i class="icon-filter fa-solid fa-filter">
+                                <!-- MENU__FILTER -->
+                                <div class="menu__filter">
+                                    <h3>Bộ Lọc Tìm Kiếm</h3>
+                                    <!-- menu__filter-item -->
+                                    <ul class="menu__filter-item"><i class="fa-solid fa-shop"></i> Nơi bán
+                                        <li><input type="radio" name="cty" id="ctyvn" value="hcm" checked>TP.Hồ Chí
+                                            Minh</li>
+                                        <li><input type="radio" name="cty" id="ctyvn" value="hn">Hà Nội</li>
+                                        <li><input type="radio" name="cty" id="ctyvn" value="tn">Thái Nguyên</li>
+                                        <li><input type="radio" name="cty" id="ctyvn" value="vp">Vĩnh Phúc</li>
+                                        <li><input type="radio" name="cty" id="ctyvn" value="hp">Hải Phòng</li>
+                                        <li><input type="radio" name="cty" id="ctyvn" value="dn">Đồng Nai</li>
+                                        <li><input type="radio" name="cty" id="ctyvn" value="hy">Hưng Yên</li>
+                                        <li><input type="radio" name="cty" id="ctyvn" value="bd">Bình Dương</li>
+                                        <li><input type="radio" name="cty" id="ctyvn" value="bn">Bắc Ninh</li>
+                                        <li><input type="radio" name="cty" id="ctyvn" value="st">Sóc Trăng</li>
+                                        <li><input type="radio" name="cty" id="ctyvn" value="ct">Cần Thơ</li>
+                                    </ul>
+
+                                    <ul class="menu__filter-item"><i class="fa-solid fa-truck"></i> Đơn Vị Vận Chuyển
+                                        <li><input type="radio" name="transport" id="transportvn" value="quick"
+                                                checked>Nhanh</li>
+                                        <li><input type="radio" name="transport" id="transportvn" value="save">Tiết
+                                            Kiệm</li>
+                                    </ul>
+
+                                    <ul class="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i> Khoảng
+                                        Giá
+                                        <li><input type="" placeholder="Từ &#8363;"></li>
+                                        <li><input type="" placeholder="Đến &#8363;"></li>
+                                        <!-- button -->
+                                        <button class="button-filter">Áp Dụng</button>
+                                    </ul>
+                                </div>
+                            </i>
+                        </a>
+                    </div>
+                    <!-- HEADER__SEARCH-ICON -->
+                    <div class="header__search-icon">
+                        <!-- link -->
+                        <a href="/web_bantrasua/myapp/user/Cart/store" class="header__search-icon-link">
+                            <!-- icon cart -->
+                            <i class="icon-cart fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <!-- Icon-user-wrapper -->
+                        <div class="icon-user-wrapper">
+                            <i class="icon-user fa-regular fa-user"></i>
+                            <!-- MENU__USER -->
+                            <div class="menu__user">
+                                <!-- item -->
+                                <ul class="menu__user-item">
+                                    <!-- item 1 -->
+                                    <li class="menu__user-item-1">
+                                        <!-- icon-login_1 -->
+                                        <i class="icon-login_1 fa-regular fa-user"></i>
+                                        <a href="#">Tên: Hoàng Mạnh Hà</a>
+                                    </li>
+                                    <!-- item-2 -->
+                                    <li class="menu__user-item-2">
+                                        <!-- icon-login_2 -->
+                                        <i class="icon-login_2 fa-solid fa-circle-info"></i>
+                                        <a onclick="handleLoadContent('thongtincanhan copy.html')">Thông Tin
+                                            Cá Nhân</a>
+                                    </li>
+                                    <!-- item-3 -->
+                                    <li class="menu__user-item-3">
+                                        <!-- icon-login_3 -->
+                                        <i class="icon-login_3 fa-solid fa-boxes-stacked"></i>
+                                        <!-- <a onclick="handleLoadContent('purchase.html')">Đơn Mua</a> -->
+                                         <a href="/web_bantrasua/myapp/user/Purchase/show">Đơn mua</a>
+                                    </li>
+
+                                    <!-- item 5 -->
+                                    <li class="menu__user-item-5">
+                                        <!-- icon-login_5 -->
+                                        <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
+                                        <a href="/index.html">Đăng Xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- THANH NAVBAR -->
+                <!-- Header__nav -->
+                <div class="header__nav">
+                    <!-- Header__nav-list -->
+                    <li class=" header__nav-list">
+                        <!-- Header__nav-item -->
+                    <li class="header__nav-item">
+                        <a onclick="handleLoadContent('logined-content.html')" class="header__nav-item">TRANG CHỦ</a>
+                    </li>
+                    <li class="header__nav-item header__nav-item--has-product">SẢN PHẨM
+
+                        <!-- Header__nav-item__product -->
+                        <!-- MENU TRÀ SỮA -->
+                        <div class="header__nav-item__product">
+                            <div class="header__product">
+                                <!-- Header__product-header -->
+                                <!-- <header class="header__product-header">
+                                    <h3>TRÀ SỮA</h3>
+                                </header> -->
+
+                                <?php foreach($data['categories'] as $category): ?>
+
+                                <header>     <!--sửa lại css khúc này dùm t nha-->
+                                    <h3> <a href="/web_bantrasua/myapp/user/Home/showProductByCategory/<?php echo $category['id'];?>" class="header__product-header">
+                                        <?php echo $category['name']?></a>
+                                    </h3>
+                                </header>
+
+                                <ul class="header__product-list">
+
+                                    <?php foreach($data['products'] as $product): ?>
+
+                                        <?php if($product['category_id'] == $category['id']): ?>
+                                            <li class="header__product-item">
+                                                <a href="/web_bantrasua/myapp/user/Home/showProductByID/<?php echo $product['id']; ?>" class="header__product-name-item">
+                                                    <?php echo $product['name']?></a>
+                                            </li>
+                                        <?php endif; ?>
+
+                                    <?php endforeach; ?>
+                                </ul>
+
+                                <?php endforeach; ?>
+
+                                <!-- Header__product-list -->
+                                <!-- <ul class="header__product-list">
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('milktea.html')"
+                                            class="header__product-name-item">Trà sữa
+                                            Clover</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('milktea.html')"
+                                            class="header__product-name-item">Trà sữa
+                                            Trân Châu Hoàng Kim</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('milktea.html')"
+                                            class="header__product-name-item">Hồng trà
+                                            sữa</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('milktea.html')"
+                                            class="header__product-name-item">Trà sữa
+                                            Olong Quế Hoa</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('milktea.html')"
+                                            class="header__product-name-item">Trà sữa
+                                            Bá ước</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('milktea.html')"
+                                            class="header__product-name-item">Trà sữa
+                                            Vân Nam</a>
+                                    </li>
+                                </ul> -->
+
+                                <!-- <header class="header__product-header">
+                                    <h3>TRÀ</h3>
+                                </header> -->
+                                <!-- <ul class="header__product-list">
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('tea.html')"
+                                            class="header__product-name-item">Clover Trà
+                                            Xanh</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('tea.html')"
+                                            class="header__product-name-item">Olong Đào
+                                            Tiên</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('tea.html')"
+                                            class="header__product-name-item">Hồng Long Pha
+                                            Lê Tuyết</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('tea.html')" class="header__product-name-item">Mỹ
+                                            Nhân Thanh
+                                            Trà</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('tea.html')"
+                                            class="header__product-name-item">Trà Nhãn Hoa
+                                            Mộc Lê</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('tea.html')"
+                                            class="header__product-name-item">Bách Trà
+                                            Thảo Mộc</a>
+                                    </li>
+                                </ul> -->
+                                <!-- <header class="header__product-header">
+                                    <h3>Coffee</h3>
+                                </header> -->
+                                <!-- <ul class="header__product-list">
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('coffee.html')"
+                                            class="header__product-name-item">Americano</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('coffee.html')"
+                                            class="header__product-name-item">Capuchino</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('coffee.html')"
+                                            class="header__product-name-item">Latte</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('coffee.html')"
+                                            class="header__product-name-item">Espresso</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('coffee.html')"
+                                            class="header__product-name-item">Machiato</a>
+                                    </li>
+                                    <li class="header__product-item">
+                                        <a onclick="handleLoadContent('coffee.html')"
+                                            class="header__product-name-item">Cold
+                                            Brew</a>
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__nav-item">
+                        <a onclick="handleLoadContent('aboutUs copy.html')" class="header__nav-item">VỀ CHÚNG TÔI</a>
+                    </li>
+                    </li>
+                </div>
+            </div>
+        </header>
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <main>
+            <iframe id="content_user" src="logined-content.html"></iframe>
+        </main>
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    </div>
+    <script src="../../assets/handle/user/loadIframe.js"></script>
+</body>
+
+</html>
+>>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a

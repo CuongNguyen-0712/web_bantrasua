@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/styles/user/purchase.css">
-    <link rel="icon" href="../../assets/img/logo.png">
-    <link rel="stylesheet" href="../../assets/styles/style.css">
-    <link rel="stylesheet" href="../../assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/purchase.css">
+    <link rel="icon" href="/web_bantrasua/myapp/public/assets/img/logo.png">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/style.css">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/font/Arimo-VariableFont_wght.ttf">
     <title>Clover Tea</title>
 </head>
 
@@ -42,14 +43,35 @@
                 <ul class="purchase-header-status">
                     <li class="purchase-header-status--success ">
                         <i class="fa-solid fa-truck"></i>
-                        Giao hàng thành công
+                        <!-- Giao hàng thành công -->
+                         <?php if( isset($data['status']) ): ?>
+                            <?php echo $data['status']['name']?>
+                            <?php else: ?>
+                                <?php echo "Không có trạng thái. "?>
+                        <?php endif; ?>
                     </li>
                     <li class="purchase-header-status--rating purchase-header-status--separate">ĐÁNH GIÁ</li>
                 </ul>
             </header>
 
-            <a href="../../pages/user/proccess.html" class="order-form">
-                <div class="order-form">
+            <!-- <a href="../../pages/user/proccess.html" class="order-form"> -->
+                <?php foreach($data['productInfo'] as $productInfo): ?>
+                    <div class="order-form">
+                        <div class="order-form__item">
+                            <div class="order-form__item-image">
+                                <img src="/assets/img/h5-removebg-preview.png" alt=">Trà Sữa Clover Tea" class="order-form__item-img">
+                            </div>
+
+                            <div class="order-form__content">
+                                <h5 class="order-form__title"> <?php echo $productInfo['name']?></h5>
+                                <span class="order-form__describ">Kích cỡ:
+                                        <?php echo $productInfo['size']?>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+                <!-- <div class="order-form">
                     <div class="order-form__item">
                         <div class="order-form__item-image">
                             <img src="/assets/img/h5-removebg-preview.png" alt=">Trà Sữa Clover Tea" class="order-form__item-img">
@@ -96,8 +118,8 @@
 
                         <div class="order-form__cost">117.000&#8363</div>
                     </div>
-                </div>
-            </a>
+                </div> -->
+            <!-- </a> -->
 
             <footer class="order-form__footer">
                 <div class="order-form__ctn">Thành tiền:
