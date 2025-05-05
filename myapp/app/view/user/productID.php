@@ -29,7 +29,7 @@
           <!-- Image -->
           <div class="product-form__image">
             <i class="product-form__image-icon fa-solid fa-clover"></i>
-            <img src="/web_bantrasua/myapp/public/assets/img/<?php echo isset($product['image']) ? $product['image'] : 'h5-removebg-preview.png'; ?>" alt="Trà Sữa Clover Tea" class="product-form__image-img">
+            <img src="/assets/img/h5-removebg-preview.png" alt="Trà Sữa Clover Tea" class="product-form__image-img"> <!--khi nào có link hình thì sẽ sửa sau-->
           </div>
           <!-- Content -->
           <div class="product-form__content">
@@ -38,7 +38,7 @@
           </div>
           <!-- Button -->
           <div class="product-form__buy">
-            <a href="/web_bantrasua/myapp/user/order/viewProduct?id=<?php echo $product['id']; ?>" class="product-form__buy-btn">
+            <a href="/web_bantrasua/myapp/user/order/index" class="product-form__buy-btn"> <!--sẽ sửa đường dẫn sau-->
               <button class="product-form__buy-btn">
                 <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                 Đặt mua
