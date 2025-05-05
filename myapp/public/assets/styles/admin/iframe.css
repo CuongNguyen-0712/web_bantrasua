@@ -75,7 +75,12 @@ tr:hover {
     margin-top: 20px;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.content .pagination p {
+    margin: 5px 0;
 }
 
 .footer {
