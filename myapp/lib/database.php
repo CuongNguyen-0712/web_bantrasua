@@ -49,7 +49,7 @@ class Database
     }
 
     public static function getInstance()
-    {  //Đây là phần kết nối db, chỉ cần gọi static class là được
+    {
         if (!self::$instance) {
             self::$instance = new Database();
         }

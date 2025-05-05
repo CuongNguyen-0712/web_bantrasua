@@ -114,7 +114,7 @@
                                     <li class="menu__user-item-2">
                                         <!-- icon-login_2 -->
                                         <i class="icon-login_2 fa-solid fa-circle-info"></i>
-                                        <a onclick="handleLoadContent('thongtincanhan copy.html')">Thông Tin
+                                        <a href = "/web_bantrasua/myapp/user/user/info  ">Thông Tin
                                             Cá Nhân</a>
                                     </li>
                                     <!-- item-3 -->
