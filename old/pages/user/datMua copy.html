@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/assets/styles/user/datMua copy.css">
+    <link rel="stylesheet" href="/old/assets/styles/user/datMua copy.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặt Mua</title>
-    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
-    <link href="/assets/font/Arimo-VariableFont_wght.ttf" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/icon/fontawesome-free-6.6.0-web/">
+    <link rel="icon" type="image/x-icon" href="/old/assets/img/logo.png">
+    <link href="/myapp/public/assets/font/Arimo-VariableFont_wght.ttf" rel ="stylesheet">
+    <link rel="stylesheet" href="/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
 
 </head>
 
@@ -26,20 +26,22 @@
                         <div class="Img__product">
                             <div class="Img__product-decribe">
                                 <img class="img"
-                                    src="https://hcm.fstorage.vn/images/2022/65000094-65000102-tra-sua-phuc-long-_3682b729-4ffc-4956-abb3-7026070663c2-og.png"
+                                    src="/old/assets/img/trasua_moi-Photoroom.png"
                                     alt="hinh tra sua">
+                            </div>
+
+                            <div class="Product-decribe">
+                                <p> <strong>Clover Trà Xanh</strong> là sự kết hợp giữa vị trà xanh thanh mát và lớp kem cheese béo mịn, mang đến hương vị hài hòa, ngọt nhẹ và thơm dịu.</p>
                             </div>
                         </div>
 
                         <!-- Header layout -->
                         <header class="header">
                             <div class="header__title-product">
-                                <h3̀>Clover Trà Xanh</h3>
+                                <h3̀> Clover Trà Xanh </h3>
                                     <!-- Nút quay trở lại -->
-                                    <div class="btn-back">
-                                        <button onclick="goBack()">&#215;
+                                        <button onclick="goBack()" class="btn-back">&#215;
                                         </button>
-                                    </div>
                             </div>
 
                             <!-- Nút quay trở lại -->
@@ -84,8 +86,10 @@
                             <!-- Header__topping-product -->
                             <div class="header__topping-product">Chọn Topping
                                 <div class="header__topping-product-check-box">
-                                    <label for="member"><span>Trân châu đen</span>
+                                    <div class="header__topping-product-name">
+                                        <label for="member"><span>Trân châu đen</span>
                                         <span>10.000&#8363;</span></label>
+                                    </div>
                                     <div class="header__topping-product-quantity">
                                         <button class="btn-topping">&#8722;</button>
                                         <span class="count">0</span>

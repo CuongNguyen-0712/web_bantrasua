@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require_once APP_ROOT . '/config/config.php';
 
 // Đây là phần autoload controller, việc nó là tự động xây dựng những controller, do phần này có phân quyền nên mới làm vậy để định dạng 
@@ -89,3 +89,4 @@ function route() {
         echo "⚠️ Không tìm thấy file: $controllerPath";
     }
 }
+

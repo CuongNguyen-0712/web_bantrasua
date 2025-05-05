@@ -8,5 +8,24 @@
     
     //Nếu lần đầu sẽ không có sẵn session nhưng những lần khác kiểm tra vui lòng session_datroy để tránh lỗi
 
-    route();
+// Đặt thời gian tồn tại của session là 1 ngày
+ini_set('session.gc_maxlifetime', 86400);
+session_set_cookie_params(86400);
+
+// Bật hiển thị lỗi (giúp debug)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Chạy route (điều hướng controller)
+route();
+
 ?>
+
+
+
+
+
+
+
+

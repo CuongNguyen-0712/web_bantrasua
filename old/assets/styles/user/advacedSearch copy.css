@@ -238,10 +238,10 @@ body {
       left: 0;
       min-width: 150px;
       background-color: #eceaea;
-      padding: 10px;
+      /* padding: 10px; */
       display: none; 
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
     }
     
     .icon-user-wrapper:hover .menu__user {
@@ -279,6 +279,7 @@ body {
       text-decoration: none;
       color: inherit;
       margin-left: 8px;
+      padding: 5px 10px;
       display: block;
     }
     
@@ -298,7 +299,8 @@ body {
     border: 2px solid #f5f4f4;
     text-decoration: none;
     line-height: 1.5;
-    flex-direction: row;
+    flex-direction: row;    
+    box-shadow: 1px 2px 3px #ccc;
   }
   
   .header__nav-list {
@@ -307,6 +309,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
+
   }
   
   .header__nav-item {
@@ -317,6 +320,7 @@ body {
     justify-content: space-between;
     display: inline-block;
     text-decoration: none;
+
   }
   
   .header__nav-item:hover {
@@ -324,61 +328,69 @@ body {
     font-weight: 700;
     cursor:grab;
   }
-  .header__product{
-    display: flex;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  
-  /* CSS TIÊU ĐỀ TRÀ SỮA DROPDOWN*/
-  .header__product-header {
-    margin-left: 15px;
-  }
-  
-  /* CSS MENU TRÀ SỮA DROPDOWN */
-  .header__product-list {
-    list-style-type: none;
-    color: #9d9c9c;
-    font-weight: 300;
-  }
 
-  .header__product-item{
-    width:auto;
-  }
-  /* CSS TÊN TỪNG LOẠI TRÀ SỮA DROPDOWN */
-  .header__product-name-item {
-    display: flex;
-    text-decoration: none;
-    color: #9d9c9c;
-    line-height: 1.5;
-    padding: 5px 5px;
-
-  }
-  
-  .header__product-name-item:hover {
-    background-color: rgb(2, 108, 61);
-    color: white;
-  }
-  
-  /* Header__nav-item-product */
-  .header__nav-item__product {
+.header__nav-item__product {
     display: none;
     position: absolute;
-    left:50%;
-    top: 90%;
-    width:800px;
-    height: auto;
-    background-color: rgb(252, 249, 246);
-    color: rgb(2, 108, 61);
-    text-decoration: none;
+    top: 100%;
+    left: 50%;
     transform: translateX(-50%);
-    transform-origin: center;
-  }
-  /* TIÊU ĐỀ SẢN PHẨM */
-  .header__nav-item.header__nav-item--has-product{
-    margin-top:9.6px;
-  }
+    width: 800px;
+    background-color: #fefcfa;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+}
 
+.header__product {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.header__product-column {
+  flex: 1;
+}
+
+
+.header__product-title {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #026c3d;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.header__product-title:hover {
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.header__product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__product-list li a {
+  display: block;
+  padding: 6px 10px;
+  text-decoration: none;
+  color: #666;
+  border-radius: 4px;
+}
+
+/* Hover hiệu ứng */
+.header__product-list li a:hover {
+  background-color: #026c3d;
+  color: #fff;
+}
+  
   .header__nav-item.header__nav-item--has-product:hover
     .header__nav-item__product {
     display: block;
@@ -393,6 +405,7 @@ body {
       opacity: 1;
     }
   }
+
     /* SLIDE SHOW ẢNH TRANG CHỦ */
 .slideShow {
   width: 90%;
@@ -589,10 +602,12 @@ body {
     color: #fff;
     border: 1px solid rgb(2, 108, 61);
     border-radius: 5px;
+    cursor: pointer;
   }
   
   .product-form__buy:hover {
     opacity: 0.8;
+    cursor: pointer;
   }
   /* CSS Button */
   
@@ -612,6 +627,7 @@ body {
     background-color: rgb(2, 108, 61);
     color: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
   }
 
 /* TIN TỨC VÀ KHUYẾN MÃI */

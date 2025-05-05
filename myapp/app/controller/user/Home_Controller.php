@@ -50,7 +50,5 @@ class Home_Controller extends Controller{
         $productID = $this->productModel->getProductByID($product_id);
         $this->view('productID', ["productID" => $productID]);
     }
-
 }
-
 ?>

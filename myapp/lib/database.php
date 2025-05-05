@@ -1,12 +1,14 @@
 <?php
 require_once __DIR__ . '/../config/config.php';
 
-class Database {
+class Database
+{
     private static $instance = null;
     private $pdo;
-    
-    private function __construct() {
-        $config = Config::getDatabaseConfig();  
+
+    private function __construct()
+    {
+        $config = Config::getDatabaseConfig();
 
         try {
             // Kết nối ban đầu không có db
@@ -22,7 +24,7 @@ class Database {
             if ($stmt->rowCount() == 0) {
                 // Tạo database nếu chưa có
                 $pdo->exec("CREATE DATABASE {$config['name']}");
-                
+
                 // Dùng db và import từ file
                 $pdo->exec("USE {$config['name']}");
                 $sqlPath = __DIR__ . "/database.sql";
@@ -44,10 +46,11 @@ class Database {
 
         } catch (PDOException $e) {
             die("Kết nối database thất bại: " . $e->getMessage());
-        }   
+        }
     }
 
-    public static function getInstance() {
+    public static function getInstance()
+    {
         if (!self::$instance) {
             self::$instance = new Database();
         }
