@@ -1,5 +1,6 @@
 <?php
 require_once APP_ROOT . "/app/model/admin/admin.php";
+// Của anh Cường
 class Home_Model
 {
     private $conn;

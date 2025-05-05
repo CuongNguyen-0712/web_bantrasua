@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <!-- Lặp qua mảng hiển thị tài khoản -->
     <?php foreach ($accounts as $account): ?>
             <tr>
                 <p>Username: <?= htmlspecialchars($account['username']) ?></p>

@@ -2,6 +2,7 @@
 // require_once APP_ROOT . "/app/services/admin/Home_Service.php";
 require_once APP_ROOT . "/app/model/admin/admin.php";
 require_once __DIR__ . "/../../../config/config.php";
+// Của a CUuo7ng2   
 class Home_Controller
 {
     private $pdo;

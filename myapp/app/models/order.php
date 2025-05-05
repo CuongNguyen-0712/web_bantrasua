@@ -46,6 +46,7 @@ class Order
     {
         $db = Database::getInstance();
         return $db->fetchAll("SELECT * FROM `order` WHERE account_id = ?", [$account_id]);
+        // Code này lát sửa sau
     }
 
 
