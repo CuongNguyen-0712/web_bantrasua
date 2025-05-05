@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
+    <link rel="stylesheet"
+        href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/cart&payment.css" />
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/style.css" />
     <link rel="icon" href="/web_bantrasua/myapp/public/assets/img/logo.png" />
@@ -30,19 +31,19 @@
 
                 <div class="cart-form__address">
                     <h5 class="cart-form__title">Địa chỉ</h5>
-                     <span class="cart-form__describe">
-                        <?php if( isset($data['address']) && is_array($data['address']) ): ?>
-                            <?php $fullAddress = $data['address']['street'] . ", " . $data['address']['ward'] . ", " . $data['address']['district'] . ", " . $data['address']['province'];
-                                    echo $fullAddress;  
+                    <span class="cart-form__describe">
+                        <?php if (isset($data['address']) && is_array($data['address'])): ?>
+                        <?php $fullAddress = $data['address']['street'] . ", " . $data['address']['ward'] . ", " . $data['address']['district'] . ", " . $data['address']['province'];
+                            echo $fullAddress;
                             ?>
-                            <?php else: echo 'Không có địa chỉ mặc định. ' ?>
-                        <?php endif?>
+                        <?php else: echo 'Không có địa chỉ mặc định. ' ?>
+                        <?php endif ?>
                     </span>
                 </div>
 
                 <div class="cart-form__btn">
                     <a href="/web_bantrasua/myapp/user/Cart/showAddressAndPhoneNumber">
-                        <i class="cart-form__btn-icon fa-solid fa-chevron-right"></i>       
+                        <i class="cart-form__btn-icon fa-solid fa-chevron-right"></i>
                     </a>
                 </div>
 
@@ -52,10 +53,10 @@
             <div class="cart-form__form">
 
                 <div class="cart-form__common">
-                     <h5 class="cart-form__title"><?php echo $data['user_name']['username']?></h5>
-                     <span class="cart-form__describ">Số điện thoại: 
-                        <?php echo $data['phone']['phone_number']?>
-                     </span>
+                    <h5 class="cart-form__title"><?php echo $data['user_name']['username'] ?></h5>
+                    <span class="cart-form__describ">Số điện thoại:
+                        <?php echo $data['phone']['phone_number'] ?>
+                    </span>
                 </div>
 
                 <div class="cart-form__btn">
@@ -91,7 +92,7 @@
                 </div>
 
                 <div class="cart-form__btn">
-                        <i class="cart-form__btn-icon fa-solid fa-chevron-right"></i>
+                    <i class="cart-form__btn-icon fa-solid fa-chevron-right"></i>
                 </div>
 
             </div>
@@ -132,7 +133,8 @@
                 <div class="cart-form__product-form">
                     <div class="cart-form__product-item">
                         <div class="cart-form__product-image">
-                            <img src="/assets/img/h5-removebg-preview.png" alt=">Trà Sữa Clover Tea" class="cart-form__product-img">
+                            <img src="/assets/img/h5-removebg-preview.png" alt=">Trà Sữa Clover Tea"
+                                class="cart-form__product-img">
                         </div>
 
                         <div class="cart-form__product-content">
@@ -173,7 +175,7 @@
                         <div class="cart-form__product-repair">
                             <i class="cart-form__product-edit fa-solid fa-pen"></i>
                             <i class="cart-form__product-delete fa-solid fa-trash"></i>
-                        </div>  
+                        </div>
                     </div>
 
                     <div class="cart-form__product-footer">
@@ -182,7 +184,7 @@
                             <button class="cart-form__product-btn">&#8722;</button>
                             <span class="cart-form__product-number">2</span>
                             <button class="cart-form__product-btn ">&#43;</button>
-                        </div>
+                        </div>w
                     </div>
                 </div>
                 <hr>
@@ -271,7 +273,7 @@
 
             <div class="cart-form__payment-button">
                 <a href="./process2.html" class="cart-form__payment-btn">
-                TIẾN HÀNH THANH TOÁN
+                    TIẾN HÀNH THANH TOÁN
                 </a>
             </div>
         </div>
@@ -300,7 +302,7 @@
             <p><i class="fa-solid fa-shield"></i> Chính sách bảo mật thông tin</p>
             <p><i class="fa-solid fa-cart-arrow-down"></i> Chính sách đặt hàng</p>
         </div>
-    </div>    
+    </div>
 </body>
 
 </html>
