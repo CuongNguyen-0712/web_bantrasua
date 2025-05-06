@@ -13,7 +13,6 @@ class User_Controller extends Controller
     public function info()
     {
         $this->view('info',[]);
-
     }
 
     // Lưu thông tin cá nhân cập nhật
@@ -93,6 +92,7 @@ class User_Controller extends Controller
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $error = "Email không hợp lệ!";
                 require_once __DIR__ . '/../../view/register.php';
+
                 return;
             }
 
@@ -107,17 +107,15 @@ class User_Controller extends Controller
             } else {
                 $error = "Đăng ký thất bại. Email có thể đã tồn tại.";
                 require_once __DIR__ . '/../../view/register.php';
+
                 return;
             }
         } else {
             // GET request: hiển thị form
+
             require_once __DIR__ . '/../../view/register.php';
         }
     }
-
-
-
-
 }
 
 
