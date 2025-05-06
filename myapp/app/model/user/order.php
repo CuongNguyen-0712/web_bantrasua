@@ -1,5 +1,8 @@
 <?php
 
+namespace user;
+use Database;
+use PDO;
 
 class Order
 {

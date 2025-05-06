@@ -5,9 +5,11 @@ namespace User;
 class Cart_Controller extends Controller{
 
     protected $addressModel;
+    protected $productModel;
     
     public function __construct(){
         $this->addressModel = $this->model("Cart_Model");
+        $this->productModel = $this->model("Product_Model");
     }
 
     public function store(){
@@ -42,6 +44,12 @@ class Cart_Controller extends Controller{
             header("Location: /web_bantrasua/myapp/user/Cart/store");
             exit;
         }
+    }
+
+    public function showCart(){
+        $cart = $_SESSION['cart'] ?? [];
+
+        $this->view('cart&payment', ["cart" => $cart] );
     }
 
 }

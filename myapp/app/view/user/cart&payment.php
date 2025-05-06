@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="cart-form__btn">
-                    <a href="/web_bantrasua/myapp/user/Cart/showAddressAndPhoneNumber">
+                    <a href="/web_bantrasua/myapp/user/Cart/showAddressAndPhoneNumber">  
                         <i class="cart-form__btn-icon fa-solid fa-chevron-right"></i>       
                     </a>
                 </div>
@@ -122,7 +122,8 @@
             <div class="cart-form__header">
                 <header class="cart-form__heading">
                     <i class="fa-solid fa-bag-shopping"></i>
-                    GIỎ HÀNG CỦA BẠN &#40;4 món&#41;
+                    <!-- GIỎ HÀNG CỦA BẠN &#40;4 món&#41; -->
+                     GIỎ HÀNG CỦA BẠN
                 </header>
             </div>
 
@@ -131,93 +132,49 @@
                 <!-- Milk tea -->
                 <div class="cart-form__product-form">
                     <div class="cart-form__product-item">
-                        <div class="cart-form__product-image">
-                            <img src="/assets/img/h5-removebg-preview.png" alt=">Trà Sữa Clover Tea" class="cart-form__product-img">
-                        </div>
+                            <?php if( empty($data['cart']) ): ?>
+                                <div style="min-height: 370px; width: 450px; display: flex; justify-content: flex-end; align-items: center;">
+                                    <p style="font-size: 20px; color: #666;"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng của bạn đang trống</p>
+                                </div>
+                            <?php else: ?>
+                                <?php foreach($data['cart'] as $item): ?>
+                                    <div class="cart-form__product-image">
+                                        <img src="/assets/img/h5-removebg-preview.png" alt=">Trà Sữa Clover Tea" class="cart-form__product-img">
+                                    </div>
 
-                        <div class="cart-form__product-content">
-                            <h5 class="cart-form__product-title">Trà Sữa Clover Tea</h5>
-                            <span class="cart-form__product-describ">Kích cỡ: S, Ngọt: Bình thường, Đá: Bình thường,
-                                Toppng: Kem Cheese Khứ Hồi</span>
-                        </div>
-
-                        <div class="cart-form__product-repair">
-                            <i class="cart-form__product-edit fa-solid fa-pen"></i>
-                            <i class="cart-form__product-delete fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="cart-form__product-footer">
-                        <div class="cart-form__product-price">59.000&#8363</div>
-                        <div class="cart-form__product-count">
-                            <button class="cart-form__product-btn">&#8722;</button>
-                            <span class="cart-form__product-number">1</span>
-                            <button class="cart-form__product-btn ">&#43;</button>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-
-                <!-- Tea -->
-                <div class="cart-form__product-form">
-                    <div class="cart-form__product-item">
-                        <div class="cart-form__product-image">
-                            <img src="/assets/img/ảnh trà.png" alt="Mỹ Nhân Thanh Trà" class="cart-form__product-img">
-                        </div>
-
-                        <div class="cart-form__product-content">
-                            <h5 class="cart-form__product-title">Mỹ Nhân Thanh Trà</h5>
-                            <span class="cart-form__product-describ">Kích cỡ: M, Ngọt: Nhiều, Đá: Bình thường</span>
-                        </div>
-
-                        <div class="cart-form__product-repair">
-                            <i class="cart-form__product-edit fa-solid fa-pen"></i>
-                            <i class="cart-form__product-delete fa-solid fa-trash"></i>
-                        </div>  
-                    </div>
-
-                    <div class="cart-form__product-footer">
-                        <div class="cart-form__product-price">218.000&#8363</div>
-                        <div class="cart-form__product-count">
-                            <button class="cart-form__product-btn">&#8722;</button>
-                            <span class="cart-form__product-number">2</span>
-                            <button class="cart-form__product-btn ">&#43;</button>
-                        </div>
+                                    <div class="cart-form__product-content">
+                                        <h5 class="cart-form__product-title">
+                                            <!-- <h5 class="cart-form__product-title">Trà Sữa Clover Tea</h5> -->
+                                            <!-- <span class="cart-form__product-describ">Kích cỡ: S, Ngọt: Bình thường, Đá: Bình thường,
+                                                Toppng: Kem Cheese Khứ Hồi</span> -->
+                                            <h5 class="cart-form__product-title"> <?php echo $item['name']?> </h5>
+                                            <span class="cart-form__product-describ">Kích cỡ: 
+                                                <?php echo $item['size'] . ", " . "Topping: ". implode(", ", $item['option_topping']) ?>
+                                            </span>
+                                        </h5>
+                                    </div>
+                                                
+                                    <div class="cart-form__product-repair">
+                                        <i class="cart-form__product-edit fa-solid fa-pen"></i>
+                                        <i class="cart-form__product-delete fa-solid fa-trash"></i>
+                                    </div>
+                                            
+                                    <div class="cart-form__product-footer">
+                                        <!-- <div class="cart-form__product-price">59.000&#8363</div> -->
+                                        <div class="cart-form__product-price"><?php echo $item['price']?></div>
+                                        <div class="cart-form__product-count">
+                                            <button class="cart-form__product-btn">&#8722;</button>
+                                            <!-- <span class="cart-form__product-number">1</span> -->
+                                            <span class="cart-form__product-number"><?php echo $item['quantity']?></span>
+                                            <button class="cart-form__product-btn ">&#43;</button>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                     </div>
                 </div>
                 <hr>
 
-                <!-- Coffee -->
-                <div class="cart-form__product-form">
-                    <div class="cart-form__product-item">
-                        <div class="cart-form__product-image">
-                            <img src="/assets/img/milk.png" alt="Americano" class="cart-form__product-img">
-                        </div>
-
-                        <div class="cart-form__product-content">
-                            <h5 class="cart-form__product-title">Americano</h5>
-                            <span class="cart-form__product-describ">Kích cỡ: L, Ngọt: Ít ngọt, Đá: Bình thường</span>
-                        </div>
-
-                        <div class="cart-form__product-repair">
-                            <i class="cart-form__product-edit fa-solid fa-pen"></i>
-                            <i class="cart-form__product-delete fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="cart-form__product-footer">
-                        <div class="cart-form__product-price">177.000&#8363</div>
-                        <div class="cart-form__product-count">
-                            <button class="cart-form__product-btn">&#8722;</button>
-                            <span class="cart-form__product-number">3</span>
-                            <button class="cart-form__product-btn ">&#43;</button>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </div>
-
-            <div class="cart-form__see-more">Xem thêm</div>
+            <!-- <div class="cart-form__see-more">Xem thêm</div>  -->
 
             <h5 class="cart-form__payment-title">Thông tin thanh toán</h5>
             <div class="cart-form__payment">
@@ -229,7 +186,10 @@
                 </ul>
 
                 <ul class="cart-form__inform">
-                    <li>385.000&#8363</li>
+                    <!-- <li>385.000&#8363</li> -->
+                     <?php $total = 0; ?>
+                     <?php foreach($data['cart'] as $item): ?>
+                     <?php endforeach; ?>
                     <li class="cart-form__cost-1">30.000&#8363</li>
                     <li class="cart-form__cost-2">0&#8363</li>
                     <li class="cart-form__sum">415.000&#8363</li>
@@ -273,11 +233,11 @@
                 <a href="./process2.html" class="cart-form__payment-btn">
                 TIẾN HÀNH THANH TOÁN
                 </a>
-            </div>
+            </div> 
         </div>
     </div>
 
-    <div class="form-container">
+    <!-- <div class="form-container">
         <div class="form-container__contact">
             <p><span class="bolded">LIÊN HỆ</span></p>
             <p><i class="fa-regular fa-envelope"></i> Email: clovertea2678@gmail.com</p>
@@ -300,7 +260,7 @@
             <p><i class="fa-solid fa-shield"></i> Chính sách bảo mật thông tin</p>
             <p><i class="fa-solid fa-cart-arrow-down"></i> Chính sách đặt hàng</p>
         </div>
-    </div>    
+    </div>     -->
 </body>
 
 </html>

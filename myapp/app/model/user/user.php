@@ -1,4 +1,9 @@
 <?php
+
+namespace user;
+use PDO;
+use Database;
+
 class User
 {
     private $db;

@@ -51,7 +51,7 @@ html{
 .proccess-form__headeing-item--separate{
     position: absolute;
     bottom: 7px;
-    left: 270px;
+    left: 150px;    /*đang có lỗi*/
     font-size: 20px;
 }
 
