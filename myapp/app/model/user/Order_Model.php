@@ -4,6 +4,8 @@ namespace user;
 
 use Database;
 use PDO;
+use Exception;
+
 class Order_Model
 {
     public static function create($data, $cart)

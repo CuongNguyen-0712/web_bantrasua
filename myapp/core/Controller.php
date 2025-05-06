@@ -1,5 +1,6 @@
 <?php
 namespace user;
+
 class Controller{
 
     public function model($model){      //$model = tên file

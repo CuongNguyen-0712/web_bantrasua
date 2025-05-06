@@ -8,7 +8,7 @@ class Order_Controller extends Controller
     protected $orderModel;
     protected $userModel;
     protected $productModel;
-    
+
     public function __construct()
     {
         $this->orderModel = $this->model('Order_Model');
@@ -26,48 +26,48 @@ class Order_Controller extends Controller
     {
         // Lấy product_id từ query string
         $product_id = isset($_GET['id']) ? intval($_GET['id']) : null;
-        
+
         if (!$product_id) {
             header('Location: index.php?url=user/home/index');
             exit;
         }
-        
+
         // Lấy thông tin sản phẩm
         $product = $this->productModel->getProductByID($product_id);
-        
+
         if (empty($product)) {
             header('Location: index.php?url=user/home/index');
             exit;
         }
-        
+
         $product = $product[0];
-        
+
         // Map các trường dữ liệu để phù hợp với view
         // Nếu tên trường trong DB khác với tên trong view, cần map lại ở đây
         if (isset($product['cost_default']) && !isset($product['price'])) {
             $product['price'] = $product['cost_default'];
         }
-        
+
         // Lấy thông tin về kích cỡ
         $sizes = $this->productModel->getProductSizes();
-        
+
         // Lấy thông tin về mức độ đá
         $specificIceIds = [1, 2, 3];
         $iceLevels = $this->productModel->getIceLevels($specificIceIds);
-        
+
         // Lấy thông tin về mức độ ngọt
         $specificSweetIds = [4, 5, 6];
         $sweetLevels = $this->productModel->getSweetLevels($specificSweetIds);
-        
+
         // Lấy các topping với
         $specificToppingIds = [8, 9, 10];
         $toppings = $this->productModel->getSpecificToppings($specificToppingIds);
-        
+
         // // Đảm bảo giá của topping
         // foreach ($toppings as &$topping) {
         //     $topping['price'] = 7000;
         // }
-        
+
         // Truyền dữ liệu vào view
         $data = [
             'product' => $product,
@@ -76,7 +76,7 @@ class Order_Controller extends Controller
             'sweetLevels' => $sweetLevels,
             'toppings' => $toppings
         ];
-        
+
         $this->view("order", $data);
     }
     // public function add() {
@@ -84,15 +84,15 @@ class Order_Controller extends Controller
     //     if (!isset($_SESSION['cart'])) {
     //         $_SESSION['cart'] = [];
     //     }
-        
+
     //     // Xử lý request AJAX dạng JSON
     //     $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
-        
+
     //     if ($contentType === "application/json") {
     //         // Đọc input JSON
     //         $content = trim(file_get_contents("php://input"));
     //         $decoded = json_decode($content, true);
-            
+
     //         // Lấy thông tin sản phẩm từ request
     //         $product_id = $decoded['id'];
     //         $product_name = $decoded['name'];
@@ -103,7 +103,7 @@ class Order_Controller extends Controller
     //         $ice = $decoded['ice'];
     //         $sweet = $decoded['sweet'];
     //         $toppings = $decoded['toppings'];
-            
+
     //     } else {
     //         // Xử lý request POST thông thường
     //         $product_id = $_POST['product_id'] ?? null;
@@ -112,31 +112,31 @@ class Order_Controller extends Controller
     //         $product_size = $_POST['product_size'] ?? 'M';
     //         $product_price = $_POST['product_price'] ?? 0;
     //         $quantity = $_POST['product_quantity'] ?? 1;
-            
+
     //         // Xử lý thông tin Ice và Sweet levels
     //         $ice_level_id = $_POST['ice_level'] ?? 2; // Mặc định là bình thường
     //         $sweet_level_id = $_POST['sweet_level'] ?? 2; // Mặc định là bình thường
-            
+
     //         // Tạo đối tượng ice và sweet
     //         $ice = [
     //             'componentId' => 1,
     //             'levelId' => $ice_level_id
     //         ];
-            
+
     //         $sweet = [
     //             'componentId' => 2,
     //             'levelId' => $sweet_level_id
     //         ];
-            
+
     //         // Xử lý toppings
     //         $toppings = [];
     //         if (isset($_POST['toppings'])) {
     //             $topping_ids = json_decode($_POST['toppings'], true);
-                
+
     //             if (count($topping_ids)>0) {
     //                 // Lấy thông tin các topping từ database
     //                 $dbToppings = $this->productModel->getSpecificToppings($topping_ids);
-                    
+
     //                 foreach ($dbToppings as $dbTopping) {
     //                     $toppings[] = [
     //                         'id' => $dbTopping['id'],
@@ -147,19 +147,19 @@ class Order_Controller extends Controller
     //             }
     //         }
     //     }
-        
+
     //     // Tạo một ID duy nhất cho sản phẩm trong giỏ hàng (kết hợp ID sản phẩm, kích cỡ, đá, ngọt và topping)
     //     $cart_item_id = $product_id . '_' . $product_size;
     //     $cart_item_id .= '_ice' . $ice['levelId'];
     //     $cart_item_id .= '_sweet' . $sweet['levelId'];
-        
+
     //     // Thêm mã của các topping vào cart_item_id
     //     $topping_ids = array_map(function($topping) {
     //         return $topping['id'];
     //     }, $toppings);
     //     sort($topping_ids); // Sắp xếp để đảm bảo thứ tự không ảnh hưởng
     //     $cart_item_id .= '_toppings' . implode('-', $topping_ids);
-        
+
     //     // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
     //     $found = false;
     //     foreach ($_SESSION['cart'] as $key => $cart_item) {
@@ -172,13 +172,13 @@ class Order_Controller extends Controller
     //             break;
     //         }
     //     }
-        
+
     //     // Nếu sản phẩm chưa có trong giỏ hàng, thêm mới
     //     if (!$found) {
     //         // Lấy tên của mức độ đá và ngọt từ database
     //         $ice_level_name = 'Bình thường'; // Mặc định
     //         $sweet_level_name = 'Bình thường'; // Mặc định
-            
+
     //         $specificIceIds = [4, 5, 6];
     //         $ice_levels = $this->productModel->getIceLevels($specificIceIds);
     //         foreach ($ice_levels as $level) {
@@ -195,7 +195,7 @@ class Order_Controller extends Controller
     //                 break;
     //             }
     //         }
-            
+
     //         // Tạo thông tin chi tiết sản phẩm
     //         $product_detail = [
     //             'cart_item_id' => $cart_item_id,
@@ -216,11 +216,11 @@ class Order_Controller extends Controller
     //             'quantity' => (int)$quantity,
     //             'totalPrice' => (float)$product_price * (int)$quantity
     //         ];
-            
+
     //         // Thêm vào giỏ hàng
     //         $_SESSION['cart'][] = $product_detail;
     //     }
-        
+
     //     // Trả về kết quả
     //     if ($contentType === "application/json") {
     //         header('Content-Type: application/json');
@@ -240,7 +240,7 @@ class Order_Controller extends Controller
     public function index()
     {
         $product_id = isset($_GET['id']) ? intval($_GET['id']) : null;
-        
+
         if ($product_id) {
             $this->viewProduct();
         } else {
@@ -293,7 +293,7 @@ class Order_Controller extends Controller
         // }
 
 
-         
+
         // Nếu giỏ hàng trống
         if (empty($_SESSION['cart'])) {
             $error = "Giỏ hàng của bạn đang trống!";
@@ -332,7 +332,7 @@ class Order_Controller extends Controller
                 // 'street'        => $_POST['street'],
                 'shipping_fee' => $shipping_fee,
                 'note' => $_POST['note'] ?? '',
-                'topping_id' =>isset($_POST['topping']) ? $_POST['topping'] : [],
+                'topping_id' => isset($_POST['topping']) ? $_POST['topping'] : [],
                 'account_id' => $_SESSION['user_id']
             ];
 
@@ -359,9 +359,3 @@ class Order_Controller extends Controller
         include __DIR__ . '/../../view/user/success.php';
     }
 }
-
-
-
-
-
-
