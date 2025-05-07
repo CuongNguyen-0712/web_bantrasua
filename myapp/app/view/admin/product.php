@@ -83,15 +83,15 @@
         <span><b><?= $offset + $index + 1 ?></b> trong số <b><?= $totalProducts ?></b> sản phẩm</span>
         <div class="product-pagination_button">
             <?php
-      $baseQuery = [
-        'controller' => 'product',
-        'action' => 'index',
-      ];
-      ?>
+            $baseQuery = [
+                'controller' => 'product',
+                'action' => 'index',
+            ];
+            ?>
             <?php if ($currentPage > 1): ?>
             <?php
-        $prevQuery = array_merge($baseQuery, ['page' => $currentPage - 1]);
-        ?>
+                $prevQuery = array_merge($baseQuery, ['page' => $currentPage - 1]);
+                ?>
             <a href="?<?= http_build_query($prevQuery) ?>">
                 <i class="fa-solid fa-chevron-left"></i> Prev
             </a>
@@ -99,8 +99,8 @@
 
             <?php if ($currentPage < $totalPages): ?>
             <?php
-        $nextQuery = array_merge($baseQuery, ['page' => $currentPage + 1]);
-        ?>
+                $nextQuery = array_merge($baseQuery, ['page' => $currentPage + 1]);
+                ?>
             <a href="?<?= http_build_query($nextQuery) ?>">
                 Next <i class="fa-solid fa-angle-right"></i>
             </a>
