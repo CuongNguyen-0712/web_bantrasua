@@ -28,7 +28,7 @@ class Product_Controller extends Controller
         $totalPages = ceil($totalProducts / $limit);
 
         // Truyền dữ liệu sang view
-        $this->view('products', [
+        $this->view('product', [
             'products' => $products,
             'currentPage' => $currentPage,
             'totalPages' => $totalPages,

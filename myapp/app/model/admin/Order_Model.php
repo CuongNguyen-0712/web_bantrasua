@@ -155,14 +155,25 @@ class Order_Model extends Base_Model
     }
 
     public function getToppings($orderID, $productId, $sizeId) {
-        $sql = "SELECT t.name, t.cost AS price_topping
+        $query = "SELECT t.name, t.cost AS price_topping
                 FROM order_detail_topping odt
                 JOIN topping t ON odt.topping_id = t.id
                 WHERE odt.order_id = :order_id AND odt.product_id = :product_id AND odt.size_id = :size_id";
-        return $this->select($sql, [
+        return $this->select($query, [
             ':order_id' => $orderID,
             ':product_id' => $productId,
             ':size_id' => $sizeId
         ]);
     }
+
+    // 
+    public function updateStatus($orderId, $status) {
+        $query = "UPDATE `order`
+        SET status_id = (
+            SELECT id FROM order_status WHERE name = :status_name
+        ) 
+        WHERE id = :order_id";
+        return $this->update($query, [':status_name' => $status, ':order_id' => $orderId]);
+    }
+    
 }

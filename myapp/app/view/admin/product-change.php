@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sửa sản phẩm</title>
-    <link rel="stylesheet" href="/assets/styles/style.css">
-    <link rel="stylesheet" href="/assets/styles/admin/iframe.css">
+    <link rel="stylesheet" href="<?php echo ASSETS . 'styles/admin/iframe.css'; ?>">
+    <link rel="stylesheet" href="<?php echo ASSETS . 'styles/style.css'; ?>" />
 </head>
 
 <body>
@@ -37,7 +37,7 @@
                 </div> -->
             <div class="form-group">
                 <label for="dateUpload">Ngày upload</label>
-                <input type="date" id="date" value="2024-02-25"/>
+                <input type="date" id="date" value="2024-02-25" />
             </div>
             <div class="form-group">
                 <label for="productImage">Hình ảnh sản phẩm</label>
@@ -50,8 +50,8 @@
         </form>
     </div>
     <div class="footer" style="justify-content: flex-end; gap: 5px;">
-        <button class="save-button" onclick="closeProductAdd()" >Hủy</button>
-        <button class="save-button" onclick="closeProductAdd()" style="background-color: #ff1a1a;" >Lưu</button>
+        <button class="save-button" onclick="closeProductAdd()">Hủy</button>
+        <button class="save-button" onclick="closeProductAdd()" style="background-color: #ff1a1a;">Lưu</button>
     </div>
     <script>
         function closeProductAdd() {

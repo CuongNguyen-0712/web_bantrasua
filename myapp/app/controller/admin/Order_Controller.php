@@ -76,4 +76,19 @@ class Order_Controller extends Controller
             'details' => $details,
         ]);
     }
+
+    //Đây là code chatGPT
+    public function updateStatus() {
+        $data = json_decode(file_get_contents('php://input'), true);
+        $orderId = $data['orderId'] ?? null;
+        $status = $data['status'] ?? null;
+    
+        if ($orderId && $status) {
+            $success = $this->ordersModel->updateStatus($orderId, $status);
+            echo json_encode(['success' => $success]);
+        } else {
+            echo json_encode(['success' => false]);
+        }
+    }
+    
 }

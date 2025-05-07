@@ -87,14 +87,26 @@
               <td><?= $offset + $index + 1 ?></td>
               <td><?= $order['id'] ?></td>
               <td><?= htmlspecialchars($order['customer_name']) ?></td>
-              <td><?= htmlspecialchars($order['status']) ?></td>
+              <td>
+                <div class="select-status">
+                  <select class="status-select" data-order-id="<?= $order['id'] ?>">
+                    <?php foreach ($statuses as $status): ?>
+                      <option value="<?= $status['name'] ?>" <?= $order['status'] === $status['name'] ? 'selected' : '' ?>>
+                        <?= htmlspecialchars($status['name']) ?>
+                      </option>
+                    <?php endforeach; ?>
+                  </select>
+                  <i class="fa-solid fa-sort-down"></i>
+                </div>
+              </td>
               <td><?= number_format($order['total_price']) ?>₫</td>
               <td><?= date('d/m/Y', strtotime($order['order_date'])) ?></td>
               <td>
                 <span class="orders-table_feature">
                   <a href="/web_bantrasua/myapp/admin/order/detail/<?= $order['id'] ?>">
-                    <img src="<?= ASSETS . 'img/icon-order-1.png' ?>" alt="icon order"></td>
-                  </a>
+                    <img src="<?= ASSETS . 'img/icon-order-1.png' ?>" alt="icon order">
+              </td>
+              </a>
               </span>
             </tr>
           <?php endforeach; ?>

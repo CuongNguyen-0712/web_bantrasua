@@ -13,10 +13,10 @@
 <body>
   <div class="product-iframe">
     <div class="product-iframe-content">
-      <iframe id="product-delete" src="del-box.html" frameborder="0" width="100%" height="100%"></iframe>
-      <iframe id="product-change" src="product-change.html" frameborder="0" width="100%" height="100%"
+      <iframe id="product-delete" src="del-box.php" frameborder="0" width="100%" height="100%"></iframe>
+      <iframe id="product-change" src="product-change.php" frameborder="0" width="100%" height="100%"
         style="display: none;"></iframe>
-      <iframe id="product-add" src="product-add.html" frameborder="0" width="100%" height="100%"></iframe>
+      <iframe id="product-add" src="product-add.php" frameborder="0" width="100%" height="100%"></iframe>
     </div>
   </div>
   <div class="product-heading">
@@ -45,7 +45,7 @@
       <tbody>
         <tr>
           <td>1</td>
-          <td><img src="/assets/img/h5-removebg-preview.png" alt="Trà sữa Clover" /></td>
+          <td><img src="<?php echo ASSETS?>img/h5-removebg-preview.png" alt="Trà sữa Clover" /></td>
           <td>Trà sữa Clover Tea</td>
           <td>Trà sữa</td>
           <td>59.000&#8363;</td>
@@ -82,7 +82,7 @@
       </button>
     </div>
   </div>
-  <script src="/assets/handle/admin/product.js"></script>
+  <script src="<?php echo ASSETS . 'js/admin/product.js'; ?>"></script>
 </body>
 
 </html>

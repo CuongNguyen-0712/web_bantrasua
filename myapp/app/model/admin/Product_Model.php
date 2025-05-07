@@ -5,7 +5,7 @@ namespace admin;
 class Product_Model extends Base_Model
 {
     public function getProductsByPage($limit, $offset) {
-        $query = "SELECT p.id, p.name, p.cost_default, c.name AS , p.upload_time
+        $query = "SELECT p.id, p.name, p.cost_default, c.name AS category, p.upload_time
         FROM product p
         JOIN category c ON p.category_id = c.id
         LIMIT :limit OFFSET :offset";
