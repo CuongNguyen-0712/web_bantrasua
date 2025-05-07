@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD:myapp/app/view/admin/index.php
     <aside class="aside_admin active">
         <div class="heading_aside">
             <i class="fa-solid fa-clover"></i>
@@ -88,6 +89,28 @@
         </header>
         <iframe id="content_admin"></iframe>
     </main>
+=======
+    <?php foreach ($accounts as $account): ?>
+<<<<<<< HEAD:myapp/app/views/admin/index.php
+        <tr>
+            <p>Username: <?= $account->getUserName(); ?></p>
+            <p>Email: <?= $account->getEmail(); ?></p>
+            <p>Password: <?= $account->getPassWord(); ?></p>
+        </tr>
+=======
+    <tr>
+        <p>Username: <?= $account->getUserName(); ?></p>
+        <p>Email: <?= $account->getEmail(); ?></p>
+        <p>Password: <?= $account->getPassWord(); ?></p>
+    </tr>
+>>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a:myapp/app/view/admin/index.php
+    <?php endforeach; ?>
+    <button>
+        <a href="index.php?url=home/home">
+            Navigate
+        </a>
+    </button>
+>>>>>>> 3e1ddc6e19d928b8fc84870cdefcb24f9415d77f:myapp/app/views/admin/index.php
 </body>
 <script src="/web_bantrasua/myapp/public/assets/js/admin/admin.js"></script>
 

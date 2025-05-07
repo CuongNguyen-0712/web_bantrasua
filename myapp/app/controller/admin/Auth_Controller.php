@@ -33,5 +33,12 @@ class Auth_Controller extends Controller{
             }
         }
     }
+    
+    public function logout()
+    {
+        session_destroy();
+        header("Location: /web_bantrasua/myapp/admin/auth/login");
+        exit;
+    }
 }
 ?>

@@ -29,4 +29,3 @@ class Home_Service {
             return $accounts;
         }
 }
-?>

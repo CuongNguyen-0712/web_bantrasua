@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 namespace admin;
 
     class Home_Controller extends Controller{
