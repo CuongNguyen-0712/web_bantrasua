@@ -25,27 +25,29 @@ function toggleOptions(event, element) {
     }
 }
 
-function loadProduct(id) {
-    document.querySelector(".product-iframe-content").style.height = "80%";
-    document.querySelector(".product-iframe").style.display = "flex";
-    const change = document.getElementById("product-change");
-    const add = document.getElementById("product-add");
-    const del = document.getElementById("product-delete");
-    del.style.display = "none"
-    add.style.display = "none";
-    change.style.display = "none";
-    if (id === "add") {
-        add.style.display = "flex";
-    } else if (id === "change") {
-        change.style.display = "flex";
-    } else{
-        document.querySelector(".product-iframe-content").style.height = "15%";
-        del.style.display = "flex";
-    }
-}
 
-window.addEventListener("message", function (event) {
-    if (event.data === "closeProduct") {
-        document.querySelector(".product-iframe").style.display = "none";
+document.getElementById('productImage').addEventListener('change', function(event) {
+    const fileInput = event.target;
+    const previewContainer = document.getElementById('imagePreview');
+    const previewImage = document.getElementById('previewImg');
+
+    if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            previewImage.src = e.target.result;
+            previewContainer.style.display = 'block';
+        };
+        reader.readAsDataURL(fileInput.files[0]);
+    } else {
+        previewContainer.style.display = 'none';
+        previewImage.src = '';
     }
 });
+
+function removePreview() {
+    document.getElementById('productImage').value = '';                    // Xóa input file
+    document.getElementById('previewImg').src = '';                        // Xóa ảnh hiển thị
+    document.getElementById('imagePreview').style.display = 'none';        // Ẩn khung preview
+    document.getElementById('removeImageFlag').value = 1;                // Đánh dấu xóa
+}
+

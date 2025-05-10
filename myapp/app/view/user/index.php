@@ -1,7 +1,4 @@
-<?php
-echo ("Dang nhap thanh cong");
-//Này là test thử thoi
-?>=======<html lang="en">
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="../../assets/styles/user/advacedSearch copy.css">
@@ -19,18 +16,18 @@ echo ("Dang nhap thanh cong");
 
 <body>
     <style>
-        .menu__user {
-            min-width: 250px;
-            background-color: #f8f6f6;
-        }
+    .menu__user {
+        min-width: 250px;
+        background-color: #f8f6f6;
+    }
 
-        .icon-login_1,
-        .icon-login_2,
-        .icon-login_3,
-        .icon-login_4,
-        .icon-login_5 {
-            margin-right: 10%;
-        }
+    .icon-login_1,
+    .icon-login_2,
+    .icon-login_3,
+    .icon-login_4,
+    .icon-login_5 {
+        margin-right: 10%;
+    }
     </style>
     <div class="web">
         <header>
@@ -61,8 +58,7 @@ echo ("Dang nhap thanh cong");
                                     <h3>Bộ Lọc Tìm Kiếm</h3>
                                     <!-- menu__filter-item -->
                                     <ul class="menu__filter-item"><i class="fa-solid fa-shop"></i> Nơi bán
-                                        <li><input type="radio" name="cty" id="ctyvn" value="hcm" checked>TP.Hồ
-                                            Chí
+                                        <li><input type="radio" name="cty" id="ctyvn" value="hcm" checked>TP.Hồ Chí
                                             Minh</li>
                                         <li><input type="radio" name="cty" id="ctyvn" value="hn">Hà Nội</li>
                                         <li><input type="radio" name="cty" id="ctyvn" value="tn">Thái Nguyên</li>
@@ -76,16 +72,14 @@ echo ("Dang nhap thanh cong");
                                         <li><input type="radio" name="cty" id="ctyvn" value="ct">Cần Thơ</li>
                                     </ul>
 
-                                    <ul class="menu__filter-item"><i class="fa-solid fa-truck"></i> Đơn Vị Vận
-                                        Chuyển
+                                    <ul class="menu__filter-item"><i class="fa-solid fa-truck"></i> Đơn Vị Vận Chuyển
                                         <li><input type="radio" name="transport" id="transportvn" value="quick"
                                                 checked>Nhanh</li>
                                         <li><input type="radio" name="transport" id="transportvn" value="save">Tiết
                                             Kiệm</li>
                                     </ul>
 
-                                    <ul class="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i>
-                                        Khoảng
+                                    <ul class="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i> Khoảng
                                         Giá
                                         <li><input type="" placeholder="Từ &#8363;"></li>
                                         <li><input type="" placeholder="Đến &#8363;"></li>
@@ -120,7 +114,7 @@ echo ("Dang nhap thanh cong");
                                     <li class="menu__user-item-2">
                                         <!-- icon-login_2 -->
                                         <i class="icon-login_2 fa-solid fa-circle-info"></i>
-                                        <a href = "/web_bantrasua/myapp/user/user/info  ">Thông Tin
+                                        <a href="/web_bantrasua/myapp/user/user/info  ">Thông Tin
                                             Cá Nhân</a>
                                     </li>
                                     <!-- item-3 -->
@@ -150,8 +144,7 @@ echo ("Dang nhap thanh cong");
                     <li class=" header__nav-list">
                         <!-- Header__nav-item -->
                     <li class="header__nav-item">
-                        <a onclick="handleLoadContent('logined-content.html')" class="header__nav-item">TRANG
-                            CHỦ</a>
+                        <a onclick="handleLoadContent('logined-content.html')" class="header__nav-item">TRANG CHỦ</a>
                     </li>
                     <li class="header__nav-item header__nav-item--has-product">SẢN PHẨM
 
@@ -166,28 +159,28 @@ echo ("Dang nhap thanh cong");
 
                                 <?php foreach ($data['categories'] as $category): ?>
 
-                                    <header>
-                                        <!--sửa lại css khúc này dùm t nha-->
-                                        <h3> <a href="/web_bantrasua/myapp/user/Home/showProductByCategory/<?php echo $category['id']; ?>"
-                                                class="header__product-header">
-                                                <?php echo $category['name'] ?></a>
-                                        </h3>
-                                    </header>
+                                <header>
+                                    <!--sửa lại css khúc này dùm t nha-->
+                                    <h3> <a href="/web_bantrasua/myapp/user/Home/showProductByCategory/<?php echo $category['id']; ?>"
+                                            class="header__product-header">
+                                            <?php echo $category['name'] ?></a>
+                                    </h3>
+                                </header>
 
-                                    <ul class="header__product-list">
+                                <ul class="header__product-list">
 
-                                        <?php foreach ($data['products'] as $product): ?>
+                                    <?php foreach ($data['products'] as $product): ?>
 
-                                            <?php if ($product['category_id'] == $category['id']): ?>
-                                                <li class="header__product-item">
-                                                    <a href="/web_bantrasua/myapp/user/Home/showProductByID/<?php echo $product['id']; ?>"
-                                                        class="header__product-name-item">
-                                                        <?php echo $product['name'] ?></a>
-                                                </li>
-                                            <?php endif; ?>
+                                    <?php if ($product['category_id'] == $category['id']): ?>
+                                    <li class="header__product-item">
+                                        <a href="/web_bantrasua/myapp/user/Home/showProductByID/<?php echo $product['id']; ?>"
+                                            class="header__product-name-item">
+                                            <?php echo $product['name'] ?></a>
+                                    </li>
+                                    <?php endif; ?>
 
-                                        <?php endforeach; ?>
-                                    </ul>
+                                    <?php endforeach; ?>
+                                </ul>
 
                                 <?php endforeach; ?>
 
@@ -294,8 +287,7 @@ echo ("Dang nhap thanh cong");
                         </div>
                     </li>
                     <li class="header__nav-item">
-                        <a onclick="handleLoadContent('aboutUs copy.html')" class="header__nav-item">VỀ CHÚNG
-                            TÔI</a>
+                        <a onclick="handleLoadContent('aboutUs copy.html')" class="header__nav-item">VỀ CHÚNG TÔI</a>
                     </li>
                     </li>
                 </div>

@@ -1,7 +1,9 @@
 body {
   width: 100%;
   height: 100vh;
-  background-image: url("../../img/katinat.jpg");
+  background-image: url('../../img/katinat.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Login overlay */
@@ -125,16 +127,6 @@ body {
 
 .login-form__button {
   margin-top: 40px;
-}
-
-.login-form__button a {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #fff;
 }
 
 .login-form__btn {

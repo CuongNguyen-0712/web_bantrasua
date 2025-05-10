@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/purchase.css">
     <link rel="icon" href="/web_bantrasua/myapp/public/assets/img/logo.png">
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/style.css">
-    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet"
+        href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/font/Arimo-VariableFont_wght.ttf">
     <title>Clover Tea</title>
 </head>
@@ -35,7 +36,8 @@
 
                     <button class="purchase-header__heading-btn-shop">
                         <i class="fa-solid fa-store"></i>
-                        <a href="/pages/user/daDangNhap copy.html" class="purchase-header__heading-btn-content">Trang
+                        <a href="/web_bantrasua/myapp/user/home/index"
+                            class="purchase-header__heading-btn-content">Trang
                             chủ </a>
                     </button>
                 </div>
@@ -43,92 +45,50 @@
                 <ul class="purchase-header-status">
                     <li class="purchase-header-status--success ">
                         <i class="fa-solid fa-truck"></i>
-                        <!-- Giao hàng thành công -->
-                         <?php if( isset($data['status']) ): ?>
-                            <?php echo $data['status']['name']?>
-                            <?php else: ?>
-                                <?php echo "Không có trạng thái. "?>
+                        <?php if (!empty($data['status'])): ?>
+                        <?php echo $data['status']['name'] ?>
+                        <?php else: ?>
+                        <?php echo "Không có trạng thái. " ?>
                         <?php endif; ?>
                     </li>
                     <li class="purchase-header-status--rating purchase-header-status--separate">ĐÁNH GIÁ</li>
                 </ul>
             </header>
 
-            <!-- <a href="../../pages/user/proccess.html" class="order-form"> -->
-                <?php foreach($data['productInfo'] as $productInfo): ?>
-                    <div class="order-form">
-                        <div class="order-form__item">
-                            <div class="order-form__item-image">
-                                <img src="/assets/img/h5-removebg-preview.png" alt=">Trà Sữa Clover Tea" class="order-form__item-img">
-                            </div>
-
-                            <div class="order-form__content">
-                                <h5 class="order-form__title"> <?php echo $productInfo['name']?></h5>
-                                <span class="order-form__describ">Kích cỡ:
-                                        <?php echo $productInfo['size']?>
-                                </span>
-                            </div>
+            <a href="/web_bantrasua/myapp/user/process/show" class="order-form">
+                <?php foreach ($data['productInfo'] as $productInfo): ?>
+                <div class="order-form">
+                    <div class="order-form__item">
+                        <div class="order-form__item-image">
+                            <img src="/assets/img/h5-removebg-preview.png" alt=">Trà Sữa Clover Tea"
+                                class="order-form__item-img">
                         </div>
+
+                        <div class="order-form__content">
+                            <h5 class="order-form__title"> <?php echo $productInfo['name'] ?></h5>
+                            <span class="order-form__describ">
+                                Kích cỡ: <?php echo $productInfo['size']; ?>,
+                                Topping: <?php echo implode(", ", $productInfo['topping']); ?>
+                            </span>
+                            <p>x<?php echo $productInfo['quantity'] ?></p>
+                        </div>
+
+                        <div class="order-form__cost">
+                            <?php echo number_format($productInfo['productTotal'], 0, ',', '.') . "\u{20AB}" ?></div>
                     </div>
+                </div>
                 <?php endforeach; ?>
-                <!-- <div class="order-form">
-                    <div class="order-form__item">
-                        <div class="order-form__item-image">
-                            <img src="/assets/img/h5-removebg-preview.png" alt=">Trà Sữa Clover Tea" class="order-form__item-img">
-                        </div>
-
-                        <div class="order-form__content">
-                            <h5 class="order-form__title">Trà Sữa Clover Tea</h5>
-                            <span class="order-form__describ">Kích cỡ: S, Ngọt: Bình thường, Đá: Bình thường, Toppng:
-                                Kem Cheese Khứ Hồi</span>
-                            <p>x1</p>
-                        </div>
-
-                        <div class="order-form__cost">59.000&#8363</div>
-                    </div>
-                </div>
-
-                <div class="order-form">
-                    <div class="order-form__item">
-                        <div class="order-form__item-image">
-                            <img src="/assets/img/ảnh trà.png" alt=">Trà Sữa Clover Tea" class="order-form__item-img">
-                        </div>
-
-                        <div class="order-form__content">
-                            <h5 class="order-form__title">Mỹ Nhân Thanh Trà</h5>
-                            <span class="order-form__describ">Kích cỡ: M, Ngọt: Nhiều, Đá: Bình thường</span>
-                            <p>x2</p>
-                        </div>
-
-                        <div class="order-form__cost">218.000&#8363</div>
-                    </div>
-                </div>
-
-                <div class="order-form">
-                    <div class="order-form__item">
-                        <div class="order-form__item-image">
-                            <img src="/assets/img/milk.png" alt=">Trà Sữa Clover Tea" class="order-form__item-img">
-                        </div>
-
-                        <div class="order-form__content">
-                            <h5 class="order-form__title">Americano</h5>
-                            <span class="order-form__describ">Kích cỡ: L, Ngọt: Ít ngọt, Đá: Bình thường</span>
-                            <p>x3</p>
-                        </div>
-
-                        <div class="order-form__cost">117.000&#8363</div>
-                    </div>
-                </div> -->
-            <!-- </a> -->
+            </a>
 
             <footer class="order-form__footer">
                 <div class="order-form__ctn">Thành tiền:
-                    <span class="order-form__ctn-cost">
-                        &nbsp;415.000&#8363
+                    <span class="order-form__ctn-cost">&nbsp;
+                        <?php echo number_format($data['totalPrice']['total_price'], 0, ',', '.') . "\u{20AB}" ?>
                     </span>
                 </div>
                 <div class="order-form__btn">
                     <button class="order-form__btn-reorder">Mua lại</button>
+                    <!--đang suy nghĩ có nên link cái này sang giỏ hàng không-->
                     <button class="order-form__btn-more">Thêm</button>
                 </div>
             </footer>
@@ -159,4 +119,5 @@
         </div>
     </div>
 </body>
+
 </html>

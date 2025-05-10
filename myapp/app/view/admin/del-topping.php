@@ -36,9 +36,9 @@
   </head>
 
   <body>
-    <form action="/web_bantrasua/myapp/admin/product/delete/<?= $productId ?>" method="POST">
+    <form action="/web_bantrasua/myapp/admin/topping/delete/<?= $toppingId ?>" method="POST">
       <div class="confirm-dialog">
-        <h2>Sản phẩm này chưa được bán ra, bạn có chắc chắn muốn xóa vĩnh viễn không ?</h2>
+        <h2>Bạn có chắc chắn muốn xóa topping này vĩnh viễn không ?</h2>
         <div class="footer" style="gap: 10px;">
           <button onclick="window.history.back()">Hủy</button>
           <button type="submit" name="confirm" style="background-color: #ff1a1a;">Xóa</button>
