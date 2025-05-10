@@ -1,13 +1,7 @@
-body{
+body {
   width: 100%;
   height: 100vh;
-<<<<<<< HEAD
-  background-image: url(/assets/img/katinat.jpg);
-=======
-  background-image: url('../../img/katinat.jpg');
->>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("../../img/katinat.jpg");
 }
 
 /* Login overlay */
@@ -89,7 +83,7 @@ body{
   display: none;
 }
 
-.login-form__input:focus + .login-form__hidden-icon {
+.login-form__input:focus+.login-form__hidden-icon {
   display: block;
 }
 
@@ -124,7 +118,7 @@ body{
   font-size: 16px;
 }
 
-.login-form__forgot:hover{
+.login-form__forgot:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -133,9 +127,8 @@ body{
   margin-top: 40px;
 }
 
-<<<<<<< HEAD
-.login-form__button a{
-  display:flex;
+.login-form__button a {
+  display: flex;
   height: 100%;
   width: 100%;
   align-items: center;
@@ -144,8 +137,6 @@ body{
   color: #fff;
 }
 
-=======
->>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a
 .login-form__btn {
   display: flex;
   margin: auto;
@@ -157,11 +148,8 @@ body{
   border-radius: 4px;
   cursor: pointer;
   font-size: 18px;
-<<<<<<< HEAD
-=======
   justify-content: center;
   line-height: 30px;
->>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a
 }
 
 .login-form__btn:hover {
@@ -181,8 +169,4 @@ body{
 
 .login-form__link:hover {
   opacity: 0.6;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a

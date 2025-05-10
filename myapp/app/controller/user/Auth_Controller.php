@@ -30,6 +30,7 @@ class Auth_Controller extends Controller
             if (!empty($result)) {
                 $_SESSION['user'] = [
                     'email' => $this->email,
+                    'id' => $result['id'],
                     'role' => 'user'
                 ];
 

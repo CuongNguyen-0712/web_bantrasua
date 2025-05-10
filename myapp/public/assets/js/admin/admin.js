@@ -25,9 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     adminInfo_btn.addEventListener("click", (e) => {
         e.stopPropagation();
         admin_center.classList.toggle("active");
-        contentBtns.forEach((btn) => {
-            btn.classList.remove("active");
-        })
     })
 
     const close_aside_tablet = document.querySelector(".close_aside");
@@ -38,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 });
+
 const handleLoadContent = (page) => {
-    var iframe = document.getElementById('content_admin');
-    iframe.src = page;
+    window.location.href = page;
 }
