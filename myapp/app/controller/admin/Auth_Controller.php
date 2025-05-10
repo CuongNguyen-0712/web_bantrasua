@@ -2,40 +2,35 @@
 
 namespace admin;
 
-class Auth_Controller extends Controller
+require_once APP_ROOT . "/app/services/admin/Auth_Service.php";
+
+class Auth_Controller
 {
-
-    protected $loginModel;
-    protected $email;
-    protected $password;
-
     public function login()
     {
-        $this->view('login', []);
+        include APP_ROOT . "/app/view/admin/login.php";
     }
+
 
     public function handleLogin()
     {
-        if (isset($_POST['email']) && isset($_POST['adminPass'])) {
-            $this->email = $_POST['email'];
-            $this->password = $_POST['adminPass'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
-            $this->loginModel = $this->model('Login_Model');
-            $result = $this->loginModel->checkLogin($this->email, $this->password);
-            if (!empty($result)) {
-                $_SESSION['user'] = [
-                    'username' => $result['username'],
-                    'email' => $this->email,
-                    'id' => $result['id'],
-                    'role' => 'admin'
-                ];
-                header('Location: /web_bantrasua/myapp/admin/home/index');
-                exit();
-            } else {
-                $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";
-                header('Location: /web_bantrasua/myapp/admin/auth/login');
-                exit();
-            }
+        $home_service = new Auth_Service();
+        $result = $home_service->checkLogin($username, $password);
+
+        if (!empty($result)) {
+            $_SESSION['user'] = [
+                'username' => $username,
+                'role' => 'admin'
+            ];
+            header("Location: /web_bantrasua/myapp/admin/home/index");
+            exit;
+        } else {
+            $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";
+            header("Location: /web_bantrasua/myapp/admin/auth/login");
+            exit;
         }
     }
 
