@@ -144,7 +144,7 @@
                         <a href="#" class="header__search-filter-link" id="showAdvancedSearch">
                             <i class="icon-filter fa-solid fa-filter">
                                 <!-- MENU__FILTER -->
-                                <div class="menu__filter" id="advancedSearchMenu">
+                                <<<<<<< HEAD <div class="menu__filter" id="advancedSearchMenu">
                                     <h3>Bộ Lọc Tìm Kiếm</h3>
                                     <!-- Advanced search form -->
                                     <form id="advancedSearchForm">
@@ -178,7 +178,48 @@
                                         <!-- Button -->
                                         <button type="submit" class="button-filter">Áp Dụng</button>
                                     </form>
-                                </div>
+                                    =======
+                                    <div class="menu__filter">
+                                        <h3>Bộ Lọc Tìm Kiếm</h3>
+                                        <!-- menu__filter-item -->
+                                        <ul class="menu__filter-item"><i class="fa-solid fa-shop"></i> Nơi bán
+                                            <li><input type="radio" name="cty" id="ctyvn" value="hcm" checked>TP.Hồ
+                                                Chí
+                                                Minh</li>
+                                            <li><input type="radio" name="cty" id="ctyvn" value="hn">Hà Nội</li>
+                                            <li><input type="radio" name="cty" id="ctyvn" value="tn">Thái Nguyên
+                                            </li>
+                                            <li><input type="radio" name="cty" id="ctyvn" value="vp">Vĩnh Phúc
+                                            </li>
+                                            <li><input type="radio" name="cty" id="ctyvn" value="hp">Hải Phòng
+                                            </li>
+                                            <li><input type="radio" name="cty" id="ctyvn" value="dn">Đồng Nai</li>
+                                            <li><input type="radio" name="cty" id="ctyvn" value="hy">Hưng Yên</li>
+                                            <li><input type="radio" name="cty" id="ctyvn" value="bd">Bình Dương
+                                            </li>
+                                            <li><input type="radio" name="cty" id="ctyvn" value="bn">Bắc Ninh</li>
+                                            <li><input type="radio" name="cty" id="ctyvn" value="st">Sóc Trăng</li>
+                                            <li><input type="radio" name="cty" id="ctyvn" value="ct">Cần Thơ</li>
+                                        </ul>
+
+                                        <ul class="menu__filter-item"><i class="fa-solid fa-truck"></i> Đơn Vị Vận
+                                            Chuyển
+                                            <li><input type="radio" name="transport" id="transportvn" value="quick"
+                                                    checked>Nhanh</li>
+                                            <li><input type="radio" name="transport" id="transportvn" value="save">Tiết
+                                                Kiệm</li>
+                                        </ul>
+
+                                        <ul class="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i>
+                                            Khoảng
+                                            Giá
+                                            <li><input type="" placeholder="Từ &#8363;"></li>
+                                            <li><input type="" placeholder="Đến &#8363;"></li>
+                                            <!-- button -->
+                                            <button class="button-filter">Áp Dụng</button>
+                                        </ul>
+                                        >>>>>>> 2ab94e7 (merge last commit from Zair0u)
+                                    </div>
                             </i>
                         </a>
                     </div>
@@ -197,53 +238,25 @@
                                 <!-- item -->
                                 <ul class="menu__user-item">
                                     <!-- item 1 -->
-                                    <?php
-                                    if (isset($data['userData'])) {
-                                    ?>
-                                        <li class="menu__user-item-1">
-                                            <!-- icon-login_1 -->
-                                            <i class="icon-login_1 fa-regular fa-user"></i>
-                                            <a href="#">Tên:
-                                                <?php echo isset($data['userData']['username']) ? $data['userData']['username'] : (isset($data['userData']['name']) ? $data['userData']['name'] : 'Khách hàng'); ?></a>
-                                        </li>
-                                        <!-- item-2 -->
-                                        <li class="menu__user-item-2">
-                                            <!-- icon-login_2 -->
-                                            <i class="icon-login_2 fa-solid fa-circle-info"></i>
-                                            <a href="/web_bantrasua/myapp/user/user/info">Thông Tin
-                                                Cá Nhân</a>
-                                        </li>
-                                        <!-- item-3 -->
-                                        <li class="menu__user-item-3">
-                                            <!-- icon-login_3 -->
-                                            <i class="icon-login_3 fa-solid fa-boxes-stacked"></i>
-                                            <!-- <a onclick="handleLoadContent('purchase')">Đơn Mua</a> -->
-                                            <a href="/web_bantrasua/myapp/user/Purchase/show">Đơn mua</a>
-                                        </li>
-
-                                        <!-- item 5 -->
-                                        <li class="menu__user-item-5">
-                                            <!-- icon-login_5 -->
-                                            <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
-                                            <a href="/web_bantrasua/myapp/user/auth/logout">Đăng Xuất</a>
-                                        </li>
-                                    <?php
-                                    } else {
-                                    ?>
-                                        <!-- item 5 -->
-                                        <li class="menu__user-item-5">
-                                            <!-- icon-login_5 -->
-                                            <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
-                                            <a href="/web_bantrasua/myapp/user/auth/login">Đăng Nhập</a>
-                                        </li>
-                                        <li class="menu__user-item-5">
-                                            <!-- icon-login_5 -->
-                                            <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
-                                            <a href="/web_bantrasua/myapp/user/user/register">Đăng Ký</a>
-                                        </li>
-                                    <?php
-                                    }
-                                    ?>
+                                    <li class="menu__user-item-1">
+                                        <!-- icon-login_1 -->
+                                        <i class="icon-login_1 fa-regular fa-user"></i>
+                                        <a href="#">Tên: Hoàng Mạnh Hà</a>
+                                    </li>
+                                    <!-- item-2 -->
+                                    <li class="menu__user-item-2">
+                                        <!-- icon-login_2 -->
+                                        <i class="icon-login_2 fa-solid fa-circle-info"></i>
+                                        <a href="/web_bantrasua/myapp/user/user/info  ">Thông Tin
+                                            Cá Nhân</a>
+                                    </li>
+                                    <!-- item-3 -->
+                                    <li class="menu__user-item-3">
+                                        <!-- icon-login_3 -->
+                                        <i class="icon-login_3 fa-solid fa-boxes-stacked"></i>
+                                        <!-- <a onclick="handleLoadContent('purchase.html')">Đơn Mua</a> -->
+                                        <a href="/web_bantrasua/myapp/user/Purchase/show">Đơn mua</a>
+                                    </li>
 
                                 </ul>
                             </div>
@@ -258,7 +271,7 @@
                     <li class=" header__nav-list">
                         <!-- Header__nav-item -->
                     <li class="header__nav-item">
-                        <a onclick="handleLoadContent('logined-content')" class="header__nav-item">TRANG
+                        <a onclick="handleLoadContent('logined-content.html')" class="header__nav-item">TRANG
                             CHỦ</a>
                     </li>
                     <li class="header__nav-item header__nav-item--has-product">SẢN PHẨM
@@ -303,7 +316,8 @@
                         </div>
                     </li>
                     <li class="header__nav-item">
-                        <a onclick="handleLoadContent('aboutUs')" class="header__nav-item" id="content_user">VỀ CHÚNG
+                        <a onclick="handleLoadContent('aboutUs')" class="header__nav-item" id="content_user">VỀ
+                            CHÚNG
                             TÔI</a>
                     </li>
                     </li>
@@ -591,7 +605,8 @@
                 <!-- information -->
                 <div class="form-container__information">
                     <p><span class="bolded">ĐỊA CHỈ</span></p>
-                    <p> <i class="fa-solid fa-location-pin"></i> Địa chỉ: F1/63/T ấp 6, xã Vĩnh Lộc A, huyện Bình Chánh,
+                    <p> <i class="fa-solid fa-location-pin"></i> Địa chỉ: F1/63/T ấp 6, xã Vĩnh Lộc A, huyện Bình
+                        Chánh,
                         TP.Hồ Chí Minh</p>
                 </div>
                 <!-- rule -->

@@ -44,37 +44,37 @@
             </thead>
             <tbody>
                 <?php if (!empty($products)): ?>
-                <?php foreach ($products as $index => $product): ?>
-                <tr>
-                    <td><?= $offset + $index + 1 ?></td>
-                    <td><img src="<?= $product['img'] ?>" alt="Hình sản phẩm" />
-                    <td><?= htmlspecialchars($product['name']) ?></td>
-                    <td><?= htmlspecialchars($product['category']) ?></td>
-                    <td><?= number_format($product['cost_default']) ?>₫</td>
-                    <td><?= date('d/m/Y', strtotime($product['upload_time'])) ?></td>
-                    <td><?= $product['is_active'] == 1 ? 'Hiện' : 'Ẩn' ?></td>
-                    <td>
-                        <span class="product-table_feature" onclick="toggleOptions(event,this)">
-                            <i class="fa fa-ellipsis-h"></i>
-                        </span>
-                        <div class="product-table_feature-menu">
-                            <a href="/web_bantrasua/myapp/admin/product/edit/<?= $product['id'] ?>">
-                                Change
-                                <i class="bi bi-wrench"></i>
-                            </a>
-                            <a href="/web_bantrasua/myapp/admin/product/delete/<?= $product['id'] ?>">
-                                Delete
-                                <i class="bi bi-trash3"></i>
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
+                    <?php foreach ($products as $index => $product): ?>
+                        <tr>
+                            <td><?= $offset + $index + 1 ?></td>
+                            <td><img src="<?= $product['img'] ?>" alt="Hình sản phẩm" />
+                            <td><?= htmlspecialchars($product['name']) ?></td>
+                            <td><?= htmlspecialchars($product['category']) ?></td>
+                            <td><?= number_format($product['cost_default']) ?>₫</td>
+                            <td><?= date('d/m/Y', strtotime($product['upload_time'])) ?></td>
+                            <td><?= $product['is_active'] == 1 ? 'Hiện' : 'Ẩn' ?></td>
+                            <td>
+                                <span class="product-table_feature" onclick="toggleOptions(event,this)">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </span>
+                                <div class="product-table_feature-menu">
+                                    <a href="/web_bantrasua/myapp/admin/product/edit/<?= $product['id'] ?>">
+                                        Change
+                                        <i class="bi bi-wrench"></i>
+                                    </a>
+                                    <a href="/web_bantrasua/myapp/admin/product/delete/<?= $product['id'] ?>">
+                                        Delete
+                                        <i class="bi bi-trash3"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 <?php else: ?>
-                <tr>
-                    <td colspan="7">KHÔNG CÓ SẢN PHẨM NÀO !!.</td>
-                    <?php $index = -1; ?>
-                </tr>
+                    <tr>
+                        <td colspan="7">KHÔNG CÓ SẢN PHẨM NÀO !!.</td>
+                        <?php $index = -1; ?>
+                    </tr>
                 <?php endif; ?>
             </tbody>
         </table>
@@ -89,21 +89,21 @@
             ];
             ?>
             <?php if ($currentPage > 1): ?>
-            <?php
+                <?php
                 $prevQuery = array_merge($baseQuery, ['page' => $currentPage - 1]);
                 ?>
-            <a href="?<?= http_build_query($prevQuery) ?>">
-                <i class="fa-solid fa-chevron-left"></i> Prev
-            </a>
+                <a href="?<?= http_build_query($prevQuery) ?>">
+                    <i class="fa-solid fa-chevron-left"></i> Prev
+                </a>
             <?php endif; ?>
 
             <?php if ($currentPage < $totalPages): ?>
-            <?php
+                <?php
                 $nextQuery = array_merge($baseQuery, ['page' => $currentPage + 1]);
                 ?>
-            <a href="?<?= http_build_query($nextQuery) ?>">
-                Next <i class="fa-solid fa-angle-right"></i>
-            </a>
+                <a href="?<?= http_build_query($nextQuery) ?>">
+                    Next <i class="fa-solid fa-angle-right"></i>
+                </a>
             <?php endif; ?>
         </div>
         <script src="<?php echo ASSETS . 'js/admin/product.js'; ?>"></script>
