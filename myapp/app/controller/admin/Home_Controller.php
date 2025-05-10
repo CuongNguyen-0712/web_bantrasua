@@ -4,20 +4,28 @@ namespace admin;
 
 class Home_Controller extends Controller
 {
-    // public function index(){
-    //     $home_service = new Home_Service();
-    //     $accounts = $home_service->getAllAccount();
-    //     include APP_ROOT ."/app/view/admin/index.php";
-    // }
-
+    protected $target;
     public function index()
     {
-        // include APP_ROOT ."/app/view/admin/index.php";
-        $this->view('index', []);
+        $this->target = 'info';
+        $this->view('index', ['page' => $this->target]);
     }
 
     public function order()
     {
-        $this->view('orders', []);
+        $this->target = 'order';
+        $this->view('index', ['page' => $this->target]);
+    }
+
+    public function user()
+    {
+        $this->target = 'user';
+        $this->view('index', ['page' => $this->target]);
+    }
+
+    public function statistics()
+    {
+        $this->target = 'statistics';
+        $this->view('index', ['page' => $this->target]);
     }
 }

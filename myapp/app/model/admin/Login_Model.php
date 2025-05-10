@@ -4,13 +4,12 @@ namespace admin;
 
 class Login_Model extends Base_Model
 {
-
     public function checkLogin($email, $password)
     {
-        $query = "SELECT * 
-                FROM account
+        $query = "SELECT id, username
+                FROM account 
                 WHERE email = ? AND is_admin = 1 AND password = ? ";
         $result = $this->select($query, [$email, $password]);
-        return $result;
+        return $result[0] ?? [];
     }
 }

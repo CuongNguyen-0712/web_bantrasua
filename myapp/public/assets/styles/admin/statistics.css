@@ -209,67 +209,6 @@ body::-webkit-scrollbar-thumb {
   flex-basis: 270px;
 }
 
-.basic_statistics .chart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100px;
-}
-
-.basic_statistics .chart > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60%;
-  width: 60%;
-  border-radius: 50px;
-}
-
-.basic_statistics:nth-child(1) .chart > span {
-  background: conic-gradient(rgb(255, 0, 0) 70%, transparent 30%);
-}
-
-.basic_statistics:nth-child(2) .chart > span {
-  background: conic-gradient(rgb(251, 255, 0) 60%, transparent 40%);
-}
-
-.basic_statistics:nth-child(3) .chart > span {
-  background: conic-gradient(rgb(0, 47, 255) 40%, transparent -60%);
-}
-
-.basic_statistics:nth-child(4) .chart > span {
-  background: conic-gradient(rgb(2 108 61) 20%, transparent -70%);
-}
-
-.chart > span::before {
-  content: "";
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  align-items: center;
-  height: 80%;
-  width: 80%;
-  font-weight: 700;
-  border-radius: 50px;
-  background: #fff;
-}
-
-.basic_statistics:nth-child(1) .chart > span::before {
-  content: "70%";
-}
-
-.basic_statistics:nth-child(2) .chart > span::before {
-  content: "60%";
-}
-
-.basic_statistics:nth-child(3) .chart > span::before {
-  content: "40%";
-}
-
-.basic_statistics:nth-child(4) .chart > span::before {
-  content: "20%";
-}
 
 .basic_statistics .info_basic {
   display: flex;
@@ -278,6 +217,7 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   flex-grow: 1;
   gap: 10px;
+  padding: 0 10px;
   text-align: center;
   flex-direction: column;
 }
@@ -291,7 +231,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   height: max-content;
-  width: max-content;
+  width: 100%;
   gap: 10px;
 }
 
@@ -300,30 +240,11 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   height: 40px;
-  width: max-content;
-  background: rgb(245, 255, 250);
-  border-radius: 10px;
+  flex-grow: 1;
+  background: rgb(2 108 61);
+  color: #fff;
+  font-weight: 600;
   padding: 10px 20px;
-}
-
-.value_table .trend_value {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 10px;
-  background: rgb(245, 255, 250);
-}
-
-.basic_statistics:nth-child(1) .trend_value,
-.basic_statistics:nth-child(2) .trend_value,
-.basic_statistics:nth-child(3) .trend_value {
-  color: rgb(0, 255, 21);
-}
-
-.basic_statistics:nth-child(4) .trend_value {
-  color: rgb(255, 0, 0);
 }
 
 .frame_statistics {
@@ -332,27 +253,24 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   height: max-content;
   width: 100%;
-  flex-direction: row;
-  gap: 30px;
+  flex-direction: column;
   transition: 0.2s all ease;
-  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.statistics_product,
 .statistics_user {
   display: flex;
   align-items: center;
   justify-content: center;
   height: max-content;
+  width: 100%;
   gap: 30px;
   flex-direction: column;
-  flex-grow: 1;
   border-bottom: 5px solid #303030;
   flex-wrap: wrap;
   z-index: 1;
 }
 
-.statistics_product h2,
 .statistics_user h2 {
   display: flex;
   font-size: 18px;
@@ -444,7 +362,6 @@ body::-webkit-scrollbar-thumb {
   transition: 0.2s all ease;
 }
 
-.statistics_product .table_product,
 .statistics_user .table_user {
   display: flex;
   justify-content: center;
@@ -466,8 +383,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
 }
 
-.table_product .statistics_value::before,
-.table_user .statistics_value::before{
+.table_user .statistics_value::before {
   display: flex;
   position: absolute;
   align-items: center;
@@ -479,10 +395,6 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   font-weight: 700;
   font-size: 13px;
-}
-
-.table_product .statistics_value::before{
-  content: "Số sản phẩm";
 }
 
 .table_user .statistics_value::before {
@@ -508,7 +420,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
 }
 
-.div_container .columns{
+.div_container .columns {
   display: flex;
   height: 0%;
   width: 50%;
@@ -543,151 +455,55 @@ body::-webkit-scrollbar-thumb {
   background: transparent;
 }
 
-.statistics_product .div_container:nth-child(1):hover > .columns::before {
+.statistics_product .div_container:nth-child(1):hover>.columns::before {
   content: "Trà sữa Clover";
 }
 
-.statistics_product.active .div_container:nth-child(1) > .columns {
+.statistics_product.active .div_container:nth-child(1)>.columns {
   height: 62%;
   transition: 0.2s all ease;
 }
 
-.statistics_user.active .div_container:nth-child(1) > .columns {
-  height:5%;
+.statistics_user.active .div_container:nth-child(1)>.columns {
+  height: 5%;
   transition: 0.2s all ease;
 }
 
-.statistics_product.active .div_container:nth-child(1) > .columns::after {
+.statistics_product.active .div_container:nth-child(1)>.columns::after {
   content: "3124";
 }
 
-.statistics_user.active .div_container:nth-child(1):hover > .columns::before {
+.statistics_user.active .div_container:nth-child(1):hover>.columns::before {
   content: "Quốc Cường";
 }
 
-.statistics_user.active .div_container:nth-child(1) > .columns::after {
+.statistics_user.active .div_container:nth-child(1)>.columns::after {
   content: "0.2";
 }
 
-.statistics_product.active .div_container:nth-child(2) > .columns {
+.statistics_product.active .div_container:nth-child(2)>.columns {
   height: 35%;
   transition: 0.2s all ease;
 }
 
-.statistics_user.active .div_container:nth-child(2) > .columns {
+.statistics_user.active .div_container:nth-child(2)>.columns {
   height: 93%;
   transition: 0.2s all ease;
 }
 
-.statistics_product .div_container:nth-child(2):hover > .columns::before {
-  content: "Bách trà thảo mộc";
-}
-
-.statistics_product.active .div_container:nth-child(2) > .columns::after {
-  content: "1830";
-}
-
-.statistics_user.active .div_container:nth-child(2):hover > .columns::before {
-  content: "Dáng Thơ";
-}
-
-.statistics_user.active .div_container:nth-child(2) > .columns::after {
-  content: "4.7";
-}
-
-.statistics_product.active .div_container:nth-child(3) > .columns {
-  height: 75%;
-  transition: 0.2s all ease;
-}
-
-.statistics_user.active .div_container:nth-child(3) > .columns {
-  height: 80%;
-  transition: 0.2s all ease;
-}
-
-.statistics_product .div_container:nth-child(3):hover > .columns::before {
-  content: "Trà sữa bá tước";
-}
-
-.statistics_product.active .div_container:nth-child(3) > .columns::after {
-  content: "3867";
-}
-
-.statistics_user.active .div_container:nth-child(3):hover > .columns::before {
-  content: "Thanh Trúc";
-}
-
-.statistics_user.active .div_container:nth-child(3) > .columns::after {
-  content: "4.2";
-}
-
-.statistics_product.active .div_container:nth-child(4) > .columns {
-  height: 55%;
-  transition: 0.2s all ease;
-}
-
-.statistics_user.active .div_container:nth-child(4) > .columns {
-  height: 30%;
-  transition: 0.2s all ease;
-}
-
-.statistics_product .div_container:nth-child(4):hover > .columns::before {
-  content: "Clover trà xanh";
-}
-
-.statistics_product.active .div_container:nth-child(4) > .columns::after {
-  content: "2831";
-}
-
-.statistics_user.active .div_container:nth-child(4):hover > .columns::before {
-  content: "Tiến An";
-}
-
-.statistics_user.active .div_container:nth-child(4) > .columns::after {
-  content: "1.5";
-}
-
-.statistics_product.active .div_container:nth-child(5) > .columns {
-  height: 90%;
-  transition: 0.2s all ease;
-}
-
-.statistics_user.active .div_container:nth-child(5) > .columns {
-  height: 45%;
-  transition: 0.2s all ease;
-}
-
-.statistics_product.active .div_container:nth-child(5) > .columns::after {
-  content: "4567";
-}
-
-.statistics_user.active .div_container:nth-child(5):hover > .columns::before {
-  content: "Mạnh Hà";
-}
-
-.statistics_user.active .div_container:nth-child(5) > .columns::after {
-  content: "2.3";
-}
-
-.statistics_product .div_container:nth-child(5):hover > .columns::before {
-  content: "Mĩ nhân thanh trà";
-}
-
-.statistics_product_detail,
-.statistics_user_detail{
+.statistics_user_detail {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   height: max-content;
+  width: 100%;
   border-radius: 10px;
   flex-direction: column;
   outline: 1px solid #ccc;
-  flex-grow: 1;
-  flex-basis: 400px;
   overflow: hidden;
 }
 
-.statistics_product_detail{
+.statistics_product_detail {
   padding: 10px;
   outline: none;
   gap: 20px;
@@ -729,7 +545,7 @@ body::-webkit-scrollbar-thumb {
   background: rgb(2 108 61);
 }
 
-.statistics_product_detail .top_product{
+.statistics_product_detail .top_product {
   display: flex;
   justify-content: space-between;
   height: max-content;
@@ -738,7 +554,7 @@ body::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
 }
 
-.top_product > div{
+.top_product>div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -752,13 +568,13 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 0 5px #303030;
 }
 
-.top_product > div h3{
+.top_product>div h3 {
   color: rgb(2 108 61);
   font-size: 17px;
   font-weight: 700;
 }
 
-.top_product .overview{
+.top_product .overview {
   display: flex;
   height: max-content;
   width: max-content;
@@ -769,11 +585,11 @@ body::-webkit-scrollbar-thumb {
   color: rgb(0, 255, 21);
 }
 
-.bottom i{
+.bottom i {
   color: rgb(255, 0, 0);
 }
 
-.statistics_product_detail .product_detail{
+.statistics_product_detail .product_detail {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -827,7 +643,7 @@ body::-webkit-scrollbar-thumb {
   text-transform: uppercase;
 }
 
-.heading_product > span {
+.heading_product>span {
   font-size: 15px;
 }
 
@@ -885,14 +701,14 @@ li .detail {
   flex-wrap: wrap;
 }
 
-.statistics_user_detail .detail > span{
+.statistics_user_detail .detail>span {
   display: flex;
   text-transform: uppercase;
   text-decoration: underline;
   font-size: 15px;
 }
 
-.detail .info_order{
+.detail .info_order {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -902,7 +718,7 @@ li .detail {
   flex-wrap: wrap;
 }
 
-.info_order .order{
+.info_order .order {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -911,7 +727,7 @@ li .detail {
   gap: 10px;
 }
 
-.detail > div{
+.detail>div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -919,9 +735,9 @@ li .detail {
   width: 100%;
 }
 
-.total_order > span,
-.fee > span,
-.total > span{
+.total_order>span,
+.fee>span,
+.total>span {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -929,17 +745,17 @@ li .detail {
   width: 50%;
 }
 
-.total > span:first-child{
+.total>span:first-child {
   font-weight: 700;
 }
 
-.total > span:last-child{
+.total>span:last-child {
   color: rgb(2 108 61);
   font-weight: 700;
   font-size: 18px;
 }
 
-.info_order > span{
+.info_order>span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -949,7 +765,7 @@ li .detail {
   flex-grow: 1;
 }
 
-.order img{
+.order img {
   display: flex;
   height: 70px;
   width: 70px;
@@ -959,37 +775,37 @@ li .detail {
   border: 1px solid #ccc;
 }
 
-.order .info{
+.order .info {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
 }
 
-.info span:first-child{
+.info span:first-child {
   font-weight: 700;
   color: rgb(2 108 61);
 }
 
-.info p{
+.info p {
   font-size: 15px;
   color: #ccc;
 }
 
-.info > span:last-child{
+.info>span:last-child {
   font-weight: 700;
 }
 
-li > span {
+li>span {
   font-weight: 700;
 }
 
-.detail > span:nth-child(1) {
+.detail>span:nth-child(1) {
   font-weight: 700;
   color: rgb(2 108 61);
 }
 
-.detail > span:nth-child(2) {
+.detail>span:nth-child(2) {
   font-size: 13px;
 }
 
@@ -999,20 +815,20 @@ li > span {
   border-radius: 5px;
 }
 
-li:last-child > span:nth-child(2) {
+li:last-child>span:nth-child(2) {
   color: rgb(2 108 61);
 }
 
 @media screen and (max-width: 375px) {
-  .detail .info_order{
+  .detail .info_order {
     flex-direction: column;
   }
 
-  .info_order .order{
+  .info_order .order {
     width: 100%;
   }
 
-  .info_order  > span{
+  .info_order>span {
     width: 100%;
     justify-content: flex-end;
   }

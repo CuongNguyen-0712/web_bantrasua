@@ -319,6 +319,11 @@ body {
   user-select: none;
 }
 
+.header_right .admin_info span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
 .header_right .admin_dropdown {
   display: flex;
   position: absolute;
@@ -348,6 +353,7 @@ body {
   height: max-content;
   width: 100%;
   gap: 10px;
+  text-align: center;
   flex-direction: column;
 }
 
@@ -400,17 +406,21 @@ body {
 
 .admin_dropdown>button {
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: max-content;
   width: 90%;
-  padding: 10px 0;
+  height: 35px;
   background: rgb(2 108 61);
   border-radius: 5px;
   text-transform: uppercase;
-  color: #fff;
   font-weight: 700;
   cursor: pointer;
+}
+
+.admin_dropdown>button>a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
 .main_admin #content_admin {
@@ -507,5 +517,10 @@ body {
   .header_right .admin_info>span {
     display: none;
   }
+}
 
+a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
 }

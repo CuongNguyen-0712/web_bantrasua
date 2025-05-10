@@ -1,10 +1,9 @@
-
-html{
+html {
   width: 100vw;
   height: 100vh;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +13,7 @@ body{
   margin-top: 3%;
 }
 
-.product-form{
+.product-form {
   /* width: 30%; */
   width: 40%;
   height: 60vh;
@@ -30,7 +29,7 @@ body{
   box-shadow: 1px 1px 3px 3px rgba(236, 239, 241, 1);
 }
 
-.product-form__form{
+.product-form__form {
   min-width: 170px;
   min-height: 200px;
   border: 1px solid rgba(236, 239, 241, 1);
@@ -38,14 +37,14 @@ body{
   overflow: hidden;
 }
 
-.product-form__container{
+.product-form__container {
   min-width: 170px;
   min-height: 210px;
 }
 
 /* CSS image */
 
-.product-form__image{
+.product-form__image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +54,7 @@ body{
   background-color: rgba(236, 239, 241, 1);
 }
 
-.product-form__image-icon{
+.product-form__image-icon {
   position: absolute;
   right: 7px;
   top: 5px;
@@ -64,32 +63,32 @@ body{
   font-size: 20px;
 }
 
-.product-form__image-img{
+.product-form__image-img {
   width: 90px;
   height: 90px;
 }
 
 /* CSS content */
 
-.product-form__content{
+.product-form__content {
   min-width: 25%;
   min-height: 15%;
-  margin: 7px 5px ;
+  margin: 7px 5px;
   margin-bottom: 2px;
   color: rgb(2, 108, 61);
 }
 
-.product-form__title{
+.product-form__title {
   font-size: 14px;
 }
 
-.product-form__cost{
+.product-form__cost {
   font-size: 14.5px;
 }
 
 /* CSS nút đặt mua */
 
-.product-form__buy{
+.product-form__buy {
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -97,7 +96,7 @@ body{
   min-height: 15%;
 }
 
-.product-form__buy-btn{
+.product-form__buy-btn {
   min-width: 95%;
   min-height: 25px;
   background-color: rgb(2, 108, 61);
@@ -109,13 +108,13 @@ body{
   cursor: pointer;
 }
 
-.product-form__buy:hover{
+.product-form__buy:hover {
   opacity: 0.8;
 }
 
 /* pagination */
 
-.pagination{
+.pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,24 +123,24 @@ body{
   padding-top: 50px;
 }
 
-.pagination-item{
- margin: 0 8px;
+.pagination-item {
+  margin: 0 8px;
 }
 
-.pagination-item:hover{
+.pagination-item:hover {
   opacity: 0.7;
 }
 
-.pagination-item--active .pagination-item__link{
+.pagination-item--active .pagination-item__link {
   background-color: rgb(2, 108, 61);
   color: #fff;
 }
 
-.pagination-item--active .pagination-item__link:hover{
+.pagination-item--active .pagination-item__link:hover {
   opacity: 0.8;
 }
 
-.pagination-item__link{
+.pagination-item__link {
   display: block;
   min-width: 40px;
   height: 30px;
@@ -164,6 +163,7 @@ body{
   background-color: rgb(2, 108, 61);
   padding: 20px 0;
 }
+
 .bolded {
   font-size: 20px;
   font-weight: 500;
@@ -176,14 +176,16 @@ body{
   min-width: 30%;
 }
 
-.icon-contact-fb{
+.icon-contact-fb {
   font-size: 25px;
 }
-.icon-contact-ig{
+
+.icon-contact-ig {
   font-size: 25px;
   margin-left: 15px;
 }
-.icon-contact-tiktok{
+
+.icon-contact-tiktok {
   font-size: 25px;
   margin-left: 15px;
 }
