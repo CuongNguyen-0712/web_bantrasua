@@ -30,7 +30,8 @@ class Auth_Controller extends Controller
             if (!empty($result)) {
                 $_SESSION['user'] = [
                     'email' => $this->email,
-                    'role' => 'user'
+                    'role' => 'user',
+                    'id' => $result['id']
                 ];
 
                 header("Location: /web_bantrasua/myapp/user/home/index");

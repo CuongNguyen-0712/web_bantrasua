@@ -1,10 +1,6 @@
 body {
     width: 100%;
-<<<<<<< HEAD
-    height: 100vh;
-=======
     height: 150vh;
->>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a
     display: flex;
     justify-content: center;
     align-items: center;

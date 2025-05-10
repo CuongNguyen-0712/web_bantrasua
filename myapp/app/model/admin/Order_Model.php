@@ -32,6 +32,7 @@ class Order_Model extends Base_Model
     //     return $result[0]['total'] ?? 0;
     // }
 
+    //region lấy trạng thái
     public function getOrderStatuses()
     {
         $query = "SELECT name FROM order_status";
@@ -141,6 +142,8 @@ class Order_Model extends Base_Model
         return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
 
+
+    //region lấy đơn chi tiết
     public function getOrderDetails($orderId)
     {
         $query = "SELECT od.product_id, od.size_id, p.name AS product_name, od.quantity, s.name AS size, od.subtotal, ps.cost AS price
@@ -149,16 +152,15 @@ class Order_Model extends Base_Model
                   JOIN product p ON od.product_id = p.id
                   JOIN product_size ps ON od.product_id = ps.product_id AND od.size_id = ps.size_id
                   WHERE od.order_id = :order_id";
-        $stmt = $this->pdo->prepare($query);
-        $stmt->execute(['order_id' => $orderId]);
-        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $this->select($query, [':order_id' => $orderId]);
     }
 
+    //region lấy topping
     public function getToppings($orderID, $productId, $sizeId) {
         $query = "SELECT t.name, t.cost AS price_topping
                 FROM order_detail_topping odt
-                JOIN topping t ON odt.topping_id = t.id
-                WHERE odt.order_id = :order_id AND odt.product_id = :product_id AND odt.size_id = :size_id";
+                JOIN topping t ON odt.topping_id = t.id 
+                WHERE odt.order_id = :order_id AND odt.product_id = :product_id AND odt.size_id = :size_id AND t.id > 6";
         return $this->select($query, [
             ':order_id' => $orderID,
             ':product_id' => $productId,
@@ -166,7 +168,31 @@ class Order_Model extends Base_Model
         ]);
     }
 
-    // 
+    public function getIce($orderID, $productId, $sizeId) {
+        $query = "SELECT t.name AS name
+                FROM order_detail_topping odt
+                JOIN topping t ON odt.topping_id = t.id 
+                WHERE odt.order_id = :order_id AND odt.product_id = :product_id AND odt.size_id = :size_id AND t.id < 4";
+        return $this->select($query, [
+            ':order_id' => $orderID,
+            ':product_id' => $productId,
+            ':size_id' => $sizeId
+        ]);
+    }
+
+    public function getSugar($orderID, $productId, $sizeId) {
+        $query = "SELECT t.name AS name
+                FROM order_detail_topping odt
+                JOIN topping t ON odt.topping_id = t.id 
+                WHERE odt.order_id = :order_id AND odt.product_id = :product_id AND odt.size_id = :size_id AND t.id < 7 AND t.id > 3";
+        return $this->select($query, [
+            ':order_id' => $orderID,
+            ':product_id' => $productId,
+            ':size_id' => $sizeId
+        ]);
+    }
+
+    //region update status
     public function updateStatus($orderId, $status) {
         $query = "UPDATE `order`
         SET status_id = (
@@ -177,3 +203,4 @@ class Order_Model extends Base_Model
     }
     
 }
+?>

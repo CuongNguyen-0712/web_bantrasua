@@ -15,12 +15,8 @@ body{
 }
 
 .product-form{
-<<<<<<< HEAD
-  width: 30%;
-=======
   /* width: 30%; */
   width: 40%;
->>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a
   height: 60vh;
   display: flex;
   flex-wrap: wrap;

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="<?php echo ASSETS . 'styles/admin/product.css'; ?>">
+  <link rel="stylesheet" href="<?php echo ASSETS . 'styles/admin/topping.css'; ?>">
   <link rel="stylesheet" href="<?php echo ASSETS . 'styles/style.css'; ?>" />
   <link rel="stylesheet" href="<?php echo ASSETS . 'icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css'; ?>" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
@@ -21,9 +21,9 @@
       </div>
     </div>
     <div class="product-pagination_button">
-      <a href="/web_bantrasua/myapp/admin/product/add">
+      <a href="/web_bantrasua/myapp/admin/topping/add">
         <i class="bi bi-plus-circle"></i>
-        Thêm sản phẩm
+        Thêm topping
       </a>
     </div>
   </div>
@@ -32,36 +32,28 @@
       <thead>
         <tr>
           <th>STT</th>
-          <th></th>
-          <th>Tên sản phẩm</th>
-          <th>Loại</th>
+          <th>Tên topping</th>
           <th>Giá tiền</th>
-          <th>Ngày upload</th>
-          <th>Trạng thái</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
-        <?php if (!empty($products)): ?>
-          <?php foreach ($products as $index => $product): ?>
+        <?php if (!empty($toppings)): ?>
+          <?php foreach ($toppings as $index => $topping): ?>
             <tr>
               <td><?= $offset + $index + 1 ?></td>
-              <td><img src="<?=$product['img']?>" alt="Hình sản phẩm"/>
-              <td><?= htmlspecialchars($product['name']) ?></td>
-              <td><?= htmlspecialchars($product['category']) ?></td>
-              <td><?= number_format($product['cost_default']) ?>₫</td>
-              <td><?= date('d/m/Y', strtotime($product['upload_time'])) ?></td>
-              <td><?= $product['is_active'] == 1 ? 'Hiện' : 'Ẩn' ?></td>
+              <td><?= htmlspecialchars($topping['name']) ?></td>
+              <td><?= number_format($topping['cost']) ?>₫</td>
               <td>
                 <span class="product-table_feature" onclick="toggleOptions(event,this)">
                   <i class="fa fa-ellipsis-h"></i>
                 </span>
                 <div class="product-table_feature-menu">
-                  <a href="/web_bantrasua/myapp/admin/product/edit/<?= $product['id'] ?>">
+                  <a href="/web_bantrasua/myapp/admin/topping/edit/<?= $topping['id'] ?>">
                     Change
                     <i class="bi bi-wrench"></i>
                   </a>
-                  <a href="/web_bantrasua/myapp/admin/product/delete/<?= $product['id'] ?>">
+                  <a href="/web_bantrasua/myapp/admin/topping/delete/<?= $topping['id'] ?>">
                     Delete
                     <i class="bi bi-trash3"></i>
                   </a>
@@ -71,7 +63,7 @@
           <?php endforeach; ?>
         <?php else: ?>
           <tr>
-            <td colspan="7">KHÔNG CÓ SẢN PHẨM NÀO !!.</td>
+            <td colspan="7">KHÔNG CÓ TOPPING NÀO !!.</td>
             <?php $index = -1; ?>
           </tr>
         <?php endif; ?>
@@ -79,11 +71,11 @@
     </table>
   </div>
   <div class="product-pagination">
-    <span><b><?= $offset + $index + 1 ?></b> trong số <b><?= $totalProducts ?></b> sản phẩm</span>
+    <span><b><?= $offset + $index + 1 ?></b> trong số <b><?= $totalToppings ?></b> sản phẩm</span>
     <div class="product-pagination_button">
       <?php
       $baseQuery = [
-        'controller' => 'product',
+        'controller' => 'topping',
         'action' => 'index',
       ];
       ?>

@@ -43,7 +43,7 @@
                 <ul class="purchase-header-status">
                     <li class="purchase-header-status--success ">
                         <i class="fa-solid fa-truck"></i>
-                         <?php if( isset($data['status']) ): ?>
+                        <?php if (!empty($data['status'])): ?>
                             <?php echo $data['status']['name']?>
                             <?php else: ?>
                                 <?php echo "Không có trạng thái. "?>

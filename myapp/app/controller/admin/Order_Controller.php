@@ -63,7 +63,11 @@ class Order_Controller extends Controller
         $details = $this->ordersModel->getOrderDetails($orderId);
         foreach ($details as &$detail) {
             $detail['toppings'] = $this->ordersModel->getToppings($orderId, $detail['product_id'], $detail['size_id']);
+            $detail['ice']= $this->ordersModel->getIce($orderId, $detail['product_id'], $detail['size_id']);
+            $detail['sugar'] = $this->ordersModel->getSugar($orderId, $detail['product_id'], $detail['size_id']);
         }
+
+
     
         // Nếu không tìm thấy đơn hàng
         if (!$order) {

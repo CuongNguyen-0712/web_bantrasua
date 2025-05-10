@@ -18,5 +18,6 @@ class Controller{
             require_once $path;
         }
     }
+
 }
 ?>

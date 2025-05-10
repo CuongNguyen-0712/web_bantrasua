@@ -49,9 +49,13 @@
                     <?php foreach ($details as $item): ?>
                         <tr>
                             <td><?= htmlspecialchars($item['product_name']) ?>
-                                <?php if (!empty($item['toppings'])): ?>
-                                    <br><small><i>Topping: <?= implode(', ', array_column($item['toppings'], 'name')) ?></i></small>
-                                <?php endif; ?>
+                                <br><small><i>
+                                        <?= implode(', ', array_column($item['sugar'], 'name')) ?>,
+                                        <?= implode(', ', array_column($item['ice'], 'name')) ?>
+                                        <?php if (!empty($item['toppings'])): ?>
+                                             Topping: <?= implode(', ', array_column($item['toppings'], 'name')) ?>
+                                        <?php endif; ?>
+                                    </i></small>
                             </td>
                             <td><?= htmlspecialchars($item['size']) ?></td>
                             <td><?= $item['quantity'] ?></td>

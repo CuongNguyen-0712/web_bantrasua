@@ -11,12 +11,7 @@
 </head>
 
 <body>
-  <div class="orders-detail">
-    <div class="orders-detail-content">
-      <iframe src="orders-detail.html" frameborder="0" width="100%" height="100%"></iframe>
-    </div>
-  </div>
-  <form action="/web_bantrasua/myapp/admin/order/index" method="get">
+  <form action="/web_bantrasua/myapp/admin/order/index" method="GET">
     <div class="orders-heading">
       <div>
         <h1>Quản lí đơn hàng</h1>
@@ -148,7 +143,6 @@
           Next <i class="fa-solid fa-angle-right"></i>
         </a>
       <?php endif; ?>
-
     </div>
     <script src="<?php echo ASSETS . 'js/admin/orders.js'; ?>"></script>
 </body>
