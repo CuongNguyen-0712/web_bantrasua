@@ -11,16 +11,6 @@
         href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/font/Arimo-VariableFont_wght.ttf">
     <title>Clover Tea</title>
-
-    <style>
-    .no-order-message {
-        text-align: center;
-        padding: 40px;
-        font-size: 1800px;
-        color: #888;
-
-    }
-    </style>
 </head>
 
 <body>
@@ -35,12 +25,6 @@
             </a>
         </ul>
 
-        <?php if (empty($data['orders'])): ?>
-        <div class="no-order-message">
-            <p>Bạn không có đơn hàng nào cả</p>
-        </div>
-        <?php else: ?>
-        <?php foreach ($data['orders'] as $order): ?>
         <div class="purchase-form">
             <header class="purchase-header">
                 <div class="purchase-header__heading">
@@ -53,15 +37,16 @@
                     <button class="purchase-header__heading-btn-shop">
                         <i class="fa-solid fa-store"></i>
                         <a href="/web_bantrasua/myapp/user/home/index"
-                            class="purchase-header__heading-btn-content">Trang chủ </a>
+                            class="purchase-header__heading-btn-content">Trang
+                            chủ </a>
                     </button>
                 </div>
 
                 <ul class="purchase-header-status">
                     <li class="purchase-header-status--success ">
                         <i class="fa-solid fa-truck"></i>
-                        <?php if (!empty($order['status'])): ?>
-                        <?php echo $order['status']['name'] ?>
+                        <?php if (!empty($data['status'])): ?>
+                        <?php echo $data['status']['name'] ?>
                         <?php else: ?>
                         <?php echo "Không có trạng thái. " ?>
                         <?php endif; ?>
@@ -70,59 +55,46 @@
                 </ul>
             </header>
 
-            <?php foreach ($order['productInfo'] as $productInfo): ?>
-            <div class="order-form__item">
+            <a href="/web_bantrasua/myapp/user/process/show" class="order-form">
+                <?php foreach ($data['productInfo'] as $productInfo): ?>
+                <div class="order-form">
+                    <div class="order-form__item">
+                        <div class="order-form__item-image">
+                            <img src="/assets/img/h5-removebg-preview.png" alt=">Trà Sữa Clover Tea"
+                                class="order-form__item-img">
+                        </div>
 
-                <div class="order-form__item-image">
-                    <img src="/web_bantrasua/myapp/public/assets/img<?php echo $productInfo['img'] ?>"
-                        alt="<?php echo $productInfo['name'] ?>" class="order-form__item-img">
+                        <div class="order-form__content">
+                            <h5 class="order-form__title"> <?php echo $productInfo['name'] ?></h5>
+                            <span class="order-form__describ">
+                                Kích cỡ: <?php echo $productInfo['size']; ?>,
+                                Topping: <?php echo implode(", ", $productInfo['topping']); ?>
+                            </span>
+                            <p>x<?php echo $productInfo['quantity'] ?></p>
+                        </div>
+
+                        <div class="order-form__cost">
+                            <?php echo number_format($productInfo['productTotal'], 0, ',', '.') . "\u{20AB}" ?></div>
+                    </div>
                 </div>
-
-                <div class="order-form__content">
-                    <h5 class="order-form__title"><?php echo $productInfo['name'] ?></h5>
-                    <span class="order-form__describ">
-                        Kích cỡ: <?php echo $productInfo['size'] ?>
-                        <?php
-                                    $da_ngot = [];
-                                    $toppings = [];
-                                    foreach ($productInfo['topping_id'] as $index => $id) {
-                                        $name = $productInfo['topping_name'][$index];
-                                        if ($id >= 1 && $id <= 6) {
-                                            $da_ngot[] = $name;
-                                        } else {
-                                            $toppings[] = $name;
-                                        }
-                                    }
-                                    if (!empty($da_ngot)) echo ", " . implode(", ", $da_ngot);
-                                    if (!empty($toppings)) echo ", Topping: " . implode(", ", $toppings);
-                                    ?>
-                    </span>
-                    <p>x<?php echo $productInfo['quantity'] ?></p>
-                </div>
-
-                <div class="order-form__cost">
-                    <?php echo number_format($productInfo['productTotal'], 0, ',', '.') . "₫" ?></div>
-            </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </a>
 
             <footer class="order-form__footer">
-                <!-- <div class="order-form__ctn">Thành tiền:
-                                <span class="order-form__ctn-cost">&nbsp;
-                                    <?php echo number_format($order['totalPrice'], 0, ',', '.') . "₫"; ?>
-                                </span>
-                            </div> -->
+                <div class="order-form__ctn">Thành tiền:
+                    <span class="order-form__ctn-cost">&nbsp;
+                        <?php echo number_format($data['totalPrice']['total_price'], 0, ',', '.') . "\u{20AB}" ?>
+                    </span>
+                </div>
                 <div class="order-form__btn">
                     <button class="order-form__btn-reorder">Mua lại</button>
-                    <button class="order-form__btn-more">
-                        <a href="/web_bantrasua/myapp/user/process/show/<?php echo $order['order_id'] ?>"
-                            style="text-decoration: none; color: black">Thêm</a></button>
+                    <!--đang suy nghĩ có nên link cái này sang giỏ hàng không-->
+                    <button class="order-form__btn-more">Thêm</button>
                 </div>
             </footer>
         </div>
-        <?php endforeach; ?>
-        <?php endif; ?>
-
-        <!-- <div class="form-container">
+    </div>
+    <div class="form-container">
         <div class="form-container__contact">
             <p><span class="bolded">LIÊN HỆ</span></p>
             <p><i class="fa-regular fa-envelope"></i> Email: clovertea2678@gmail.com</p>
@@ -145,7 +117,7 @@
             <p><i class="fa-solid fa-shield"></i> Chính sách bảo mật thông tin</p>
             <p><i class="fa-solid fa-cart-arrow-down"></i> Chính sách đặt hàng</p>
         </div>
-    </div> -->
+    </div>
 </body>
 
 </html>
