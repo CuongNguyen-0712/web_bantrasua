@@ -24,7 +24,8 @@ class Auth_Controller extends Controller
             $result = $this->loginModel->checkLogin($this->email, $this->password);
             if (!empty($result)) {
                 $_SESSION['user'] = [
-                    'email' => $result['email'],
+                    'username' => $result['username'],
+                    'email' => $this->email,
                     'id' => $result['id'],
                     'role' => 'admin'
                 ];
