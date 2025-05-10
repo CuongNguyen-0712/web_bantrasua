@@ -1,7 +1,7 @@
 <<<<<<< HEAD <?php
-    echo ("Dang nhap thanh cong");
-    //Này là test thử thoi
-    ?>=======<html lang="en">
+                echo ("Dang nhap thanh cong");
+                //Này là test thử thoi
+                ?>=======<html lang="en">
 
     <head>
         <link rel="stylesheet" href="../../assets/styles/user/advacedSearch copy.css">

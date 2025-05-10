@@ -89,38 +89,21 @@ th {
 
 th:first-child,
 td:first-child {
-    width: 20px;
+    width: 20%;
 }
 
 th:nth-child(2),
 td:nth-child(2) {
-    width: 50px;
-}
-
-th:nth-child(3),
-td:nth-child(3) {
     white-space: wrap;
-    width: 100px;
+    width: 50%;
 }
 
 th:nth-child(4),
 td:nth-child(4),
-th:nth-child(5),
-td:nth-child(5),
-th:nth-child(6),
-td:nth-child(6),
-th:nth-child(7),
-td:nth-child(7),
-th:nth-child(8),
-td:nth-child(8) {
-    width: 100px;
-}
-
-
-td img {
-    height: 80px;
-    width: 80px;
-    border-radius: 10%;
+th:nth-child(3),
+td:nth-child(3)
+ {
+    width: 15%;
 }
 
 tr:hover {
