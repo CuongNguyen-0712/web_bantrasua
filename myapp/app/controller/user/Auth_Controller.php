@@ -44,7 +44,8 @@ class Auth_Controller extends Controller
         }
     }
 
-    public function notLogin(){
+    public function notLogin()
+    {
         $this->view('index_notLogin', []);
     }
 }
