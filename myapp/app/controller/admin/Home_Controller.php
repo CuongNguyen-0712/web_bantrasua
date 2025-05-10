@@ -11,6 +11,12 @@ class Home_Controller extends Controller
         $this->view('index', ['page' => $this->target]);
     }
 
+    public function product()
+    {
+        $this->target = 'product';
+        $this->view('index', ['page' => $this->target]);
+    }
+
     public function order()
     {
         $this->target = 'order';
