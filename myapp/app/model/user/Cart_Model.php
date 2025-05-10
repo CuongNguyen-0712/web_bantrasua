@@ -41,6 +41,18 @@ class Cart_Model{
 
         return $result;
     }
+
+    public function toppingName($topping_id){
+        $stmt = Database::getInstance()->prepare("SELECT name 
+                                                  FROM topping 
+                                                  WHERE id = ? ");
+
+        $stmt->execute([$topping_id]);
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
 }
 
 ?>

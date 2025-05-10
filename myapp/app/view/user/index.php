@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<?php 
-    echo("Dang nhap thanh cong");
-    //Này là test thử thoi
-?>
-=======
 <html lang="en">
 
 <head>
@@ -300,4 +294,3 @@
 </body>
 
 </html>
->>>>>>> 74dd076629cf0281bdfadcbcf387e3ab08abe55a

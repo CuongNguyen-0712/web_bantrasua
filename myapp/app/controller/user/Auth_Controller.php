@@ -29,8 +29,9 @@ class Auth_Controller extends Controller
 
             if (!empty($result)) {
                 $_SESSION['user'] = [
-                    'email' => $this->email,
-                    'role' => 'user'
+                    'email' => $result['email'],
+                    'role' => 'user',
+                    'id' => $result['id']
                 ];
 
                 header("Location: /web_bantrasua/myapp/user/home/index");
@@ -41,5 +42,9 @@ class Auth_Controller extends Controller
                 exit;
             }
         }
+    }
+
+    public function notLogin(){
+        $this->view('index_notLogin', []);
     }
 }

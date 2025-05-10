@@ -4,11 +4,11 @@ namespace user;
 
 class User_Controller extends Controller
 {
-    // protected $userModel;
-    // public function __construct()
-    // {
-    //     $this->userModel = $this->model('user');
-    // }
+    protected $userModel;
+    public function __construct()
+    {
+        $this->userModel = $this->model('user');
+    }
 
     public function info()
     {
@@ -113,7 +113,8 @@ class User_Controller extends Controller
         } else {
             // GET request: hiển thị form
 
-            require_once __DIR__ . '/../../view/register.php';
+            // require_once __DIR__ . '/../../view/register.php';
+            $this->view('register', []);
         }
     }
 }

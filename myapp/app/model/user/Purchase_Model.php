@@ -6,12 +6,12 @@ use PDO;
 
 class Purchase_Model{
 
-    public function getOrderID($userID){
+    public function getOrderID($orderID){
         $stmt = Database::getInstance()->prepare("SELECT id, total_price, shipping_fee
                                                   FROM `order` 
-                                                  WHERE account_id = ?");
+                                                  WHERE id = ?");
 
-        $stmt->execute([$userID]);
+        $stmt->execute([$orderID]);
         $result = $stmt->fetch(PDO:: FETCH_ASSOC);
         return $result;
     }
@@ -50,13 +50,13 @@ class Purchase_Model{
         return $result;
     }
 
-    public function getToppingsByOrderDetailID($orderDetailID){
-        $stmt = Database::getInstance()->prepare("SELECT t.name 
+    public function getToppingsByOrderDetailID($orderDetailID, $productID, $sizeID){
+        $stmt = Database::getInstance()->prepare("SELECT t.name as name, t.id as id
                                                   FROM order_detail_topping odt 
                                                   JOIN topping t ON odt.topping_id = t.id 
-                                                  WHERE odt.order_id = ? ");
-        $stmt->execute([$orderDetailID]);
-        return $stmt->fetchAll(PDO::FETCH_COLUMN); 
+                                                  WHERE odt.order_id = ? AND odt.product_id = ? AND odt.size_id = ?");
+        $stmt->execute([$orderDetailID, $productID, $sizeID]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); 
     }
 
     public function getPayment_Method($orderID){
@@ -65,6 +65,16 @@ class Purchase_Model{
                                                   WHERE o.id = ? ");
         $stmt->execute([$orderID]);
         return $stmt->fetch(PDO::FETCH_ASSOC); 
+    }
+
+    public function getAllOrders($userID){
+        $stmt = Database::getInstance()->prepare("SELECT id
+                                                  FROM `order` 
+                                                  WHERE account_id = ?");
+
+        $stmt->execute([$userID]);
+        $result = $stmt->fetchAll(PDO:: FETCH_ASSOC);
+        return $result;
     }
 
 }

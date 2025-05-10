@@ -1,12 +1,12 @@
 <html lang="en">
-
+<!-- trang này chỉ làm tạm bợ để link -->
 <head>
-    <link rel="stylesheet" href="./assets/styles/user/advacedSearch copy.css">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/advacedSearch copy.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLOVER-TEA</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/logo.png">
-    <link rel="stylesheet" href="./assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
     <link href="./assets/font/Arimo-VariableFont_wght.ttf" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Arimo:ital,wght@0,400..700;1,400..700&family=Lobster&family=Qwigley&display=swap"
@@ -94,15 +94,14 @@
                                 <ul class="menu__user-item">
                                     <!--item-1  -->
                                     <li class="menu__user-item-1">
-                                        <a href="/old/pages/user/dangKi copy.html">
+                                        <a href="/web_bantrasua/myapp/user/user/register">
                                             <!-- login-1 -->
                                             <i class="icon-login_1 fa-solid fa-right-to-bracket"></i> Đăng Ký
                                         </a>
                                     </li>
                                     <!-- item-2 -->
                                     <li class="menu__user-item-2">
-                                        <a href="/old/pages/user/login.html">
-                                            <!-- login-2 -->
+                                        <a href="/web_bantrasua/myapp/user/auth/login">
                                             <i class="icon-login_2 fa-solid fa-right-to-bracket"></i> Đăng Nhập
                                         </a>
                                     </li>
