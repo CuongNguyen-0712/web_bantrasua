@@ -11,6 +11,7 @@ body {
 
 .form {
     margin-top: 17%;
+    
 }
 
 .header-form {
@@ -36,9 +37,10 @@ body {
 }
 
 .purchase-form {
-    width: 700px;
+    /* width: 700px; */
     margin-top: 4%;
     margin-bottom: 5%;
+    scroll-behavior: smooth;
 }
 
 .purchase-header {

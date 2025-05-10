@@ -409,7 +409,8 @@
             border: 1px solid rgb(2, 108, 61);
         }
 
-        .btn-sweet.selected, .btn-ice.selected{
+        .btn-sweet.selected,
+        .btn-ice.selected {
             background-color: rgb(2, 108, 61);
             color: white;
         }
@@ -429,18 +430,24 @@
                     <div class="Order">
                         <div class="Img__product">
                             <div class="Img__product-decribe">
-                                <img class="img" src="/web_bantrasua/myapp/public/assets/img/<?php echo isset($data['product']['image']) ? $data['product']['image'] : 'trasua_moi-Photoroom.png'; ?>" alt="hinh tra sua">
+                                <img class="img"
+                                    src="/web_bantrasua/myapp/public/assets/img/<?php echo isset($data['product']['image']) ? $data['product']['image'] : 'trasua_moi-Photoroom.png'; ?>"
+                                    alt="hinh tra sua">
                             </div>
 
                             <div class="Product-decribe">
-                                <p> <strong><?php echo isset($data['product']['name']) ? $data['product']['name'] : 'Clover Trà Xanh'; ?></strong> <?php echo isset($data['product']['description']) ? $data['product']['description'] : 'là sự kết hợp giữa vị trà xanh thanh mát và lớp kem cheese béo mịn, mang đến hương vị hài hòa, ngọt nhẹ và thơm dịu.'; ?></p>
+                                <p> <strong><?php echo isset($data['product']['name']) ? $data['product']['name'] : 'Clover Trà Xanh'; ?></strong>
+                                    <?php echo isset($data['product']['description']) ? $data['product']['description'] : 'là sự kết hợp giữa vị trà xanh thanh mát và lớp kem cheese béo mịn, mang đến hương vị hài hòa, ngọt nhẹ và thơm dịu.'; ?>
+                                </p>
                             </div>
                         </div>
 
                         <!-- Header layout -->
                         <header class="header">
                             <div class="header__title-product">
-                                <h3̀> <?php echo isset($data['product']['name']) ? $data['product']['name'] : 'Clover Trà Xanh'; ?> </h3>
+                                <h3̀>
+                                    <?php echo isset($data['product']['name']) ? $data['product']['name'] : 'Clover Trà Xanh'; ?>
+                                    </h3>
                                     <!-- Nút quay trở lại -->
                                     <button onclick="goBack()" class="btn-back">&#215;
                                     </button>
@@ -453,7 +460,8 @@
                             </div>
                             <!-- Header__cost-product -->
                             <div class="header__cost-product">
-                                <div class="header__price-product"><span id="displayPrice"><?php echo isset($data['product']['price']) ? number_format($data['product']['price'], 0, ',', '.') : '59.000'; ?></span>&#8363;
+                                <div class="header__price-product"><span
+                                        id="displayPrice"><?php echo isset($data['product']['price']) ? number_format($data['product']['price'], 0, ',', '.') : '59.000'; ?></span>&#8363;
                                     <div class="header__quantity-product">
                                         <button class="btn-min" id="decreaseBtn">&#8722;</button>
                                         <span class="count" id="quantityCount">1</span>
@@ -465,11 +473,11 @@
                             <!-- Header__size-product -->
                             <div class="header__size-product">Chọn kích cỡ
                                 <div class="header__size-product-detail">
-                                    <?php if(isset($data['sizes']) && is_array($data['sizes'])): ?>
-                                        <?php foreach($data['sizes'] as $index => $size): ?>
-                                            <button class="btn size-btn <?php echo $index === 0 ? 'selected' : ''; ?>" 
-                                                    data-size="<?php echo $size['name']; ?>" 
-                                                    data-price="<?php echo $size['price_difference']; ?>">
+                                    <?php if (isset($data['sizes']) && is_array($data['sizes'])): ?>
+                                        <?php foreach ($data['sizes'] as $index => $size): ?>
+                                            <button class="btn size-btn <?php echo $index === 0 ? 'selected' : ''; ?>"
+                                                data-size="<?php echo $size['name']; ?>"
+                                                data-price="<?php echo $size['price_difference']; ?>">
                                                 <?php echo $size['name']; ?>
                                             </button>
                                         <?php endforeach; ?>
@@ -482,30 +490,29 @@
                             <!-- Header__sweet-product -->
                             <div class="header__sweet-product">Ngọt
                                 <div class="header__sweet-product-option">
-                                    <?php if(isset($data['sweetLevels']) && is_array($data['sweetLevels'])): ?>
-                                        <?php foreach($data['sweetLevels'] as $sweet): 
-                                            if($sweet['id']==5){
+                                    <?php if (isset($data['sweetLevels']) && is_array($data['sweetLevels'])): ?>
+                                        <?php foreach ($data['sweetLevels'] as $sweet):
+                                            if ($sweet['id'] == 5) {
+                                        ?>
+                                                <button class="btn-sweet sweet-btn selected" data-component-id="2"
+                                                    data-level-id="<?php echo $sweet['id']; ?>"
+                                                    data-sweet="<?php echo $sweet['name']; ?>">
+                                                    <?php echo $sweet['name']; ?>
+                                                </button>
+                                            <?php
+                                            } else {
                                             ?>
-                                            <button class="btn-sweet sweet-btn selected" 
-                                                    data-component-id="2" 
-                                                    data-level-id="<?php echo $sweet['id']; ?>"
+                                                <button class="btn-sweet sweet-btn " data-level-id="<?php echo $sweet['id']; ?>"
                                                     data-sweet="<?php echo $sweet['name']; ?>">
-                                                <?php echo $sweet['name']; ?>
-                                            </button>
+                                                    <?php echo $sweet['name']; ?>
+                                                </button>
                                         <?php
-                                            }else{
-                                                ?>
-                                                <button class="btn-sweet sweet-btn "  
-                                                    data-level-id="<?php echo $sweet['id']; ?>"
-                                                    data-sweet="<?php echo $sweet['name']; ?>">
-                                                <?php echo $sweet['name']; ?>
-                                            </button>
-                                                <?php
                                             }
-                                     endforeach; ?>
+                                        endforeach; ?>
                                     <?php else: ?>
                                         <button class="btn-sweet sweet-btn" data-sweet="Ít">Ít</button>
-                                        <button class="btn-sweet sweet-btn selected" data-sweet="Bình thường">Bình thường</button>
+                                        <button class="btn-sweet sweet-btn selected" data-sweet="Bình thường">Bình
+                                            thường</button>
                                         <button class="btn-sweet sweet-btn" data-sweet="Nhiều">Nhiều</button>
                                     <?php endif; ?>
                                 </div>
@@ -513,26 +520,24 @@
                             <!-- Header__ice-product -->
                             <div class="header__ice-product">Đá
                                 <div class="header__ice-product-option">
-                                    <?php if(isset($data['iceLevels']) && is_array($data['iceLevels'])): ?>
-                                        <?php foreach($data['iceLevels'] as $ice): 
-                                            if($ice['id']==2){
-                                            ?>
-                                            <button class="btn-ice ice-btn selected "
-                                                    data-level-id="<?php echo $ice['id']; ?>"
+                                    <?php if (isset($data['iceLevels']) && is_array($data['iceLevels'])): ?>
+                                        <?php foreach ($data['iceLevels'] as $ice):
+                                            if ($ice['id'] == 2) {
+                                        ?>
+                                                <button class="btn-ice ice-btn selected " data-level-id="<?php echo $ice['id']; ?>"
                                                     data-ice="<?php echo $ice['name']; ?>">
-                                                <?php echo $ice['name']; ?>
-                                            </button>
+                                                    <?php echo $ice['name']; ?>
+                                                </button>
                                             <?php
-                                            }else{
-                                                ?>
-                                                <button class="btn-ice ice-btn"
-                                                    data-level-id="<?php echo $ice['id']; ?>"
+                                            } else {
+                                            ?>
+                                                <button class="btn-ice ice-btn" data-level-id="<?php echo $ice['id']; ?>"
                                                     data-ice="<?php echo $ice['name']; ?>">
-                                                <?php echo $ice['name']; ?>
-                                            </button>
-                                                <?php
+                                                    <?php echo $ice['name']; ?>
+                                                </button>
+                                        <?php
                                             }
-                                       endforeach; ?>
+                                        endforeach; ?>
                                     <?php else: ?>
                                         <button class="btn-ice ice-btn" data-ice="Ít">Ít</button>
                                         <button class="btn-ice ice-btn selected" data-ice="Bình thường">Bình thường</button>
@@ -542,19 +547,19 @@
                             </div>
                             <!-- Header__topping-product -->
                             <div class="header__topping-product">Chọn Topping
-                                <?php if(isset($data['toppings']) && is_array($data['toppings'])): ?>
-                                    <?php foreach($data['toppings'] as $topping): ?>
+                                <?php if (isset($data['toppings']) && is_array($data['toppings'])): ?>
+                                    <?php foreach ($data['toppings'] as $topping): ?>
                                         <div class="header__topping-product-check-box">
                                             <label>
-                                                <input type="checkbox" class="topping-checkbox" name="topping[]" 
-                                                       value="<?php echo $topping['id']; ?>" 
-                                                       data-price="<?php echo $topping['cost']; ?>">
-                                                <span><?php echo $topping['name']; ?></span> - 
+                                                <input type="checkbox" class="topping-checkbox" name="topping[]"
+                                                    value="<?php echo $topping['id']; ?>"
+                                                    data-price="<?php echo $topping['cost']; ?>">
+                                                <span><?php echo $topping['name']; ?></span> -
                                                 <span><?php echo number_format($topping['cost'], 0, ',', '.'); ?>&#8363;</span>
                                             </label>
                                         </div>
                                     <?php endforeach; ?>
-                                    <?php endif; ?>
+                                <?php endif; ?>
                             </div>
 
                             <!-- header__pay-product -->
@@ -562,7 +567,8 @@
                                 <button class="header__pay-product-bill" id="">
                                     <a class="header__pay-product-bill-link">
                                         <i class="fa-solid fa-cart-shopping"></i>
-                                        Thêm vào giỏ hàng: <span id="totalPrice"><?php echo isset($data['product']['price']) ? number_format($data['product']['price'], 0, ',', '.') : '59.000'; ?></span>&#8363;
+                                        Thêm vào giỏ hàng: <span
+                                            id="totalPrice"><?php echo isset($data['product']['price']) ? number_format($data['product']['price'], 0, ',', '.') : '59.000'; ?></span>&#8363;
                                     </a>
                                 </button>
                             </div>
@@ -579,12 +585,14 @@
             // Lấy giá sản phẩm từ dữ liệu PHP
             const basePrice = <?php echo isset($data['product']['price']) ? $data['product']['price'] : 59000; ?>;
             const productId = <?php echo isset($data['product']['id']) ? $data['product']['id'] : 1; ?>;
-            const productName = "<?php echo isset($data['product']['name']) ? $data['product']['name'] : 'Clover Trà Xanh'; ?>";
-            const productImage = "<?php echo isset($data['product']['image']) ? $data['product']['image'] : 'trasua_moi-Photoroom.png'; ?>";
+            const productName =
+                "<?php echo isset($data['product']['name']) ? $data['product']['name'] : 'Clover Trà Xanh'; ?>";
+            const productImage =
+                "<?php echo isset($data['product']['image']) ? $data['product']['image'] : 'trasua_moi-Photoroom.png'; ?>";
             let quantity = 1; // Số lượng mặc định
-            let selectedSize = { 
-                size: '<?php echo isset($data['sizes'][0]['name']) ? $data['sizes'][0]['name'] : 'M'; ?>', 
-                price: <?php echo isset($data['sizes'][0]['price_difference']) ? $data['sizes'][0]['price_difference'] : 0; ?> 
+            let selectedSize = {
+                size: '<?php echo isset($data['sizes'][0]['name']) ? $data['sizes'][0]['name'] : 'M'; ?>',
+                price: <?php echo isset($data['sizes'][0]['price_difference']) ? $data['sizes'][0]['price_difference'] : 0; ?>
             }; // Size mặc định
             let selectedToppings = []; // Mảng lưu trữ topping đã chọn
             let selectedSweet = null; // Độ ngọt đã chọn
@@ -599,22 +607,22 @@
             function calculateTotalPrice() {
                 // Tính giá cho 1 sản phẩm (giá cơ bản + giá size)
                 let singleItemPrice = basePrice + selectedSize.price;
-                
+
                 // Cộng thêm giá các topping đã chọn
                 let toppingPrice = 0;
                 selectedToppings.forEach(topping => {
                     toppingPrice += topping.price;
                 });
-                
+
                 singleItemPrice += toppingPrice;
 
                 // Tính tổng giá theo số lượng
                 const totalPrice = singleItemPrice * quantity;
-                
+
                 // Hiển thị giá đơn vị và tổng giá
                 document.getElementById('displayPrice').textContent = formatPrice(singleItemPrice);
                 document.getElementById('totalPrice').textContent = formatPrice(totalPrice);
-                
+
                 return {
                     singlePrice: singleItemPrice,
                     total: totalPrice
@@ -650,16 +658,16 @@
                     button.addEventListener('click', function() {
                         // Bỏ selected khỏi tất cả các nút size
                         sizeButtons.forEach(btn => btn.classList.remove('selected'));
-                        
+
                         // Thêm selected vào nút được chọn
                         this.classList.add('selected');
-                        
+
                         // Cập nhật size đã chọn
                         selectedSize = {
                             size: this.getAttribute('data-size'),
                             price: parseInt(this.getAttribute('data-price'))
                         };
-                        
+
                         // Tính toán lại giá
                         calculateTotalPrice();
                     });
@@ -671,17 +679,19 @@
                     button.addEventListener('click', function() {
                         // Bỏ selected khỏi tất cả các nút ngọt
                         sweetButtons.forEach(btn => btn.classList.remove('selected'));
-                        
+
                         // Thêm selected vào nút được chọn
                         this.classList.add('selected');
-                        
+
                         // Cập nhật thông tin ngọt đã chọn (ID 4, 5, 6)
                         selectedSweet = {
                             sweet: this.getAttribute('data-sweet'),
-                            componentId: this.hasAttribute('data-component-id') ? parseInt(this.getAttribute('data-component-id')) : 2,
-                            levelId: this.hasAttribute('data-level-id') ? parseInt(this.getAttribute('data-level-id')) : 
-                                     (this.getAttribute('data-sweet') === 'Ít' ? 4 : 
-                                     (this.getAttribute('data-sweet') === 'Bình thường' ? 5 : 6))
+                            componentId: this.hasAttribute('data-component-id') ? parseInt(this
+                                .getAttribute('data-component-id')) : 2,
+                            levelId: this.hasAttribute('data-level-id') ? parseInt(this
+                                .getAttribute('data-level-id')) : (this.getAttribute(
+                                    'data-sweet') === 'Ít' ? 4 :
+                                (this.getAttribute('data-sweet') === 'Bình thường' ? 5 : 6))
                         };
                     });
                 });
@@ -692,17 +702,19 @@
                     button.addEventListener('click', function() {
                         // Bỏ selected khỏi tất cả các nút đá
                         iceButtons.forEach(btn => btn.classList.remove('selected'));
-                        
+
                         // Thêm selected vào nút được chọn
                         this.classList.add('selected');
-                        
+
                         // Cập nhật thông tin đá đã chọn (ID 1, 2, 3)
                         selectedIce = {
                             ice: this.getAttribute('data-ice'),
-                            componentId: this.hasAttribute('data-component-id') ? parseInt(this.getAttribute('data-component-id')) : 1,
-                            levelId: this.hasAttribute('data-level-id') ? parseInt(this.getAttribute('data-level-id')) : 
-                                    (this.getAttribute('data-ice') === 'Ít' ? 1 : 
-                                    (this.getAttribute('data-ice') === 'Bình thường' ? 2 : 3))
+                            componentId: this.hasAttribute('data-component-id') ? parseInt(this
+                                .getAttribute('data-component-id')) : 1,
+                            levelId: this.hasAttribute('data-level-id') ? parseInt(this
+                                .getAttribute('data-level-id')) : (this.getAttribute(
+                                    'data-ice') === 'Ít' ? 1 :
+                                (this.getAttribute('data-ice') === 'Bình thường' ? 2 : 3))
                         };
                     });
                 });
@@ -719,9 +731,10 @@
                             });
                         } else {
                             // Xóa topping khỏi danh sách đã chọn
-                            selectedToppings = selectedToppings.filter(topping => topping.id !== this.value);
+                            selectedToppings = selectedToppings.filter(topping => topping.id !==
+                                this.value);
                         }
-                        
+
                         // Tính toán lại giá
                         calculateTotalPrice();
                     });
@@ -739,26 +752,32 @@
 
                 // Chọn độ ngọt mặc định (bình thường)
                 if (sweetButtons.length > 0 && !document.querySelector('.sweet-btn.selected')) {
-                    const defaultSweetBtn = Array.from(sweetButtons).find(btn => btn.getAttribute('data-sweet') === 'Bình thường');
+                    const defaultSweetBtn = Array.from(sweetButtons).find(btn => btn.getAttribute('data-sweet') ===
+                        'Bình thường');
                     if (defaultSweetBtn) {
                         defaultSweetBtn.classList.add('selected');
                         selectedSweet = {
                             sweet: 'Bình thường',
-                            componentId: defaultSweetBtn.hasAttribute('data-component-id') ? parseInt(defaultSweetBtn.getAttribute('data-component-id')) : 2,
-                            levelId: defaultSweetBtn.hasAttribute('data-level-id') ? parseInt(defaultSweetBtn.getAttribute('data-level-id')) : 5
+                            componentId: defaultSweetBtn.hasAttribute('data-component-id') ? parseInt(
+                                defaultSweetBtn.getAttribute('data-component-id')) : 2,
+                            levelId: defaultSweetBtn.hasAttribute('data-level-id') ? parseInt(defaultSweetBtn
+                                .getAttribute('data-level-id')) : 5
                         };
                     }
                 }
 
                 // Chọn đá mặc định (bình thường)
                 if (iceButtons.length > 0 && !document.querySelector('.ice-btn.selected')) {
-                    const defaultIceBtn = Array.from(iceButtons).find(btn => btn.getAttribute('data-ice') === 'Bình thường');
+                    const defaultIceBtn = Array.from(iceButtons).find(btn => btn.getAttribute('data-ice') ===
+                        'Bình thường');
                     if (defaultIceBtn) {
                         defaultIceBtn.classList.add('selected');
                         selectedIce = {
                             ice: 'Bình thường',
-                            componentId: defaultIceBtn.hasAttribute('data-component-id') ? parseInt(defaultIceBtn.getAttribute('data-component-id')) : 1,
-                            levelId: defaultIceBtn.hasAttribute('data-level-id') ? parseInt(defaultIceBtn.getAttribute('data-level-id')) : 2
+                            componentId: defaultIceBtn.hasAttribute('data-component-id') ? parseInt(
+                                defaultIceBtn.getAttribute('data-component-id')) : 1,
+                            levelId: defaultIceBtn.hasAttribute('data-level-id') ? parseInt(defaultIceBtn
+                                .getAttribute('data-level-id')) : 2
                         };
                     }
                 }
@@ -775,7 +794,8 @@
                         product_name: productName,
                         product_image: productImage,
                         product_size: selectedSize.size,
-                        product_price: basePrice + selectedSize.price + selectedToppings.reduce((total, topping) => total + topping.price, 0),
+                        product_price: basePrice + selectedSize.price + selectedToppings.reduce((total,
+                            topping) => total + topping.price, 0),
                         product_quantity: quantity,
                         ice_level: selectedIce ? selectedIce.levelId : 2, // Mặc định là bình thường (ID: 5)
                         sweet_level: selectedSweet ? selectedSweet.levelId : 5, // Mặc định là bình thường (ID: 8)

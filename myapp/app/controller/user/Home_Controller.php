@@ -79,6 +79,7 @@ class Home_Controller extends Controller
         $totalProduct = $totalProductData[0]['total'];
         $totalPage = ceil($totalProduct / $limit);
 
+
         $this->view("productCategory", [
             "totalPage" => $totalPage,
             "page" => $page,

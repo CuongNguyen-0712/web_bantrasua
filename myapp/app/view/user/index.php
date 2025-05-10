@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLOVER-TEA</title>
-    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png">  
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png">
     <link rel="stylesheet" href="../../assets/styles/user/grid.css">
     <link rel="stylesheet"
         href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css  ">
@@ -22,18 +22,20 @@
             background-color: #f8f6f6;
             padding: 0px;
         }
-        .menu__user-item{
+
+        .menu__user-item {
             width: 100%;
             font-size: 15px;
             box-shadow: 1px 2px 3px rgb(95, 92, 92);
 
         }
 
-        .menu__user-item li{
+        .menu__user-item li {
             width: 100%;
             padding: 10px;
         }
-        .menu__user-item a{
+
+        .menu__user-item a {
             width: 100%;
             padding: 5px 10px;
 
@@ -46,24 +48,25 @@
         .icon-login_5 {
             margin-right: 10%;
         }
-        
+
         .header__search-find {
             display: flex;
             align-items: center;
         }
-        
+
         .header__search-find form {
             display: flex;
             align-items: center;
             position: relative;
             width: 100%;
         }
-        
+
         #search {
             width: 100%;
-            padding-right: 40px; /* Space for the search icon */
+            padding-right: 40px;
+            /* Space for the search icon */
         }
-        
+
         .header__search-find-link {
             display: flex;
             align-items: center;
@@ -77,36 +80,40 @@
             transform: translateY(-50%);
             z-index: 1;
         }
-        .header__nav{
+
+        .header__nav {
             box-shadow: 1px 2px 3px rgb(197, 192, 192);
             cursor: pointer;
         }
-        
+
         .header__search-filter-link {
             display: flex;
             align-items: center;
             margin-left: 5px;
         }
-        .Img__BestSeller{
+
+        .Img__BestSeller {
             display: grid;
             justify-content: center;
             grid-template-columns: 12% 12% 12% 12%;
             column-gap: 2%;
         }
-        .product-form__form{
+
+        .product-form__form {
             width: 100%;
             height: 250px;
         }
-        .product-form__buy-btn{
+
+        .product-form__buy-btn {
             min-height: 30px;
         }
-        .status__bestseller{
+
+        .status__bestseller {
             display: grid;
             justify-content: center;
             grid-template-columns: 18% 18% 18% 18%;
-            column-gap: 1%;  
+            column-gap: 1%;
         }
-        
     </style>
     <div class="web">
         <header>
@@ -143,24 +150,30 @@
                                         <!-- Category filter -->
                                         <ul class="menu__filter-item"><i class="fa-solid fa-tags"></i> Phân loại
                                             <?php foreach ($data['categories'] as $category): ?>
-                                            <li>
-                                                <input type="radio" name="category" id="category_<?php echo $category['id']; ?>" value="<?php echo $category['id']; ?>">
-                                                <label for="category_<?php echo $category['id']; ?>"><?php echo $category['name']; ?></label>
-                                            </li>
+                                                <li>
+                                                    <input type="radio" name="category"
+                                                        id="category_<?php echo $category['id']; ?>"
+                                                        value="<?php echo $category['id']; ?>">
+                                                    <label
+                                                        for="category_<?php echo $category['id']; ?>"><?php echo $category['name']; ?></label>
+                                                </li>
                                             <?php endforeach; ?>
                                         </ul>
 
                                         <!-- Price range filter -->
-                                        <ul class="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i> Khoảng Giá
-                                            <li><input type="number" name="min_price" placeholder="Từ &#8363;" min="0"></li>
-                                            <li><input type="number" name="max_price" placeholder="Đến &#8363;" min="0"></li>
+                                        <ul class="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i>
+                                            Khoảng Giá
+                                            <li><input type="number" name="min_price" placeholder="Từ &#8363;" min="0">
+                                            </li>
+                                            <li><input type="number" name="max_price" placeholder="Đến &#8363;" min="0">
+                                            </li>
                                         </ul>
-                                        
+
                                         <!-- Search term (will be transferred from main search box) -->
                                         <input type="hidden" name="search" id="advanced_search_term">
                                         <!-- Set advanced search flag to 1 -->
                                         <input type="hidden" name="advanced" value="1">
-                                        
+
                                         <!-- Button -->
                                         <button type="submit" class="button-filter">Áp Dụng</button>
                                     </form>
@@ -183,53 +196,54 @@
                                 <!-- item -->
                                 <ul class="menu__user-item">
                                     <!-- item 1 -->
-                                     <?php 
-                                      if( isset($data['userData'])){
-?>
-<li class="menu__user-item-1">
-                                        <!-- icon-login_1 -->
-                                        <i class="icon-login_1 fa-regular fa-user"></i>
-                                        <a href="#">Tên: <?php echo isset($data['userData']['username']) ? $data['userData']['username'] : (isset($data['userData']['name']) ? $data['userData']['name'] : 'Khách hàng'); ?></a>
-                                    </li>
-                                    <!-- item-2 -->
-                                    <li class="menu__user-item-2">
-                                        <!-- icon-login_2 -->
-                                        <i class="icon-login_2 fa-solid fa-circle-info"></i>
-                                        <a href = "/web_bantrasua/myapp/user/user/info">Thông Tin
-                                            Cá Nhân</a>
-                                    </li>
-                                    <!-- item-3 -->
-                                    <li class="menu__user-item-3">
-                                        <!-- icon-login_3 -->
-                                        <i class="icon-login_3 fa-solid fa-boxes-stacked"></i>
-                                        <!-- <a onclick="handleLoadContent('purchase')">Đơn Mua</a> -->
-                                        <a href="/web_bantrasua/myapp/user/Purchase/show">Đơn mua</a>
-                                    </li>
+                                    <?php
+                                    if (isset($data['userData'])) {
+                                    ?>
+                                        <li class="menu__user-item-1">
+                                            <!-- icon-login_1 -->
+                                            <i class="icon-login_1 fa-regular fa-user"></i>
+                                            <a href="#">Tên:
+                                                <?php echo isset($data['userData']['username']) ? $data['userData']['username'] : (isset($data['userData']['name']) ? $data['userData']['name'] : 'Khách hàng'); ?></a>
+                                        </li>
+                                        <!-- item-2 -->
+                                        <li class="menu__user-item-2">
+                                            <!-- icon-login_2 -->
+                                            <i class="icon-login_2 fa-solid fa-circle-info"></i>
+                                            <a href="/web_bantrasua/myapp/user/user/info">Thông Tin
+                                                Cá Nhân</a>
+                                        </li>
+                                        <!-- item-3 -->
+                                        <li class="menu__user-item-3">
+                                            <!-- icon-login_3 -->
+                                            <i class="icon-login_3 fa-solid fa-boxes-stacked"></i>
+                                            <!-- <a onclick="handleLoadContent('purchase')">Đơn Mua</a> -->
+                                            <a href="/web_bantrasua/myapp/user/Purchase/show">Đơn mua</a>
+                                        </li>
 
-                                    <!-- item 5 -->
-                                    <li class="menu__user-item-5">
-                                        <!-- icon-login_5 -->
-                                        <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
-                                        <a href="/web_bantrasua/myapp/user/auth/logout">Đăng Xuất</a>
-                                    </li>
-<?php
-                                      }else{
-?>
-                                    <!-- item 5 -->
-                                    <li class="menu__user-item-5">
-                                        <!-- icon-login_5 -->
-                                        <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
-                                        <a href="/web_bantrasua/myapp/user/auth/login">Đăng Nhập</a>
-                                    </li>
-                                    <li class="menu__user-item-5">
-                                        <!-- icon-login_5 -->
-                                        <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
-                                        <a href="/web_bantrasua/myapp/user/user/register">Đăng Ký</a>
-                                    </li>
-<?php
-                                      }
-                                     ?>
-                                    
+                                        <!-- item 5 -->
+                                        <li class="menu__user-item-5">
+                                            <!-- icon-login_5 -->
+                                            <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
+                                            <a href="/web_bantrasua/myapp/user/auth/logout">Đăng Xuất</a>
+                                        </li>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <!-- item 5 -->
+                                        <li class="menu__user-item-5">
+                                            <!-- icon-login_5 -->
+                                            <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
+                                            <a href="/web_bantrasua/myapp/user/auth/login">Đăng Nhập</a>
+                                        </li>
+                                        <li class="menu__user-item-5">
+                                            <!-- icon-login_5 -->
+                                            <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
+                                            <a href="/web_bantrasua/myapp/user/user/register">Đăng Ký</a>
+                                        </li>
+                                    <?php
+                                    }
+                                    ?>
+
                                 </ul>
                             </div>
                         </div>
@@ -303,13 +317,10 @@
 
         <div class="slideShow">
             <div class="list-image">
-                <img src="../../../old/assets/img/ảnh trang chủ 1.jpg" width="100%"
-                    alt="">
-                <img src="../../../old/assets/img/ảnh trang chủ 2.jpg" width="100%"
-                    alt="">
+                <img src="../../../old/assets/img/ảnh trang chủ 1.jpg" width="100%" alt="">
+                <img src="../../../old/assets/img/ảnh trang chủ 2.jpg" width="100%" alt="">
                 <img src="../../../old/assets/img/ảnh trang chủ 3.jpg" width="100%" alt="">
-                <img src="../../../old/assets/img/ảnh trang chủ 4.jpg" width="100%"
-                    alt="">
+                <img src="../../../old/assets/img/ảnh trang chủ 4.jpg" width="100%" alt="">
             </div>
         </div>
 
@@ -348,40 +359,44 @@
                 <!-- Form -->
                 <?php foreach ($data['products'] as $index => $product): ?>
                     <?php
-                        if($index==8){
-                          break; 
-                        }
-                            ?>
+                    if ($index == 8) {
+                        break;
+                    }
+                    ?>
                     <div class="product-form__form">
-          <!-- Container -->
-          <div class="product-form__container">
-            <!-- Image -->
-            <div class="product-form__image">
-              <i class="product-form__image-icon fa-solid fa-clover"></i>
-              <img src="/web_bantrasua/myapp/public/assets/img/<?php echo isset($product['image']) ? $product['image'] : 'h5-removebg-preview.png'; ?>" alt="<?php echo $product['name']; ?>" class="product-form__image-img">
-            </div>
-            <!-- Content -->
-            <div class="product-form__content" style=" white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
-              <h3 class="product-form__title" title="<?php echo $product['name']?>"><?php 
-                // Hiển thị tên sản phẩm, nếu quá dài thì cắt ngắn
-                $name = $product['name'];
-                echo $name;
-              ?></h3>
-              <span class="product-form__cost"> <?php echo number_format($product['cost_default'], 0, ',', '.') . "\u{20AB}" ?></span>
-            </div>
-            <!-- Button -->
-            <div class="product-form__buy">
-              <a href="/web_bantrasua/myapp/user/order/viewProduct?id=<?php echo $product['id']; ?>" class="product-form__buy-btn">
-                <button class="product-form__buy-btn">
-                  <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
-                  Đặt mua
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-                    <?php endforeach; ?>
-                
+                        <!-- Container -->
+                        <div class="product-form__container">
+                            <!-- Image -->
+                            <div class="product-form__image">
+                                <i class="product-form__image-icon fa-solid fa-clover"></i>
+                                <img src="/web_bantrasua/myapp/public/assets/img/<?php echo isset($product['image']) ? $product['image'] : 'h5-removebg-preview.png'; ?>"
+                                    alt="<?php echo $product['name']; ?>" class="product-form__image-img">
+                            </div>
+                            <!-- Content -->
+                            <div class="product-form__content"
+                                style=" white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                                <h3 class="product-form__title" title="<?php echo $product['name'] ?>"><?php
+                                                                                                        // Hiển thị tên sản phẩm, nếu quá dài thì cắt ngắn
+                                                                                                        $name = $product['name'];
+                                                                                                        echo $name;
+                                                                                                        ?></h3>
+                                <span class="product-form__cost">
+                                    <?php echo number_format($product['cost_default'], 0, ',', '.') . "\u{20AB}" ?></span>
+                            </div>
+                            <!-- Button -->
+                            <div class="product-form__buy">
+                                <a href="/web_bantrasua/myapp/user/order/viewProduct?id=<?php echo $product['id']; ?>"
+                                    class="product-form__buy-btn">
+                                    <button class="product-form__buy-btn">
+                                        <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
+                                        Đặt mua
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
             </div>
             <button class="more">
                 Xem thêm
@@ -404,8 +419,8 @@
 
                         <!-- Image -->
                         <div class="status-form__image">
-                            <img src="../../../old/assets/img/ảnh ăn bánh và uống tra.jpg"
-                                alt="Trà Sữa Clover Tea" alt="Trà Sữa Clover Tea" class="status-form__image-img">
+                            <img src="../../../old/assets/img/ảnh ăn bánh và uống tra.jpg" alt="Trà Sữa Clover Tea"
+                                alt="Trà Sữa Clover Tea" class="status-form__image-img">
                         </div>
 
                         <!-- Content -->
@@ -417,7 +432,7 @@
                     </div>
                 </div>
                 <!-- Form -->
-                 <!-- 2 -->
+                <!-- 2 -->
 
                 <div class="status-form__form">
                     <!-- Content -->
@@ -425,14 +440,14 @@
 
                         <!-- Image -->
                         <div class="status-form__image">
-                            <img src="../../../old/assets/img/anhNews7.jpg"
-                                alt="Trà Sữa Clover Tea" alt="Trà Sữa Clover Tea" class="status-form__image-img">
+                            <img src="../../../old/assets/img/anhNews7.jpg" alt="Trà Sữa Clover Tea"
+                                alt="Trà Sữa Clover Tea" class="status-form__image-img">
                         </div>
 
                         <!-- Content -->
                         <div class="status-form__content">
                             <a href="#">
-                                <h3 class="status-form__title">CLOVER TEA CHÀO ĐÓN NGÀY THANH NIÊN 
+                                <h3 class="status-form__title">CLOVER TEA CHÀO ĐÓN NGÀY THANH NIÊN
                             </a></h3>
                         </div>
                     </div>
@@ -444,14 +459,14 @@
 
                         <!-- Image -->
                         <div class="status-form__image">
-                            <img src="../../../old/assets/img/anhNewss1.jpg"
-                                alt="Trà Sữa Clover Tea" alt="Trà Sữa Clover Tea" class="status-form__image-img">
+                            <img src="../../../old/assets/img/anhNewss1.jpg" alt="Trà Sữa Clover Tea"
+                                alt="Trà Sữa Clover Tea" class="status-form__image-img">
                         </div>
 
                         <!-- Content -->
                         <div class="status-form__content">
                             <a href="#">
-                                <h3 class="status-form__title">TRI  HỘI VIÊN MUA 1 TẶNG 1
+                                <h3 class="status-form__title">TRI HỘI VIÊN MUA 1 TẶNG 1
                             </a></h3>
                         </div>
                     </div>
@@ -463,8 +478,8 @@
 
                         <!-- Image -->
                         <div class="status-form__image">
-                            <img src="../../../old/assets/img/anhNews3.jpg"
-                                alt="Trà Sữa Clover Tea" alt="Trà Sữa Clover Tea" class="status-form__image-img">
+                            <img src="../../../old/assets/img/anhNews3.jpg" alt="Trà Sữa Clover Tea"
+                                alt="Trà Sữa Clover Tea" class="status-form__image-img">
                         </div>
 
                         <!-- Content -->
@@ -482,14 +497,14 @@
 
                         <!-- Image -->
                         <div class="status-form__image">
-                            <img src="../../../old/assets/img/anhNews6.jpg"
-                                alt="Trà Sữa Clover Tea" alt="Trà Sữa Clover Tea" class="status-form__image-img">
+                            <img src="../../../old/assets/img/anhNews6.jpg" alt="Trà Sữa Clover Tea"
+                                alt="Trà Sữa Clover Tea" class="status-form__image-img">
                         </div>
 
                         <!-- Content -->
                         <div class="status-form__content">
                             <a href="#">
-                                <h3 class="status-form__title">CHÀO BẠN MỚI - CLOVER TEA MỜI BẠN 1 LY TRÀ ĐÀO 
+                                <h3 class="status-form__title">CHÀO BẠN MỚI - CLOVER TEA MỜI BẠN 1 LY TRÀ ĐÀO
                             </a></h3>
                         </div>
                     </div>
@@ -501,27 +516,27 @@
 
                         <!-- Image -->
                         <div class="status-form__image">
-                            <img src="../../../old/assets/img/anhNews4.jpg"
-                                alt="Trà Sữa Clover Tea" alt="Trà Sữa Clover Tea" class="status-form__image-img">
+                            <img src="../../../old/assets/img/anhNews4.jpg" alt="Trà Sữa Clover Tea"
+                                alt="Trà Sữa Clover Tea" class="status-form__image-img">
                         </div>
 
                         <!-- Content -->
                         <div class="status-form__content">
                             <a href="#">
-                                <h3 class="status-form__title">SẮC VIỆT TRÊN ÁO, VỊ VIỆT TRÊN TAY 
+                                <h3 class="status-form__title">SẮC VIỆT TRÊN ÁO, VỊ VIỆT TRÊN TAY
                             </a></h3>
                         </div>
                     </div>
                 </div>
-                    <!-- 7 -->
+                <!-- 7 -->
                 <div class="status-form__form">
                     <!-- Content -->
                     <div class="status-form__container">
 
                         <!-- Image -->
                         <div class="status-form__image">
-                            <img src="../../../old/assets/img/anhNews2.jpg"
-                                alt="Trà Sữa Clover Tea" alt="Trà Sữa Clover Tea" class="status-form__image-img">
+                            <img src="../../../old/assets/img/anhNews2.jpg" alt="Trà Sữa Clover Tea"
+                                alt="Trà Sữa Clover Tea" class="status-form__image-img">
                         </div>
 
                         <!-- Content -->
@@ -532,15 +547,15 @@
                         </div>
                     </div>
                 </div>
-                        <!-- 8 -->
+                <!-- 8 -->
                 <div class="status-form__form">
                     <!-- Content -->
                     <div class="status-form__container">
 
                         <!-- Image -->
                         <div class="status-form__image">
-                            <img src="../../../old/assets/img/anhNews5.jpg"
-                                alt="Trà Sữa Clover Tea" alt="Trà Sữa Clover Tea" class="status-form__image-img">
+                            <img src="../../../old/assets/img/anhNews5.jpg" alt="Trà Sữa Clover Tea"
+                                alt="Trà Sữa Clover Tea" class="status-form__image-img">
                         </div>
 
                         <!-- Content -->
@@ -551,7 +566,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <!-- Information -->
             <a href="#" class="status-more__information">Xem Thêm</a>
@@ -588,19 +603,19 @@
     </div>
     </footer>
 
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     </div>
     <script src="../../assets/handle/user/loadIframe.js"></script>
-     <script>
+    <script>
         const handleLoadContent = (page) => {
-                var iframe = document.getElementById('content_user');
-                iframe.src = "/web_bantrasua/myapp/user/home/userContent?view="+page;
+            var iframe = document.getElementById('content_user');
+            iframe.src = "/web_bantrasua/myapp/user/home/userContent?view=" + page;
         }
 
         function check() {
             alert("Vui lòng đăng nhập để tiếp tục!!!");
         }
-     </script>
+    </script>
 
 
 </body>

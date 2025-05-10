@@ -18,8 +18,7 @@ class User_Controller extends Controller
             $_SESSION['old'] = $this->userModel->getById($_SESSION['user']['id']);
             $_SESSION['userAddress'] = $this->userModel1->getAddress($_SESSION['user']['id']);
         }
-        $this->view('info', [
-        ]);
+        $this->view('info', []);
     }
 
     // Lưu thông tin cá nhân cập nhật
@@ -86,8 +85,8 @@ class User_Controller extends Controller
 
     public function register()
     {
-        unset($_SESSION['success']); 
-        unset($_SESSION['errorRegister']); 
+        unset($_SESSION['success']);
+        unset($_SESSION['errorRegister']);
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $name = trim($_POST['username'] ?? '');
             $email = trim($_POST['email'] ?? '');
@@ -97,18 +96,18 @@ class User_Controller extends Controller
 
             if ($password !== $confirm_password) {
                 $_SESSION['errorRegister'] = "Mật khẩu không khớp!";
-                return $this->view('register',[]);
+                return $this->view('register', []);
             }
 
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $_SESSION['errorRegister'] = "Email không hợp lệ!";
-                return $this->view('register',[]);
+                return $this->view('register', []);
             }
 
             // Gọi model để lưu
             $success = $this->userModel->register($name, $email, $password, $isMember);
             if ($success) {
-            $id =$this->userModel->returnIdUserAfterRegister();
+                $id = $this->userModel->returnIdUserAfterRegister();
                 $_SESSION['user'] = [
                     'email' => $email,
                     'role' => 'user',
@@ -118,18 +117,18 @@ class User_Controller extends Controller
                 exit;
             } else {
                 $_SESSION['errorRegister'] = "Đăng ký thất bại. Email có thể đã tồn tại.";
-                return $this->view('register',[]);
+                return $this->view('register', []);
             }
         } else {
             // GET request: hiển thị form
 
-            $this->view('register',[]);;
+            $this->view('register', []);;
         }
     }
 
 
-        public function showRegister(){
-            $this->view('register',[]);
-        }
-
+    public function showRegister()
+    {
+        $this->view('register', []);
+    }
 }

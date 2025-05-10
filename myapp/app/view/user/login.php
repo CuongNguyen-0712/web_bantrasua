@@ -19,7 +19,8 @@
         <div class="login-form">
             <div class="login-form__container">
                 <div class="login-form__header">
-                    <a href="/index.html" class="login-form__heading">
+                    <!--chờ link lại-->
+                    <a href="/web_bantrasua/myapp/user/auth/notLogin" class="login-form__heading">
                         <h3 class="login-form__heading">
                             <span class="login-form__welcome"> Welcome to </span>
                             Clover Tea
@@ -54,9 +55,11 @@
                             Đăng nhập
                         </button>
                 </form>
+
                 <div class="login-form__link">
-                    <a href="/web_bantrasua/myapp/user/user/showRegister" class="login-form__link-register login-form__link">
-                        <!--chờ link lại-->
+                    <!--chờ link lại-->
+                    <a href="/web_bantrasua/myapp/user/User/register"
+                        class="login-form__link-register login-form__link">
                         Bạn chưa có tài khoản?
                     </a>
                 </div>

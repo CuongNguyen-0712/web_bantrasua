@@ -12,7 +12,7 @@ class Auth_Model
     {
         $stmt = Database::getInstance()->prepare("SELECT * 
                                               FROM account
-                                              WHERE email = ? AND password = ? and is_admin = 0");
+                                              WHERE email = ? AND password = ? AND is_admin = 0 and status = 1 ");
         $stmt->execute([$email, $password]);
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);

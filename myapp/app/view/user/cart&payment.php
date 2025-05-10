@@ -1,11 +1,18 @@
+<?php
+
+namespace user;
+
+use PDO;
+use Database;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/cart&payment.css" />
     <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/style.css" />
     <link rel="icon" href="/web_bantrasua/myapp/public/assets/img/logo.png" />
@@ -124,18 +131,15 @@
             <div class="cart-form__product">
                 <!-- Milk tea -->
                 <?php if (empty($data['cart'])): ?>
-                    <div
-                        style="min-height: 825px; width: 450px; display: flex; justify-content: flex-end; align-items: center;">
-                        <p style="font-size: 20px; color: #666;"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng của bạn
-                            đang trống</p>
+                    <div style="min-height: 825px; width: 450px; display: flex; justify-content: flex-end; align-items: center;">
+                        <p style="font-size: 20px; color: #666;"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng của bạn đang trống</p>
                     </div>
                 <?php else: ?>
                     <?php foreach ($data['cart'] as $item): ?>
                         <div class="cart-form__product-form">
                             <div class="cart-form__product-item">
                                 <div class="cart-form__product-image">
-                                    <img src="/assets/img/h5-removebg-preview.png" alt="Trà Sữa Clover Tea"
-                                        class="cart-form__product-img">
+                                    <img src="/assets/img/h5-removebg-preview.png" alt="Trà Sữa Clover Tea" class="cart-form__product-img">
                                 </div>
 
 
@@ -155,8 +159,7 @@
 
 
                                     <div class="cart-form__product-footer">
-                                        <div class="cart-form__product-price">
-                                            <?php echo number_format($item['price'], 0, ',', '.') . "\u{20AB}" ?></div>
+                                        <div class="cart-form__product-price"><?php echo number_format($item['price'], 0, ',', '.') . "\u{20AB}" ?></div>
                                         <div class="cart-form__product-count">
                                             <button class="cart-form__product-btn">&#8722;</button>
                                             <span class="cart-form__product-number"><?php echo $item['quantity'] ?></span>
@@ -218,8 +221,7 @@
 
                             <div class="cart-form__clause">
                                 <input type="checkbox" name="checkboxid" class="cart-form__clause-btn">
-                                <label for="checkboxid" class="cart-form__clause-title">Tôi đã đọc, hiểu và đồng ý với tất cả
-                                    các
+                                <label for="checkboxid" class="cart-form__clause-title">Tôi đã đọc, hiểu và đồng ý với tất cả các
                                     <span class="cart-form__clause-title-main">
                                         <em>điều khoản, điều kiện và chính sách</em>
                                     </span>

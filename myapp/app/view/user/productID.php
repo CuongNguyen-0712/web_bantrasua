@@ -14,41 +14,41 @@
 <body>
 
   <style>
-    .product-form__image-img{
+    .product-form__image-img {
       width: 100px;
       height: 130px;
     }
   </style>
 
-    <div class="product-form">
-        <!-- Form -->
-        <?php foreach($data['productID'] as $product): ?>
-            <div class="product-form__form">
-                <!-- Container -->
-                <div class="product-form__container">
-                    <!-- Image -->
-                    <div class="product-form__image">
-                        <i class="product-form__image-icon fa-solid fa-clover"></i>
-                        <img src="/web_bantrasua/myapp/public/assets/img/<?php echo isset($product['image']) ? $product['image'] : 'h5-removebg-preview.png'; ?>" alt="Trà Sữa Clover Tea" class="product-form__image-img">
-                    </div>
-                    <!-- Content -->
-                    <div class="product-form__content">
-                        <h3 class="product-form__title"><?php echo $product['name']?></h3>
-                        <span class="product-form__cost"><?php echo number_format($product['cost_default'], 0, ',', '.') . "\u{20AB}" ?></span>
-                    </div>
-                        <!-- Button -->
-                    <div class="product-form__buy">
-                        <a href="/web_bantrasua/myapp/user/order/viewProduct?id=<?php echo $product['id']; ?>" class="product-form__buy-btn">
-                            <button class="product-form__buy-btn">
-                            <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
-                            Đặt mua
-                            </button>
-                        </a>
-                    </div>
-                </div> 
-            </div>
-        <?php endforeach; ?>
-    </div>
+  <div class="product-form">
+    <!-- Form -->
+    <?php foreach ($data['productID'] as $product): ?>
+      <div class="product-form__form">
+        <!-- Container -->
+        <div class="product-form__container">
+          <!-- Image -->
+          <div class="product-form__image">
+            <i class="product-form__image-icon fa-solid fa-clover"></i>
+            <img src="/web_bantrasua/myapp/public/assets/img/<?php echo isset($product['image']) ? $product['image'] : 'h5-removebg-preview.png'; ?>" alt="Trà Sữa Clover Tea" class="product-form__image-img">
+          </div>
+          <!-- Content -->
+          <div class="product-form__content">
+            <h3 class="product-form__title"><?php echo $product['name'] ?></h3>
+            <span class="product-form__cost"><?php echo number_format($product['cost_default'], 0, ',', '.') . "\u{20AB}" ?></span>
+          </div>
+          <!-- Button -->
+          <div class="product-form__buy">
+            <a href="/web_bantrasua/myapp/user/order/viewProduct?id=<?php echo $product['id']; ?>" class="product-form__buy-btn">
+              <button class="product-form__buy-btn">
+                <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
+                Đặt mua
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
 
   <!-- FOOTER -->
   <div class="form-container">

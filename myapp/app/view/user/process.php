@@ -13,88 +13,6 @@
 
 <body>
 
-    <div class="proccess-form-1">       <!-- sẽ xử lý nếu có thời gian, còn không thì bỏ-->
-        <!-- Header -->
-        <header class="proccess-form__header">
-            <ul>
-                <li class="proccess-form__headeing-item--back">
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <a href="/pages/user/purchase.html" class="proccess-form__headeing-item--back">
-                        TRỞ LẠI
-                    </a>
-                </li>
-            </ul>
-            <ul class="proccess-form__heading">
-                <li class="proccess-form__headeing-item">MÃ ĐƠN HÀNG. <?php echo $data['order_id']['id']?></li>
-                <span class="proccess-form__headeing-item--separate">&#10072;</span>
-                <li class="proccess-form__headeing-item--confirm">ĐƠN HÀNG ĐÃ HOÀN THÀNH</li>
-            </ul>
-        </header>
-
-        <!-- Proccess -->
-        <div class="proccess-form__proccess">
-            <div class="proccess-form__proccess-item-line">
-                <div class="proccess-form__item-line"></div>
-                <div class="proccess-form__item-line"></div>
-                <div class="proccess-form__item-line"></div>
-                <div class="proccess-form__item-line"></div>
-            </div>
-
-            <div class="proccess-form__proccess-item-circle">
-                <div class="proccess-form__item-circle"></div>
-                <div class="proccess-form__item-circle"></div>
-                <div class="proccess-form__item-circle"></div>
-                <div class="proccess-form__item-circle"></div>
-                <div class="proccess-form__item-circle"></div>
-            </div>
-
-            <div class="proccess-form__proccess-item-icons">
-                <i
-                    class="proccess-form__proccess-item-icon proccess-form__proccess-item-icon--order fa-solid fa-rectangle-list"></i>
-                <i
-                    class="proccess-form__proccess-item-icon proccess-form__proccess-item-icon--confirm fa-solid fa-money-check-dollar"></i>
-                <i class="proccess-form__proccess-item-icon--transport fa-solid fa-truck"></i>
-                <i class="proccess-form__proccess-item-icon--received fa-solid fa-boxes-packing"></i>
-                <i class="proccess-form__proccess-item-icon--rated fa-solid fa-star"></i>
-            </div>
-
-            <div class="proccess-form__proccess-item-details">
-                <div class="proccess-form__proccess-item-detail--ordered">Đơn Hàng Đã Đặt</div>
-                <div class="proccess-form__proccess-item-detail--common">Đã Xác Nhận Thông Tin Thanh Toán</div>
-                <div class="proccess-form__proccess-item-detai--transport">Đã Giao Cho ĐVVC</div>
-                <div class="proccess-form__proccess-item-detail--received">Đã Nhận Được Hàng</div>
-                <div class="proccess-form__proccess-item-detail--common proccess-form__proccess-item-detail--rated">Đơn
-                    Hàng Đã Được Đánh Giá</div>
-            </div>
-
-            <div class="proccess-form__proccess-item-time">
-                <div class="proccess-form__proccess-item-date--ordered">12:05&nbsp;08-11-2024</div>
-                <div class="proccess-form__proccess-item-date--confirm">12:10&nbsp;08-11-2024</div>
-                <div class="proccess-form__proccess-item-date--transport">12:30&nbsp;08-11-2024</div>
-                <div class="proccess-form__proccess-item-date--received">12:40&nbsp;08-11-2024</div>
-                <div class="proccess-form__proccess-item-date--rated">12:45&nbsp;08-11-2024</div>
-            </div>
-        </div>
-
-        <!-- Another -->
-        <div class="proccess-form__another">
-            <div class="proccess-form__another-box">
-                <span class="proccess-form__another-box-content">
-                    Nếu hàng nhận được có vấn đề, đừng vội đánh giá 1 sao mà hãy liên hệ ngay với shop nhé
-                    <i class="fa-regular fa-heart"></i>
-                </span>
-            </div>
-
-            <div class="proccess-form__common">
-                <button class="proccess-form__common-btn proccess-form__common-btn--buy">Mua Lại</button>
-            </div>
-
-            <div class="proccess-form__common">
-                <button class="proccess-form__common-btn">Liên Hệ Người Bán</button>
-            </div>
-        </div>
-    </div>
-
     <div class="proccess-form-2">
         <header class="proccess-header">
             <div class="proccess-header__heading">
@@ -125,7 +43,30 @@
                     <h5 class="order-form__title"> <?php echo $productInfo['name']?></h5>
                     <span class="order-form__describ">
                         Kích cỡ: <?php echo $productInfo['size']; ?>,
-                        Topping: <?php echo implode(", ", $productInfo['topping']); ?>
+                        <?php if(!empty($productInfo['topping_name']) && !empty($productInfo['topping_id'])): ?>
+                            <?php 
+                                $da_ngot = [];
+                                $toppings = [];
+                                foreach($productInfo['topping_id'] as $index => $id):
+                                    $name = $productInfo['topping_name'][$index];
+                                    if($id >= 1 && $id <= 6): // đá - ngọt
+                                        $da_ngot[] = $name;
+                                    else: // topping
+                                        $toppings[] = $name;
+                                    endif;
+                                endforeach;
+                            ?>
+
+                            <?php if(!empty($da_ngot)): ?>
+                                <?php echo ", " . implode(", ", $da_ngot); ?>
+                            <?php endif; ?>
+
+                            <?php if(!empty($toppings)): ?>
+                                <?php echo ", Topping: " . implode(", ", $toppings); ?>
+                            <?php endif; ?>
+                        <?php else: ?>
+                            <?php echo " "?>
+                    <?php endif; ?>
                     </span>
                     <p>x<?php echo $productInfo['quantity']?></p>
                 </div>
@@ -159,7 +100,25 @@
                 <?php echo $data['payment']['name']?>
             </li>
         </ul>
-    </div>
+    </div>      
+        <!-- Another -->
+        <div class="proccess-form__another">
+            <div class="proccess-form__another-box">
+                <span class="proccess-form__another-box-content">
+                    Nếu hàng nhận được có vấn đề, đừng vội đánh giá 1 sao mà hãy liên hệ ngay với shop nhé
+                    <i class="fa-regular fa-heart"></i>
+                </span>
+            </div>
+
+            <div class="proccess-form__common">
+                <button class="proccess-form__common-btn proccess-form__common-btn--buy">Mua Lại</button>
+            </div>
+
+            <div class="proccess-form__common">
+                <button class="proccess-form__common-btn">Liên Hệ Người Bán</button>
+            </div>
+        </div>
+
 </body>
 
 </html>

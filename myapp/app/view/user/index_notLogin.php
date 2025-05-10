@@ -1,19 +1,13 @@
 <html lang="en">
-
+<!-- trang này chỉ làm tạm bợ để link -->
 <head>
-    <link rel="stylesheet" href="./assets/styles/user/advacedSearch copy.css">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/advacedSearch copy.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLOVER-TEA</title>
-<<<<<<< HEAD
-    <link rel="icon" type="image/x-icon" href="/old/assets/img/logo.png">
-    <link rel="stylesheet" href="/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
-    <link href="/myapp/public/assets/font/Arimo-VariableFont_wght.ttf" rel ="stylesheet">
-=======
     <link rel="icon" type="image/x-icon" href="./assets/img/logo.png">
-    <link rel="stylesheet" href="./assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css" />
     <link href="./assets/font/Arimo-VariableFont_wght.ttf" rel="stylesheet">
->>>>>>> 61ceaae (done)
     <link
         href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Arimo:ital,wght@0,400..700;1,400..700&family=Lobster&family=Qwigley&display=swap"
         rel="stylesheet">
@@ -39,11 +33,7 @@
                         <input type="text" placeholder="Tìm kiếm theo sản phẩm" id="search" name="search">
                         <!-- link -->
                         <!-- icon-search -->
-<<<<<<< HEAD
-                        <a href="#" onclick="handleLoadContent('/old/pages/user/milktea.html')" class="header__search-find-link">
-=======
                         <a href="#" onclick="handleLoadContent('./pages/user/milktea.html')" class="header__search-find-link">
->>>>>>> 61ceaae (done)
                             <i class="icon-search fa-solid fa-magnifying-glass"></i>
                         </a>
                         <!-- icon-filter -->
@@ -104,15 +94,14 @@
                                 <ul class="menu__user-item">
                                     <!--item-1  -->
                                     <li class="menu__user-item-1">
-                                        <a href="/old/pages/user/dangKi copy.html">
+                                        <a href="/web_bantrasua/myapp/user/user/register">
                                             <!-- login-1 -->
                                             <i class="icon-login_1 fa-solid fa-right-to-bracket"></i> Đăng Ký
                                         </a>
                                     </li>
                                     <!-- item-2 -->
                                     <li class="menu__user-item-2">
-                                        <a href="/old/pages/user/login.html">
-                                            <!-- login-2 -->
+                                        <a href="/web_bantrasua/myapp/user/auth/login">
                                             <i class="icon-login_2 fa-solid fa-right-to-bracket"></i> Đăng Nhập
                                         </a>
                                     </li>
@@ -129,117 +118,12 @@
                         <!-- item -->
                     <li class="header__nav-item">
                         <!-- item-link -->
-<<<<<<< HEAD
-                        <a href="#" onclick="handleLoadContent('/old/pages/user/index-content.html')" class="header__nav-item">TRANG CHỦ</a>
-=======
                         <a href="#" onclick="handleLoadContent('./pages/user//index-content.html')" class="header__nav-item">TRANG CHỦ</a>
->>>>>>> 61ceaae (done)
                     </li>
                     <li class="header__nav-item header__nav-item--has-product">SẢN PHẨM
 
                             <!-- HEADER__NAV-ITEM__PRODUCT -->
 
-<<<<<<< HEAD
-                            <!-- MENU TRÀ SỮA-->
-                            <div class="header__nav-item__product">
-                                <div class="header__product">
-                                    <!-- Header__product-header -->
-                                     <div class="header__product-column">
-                                        <a href="" class="header__product-title">TRÀ SỮA</a>
-                                        <!-- Header__product-list -->
-                                            <ul class="header__product-list">
-                                                <!-- item -->
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/milktea.html')" class="header__product-name-item">Trà sữa
-                                                        Clover</a>
-                                                </li>
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/milktea.html')" class="header__product-name-item">Trà sữa
-                                                        Trân Châu Hoàng Kim</a>
-                                                </li>
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/milktea.html')" class="header__product-name-item">Hồng trà
-                                                        sữa</a>
-                                                </li>
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/milktea.html')" class="header__product-name-item">Trà sữa
-                                                        Olong Quế Hoa</a>
-                                                </li>
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/milktea.html')" class="header__product-name-item">Trà sữa
-                                                        Bá ước</a>
-                                                </li>
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/milktea.html')" class="header__product-name-item">Trà sữa
-                                                        Vân Nam</a>
-                                                </li>
-                                            </ul>
-                                     </div>
-
-
-                                    <!-- Header__product-header -->
-                                    <div class="header__product-column">
-                                        <a href="" class="header__product-title">TRÀ</a>
-                                    <!-- Header__product-list -->
-                                            <ul class="header__product-list">
-                                                <!-- item -->
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/tea.html')" class="header__product-name-item">Clover Trà
-                                                        Xanh</a>
-                                                </li>
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/tea.html')" class="header__product-name-item">Olong Đào
-                                                        Tiên</a>
-                                                </li>
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/tea.html')" class="header__product-name-item">Hồng Long Pha
-                                                        Lê Tuyết</a>
-                                                </li>
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/tea.html')" class="header__product-name-item">Mỹ Nhân Thanh
-                                                        Trà</a>
-                                                </li>
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/tea.html')" class="header__product-name-item">Trà Nhãn Hoa
-                                                        Mộc Lê</a>
-                                                </li>
-                                                <li class="header__product-item">
-                                                    <a href="#" onclick="handleLoadContent('/old/pages/user/tea.html')" class="header__product-name-item">Bách Trà
-                                                        Thảo Mộc</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="header__product-column">
-                                            <a href="" class="header__product-title">COFFEE</a>
-                                            <!-- header__product-list -->
-                                                <ul class="header__product-list">
-                                                    <!-- item -->
-                                                    <li class="header__product-item">
-                                                        <a href="#" onclick="handleLoadContent('/old/pages/user/coffee.html')"
-                                                            class="header__product-name-item">Americano</a>
-                                                    </li>
-                                                    <li class="header__product-item">
-                                                        <a href="#" onclick="handleLoadContent('/old/pages/user/coffee.html')"
-                                                            class="header__product-name-item">Capuchino</a>
-                                                    </li>
-                                                    <li class="header__product-item">
-                                                        <a href="#" onclick="handleLoadContent('/old/pages/user/coffee.html')" class="header__product-name-item">Latte</a>
-                                                    </li>
-                                                    <li class="header__product-item">
-                                                        <a href="#" onclick="handleLoadContent('/old/pages/user/coffee.html')" class="header__product-name-item">Espresso</a>
-                                                    </li>
-                                                    <li class="header__product-item">
-                                                        <a href="#" onclick="handleLoadContent('/old/pages/user/coffee.html')" class="header__product-name-item">Machiato</a>
-                                                    </li>
-                                                    <li class="header__product-item">
-                                                        <a href="#" onclick="handleLoadContent('/old/pages/user/coffee.html')" class="header__product-name-item">Cold
-                                                            Brew</a>
-                                                    </li>
-                                                </ul>
-                                        </div>        
-                                </div>
-=======
                         <!-- MENU TRÀ SỮA-->
                         <div class="header__nav-item__product">
                             <div class="header__product">
@@ -337,16 +221,11 @@
                                             Brew</a>
                                     </li>
                                 </ul>
->>>>>>> 61ceaae (done)
                             </div>
                         </li>
                     <!-- ABOUT US -->
                     <li class="header__nav-item">
-<<<<<<< HEAD
-                        <a href="#" onclick="handleLoadContent('/old/pages/user/aboutUs copy.html')" class="header__nav-item">VỀ CHÚNG TÔI</a>
-=======
                         <a href="#" onclick="handleLoadContent('./pages/user/aboutUs copy.html')" class="header__nav-item">VỀ CHÚNG TÔI</a>
->>>>>>> 61ceaae (done)
                     </li>
                     </li>
                 </div>
@@ -354,19 +233,11 @@
         </header>
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
         <main>
-<<<<<<< HEAD
-            <iframe id="content_user" src="/old/pages/user/index-content.html"></iframe>
-        </main>
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    </div>
-    <script src="/old/assets/handle/user/loadIframe.js"></script>
-=======
             <iframe id="content_user" src="../old/pages/user/index-content.html"></iframe>
         </main>
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     </div>
     <script src="./assets/handle/user/loadIframe.js"></script>
->>>>>>> 61ceaae (done)
 </body>
 
 </html>

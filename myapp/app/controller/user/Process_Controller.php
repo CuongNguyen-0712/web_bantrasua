@@ -9,23 +9,23 @@ class Process_Controller extends Controller{
         $this->processModel = $this->model("Purchase_Model");
     }
 
-    public function show(){
+    public function show($orderID){
         $userID = $_SESSION['user']['id'];
-        $orderID = $this->processModel->getOrderID($userID);
+        // $orderID = $this->processModel->getOrderID($userID);
 
-        $totalPrice = $this->processModel->getOrderID($userID);
+        $totalPrice = $this->processModel->getOrderID($orderID);
 
         //lấy trạng thái đơn
-        $status = $this->processModel->getOrderStatus($orderID['id']);
+        $status = $this->processModel->getOrderStatus($orderID);
 
         //trả về order_id, product_id, size_id, quantity, subtotal
-        $orderDetail = $this->processModel->getOrderDetail($orderID['id']);
+        $orderDetail = $this->processModel->getOrderDetail($orderID);
 
         //lấy phương thức thanh toán
-        $payment = $this->processModel->getPayment_Method($orderID['id']);
+        $payment = $this->processModel->getPayment_Method($orderID);
 
         //lấy phí ship
-        $shipping_fee = $this->processModel->getOrderID($userID);
+        $shipping_fee = $this->processModel->getOrderID($orderID);
 
         
         //lấy thông tin sản phẩm
@@ -33,14 +33,24 @@ class Process_Controller extends Controller{
         foreach($orderDetail as $detail){
             $productName =  $this->processModel->getProductName($detail['product_id']);
             $productSize =  $this->processModel->getSizeName($detail['size_id']);
-            $toppingName = $this->processModel->getToppingsByOrderDetailID($detail['order_id']);
+            $toppingList = $this->processModel->getToppingsByOrderDetailID($detail['order_id'], $detail['product_id'], $detail['size_id']);
+            
+            $toppingName = [];
+            $toppingID = [];
+
+            foreach($toppingList as $topping){
+                $toppingName[] = $topping['name'];
+                $toppingID[] = $topping['id'];
+            }
+
             $quantity = $detail['quantity'];
             $productTotal = $detail['subtotal'];
             
             if($productName){
                 $productInfo[] = ['name' => $productName['name'],
                 'size' => $productSize['name'],
-                'topping' => $toppingName,
+                'topping_name' => $toppingName,
+                'topping_id' => $toppingID,
                 'quantity' => $quantity,
                 'productTotal' =>  $productTotal,]; 
             }
