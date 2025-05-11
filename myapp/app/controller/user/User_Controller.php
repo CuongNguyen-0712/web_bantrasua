@@ -71,6 +71,7 @@ class User_Controller extends Controller
                 'ward' => $ward,
                 'street' => $street
             ]);
+
             if (isset($_SESSION['user']) && isset($_SESSION['user']['id'])) {
                 $_SESSION['old'] = $this->userModel->getById($_SESSION['user']['id']);
                 $_SESSION['userAddress'] = $this->userModel1->getAddress($_SESSION['user']['id']);
@@ -92,7 +93,6 @@ class User_Controller extends Controller
             $email = trim($_POST['email'] ?? '');
             $password = $_POST['password'] ?? '';
             $confirm_password = $_POST['confirm_password'] ?? '';
-            $isMember = isset($_POST['is_member']) ? 1 : 0;
 
             if ($password !== $confirm_password) {
                 $_SESSION['errorRegister'] = "Mật khẩu không khớp!";
@@ -105,7 +105,7 @@ class User_Controller extends Controller
             }
 
             // Gọi model để lưu
-            $success = $this->userModel->register($name, $email, $password, $isMember);
+            $success = $this->userModel->register($name, $email, $password);
             if ($success) {
                 $id = $this->userModel->returnIdUserAfterRegister();
                 $_SESSION['user'] = [

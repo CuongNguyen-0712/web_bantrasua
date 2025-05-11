@@ -1,3 +1,8 @@
+<?php
+$start = $_GET['start'] ?? date('Y-m-d');
+$end = $_GET['end'] ?? date('Y-m-d');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,11 +63,11 @@
                         method="POST">
                         <div class="from_time">
                             <span>Từ ngày</span>
-                            <input type="date" name="time_from" value="<?= date('Y-m-d') ?>">
+                            <input type="date" name="time_from" value="<?= htmlspecialchars($start) ?>">
                         </div>
                         <div class="to_time">
                             <span>đến ngày</span>
-                            <input type="date" name="time_to" value="<?= date('Y-m-d') ?>">
+                            <input type="date" name="time_to" value="<?= htmlspecialchars($end) ?>">
                         </div>
                         <div class="statistics_button_handle">
                             <button type="submit">Thống kê</button>
@@ -79,14 +84,22 @@
                         </ul>
                         <div class="statistics_column">
                             <?php if (!empty($result)): ?>
-                            <?php foreach ($result as $row): ?>
-                            <?php
+                                <?php foreach ($result as $row): ?>
+                                    <?php
                                     $percentHeight = min(round(($row['totalCost'] / 5000000) * 100, 2), 100);
                                     ?>
-                            <div class="div_container">
-                                <span class="columns" style="height: <?= $percentHeight ?>%;"></span>
-                            </div>
-                            <?php endforeach; ?>
+                                    <div class="div_container">
+                                        <span class="columns" style="height: <?= $percentHeight ?>%;"></span>
+                                        <span class="statistics_info" style="bottom: calc(<?= $percentHeight ?>% + 20px);">
+                                            <h5>
+                                                <?= htmlspecialchars($row['username']) ?>
+                                            </h5>
+                                            <p>
+                                                Tổng mua: <?= number_format($row['totalCost'], 0, ',', '.') ?> &#8363;
+                                            </p>
+                                        </span>
+                                    </div>
+                                <?php endforeach; ?>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -97,54 +110,54 @@
                     </div>
                     <div class="frame_detail">
                         <?php if (!empty($result)): ?>
-                        <?php foreach ($result as $row): ?>
-                        <div class="content_detail">
-                            <div class="heading_product">
-                                <div class="info_detail">
-                                    <i class="fa-solid fa-clover"></i>
-                                    <h3><?= htmlspecialchars($row['username']) ?></h3>
-                                </div>
-                                <span>Số hóa đơn: <?= htmlspecialchars($row['totalOrder']) ?></span>
-                                <button>Xem chi tiết</button>
-                            </div>
-
-                            <ul class="list_detail active">
-                                <?php if (!empty($detail[$row['account_id']])): ?>
-                                <?php foreach ($detail[$row['account_id']] as $orderId => $products): ?>
-                                <li>
-                                    <div class="detail">
-                                        <span>Mã hóa đơn: <?= htmlspecialchars($orderId) ?></span>
-
-                                        <?php $total = 0; ?>
-                                        <?php foreach ($products as $product): ?>
-                                        <?php $total += $product['total']; ?>
-                                        <div class="info_order">
-                                            <div class="order">
-                                                <img src="/assets/img/milk.png" alt="Hình ảnh sản phẩm">
-                                                <div class="info">
-                                                    <span><?= htmlspecialchars($product['name']) ?></span>
-                                                    <p>
-                                                        Kích thước: <?= htmlspecialchars($product['size']) ?>,
-                                                        Topping: <?= htmlspecialchars($product['topping']) ?>
-                                                    </p>
-                                                    <span>x<?= htmlspecialchars($product['quantity']) ?></span>
-                                                </div>
-                                            </div>
-                                            <span><?= number_format($product['total'], 0, ',', '.') ?>&#8363;</span>
+                            <?php foreach ($result as $row): ?>
+                                <div class="content_detail">
+                                    <div class="heading_product">
+                                        <div class="info_detail">
+                                            <i class="fa-solid fa-clover"></i>
+                                            <h3><?= htmlspecialchars($row['username']) ?></h3>
                                         </div>
-                                        <?php endforeach; ?>
-
-                                        <div class="total">
-                                            <span>Tổng tiền</span>
-                                            <span><?= number_format($total, 0, ',', '.') ?>&#8363;</span>
-                                        </div>
+                                        <span>Số hóa đơn: <?= htmlspecialchars($row['totalOrder']) ?></span>
+                                        <button>Xem chi tiết</button>
                                     </div>
-                                </li>
-                                <?php endforeach; ?>
-                                <?php endif; ?>
-                            </ul>
-                        </div>
-                        <?php endforeach; ?>
+
+                                    <ul class="list_detail active">
+                                        <?php if (!empty($detail[$row['account_id']])): ?>
+                                            <?php foreach ($detail[$row['account_id']] as $orderId => $products): ?>
+                                                <li>
+                                                    <div class="detail">
+                                                        <span>Mã hóa đơn: <?= htmlspecialchars($orderId) ?></span>
+
+                                                        <?php $total = 0; ?>
+                                                        <?php foreach ($products as $product): ?>
+                                                            <?php $total += $product['total']; ?>
+                                                            <div class="info_order">
+                                                                <div class="order">
+                                                                    <img src="/assets/img/milk.png" alt="Hình ảnh sản phẩm">
+                                                                    <div class="info">
+                                                                        <span><?= htmlspecialchars($product['name']) ?></span>
+                                                                        <p>
+                                                                            Kích thước: <?= htmlspecialchars($product['size']) ?>,
+                                                                            Topping: <?= htmlspecialchars($product['topping']) ?>
+                                                                        </p>
+                                                                        <span>x<?= htmlspecialchars($product['quantity']) ?></span>
+                                                                    </div>
+                                                                </div>
+                                                                <span><?= number_format($product['total'], 0, ',', '.') ?>&#8363;</span>
+                                                            </div>
+                                                        <?php endforeach; ?>
+
+                                                        <div class="total">
+                                                            <span>Tổng tiền</span>
+                                                            <span><?= number_format($total, 0, ',', '.') ?>&#8363;</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    </ul>
+                                </div>
+                            <?php endforeach; ?>
                         <?php endif; ?>
                     </div>
                 </div>

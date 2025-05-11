@@ -428,67 +428,21 @@ body::-webkit-scrollbar-thumb {
   transition: 0.2s all ease;
 }
 
-.div_container .columns::before {
-  display: flex;
+.div_container .statistics_info {
+  display: none;
   position: absolute;
   align-items: center;
-  justify-content: center;
   height: max-content;
   width: max-content;
-  top: -70px;
-  right: 0;
-  font-weight: 700;
+  padding: 10px 20px;
   background: rgb(245, 255, 250);
-  padding: 10px;
+  flex-direction: column;
   border-radius: 5px;
+  gap: 10px;
 }
 
-.div_container .columns::after {
+.div_container .columns:hover~.statistics_info {
   display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  height: max-content;
-  width: 100%;
-  top: -20px;
-  color: rgb(2 108 61);
-  background: transparent;
-}
-
-.statistics_product .div_container:nth-child(1):hover>.columns::before {
-  content: "Trà sữa Clover";
-}
-
-.statistics_product.active .div_container:nth-child(1)>.columns {
-  height: 62%;
-  transition: 0.2s all ease;
-}
-
-.statistics_user.active .div_container:nth-child(1)>.columns {
-  height: 5%;
-  transition: 0.2s all ease;
-}
-
-.statistics_product.active .div_container:nth-child(1)>.columns::after {
-  content: "3124";
-}
-
-.statistics_user.active .div_container:nth-child(1):hover>.columns::before {
-  content: "Quốc Cường";
-}
-
-.statistics_user.active .div_container:nth-child(1)>.columns::after {
-  content: "0.2";
-}
-
-.statistics_product.active .div_container:nth-child(2)>.columns {
-  height: 35%;
-  transition: 0.2s all ease;
-}
-
-.statistics_user.active .div_container:nth-child(2)>.columns {
-  height: 93%;
-  transition: 0.2s all ease;
 }
 
 .statistics_user_detail {
@@ -687,7 +641,9 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 li .detail {
@@ -807,12 +763,6 @@ li>span {
 
 .detail>span:nth-child(2) {
   font-size: 13px;
-}
-
-.list_detail li:last-child {
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
 li:last-child>span:nth-child(2) {

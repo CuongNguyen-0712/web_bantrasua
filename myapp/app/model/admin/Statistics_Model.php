@@ -32,11 +32,11 @@ class Statistics_Model extends Base_Model
                 a.id AS account_id, 
                 a.username AS username, 
                 SUM(o.total_price) AS totalCost, 
-                COUNT(o.id) AS totalOrder 
+                COUNT(DISTINCT o.id) AS totalOrder 
                     FROM account a
                     JOIN `order` o ON o.account_id = a.id
                     WHERE o.order_date BETWEEN :start AND :end
-                    GROUP BY a.id, o.id
+                    GROUP BY a.id, a.username
                 )
 
                 SELECT *

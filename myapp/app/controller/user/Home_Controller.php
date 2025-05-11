@@ -1,6 +1,6 @@
 <?php
 
-namespace User;
+namespace user;
 
 class Home_Controller extends Controller
 {
@@ -14,31 +14,31 @@ class Home_Controller extends Controller
         $this->showCategory();
     }
     public function userContent()
-{
-  
-    $view = $_GET['view'] ?? '';
+    {
 
-  
-    $allowedViews = ['logined-content', 'aboutUs'];
+        $view = $_GET['view'] ?? '';
 
-    if (!in_array($view, $allowedViews)) {
-        http_response_code(403);
-        echo "Không được phép truy cập";
-        exit;
+
+        $allowedViews = ['logined-content', 'aboutUs'];
+
+        if (!in_array($view, $allowedViews)) {
+            http_response_code(403);
+            echo "Không được phép truy cập";
+            exit;
+        }
+
+
+        $filePath =  "C:/xampp/htdocs/web_bantrasua/old/pages/user/{$view}.html";
+
+        if (file_exists($filePath)) {
+
+            header('Content-Type: text/html; charset=utf-8');
+            readfile($filePath);
+        } else {
+            http_response_code(404);
+            echo "Không tìm thấy nội dung";
+        }
     }
-
-    
-    $filePath =  "C:/xampp/htdocs/web_bantrasua/old/pages/user/{$view}.html";
-
-    if (file_exists($filePath)) {
-        
-        header('Content-Type: text/html; charset=utf-8');
-        readfile($filePath);
-    } else {
-        http_response_code(404);
-        echo "Không tìm thấy nội dung";
-    }
-}
 
     public function __construct()
     {
@@ -95,8 +95,8 @@ class Home_Controller extends Controller
         $this->view('productID', ["productID" => $productID]);
     }
 
-    
-    
+
+
     public function search()
     {
         // Lấy các tham số tìm kiếm từ form
@@ -105,10 +105,10 @@ class Home_Controller extends Controller
         $minPrice = isset($_GET['min_price']) ? (int)$_GET['min_price'] : 0;
         $maxPrice = isset($_GET['max_price']) ? (int)$_GET['max_price'] : 0;
         $isAdvancedSearch = isset($_GET['advanced']) && $_GET['advanced'] == 1;
-        
+
         // Lấy danh sách category để hiển thị trong form tìm kiếm
         $categories = $this->categoryModel->getCategory();
-        
+
         // Xử lý tìm kiếm
         if (!empty($searchTerm) || !empty($category) || ($minPrice > 0 || $maxPrice > 0)) {
             // Xử lý tìm kiếm theo tên danh mục (coffee, trà, trà sữa, ...)
@@ -116,7 +116,7 @@ class Home_Controller extends Controller
                 // Tìm danh mục theo tên
                 $foundCategory = null;
                 $exactMatch = false;
-                
+
                 foreach ($categories as $cat) {
                     // Kiểm tra nếu là match chính xác (không phân biệt hoa thường)
                     if (strcasecmp($cat['name'], $searchTerm) === 0) {
@@ -129,24 +129,24 @@ class Home_Controller extends Controller
                         $foundCategory = $cat['id'];
                     }
                 }
-                
+
                 // Nếu tìm thấy danh mục phù hợp với từ khóa tìm kiếm (ưu tiên match chính xác)
                 if ($exactMatch || $foundCategory !== null) {
                     // Sử dụng cùng logic và định dạng của showProductByCategory
                     $productCategory = $this->productModel->getProductByCategory($foundCategory);
-                    
+
                     $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
                     $limit = 6;
                     $offset = ($page - 1) * $limit;
-                    
+
                     // Thay vì lấy tất cả sản phẩm, chỉ lấy sản phẩm của danh mục tìm thấy
                     $totalProductData = $this->productModel->getTotalProductByCategory($foundCategory);
                     $totalProduct = $totalProductData[0]['total'];
                     $totalPage = ceil($totalProduct / $limit);
-                    
+
                     // Phân trang cho sản phẩm trong danh mục
                     $productList = $this->productModel->getProductByCategoryPagination($foundCategory, $limit, $offset);
-                    
+
                     $this->view("productCategory", [
                         "totalPage" => $totalPage,
                         "page" => $page,
@@ -155,19 +155,19 @@ class Home_Controller extends Controller
                         "categoryID" => $foundCategory,
                         "categoryName" => $categories[array_search($foundCategory, array_column($categories, 'id'))]['name']
                     ]);
-                    
+
                     return;
                 }
             }
-            
+
             // Nếu chỉ tìm theo category (tìm kiếm cơ bản)
             if (!$isAdvancedSearch && !empty($category) && empty($searchTerm) && $minPrice == 0 && $maxPrice == 0) {
                 return $this->showProductByCategory($category);
             }
-            
+
             // Tìm kiếm sản phẩm với các điều kiện
             $searchResults = $this->productModel->searchProducts($searchTerm, $category, $minPrice, $maxPrice);
-            
+
             // Kiểm tra xem chỉ còn lại 1 sản phẩm duy nhất không
             if (count($searchResults) == 1) {
                 // Nếu chỉ có 1 kết quả, chuyển hướng đến trang chi tiết sản phẩm
@@ -177,14 +177,14 @@ class Home_Controller extends Controller
                 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
                 $limit = 6;
                 $offset = ($page - 1) * $limit;
-                
+
                 // Nếu có nhiều kết quả, giới hạn kết quả hiển thị theo phân trang
                 $totalProduct = count($searchResults);
                 $totalPage = ceil($totalProduct / $limit);
-                
+
                 // Chỉ lấy phần dữ liệu cần thiết cho trang hiện tại
                 $productCategory = array_slice($searchResults, $offset, $limit);
-                
+
                 // Hiển thị trang kết quả tìm kiếm với nhiều sản phẩm
                 $this->view('productCategory', [
                     "totalPage" => $totalPage,
@@ -214,4 +214,3 @@ class Home_Controller extends Controller
         exit();
     }
 }
-?>

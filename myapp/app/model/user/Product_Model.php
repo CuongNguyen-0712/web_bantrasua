@@ -10,7 +10,7 @@ class Product_Model
 
     public function getProduct()
     {
-        $stmt = Database::getInstance()->prepare("SELECT * FROM product where is_active = 1");
+        $stmt = Database::getInstance()->prepare("SELECT * FROM product");
 
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -21,7 +21,7 @@ class Product_Model
     {
         $stmt = Database::getInstance()->prepare("SELECT *
                                                   FROM product 
-                                                  WHERE category_id = ? and is_active = 1");
+                                                  WHERE category_id = ? ");
 
         $stmt->execute([$category_id]);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -32,7 +32,7 @@ class Product_Model
     {
         $stmt = Database::getInstance()->prepare("SELECT *
                                                   FROM product 
-                                                  WHERE id = ? and is_active = 1");
+                                                  WHERE id = ? ");
 
         $stmt->execute([$product_id]);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -56,6 +56,28 @@ class Product_Model
     {
         $stmt = Database::getInstance()->prepare("SELECT COUNT(*) AS total FROM product");
 
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function getTotalProductByCategory($category_id)
+    {
+        $stmt = Database::getInstance()->prepare("SELECT COUNT(*) AS total FROM product WHERE category_id = ?");
+        $stmt->execute([$category_id]);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function getProductByCategoryPagination($category_id, $limit, $offset)
+    {
+        $stmt = Database::getInstance()->prepare("SELECT * 
+                                                  FROM product 
+                                                  WHERE category_id = :category_id
+                                                  LIMIT :limit OFFSET :offset");
+        $stmt->bindValue(':category_id', $category_id, PDO::PARAM_INT);
+        $stmt->bindValue(':limit', (int)$limit, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', (int)$offset, PDO::PARAM_INT);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
@@ -92,6 +114,7 @@ class Product_Model
             ]
         ];
     }
+
     // Phương thức lấy các kích cỡ có sẵn cho một sản phẩm cụ thể
     public function getProductSizesByProductID($product_id)
     {

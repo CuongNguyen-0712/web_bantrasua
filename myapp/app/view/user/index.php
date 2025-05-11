@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -140,93 +139,12 @@
                                 <i class="icon-search fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
-                        <!-- icon-filter -->
-                        <a href="#" class="header__search-filter-link" id="showAdvancedSearch">
-                            <i class="icon-filter fa-solid fa-filter">
-                                <!-- MENU__FILTER -->
-                                <<<<<<< HEAD <div class="menu__filter" id="advancedSearchMenu">
-                                    <h3>Bộ Lọc Tìm Kiếm</h3>
-                                    <!-- Advanced search form -->
-                                    <form id="advancedSearchForm">
-                                        <!-- Category filter -->
-                                        <ul class="menu__filter-item"><i class="fa-solid fa-tags"></i> Phân loại
-                                            <?php foreach ($data['categories'] as $category): ?>
-                                                <li>
-                                                    <input type="radio" name="category"
-                                                        id="category_<?php echo $category['id']; ?>"
-                                                        value="<?php echo $category['id']; ?>">
-                                                    <label
-                                                        for="category_<?php echo $category['id']; ?>"><?php echo $category['name']; ?></label>
-                                                </li>
-                                            <?php endforeach; ?>
-                                        </ul>
-
-                                        <!-- Price range filter -->
-                                        <ul class="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i>
-                                            Khoảng Giá
-                                            <li><input type="number" name="min_price" placeholder="Từ &#8363;" min="0">
-                                            </li>
-                                            <li><input type="number" name="max_price" placeholder="Đến &#8363;" min="0">
-                                            </li>
-                                        </ul>
-
-                                        <!-- Search term (will be transferred from main search box) -->
-                                        <input type="hidden" name="search" id="advanced_search_term">
-                                        <!-- Set advanced search flag to 1 -->
-                                        <input type="hidden" name="advanced" value="1">
-
-                                        <!-- Button -->
-                                        <button type="submit" class="button-filter">Áp Dụng</button>
-                                    </form>
-                                    =======
-                                    <div class="menu__filter">
-                                        <h3>Bộ Lọc Tìm Kiếm</h3>
-                                        <!-- menu__filter-item -->
-                                        <ul class="menu__filter-item"><i class="fa-solid fa-shop"></i> Nơi bán
-                                            <li><input type="radio" name="cty" id="ctyvn" value="hcm" checked>TP.Hồ
-                                                Chí
-                                                Minh</li>
-                                            <li><input type="radio" name="cty" id="ctyvn" value="hn">Hà Nội</li>
-                                            <li><input type="radio" name="cty" id="ctyvn" value="tn">Thái Nguyên
-                                            </li>
-                                            <li><input type="radio" name="cty" id="ctyvn" value="vp">Vĩnh Phúc
-                                            </li>
-                                            <li><input type="radio" name="cty" id="ctyvn" value="hp">Hải Phòng
-                                            </li>
-                                            <li><input type="radio" name="cty" id="ctyvn" value="dn">Đồng Nai</li>
-                                            <li><input type="radio" name="cty" id="ctyvn" value="hy">Hưng Yên</li>
-                                            <li><input type="radio" name="cty" id="ctyvn" value="bd">Bình Dương
-                                            </li>
-                                            <li><input type="radio" name="cty" id="ctyvn" value="bn">Bắc Ninh</li>
-                                            <li><input type="radio" name="cty" id="ctyvn" value="st">Sóc Trăng</li>
-                                            <li><input type="radio" name="cty" id="ctyvn" value="ct">Cần Thơ</li>
-                                        </ul>
-
-                                        <ul class="menu__filter-item"><i class="fa-solid fa-truck"></i> Đơn Vị Vận
-                                            Chuyển
-                                            <li><input type="radio" name="transport" id="transportvn" value="quick"
-                                                    checked>Nhanh</li>
-                                            <li><input type="radio" name="transport" id="transportvn" value="save">Tiết
-                                                Kiệm</li>
-                                        </ul>
-
-                                        <ul class="menu__filter-item"><i class="fa-solid fa-money-check-dollar"></i>
-                                            Khoảng
-                                            Giá
-                                            <li><input type="" placeholder="Từ &#8363;"></li>
-                                            <li><input type="" placeholder="Đến &#8363;"></li>
-                                            <!-- button -->
-                                            <button class="button-filter">Áp Dụng</button>
-                                        </ul>
-                                        >>>>>>> 2ab94e7 (merge last commit from Zair0u)
-                                    </div>
-                            </i>
-                        </a>
                     </div>
                     <!-- HEADER__SEARCH-ICON -->
                     <div class="header__search-icon">
                         <!-- link -->
-                        <a href="/web_bantrasua/myapp/user/Cart/store" class="header__search-icon-link">
+                        <a href="/web_bantrasua/myapp/user/Cart/store"
+                            class="header__search-icon-link <?= isset($_SESSION['user']) ? '' : 'disable' ?>">
                             <!-- icon cart -->
                             <i class="icon-cart fa-solid fa-cart-shopping"></i>
                         </a>
@@ -238,25 +156,53 @@
                                 <!-- item -->
                                 <ul class="menu__user-item">
                                     <!-- item 1 -->
-                                    <li class="menu__user-item-1">
-                                        <!-- icon-login_1 -->
-                                        <i class="icon-login_1 fa-regular fa-user"></i>
-                                        <a href="#">Tên: Hoàng Mạnh Hà</a>
-                                    </li>
-                                    <!-- item-2 -->
-                                    <li class="menu__user-item-2">
-                                        <!-- icon-login_2 -->
-                                        <i class="icon-login_2 fa-solid fa-circle-info"></i>
-                                        <a href="/web_bantrasua/myapp/user/user/info  ">Thông Tin
-                                            Cá Nhân</a>
-                                    </li>
-                                    <!-- item-3 -->
-                                    <li class="menu__user-item-3">
-                                        <!-- icon-login_3 -->
-                                        <i class="icon-login_3 fa-solid fa-boxes-stacked"></i>
-                                        <!-- <a onclick="handleLoadContent('purchase.html')">Đơn Mua</a> -->
-                                        <a href="/web_bantrasua/myapp/user/Purchase/show">Đơn mua</a>
-                                    </li>
+                                    <?php
+                                    if (isset($data['userData'])) {
+                                    ?>
+                                        <li class="menu__user-item-1">
+                                            <!-- icon-login_1 -->
+                                            <i class="icon-login_1 fa-regular fa-user"></i>
+                                            <a href="#">Tên:
+                                                <?php echo isset($data['userData']['username']) ? $data['userData']['username'] : (isset($data['userData']['name']) ? $data['userData']['name'] : 'Khách hàng'); ?></a>
+                                        </li>
+                                        <!-- item-2 -->
+                                        <li class="menu__user-item-2">
+                                            <!-- icon-login_2 -->
+                                            <i class="icon-login_2 fa-solid fa-circle-info"></i>
+                                            <a href="/web_bantrasua/myapp/user/user/info">Thông Tin
+                                                Cá Nhân</a>
+                                        </li>
+                                        <!-- item-3 -->
+                                        <li class="menu__user-item-3">
+                                            <!-- icon-login_3 -->
+                                            <i class="icon-login_3 fa-solid fa-boxes-stacked"></i>
+                                            <!-- <a onclick="handleLoadContent('purchase')">Đơn Mua</a> -->
+                                            <a href="/web_bantrasua/myapp/user/Purchase/show">Đơn mua</a>
+                                        </li>
+
+                                        <!-- item 5 -->
+                                        <li class="menu__user-item-5">
+                                            <!-- icon-login_5 -->
+                                            <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
+                                            <a href="/web_bantrasua/myapp/user/auth/logout">Đăng Xuất</a>
+                                        </li>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <!-- item 5 -->
+                                        <li class="menu__user-item-5">
+                                            <!-- icon-login_5 -->
+                                            <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
+                                            <a href="/web_bantrasua/myapp/user/auth/login">Đăng Nhập</a>
+                                        </li>
+                                        <li class="menu__user-item-5">
+                                            <!-- icon-login_5 -->
+                                            <i class="icon-login_5 fa-solid fa-right-to-bracket"></i>
+                                            <a href="/web_bantrasua/myapp/user/user/register">Đăng Ký</a>
+                                        </li>
+                                    <?php
+                                    }
+                                    ?>
 
                                 </ul>
                             </div>
@@ -271,7 +217,7 @@
                     <li class=" header__nav-list">
                         <!-- Header__nav-item -->
                     <li class="header__nav-item">
-                        <a onclick="handleLoadContent('logined-content.html')" class="header__nav-item">TRANG
+                        <a onclick="handleLoadContent('logined-content')" class="header__nav-item">TRANG
                             CHỦ</a>
                     </li>
                     <li class="header__nav-item header__nav-item--has-product">SẢN PHẨM
@@ -290,7 +236,7 @@
                                     <header>
                                         <!--sửa lại css khúc này dùm t nha-->
                                         <h3> <a href="/web_bantrasua/myapp/user/home/showProductByCategory/<?php echo $category['id']; ?>"
-                                                class="header__product-header">
+                                                class="header__product-header <?= isset($_SESSION['user']) ? '' : 'disable' ?>">
                                                 <?php echo $category['name'] ?></a>
                                         </h3>
                                     </header>
@@ -302,7 +248,7 @@
                                             <?php if ($product['category_id'] == $category['id']): ?>
                                                 <li class="header__product-item">
                                                     <a href="/web_bantrasua/myapp/user/home/showProductByID/<?php echo $product['id']; ?>"
-                                                        class="header__product-name-item">
+                                                        class="header__product-name-item <?= isset($_SESSION['user']) ? '' : 'disable' ?>">
                                                         <?php echo $product['name'] ?></a>
                                                 </li>
                                             <?php endif; ?>
@@ -316,8 +262,7 @@
                         </div>
                     </li>
                     <li class="header__nav-item">
-                        <a onclick="handleLoadContent('aboutUs')" class="header__nav-item" id="content_user">VỀ
-                            CHÚNG
+                        <a onclick="handleLoadContent('aboutUs')" class="header__nav-item" id="content_user">VỀ CHÚNG
                             TÔI</a>
                     </li>
                     </li>
@@ -402,7 +347,7 @@
                             <div class="product-form__buy">
                                 <a href="/web_bantrasua/myapp/user/order/viewProduct?id=<?php echo $product['id']; ?>"
                                     class="product-form__buy-btn">
-                                    <button class="product-form__buy-btn">
+                                    <button class="product-form__buy-btn <?= isset($_SESSION['user']) ? '' : 'disable' ?>">
                                         <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                                         Đặt mua
                                     </button>
@@ -413,7 +358,7 @@
                 <?php endforeach; ?>
 
             </div>
-            <button class="more">
+            <button class="more <?= isset($_SESSION['user']) ? '' : 'disable' ?>">
                 Xem thêm
             </button>
         </div>
@@ -605,8 +550,7 @@
                 <!-- information -->
                 <div class="form-container__information">
                     <p><span class="bolded">ĐỊA CHỈ</span></p>
-                    <p> <i class="fa-solid fa-location-pin"></i> Địa chỉ: F1/63/T ấp 6, xã Vĩnh Lộc A, huyện Bình
-                        Chánh,
+                    <p> <i class="fa-solid fa-location-pin"></i> Địa chỉ: F1/63/T ấp 6, xã Vĩnh Lộc A, huyện Bình Chánh,
                         TP.Hồ Chí Minh</p>
                 </div>
                 <!-- rule -->
@@ -628,9 +572,15 @@
             iframe.src = "/web_bantrasua/myapp/user/home/userContent?view=" + page;
         }
 
-        function check() {
-            alert("Vui lòng đăng nhập để tiếp tục!!!");
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const btns = document.getElementsByClassName('disable');
+            Array.from(btns).forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert("Vui lòng đăng nhập để tiếp tục !")
+                });
+            });
+        });
     </script>
 
 

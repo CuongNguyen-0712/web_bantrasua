@@ -41,7 +41,7 @@ class User_Model
         ]);
     }
 
-    public static function register($name, $email, $password, $is_member)
+    public static function register($name, $email, $password)
     {
         $db = Database::getInstance();
 
@@ -56,15 +56,24 @@ class User_Model
         }
 
         // Nếu chưa tồn tại, tiến hành đăng ký
-        $sql = "INSERT INTO account (username, email, password, is_admin) 
-                VALUES (:username, :email, :password, :is_admin)";
+        $sql = "INSERT INTO account (username, email, password) 
+                VALUES (:username, :email, :password)";
         $stmt = $db->prepare($sql);
+
         $success = $stmt->execute([
             'username' => $name,
             'email' => $email,
             'password' => $password,
-            'is_admin' => $is_member
         ]);
+
+        $rawData = "SELECT id FROM account WHERE email = :email";
+        $rawStmt = $db->prepare($rawData);
+        $rawStmt->execute(['email' => $email]);
+        $id = $rawStmt->fetch(PDO::FETCH_ASSOC);
+
+        $insertSql = "INSERT INTO address (account_id) VALUES (:id)";
+        $insertStmt = $db->prepare($insertSql);
+        $insertStmt->execute(['id' => $id['id']]);
 
         return ['success' => $success, 'message' => $success ? 'Đăng ký thành công!' : 'Đăng ký thất bại.'];
     }
