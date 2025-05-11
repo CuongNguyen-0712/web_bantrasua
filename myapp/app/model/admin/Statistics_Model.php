@@ -36,7 +36,7 @@ class Statistics_Model extends Base_Model
                     FROM account a
                     JOIN `order` o ON o.account_id = a.id
                     WHERE o.order_date BETWEEN :start AND :end
-                    GROUP BY a.id, a.username
+                    GROUP BY a.id, o.id
                 )
 
                 SELECT *

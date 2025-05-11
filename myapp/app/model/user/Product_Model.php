@@ -10,7 +10,7 @@ class Product_Model
 
     public function getProduct()
     {
-        $stmt = Database::getInstance()->prepare("SELECT * FROM product");
+        $stmt = Database::getInstance()->prepare("SELECT * FROM product where is_active = 1");
 
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -21,7 +21,7 @@ class Product_Model
     {
         $stmt = Database::getInstance()->prepare("SELECT *
                                                   FROM product 
-                                                  WHERE category_id = ? ");
+                                                  WHERE category_id = ? and is_active = 1");
 
         $stmt->execute([$category_id]);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -32,7 +32,7 @@ class Product_Model
     {
         $stmt = Database::getInstance()->prepare("SELECT *
                                                   FROM product 
-                                                  WHERE id = ? ");
+                                                  WHERE id = ? and is_active = 1");
 
         $stmt->execute([$product_id]);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -92,6 +92,33 @@ class Product_Model
             ]
         ];
     }
+
+    // Phương thức lấy kích cỡ theo sản phẩm
+    // public function getProductSizesWithPrice($product_id) {
+    //     $sizes = $this->getDefaultSizes();
+
+    //     // Giá cho từng sản phẩm cụ thể
+    //     switch ($product_id) {
+    //         case 2: // Mỹ nhân thanh trà
+    //             foreach ($sizes as &$size) {
+    //                 if ($size['name'] === 'L') {
+    //                     $size['price_difference'] = 11000; // L = M + 11,000đ
+    //                 }
+    //             }
+    //             break;
+    //         case 3: // Sản phẩm 3 (ví dụ)
+    //             foreach ($sizes as &$size) {
+    //                 if ($size['name'] === 'L') {
+    //                     $size['price_difference'] = 8000; // L = M + 8,000đ
+    //                 }
+    //             }
+    //             break;
+    //         // Thêm các sản phẩm khác nếu cần
+    //     }
+
+    //     return $sizes;
+    // }
+
     // Phương thức lấy các kích cỡ có sẵn cho một sản phẩm cụ thể
     public function getProductSizesByProductID($product_id)
     {
@@ -208,6 +235,17 @@ class Product_Model
             $conditions[] = "p.category_id = ?";
             $params[] = $category_id;
         }
+
+        // Tìm kiếm theo khoảng giá
+        // if ($minPrice > 0) {
+        //     $conditions[] = "p.cost_default >= ?";
+        //     $params[] = $minPrice;
+        // }
+
+        // if ($maxPrice > 0) {
+        //     $conditions[] = "p.cost_default <= ?";
+        //     $params[] = $maxPrice;
+        // }
 
         // Thêm điều kiện vào câu truy vấn
         if (!empty($conditions)) {

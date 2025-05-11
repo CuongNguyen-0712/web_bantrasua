@@ -1,43 +1,13 @@
 <!DOCTYPE html>
-<html lang="vi">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Amin</title>
-    <link rel="stylesheet" href="<?php echo ASSETS . 'styles/style.css'; ?>" />
-    <link rel="stylesheet" href="<?php echo ASSETS . 'styles/admin/login.css'; ?>" />
-</head>
-
-<body>
-    <div class="login-container">
-        <h2>ADMIN LOGIN</h2>
-
-        <form id="login-form" action="/web_bantrasua/myapp/admin/auth/handleLogin" method="POST">
-            <input type="text" id="username" name="email" placeholder="Email" required />
-            <input type="password" id="password" name="adminPass" placeholder="Mật khẩu" required />
-            <button type="submit">Đăng nhập</button>
-            <p id="error-message" class="error"></p>
-            <?php if (isset($_SESSION['error'])): ?>
-            <p style="color:red"><?= $_SESSION['error'] ?></p>
-            <?php unset($_SESSION['error']); ?>
-            <?php endif; ?>
-        </form>
-    </div>
-</body>
-
-</html>
-
-<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="\web_bantrasua\myapp\public\assets\styles\admin\login.css">
-    <link rel="stylesheet" href="\web_bantrasua\myapp\public\assets\styles\style.css">
+    <link rel="stylesheet" href="<?php echo ASSETS . 'styles/style.css'; ?>" />
+    <link rel="stylesheet" href="<?php echo ASSETS . 'styles/admin/login.css'; ?>" />
     <link rel="stylesheet"
-        href="\web_bantrasua\myapp\public\assets\icon\fontawesome-free-6.6.0-web\fontawesome-free-6.6.0-web\css\all.min.css">
+        href="<?php echo ASSETS . 'icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css'; ?>">
     <title>Login Admin</title>
 </head>
 
@@ -55,11 +25,11 @@
         <div class="admin-container">
             <div class="admin-input">
                 <label for="username">Tên đăng nhập</label>
-                <input type="text" name="username" placeholder="Email hoặc số điện thoại">
+                <input type="text" name="email" placeholder="Email hoặc số điện thoại">
             </div>
             <div class="admin-input">
                 <label for="password">Mật khẩu</label>
-                <input type="password" name="password" placeholder="Mật khẩu">
+                <input type="password" name="adminPass" placeholder="Mật khẩu">
             </div>
         </div>
         <div class="admin-footer">
@@ -80,12 +50,12 @@
 </body>
 
 <script>
-const checkError = document.querySelector('.box-message');
-if (checkError) {
-    setTimeout(() => {
-        checkError.remove();
-    }, 3000)
-}
+    const checkError = document.querySelector('.box-message');
+    if (checkError) {
+        setTimeout(() => {
+            checkError.remove();
+        }, 3000)
+    }
 </script>
 
-</html> -->
+</html>

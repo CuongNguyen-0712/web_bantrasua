@@ -565,7 +565,7 @@
 
                             <!-- header__pay-product -->
                             <div class="header__pay-product">
-                                <button class="header__pay-product-bill" id="">
+                                <button class="header__pay-product-bill" id="addToCartBtn">
                                     <a class="header__pay-product-bill-link">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                         Thêm vào giỏ hàng: <span
