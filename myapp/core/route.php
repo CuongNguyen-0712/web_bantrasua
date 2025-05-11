@@ -43,7 +43,11 @@ function route()
     // Danh sách các public route, nhớ kiểm tra phần này vì sẽ có khả năng bị block hoặc vướng lỗi kiểm tra nếu nhập đường dẫn khác ở đây
     $publicRoutes = [
         'user' => [
+            'home/index',
+            'home/userContent',
             'auth/login',
+            'user/showRegister',
+            'user/register',
             'auth/handleLogin',
         ],
         'admin' => [

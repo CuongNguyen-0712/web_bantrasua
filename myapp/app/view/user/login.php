@@ -55,7 +55,7 @@
                         </button>
                 </form>
                 <div class="login-form__link">
-                    <a href="./dangKi copy.html" class="login-form__link-register login-form__link">
+                    <a href="/web_bantrasua/myapp/user/user/showRegister" class="login-form__link-register login-form__link">
                         <!--chờ link lại-->
                         Bạn chưa có tài khoản?
                     </a>

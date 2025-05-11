@@ -29,7 +29,7 @@
                     <!-- Image -->
                     <div class="product-form__image">
                         <i class="product-form__image-icon fa-solid fa-clover"></i>
-                        <img src="/assets/img/h5-removebg-preview.png" alt="Trà Sữa Clover Tea" class="product-form__image-img">      <!--khi nào có link hình thì sẽ sửa sau-->
+                        <img src="/web_bantrasua/myapp/public/assets/img/<?php echo isset($product['image']) ? $product['image'] : 'h5-removebg-preview.png'; ?>" alt="Trà Sữa Clover Tea" class="product-form__image-img">
                     </div>
                     <!-- Content -->
                     <div class="product-form__content">
@@ -38,7 +38,7 @@
                     </div>
                         <!-- Button -->
                     <div class="product-form__buy">
-                        <a href="/web_bantrasua/myapp/user/order/index" class="product-form__buy-btn">        <!--sẽ sửa đường dẫn sau-->
+                        <a href="/web_bantrasua/myapp/user/order/viewProduct?id=<?php echo $product['id']; ?>" class="product-form__buy-btn">
                             <button class="product-form__buy-btn">
                             <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                             Đặt mua
@@ -53,7 +53,7 @@
   <!-- FOOTER -->
   <div class="form-container">
     <div class="form-container__contact">
-      <p><span class="bolded">LIÊN HỆ</span></p>
+      <p><span class="bolded">LIÊN HỆ</span></p>
       <p><i class="fa-regular fa-envelope"></i> Email: clovertea2678@gmail.com</p>
       <p><i class="fa-solid fa-phone"></i> Hotline: 0968597549</p>
       <p><i class="fa-solid fa-building"></i> Công ty TNHH Clover Tea</p>
@@ -66,15 +66,15 @@
     </div>
 
     <div class="form-container__information">
-      <p><span class="bolded">ĐỊA CHỈ</span></p>
+      <p><span class="bolded">ĐỊA CHỈ</span></p>
       <p> <i class="fa-solid fa-location-pin"></i> Địa chỉ: F1/63/T ấp 6, xã Vĩnh Lộc A, huyện Bình Chánh,
         TP.Hồ Chí Minh</p>
     </div>
 
     <div class="form-container__rule">
-      <p><span class="bolded">ĐIỀU KHOẢN SỬ DỤNG</span></p>
-      <p><i class="fa-solid fa-shield"></i> Chính sách bảo mật thông tin</p>
-      <p><i class="fa-solid fa-cart-arrow-down"></i> Chính sách đặt hàng</p>
+      <p><span class="bolded">ĐIỀU KHOẢN SỬ DỤNG</span></p>
+      <p><i class="fa-solid fa-shield"></i> Chính sách bảo mật thông tin</p>
+      <p><i class="fa-solid fa-cart-arrow-down"></i> Chính sách đặt hàng</p>
     </div>
   </div>
 </body>

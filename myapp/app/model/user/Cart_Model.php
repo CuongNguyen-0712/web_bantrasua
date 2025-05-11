@@ -17,6 +17,18 @@ class Cart_Model{
 
         return $result;
     }
+    public function update($id, $data)
+    {
+        $sql = "UPDATE address SET  district = ?, province = ?, street = ?, ward = ? WHERE account_id = ?";
+        $stmt = Database::getInstance()->prepare($sql);
+        return $stmt->execute([
+            $data['district'],
+            $data['province'],
+            $data['street'],
+            $data['ward'],
+            $id
+        ]);
+    }
 
     public function getPhoneNumber($user_id){
         $stmt = Database::getInstance()->prepare("SELECT phone_number 

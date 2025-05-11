@@ -238,7 +238,6 @@ body {
       left: 0;
       min-width: 150px;
       background-color: #eceaea;
-      /* padding: 10px; */
       display: none; 
       z-index: 1000;
       box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
@@ -250,6 +249,7 @@ body {
     
     /* Menu item */
     .menu__user-item {
+      width: 100%;
       list-style: none;
       padding: 0;
       margin: 0;
@@ -259,11 +259,9 @@ body {
     .menu__user-item li {
       display: flex;
       align-items: center;
-      padding: 10px; 
       font-weight:500;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid rgb(136, 117, 117);
       transition: background-color 0.3s ease, color 0.3s ease;
-      cursor: grab;
     }
     
     .menu__user-item li:last-child {
@@ -279,7 +277,6 @@ body {
       text-decoration: none;
       color: inherit;
       margin-left: 8px;
-      padding: 5px 10px;
       display: block;
     }
     
@@ -300,7 +297,8 @@ body {
     text-decoration: none;
     line-height: 1.5;
     flex-direction: row;    
-    box-shadow: 1px 2px 3px #ccc;
+    box-shadow: 1px 2px 3px #8b8a8a;
+    cursor: pointer;
   }
   
   .header__nav-list {

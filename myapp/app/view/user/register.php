@@ -137,7 +137,6 @@ body{
 .auth-form__input{
     width:95%;
     height: 30px;
-    color:#cfc7c7;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 0 12px;
@@ -220,7 +219,7 @@ body{
     <div class="modal__over-lay"></div>
     <div class="modal__body">
         <div class="modal__inner">
-            <form action="index.php?url=user/register" method="post" class="auth-form">
+            <form action="/web_bantrasua/myapp/user/user/register" method="post" class="auth-form">
                 <div class="auth-form__header">
                     <div class="auth-form__welcome">
                         <span class="auth-form-heading">Welcome to 
@@ -232,8 +231,8 @@ body{
                     </div>
                     <h3 class="auth-form__heading">Đăng Ký</h3>
 
-                    <?php if (!empty($error)): ?>
-                                <div class="error-message"><?= htmlspecialchars($error) ?></div>
+                    <?php if (!empty($_SESSION['errorRegister'])): ?>
+                                <div class="error-message"><?= htmlspecialchars($_SESSION['errorRegister']) ?></div>
                     <?php endif; ?>
 
                     <?php if (!empty($_SESSION['success'])): ?>
@@ -241,12 +240,12 @@ body{
                                 alert("<?= addslashes($_SESSION['success']) ?>");
                             </script>
                             <?php unset($_SESSION['success']); ?>
-                <?php endif; ?>
+                    <?php endif; ?>
 
                     
 
                     <span class="auth-form__switch-btn">Bạn đã có tài khoản?
-                        <a href="/user/login" class="auth-form__switch-btn-link">Đăng nhập</a>
+                        <a href="/web_bantrasua/myapp/user/auth/login" class="auth-form__switch-btn-link">Đăng nhập</a>
                     </span>
                 </div>
 
@@ -270,10 +269,10 @@ body{
                 </div>
 
                 <div class="auth-form__aside">
-    <a href="#" class="auth-form__policy-text-link">Chấp nhận điều khoản: </a>
-    <p class="auth-form__check-box">
-        <input type="checkbox" id="member" name="is_member" value="1">
-        <label for="member">Khách hàng đăng kí trở thành Hội Viên Clover Tea</label>
+                    <a href="#" class="auth-form__policy-text-link">Chấp nhận điều khoản: </a>
+                    <p class="auth-form__check-box">
+                        <input type="checkbox" id="member" name="is_member" value="1">
+                        <label for="member">Khách hàng đăng kí trở thành Hội Viên Clover Tea</label>
     </p>
 </div>
 
