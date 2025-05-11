@@ -13,13 +13,13 @@
     <title>Clover Tea</title>
 
     <style>
-        .no-order-message {
-            text-align: center;
-            padding: 40px;
-            font-size: 1800px;
-            color: #888;
+    .no-order-message {
+        text-align: center;
+        padding: 40px;
+        font-size: 1800px;
+        color: #888;
 
-        }
+    }
     </style>
 </head>
 
@@ -36,53 +36,53 @@
         </ul>
 
         <?php if (empty($data['orders'])): ?>
-            <div class="no-order-message">
-                <p>Bạn không có đơn hàng nào cả</p>
-            </div>
+        <div class="no-order-message">
+            <p>Bạn không có đơn hàng nào cả</p>
+        </div>
         <?php else: ?>
-            <?php foreach ($data['orders'] as $order): ?>
-                <div class="purchase-form">
-                    <header class="purchase-header">
-                        <div class="purchase-header__heading">
-                            <span class="purchase-header__heading-item">Clover Tea</span>
-                            <button class="purchase-header__heading-btn-chat">
-                                <i class="fa-regular fa-comment"></i>
-                                Chat
-                            </button>
+        <?php foreach ($data['orders'] as $order): ?>
+        <div class="purchase-form">
+            <header class="purchase-header">
+                <div class="purchase-header__heading">
+                    <span class="purchase-header__heading-item">Clover Tea</span>
+                    <button class="purchase-header__heading-btn-chat">
+                        <i class="fa-regular fa-comment"></i>
+                        Chat
+                    </button>
 
-                            <button class="purchase-header__heading-btn-shop">
-                                <i class="fa-solid fa-store"></i>
-                                <a href="/web_bantrasua/myapp/user/home/index"
-                                    class="purchase-header__heading-btn-content">Trang chủ </a>
-                            </button>
-                        </div>
+                    <button class="purchase-header__heading-btn-shop">
+                        <i class="fa-solid fa-store"></i>
+                        <a href="/web_bantrasua/myapp/user/home/index"
+                            class="purchase-header__heading-btn-content">Trang chủ </a>
+                    </button>
+                </div>
 
-                        <ul class="purchase-header-status">
-                            <li class="purchase-header-status--success ">
-                                <i class="fa-solid fa-truck"></i>
-                                <?php if (!empty($order['status'])): ?>
-                                    <?php echo $order['status']['name'] ?>
-                                <?php else: ?>
-                                    <?php echo "Không có trạng thái. " ?>
-                                <?php endif; ?>
-                            </li>
-                            <li class="purchase-header-status--rating purchase-header-status--separate">ĐÁNH GIÁ</li>
-                        </ul>
-                    </header>
+                <ul class="purchase-header-status">
+                    <li class="purchase-header-status--success ">
+                        <i class="fa-solid fa-truck"></i>
+                        <?php if (!empty($order['status'])): ?>
+                        <?php echo $order['status']['name'] ?>
+                        <?php else: ?>
+                        <?php echo "Không có trạng thái. " ?>
+                        <?php endif; ?>
+                    </li>
+                    <li class="purchase-header-status--rating purchase-header-status--separate">ĐÁNH GIÁ</li>
+                </ul>
+            </header>
 
-                    <?php foreach ($order['productInfo'] as $productInfo): ?>
-                        <div class="order-form__item">
+            <?php foreach ($order['productInfo'] as $productInfo): ?>
+            <div class="order-form__item">
 
-                            <div class="order-form__item-image">
-                                <img src="/web_bantrasua/myapp/public/assets/img<?php echo $productInfo['img'] ?>"
-                                    alt="<?php echo $productInfo['name'] ?>" class="order-form__item-img">
-                            </div>
+                <div class="order-form__item-image">
+                    <img src="/web_bantrasua/myapp/public/assets/img<?php echo $productInfo['img'] ?>"
+                        alt="<?php echo $productInfo['name'] ?>" class="order-form__item-img">
+                </div>
 
-                            <div class="order-form__content">
-                                <h5 class="order-form__title"><?php echo $productInfo['name'] ?></h5>
-                                <span class="order-form__describ">
-                                    Kích cỡ: <?php echo $productInfo['size'] ?>
-                                    <?php
+                <div class="order-form__content">
+                    <h5 class="order-form__title"><?php echo $productInfo['name'] ?></h5>
+                    <span class="order-form__describ">
+                        Kích cỡ: <?php echo $productInfo['size'] ?>
+                        <?php
                                     $da_ngot = [];
                                     $toppings = [];
                                     foreach ($productInfo['topping_id'] as $index => $id) {
@@ -96,30 +96,30 @@
                                     if (!empty($da_ngot)) echo ", " . implode(", ", $da_ngot);
                                     if (!empty($toppings)) echo ", Topping: " . implode(", ", $toppings);
                                     ?>
-                                </span>
-                                <p>x<?php echo $productInfo['quantity'] ?></p>
-                            </div>
+                    </span>
+                    <p>x<?php echo $productInfo['quantity'] ?></p>
+                </div>
 
-                            <div class="order-form__cost">
-                                <?php echo number_format($productInfo['productTotal'], 0, ',', '.') . "₫" ?></div>
-                        </div>
-                    <?php endforeach; ?>
+                <div class="order-form__cost">
+                    <?php echo number_format($productInfo['productTotal'], 0, ',', '.') . "₫" ?></div>
+            </div>
+            <?php endforeach; ?>
 
-                    <footer class="order-form__footer">
-                        <!-- <div class="order-form__ctn">Thành tiền:
+            <footer class="order-form__footer">
+                <!-- <div class="order-form__ctn">Thành tiền:
                                 <span class="order-form__ctn-cost">&nbsp;
                                     <?php echo number_format($order['totalPrice'], 0, ',', '.') . "₫"; ?>
                                 </span>
                             </div> -->
-                        <div class="order-form__btn">
-                            <button class="order-form__btn-reorder">Mua lại</button>
-                            <button class="order-form__btn-more">
-                                <a href="/web_bantrasua/myapp/user/process/show/<?php echo $order['order_id'] ?>"
-                                    style="text-decoration: none; color: black">Thêm</a></button>
-                        </div>
-                    </footer>
+                <div class="order-form__btn">
+                    <button class="order-form__btn-reorder">Mua lại</button>
+                    <button class="order-form__btn-more">
+                        <a href="/web_bantrasua/myapp/user/process/show/<?php echo $order['order_id'] ?>"
+                            style="text-decoration: none; color: black">Thêm</a></button>
                 </div>
-            <?php endforeach; ?>
+            </footer>
+        </div>
+        <?php endforeach; ?>
         <?php endif; ?>
 
         <!-- <div class="form-container">

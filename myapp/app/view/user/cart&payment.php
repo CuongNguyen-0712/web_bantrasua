@@ -1,3 +1,11 @@
+<?php
+
+namespace user;
+
+use PDO;
+use Database;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -90,12 +90,14 @@
           <!-- Image -->
           <div class="product-form__image">
             <i class="product-form__image-icon fa-solid fa-clover"></i>
-            <img src="/assets/img/h5-removebg-preview.png" alt="Trà Sữa Clover Tea" class="product-form__image-img">
+            <img src="/assets/img/h5-removebg-preview.png" alt="Trà Sữa Clover Tea"
+              class="product-form__image-img">
           </div>
           <!-- Content -->
           <div class="product-form__content">
             <h3 class="product-form__title"><?php echo $product['name'] ?></h3>
-            <span class="product-form__cost"> <?php echo number_format($product['cost_default'], 0, ',', '.') . "\u{20AB}" ?></span>
+            <span class="product-form__cost">
+              <?php echo number_format($product['cost_default'], 0, ',', '.') . "\u{20AB}" ?></span>
           </div>
           <!-- Button -->
           <div class="product-form__buy">

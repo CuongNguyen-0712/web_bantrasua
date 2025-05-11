@@ -92,33 +92,6 @@ class Product_Model
             ]
         ];
     }
-
-    // Phương thức lấy kích cỡ theo sản phẩm
-    // public function getProductSizesWithPrice($product_id) {
-    //     $sizes = $this->getDefaultSizes();
-
-    //     // Giá cho từng sản phẩm cụ thể
-    //     switch ($product_id) {
-    //         case 2: // Mỹ nhân thanh trà
-    //             foreach ($sizes as &$size) {
-    //                 if ($size['name'] === 'L') {
-    //                     $size['price_difference'] = 11000; // L = M + 11,000đ
-    //                 }
-    //             }
-    //             break;
-    //         case 3: // Sản phẩm 3 (ví dụ)
-    //             foreach ($sizes as &$size) {
-    //                 if ($size['name'] === 'L') {
-    //                     $size['price_difference'] = 8000; // L = M + 8,000đ
-    //                 }
-    //             }
-    //             break;
-    //         // Thêm các sản phẩm khác nếu cần
-    //     }
-
-    //     return $sizes;
-    // }
-
     // Phương thức lấy các kích cỡ có sẵn cho một sản phẩm cụ thể
     public function getProductSizesByProductID($product_id)
     {
@@ -235,17 +208,6 @@ class Product_Model
             $conditions[] = "p.category_id = ?";
             $params[] = $category_id;
         }
-
-        // Tìm kiếm theo khoảng giá
-        // if ($minPrice > 0) {
-        //     $conditions[] = "p.cost_default >= ?";
-        //     $params[] = $minPrice;
-        // }
-
-        // if ($maxPrice > 0) {
-        //     $conditions[] = "p.cost_default <= ?";
-        //     $params[] = $maxPrice;
-        // }
 
         // Thêm điều kiện vào câu truy vấn
         if (!empty($conditions)) {

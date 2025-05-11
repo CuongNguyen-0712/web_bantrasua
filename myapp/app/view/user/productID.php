@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/user/product.css">
-  <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
+  <link rel="stylesheet"
+    href="/web_bantrasua/myapp/public/assets/icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
   <link rel="stylesheet" href="/web_bantrasua/myapp/public/assets/styles/style.css">
   <link rel="icon" href="/web_bantrasua/myapp/public/assets/img/logo.png">
   <title>CLOVER-TEA</title>
@@ -29,16 +30,20 @@
           <!-- Image -->
           <div class="product-form__image">
             <i class="product-form__image-icon fa-solid fa-clover"></i>
-            <img src="/assets/img/h5-removebg-preview.png" alt="Trà Sữa Clover Tea" class="product-form__image-img"> <!--khi nào có link hình thì sẽ sửa sau-->
+            <img src="/assets/img/h5-removebg-preview.png" alt="Trà Sữa Clover Tea"
+              class="product-form__image-img">
+            <!--khi nào có link hình thì sẽ sửa sau-->
           </div>
           <!-- Content -->
           <div class="product-form__content">
             <h3 class="product-form__title"><?php echo $product['name'] ?></h3>
-            <span class="product-form__cost"><?php echo number_format($product['cost_default'], 0, ',', '.') . "\u{20AB}" ?></span>
+            <span
+              class="product-form__cost"><?php echo number_format($product['cost_default'], 0, ',', '.') . "\u{20AB}" ?></span>
           </div>
           <!-- Button -->
           <div class="product-form__buy">
-            <a href="/web_bantrasua/myapp/user/order/index" class="product-form__buy-btn"> <!--sẽ sửa đường dẫn sau-->
+            <a href="/web_bantrasua/myapp/user/order/index" class="product-form__buy-btn">
+              <!--sẽ sửa đường dẫn sau-->
               <button class="product-form__buy-btn">
                 <i class="product-form__buy-cart fa-solid fa-cart-shopping"></i>
                 Đặt mua
